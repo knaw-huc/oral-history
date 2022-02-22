@@ -14,6 +14,7 @@ error_reporting(E_ERROR);
 if (!isset($_GET["page"]))
 {
     show_home();
+    // show_profile()
 }
  else {
     show_page($_GET);

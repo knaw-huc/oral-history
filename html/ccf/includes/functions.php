@@ -5,6 +5,9 @@ $db = new db();
 
 function show_home()
 {
+
+    list_records();
+    die;    
     global $db;
     global $smarty;
 
@@ -40,6 +43,7 @@ function show_page($params)
                         show_profile($profile[0], $params["state"]);
                     } else {
                         show_profile($profile[0]);
+                        
                     }
                 }
             }
@@ -73,8 +77,13 @@ function show_page($params)
 
 
 function list_records() {
-    echo 'list';
-    
+    $title = getenv('TITLE');
+    // echo $title;
+    echo '<h1>' . $title . '</h1>';
+    echo 'list of records';
+
+
+
 }
 
 function add_record($profile)
