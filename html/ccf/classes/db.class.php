@@ -22,6 +22,17 @@ class db {
             return false;
         }
     }
+
+    function getProfileData($profile_name) {
+        $results = $this->con->query(" SELECT profile_id, name, description, owner, created, language FROM `profiles` WHERE name LIKE '$profile_name' ");
+        $results = $this->_resultsToArray($results);
+       
+        if (count($results)) {
+            return $results;
+        } else {
+            return false;
+        }
+    }
     
     function getProfileByMetaDataID($md_id) {
         $results = $this->con->query("SELECT p.profile_id, p.name, p.language FROM `profiles` AS p, metadata_records AS m WHERE m.id = $md_id AND p.profile_id = m.profile_id");

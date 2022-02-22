@@ -77,17 +77,32 @@ function show_page($params)
 
 
 function list_records() {
+    global $smarty;
+    global $db;
     $title = getenv('TITLE');
-    // echo $title;
-    echo '<h1>' . $title . '</h1>';
-    echo 'list of records';
-    $profile = getenv('PROFILE');
-    
+    $profilename = getenv('PROFILE');
+    $profile = $db->getProfileData($profilename);
+    // print_array($profile);
+    $profile_id = $profile[0]['profile_id'];
+    $state= 'records';
+    $smarty->configLoad(ROOT . 'config/my.conf', 'Tabs');
+    $parser = new Ccfparser();
+    $profile["json"] = $parser->cmdi2json($profile["content"]);
+    $mdRecords = $db->getMetadataRecords($profile_id);
+    print_array($mdRecords);
+    // TODO EXTRACT WITH THE IDS the relevant information from the XML records
 
+    // die;
+    $smarty->assign('state', $state);
+    $smarty->assign('records', $mdRecords);
+    $smarty->assign('profile', $profile);
+    $smarty->assign('title', $title);
+    $smarty->view('list_records');
 
 }
 
 function add_record($profile)
+// $profile is here profileid
 {
     global $db;
     global $smarty;
@@ -95,6 +110,12 @@ function add_record($profile)
     //$profile = $_POST["profile_id"];
     $title = 'Another CMDI record';
     $md_id = $db->addRecord($title, $profile);
+
+    // count the records + 1
+
+
+
+
     $mapName = CMDI_RECORD_PATH . "md$md_id";
     error_log($mapName);
     create_map($mapName);
@@ -107,16 +128,19 @@ function show_profile($profile, $state = 'profile')
 {
     global $smarty;
     global $db;
-
+    // print_array($profile); // hier is $profile het gehele profiel 
+    // die;
     $smarty->configLoad(ROOT . 'config/my.conf', 'Tabs');
     $profileTab = $smarty->getConfigVars('profileTab');
     $tweakTab = $smarty->getConfigVars('tweakTab');
     $recordsTab = $smarty->getConfigVars('recordsTab');
 
     $parser = new Ccfparser();
-    $profile["json"] = $parser->cmdi2json($profile["content"]);
+    $profile["json"] = $parser->cmdi2json($profile["content"]); // important! Creation of the json representation of cmdi
     //$profile["parsed"] = $parser->parseTweak($profile["tweak"]);
     $mdRecords = $db->getMetadataRecords($profile["profile_id"]);
+    print_array($mdRecords);
+    die;
 
     $smarty->assign('profileTab', $profileTab);
     $smarty->assign('tweakTab', $tweakTab);
@@ -250,4 +274,10 @@ function create_map($filename)
     if (!file_exists($filename)) {
         mkdir($filename);
     }
+}
+
+function print_array($array) {
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
 }

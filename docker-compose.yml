@@ -20,7 +20,8 @@ services:
         environment:
             TITLE: "Oral history editor "
             PROFILE: "Interview"
-            SUBTITLE: "all you need for development  "
+            PROFILE_ID: "p_163300033799"
+            SUBTITLE: "All you need for development and light entertainment "
             THUIS: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"               
 
