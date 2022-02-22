@@ -1,0 +1,27 @@
+version: '3'
+services: 
+    mysql:
+        image: mariadb:10.5
+        volumes: 
+            - mysqldb:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: rood
+            MYSQL_DATABASE: "cmdi_forms"
+
+    # huc-editor backend & frontend
+    php-apache:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - 80:80
+        volumes: 
+            - ./html:/var/www/html/
+        environment:
+            TITLE: "CLARIAH CMDI FORMS "
+            SUBTITLE: "all you need for development  "
+            THUIS: "http://localhost/ccf/"
+            TZ: "Europe/Amsterdam"               
+
+volumes:
+    mysqldb:       
