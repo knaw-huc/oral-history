@@ -19,6 +19,7 @@ services:
             - ./html:/var/www/html/
         environment:
             TITLE: "Oral history editor "
+            PROFILE: "Interview"
             SUBTITLE: "all you need for development  "
             THUIS: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"               

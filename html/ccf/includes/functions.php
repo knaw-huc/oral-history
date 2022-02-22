@@ -81,7 +81,8 @@ function list_records() {
     // echo $title;
     echo '<h1>' . $title . '</h1>';
     echo 'list of records';
-
+    $profile = getenv('PROFILE');
+    
 
 
 }
