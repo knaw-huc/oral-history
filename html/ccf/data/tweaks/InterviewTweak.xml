@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.1" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:clariah="http://www.clariah.eu/">
+    <Header>
+        <ID>clarin.eu:cr1:p_1633000337998</ID>
+    </Header>
+    <Component name="Interview">
+        <Component name="Opname">
+            <clariah:resource>all</clariah:resource>
+        </Component>
+        <Component name="Rechten">
+            <Component name="Toestemmingverklaring">
+                <clariah:resource>all</clariah:resource>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>

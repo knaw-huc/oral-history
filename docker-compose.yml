@@ -18,7 +18,7 @@ services:
         volumes: 
             - ./html:/var/www/html/
         environment:
-            TITLE: "CLARIAH CMDI FORMS "
+            TITLE: "Oral history editor "
             SUBTITLE: "all you need for development  "
             THUIS: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"               

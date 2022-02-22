@@ -74,6 +74,7 @@ function show_page($params)
 
 function list_records() {
     echo 'list';
+    
 }
 
 function add_record($profile)
