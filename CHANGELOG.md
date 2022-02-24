@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## 24-2-2022
+
+- parsed xml through json to obtain useful information for the list view
+- list view now minimal viable
+
 ## 22-2-2022
 
 - started to make the application more standalone and configurable for a single .xml file

@@ -6,8 +6,7 @@ $db = new db();
 function show_home()
 {
 
-    list_records();
-    die;    
+  
     global $db;
     global $smarty;
 
@@ -79,7 +78,7 @@ function show_page($params)
 function list_records() {
     global $smarty;
     global $db;
-    $title = getenv('TITLE');
+    $titleheader = getenv('TITLE');
     $profilename = getenv('PROFILE');
     $profile = $db->getProfileData($profilename);
     // print_array($profile);
@@ -89,17 +88,76 @@ function list_records() {
     $parser = new Ccfparser();
     $profile["json"] = $parser->cmdi2json($profile["content"]);
     $mdRecords = $db->getMetadataRecords($profile_id);
-    print_array($mdRecords);
-    // TODO EXTRACT WITH THE IDS the relevant information from the XML records
+    // print_array($mdRecords);
+    // die;
+    // DONE EXTRACT WITH THE IDS the relevant information from the XML files, date of interview and title
+ 
+    $list = array();
+    foreach($mdRecords as $key => $value) {
+        $recID = $value['id'];
+        $json = parse_metadata($profilename, 'en', $recID);
+        $jsonphp = json_decode($json);
+        $content = $jsonphp->record[2]->value[0]->value; // horrible hard
+        $title = $content[0]->value;
+        $interviewdate = $content[1]->value;
+        $list[] = array('title' => $title, 'interviewdate' => $interviewdate);
+        $mdRecords[$key]['title'] = $title;
+        $mdRecords[$key]['interviewdate'] = $interviewdate;
 
+    }
+    // print_array($mdRecords);
+ 
     // die;
     $smarty->assign('state', $state);
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
-    $smarty->assign('title', $title);
+    $smarty->assign('title', $titleheader);
     $smarty->view('list_records');
 
 }
+function parse_metadata($name, $language, $recID) // 'copy from show_metadata it returns the cmdi converted to json instead of showing
+{
+    global $smarty;
+    // echo 'hoi';
+    // echo $name, $language, $recID;
+    $_SESSION["rec_id"] = $recID;
+
+    $errors = array();
+    $cmdi = PROFILE_PATH . "$name.xml";
+    $tweakFile = TWEAK_PATH . $name . "Tweak.xml";
+    $tweaker = TWEAKER;
+    $parser = new Ccfparser();
+    $record = get_record_file($recID);
+    $smarty->assign('lang', $language);
+    if (!file_exists($cmdi)) {
+        $errors[] = "Profile $name not found on disc!";
+        show_errors($errors);
+    } else {
+        if (!file_exists($tweakFile)) {
+            $json = $parser->parseTweak($cmdi, null, null, $record);
+            $smarty->assign('title', 'CMDI Form');
+            $smarty->assign('json', $json);
+            $smarty->view('formPage');
+        } else {
+            if (!file_exists(TWEAKER)) {
+                $errors[] = "Tweaker xslt not found on disc!";
+                show_errors($errors);
+            } else {
+                $json = $parser->parseTweak($cmdi, $tweakFile, $tweaker, $record);
+                if ($json) {
+                    // $smarty->assign('title', 'CMDI Form');
+                    // $smarty->assign('json', $json);
+                    // $smarty->view('formPage');
+                    return $json;
+                } else {
+                    $errors[] = "Error detected in xslt tranformation!";
+                    show_errors($errors);
+                }
+            }
+        }
+    }
+}
+
 
 function add_record($profile)
 // $profile is here profileid
@@ -139,8 +197,7 @@ function show_profile($profile, $state = 'profile')
     $profile["json"] = $parser->cmdi2json($profile["content"]); // important! Creation of the json representation of cmdi
     //$profile["parsed"] = $parser->parseTweak($profile["tweak"]);
     $mdRecords = $db->getMetadataRecords($profile["profile_id"]);
-    print_array($mdRecords);
-    die;
+   
 
     $smarty->assign('profileTab', $profileTab);
     $smarty->assign('tweakTab', $tweakTab);
@@ -151,6 +208,8 @@ function show_profile($profile, $state = 'profile')
     $smarty->assign('title', 'CMDI profile');
     $smarty->view('profile');
 }
+
+
 
 function show_metadata($name, $language, $recID)
 {

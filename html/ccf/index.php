@@ -1,4 +1,5 @@
 <?php
+
 require(dirname(__FILE__) . '/config/common.inc.php');
 require(dirname(__FILE__) . '/config/ccf.config.inc.php');
 require(dirname(__FILE__) . '/classes/MySmarty.class.php');
@@ -13,7 +14,9 @@ error_reporting(E_ERROR);
 
 if (!isset($_GET["page"]))
 {
-    show_home();
+    list_records();
+    die;  
+    // show_home(); 
     // show_profile();
 }
  else {
