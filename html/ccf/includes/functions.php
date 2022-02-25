@@ -93,6 +93,15 @@ function list_records() {
     // DONE EXTRACT WITH THE IDS the relevant information from the JSON XML files, date of interview and title
  
     $list = array();
+    $listviewparameters = json_decode(file_get_contents(LISTVIEWCONFIG));
+    // print_array($listviewparameters);
+    $headings = [];
+    foreach($listviewparameters as $va) {
+        $headings[] = $va->heading;
+      
+    }
+    // print_array($headings);
+
     foreach($mdRecords as $key => $value) {
         $recID = $value['id'];
 
@@ -106,14 +115,28 @@ function list_records() {
         $xml =  file_get_contents($recordpath);
 
         //TODO put the extra elements in configuration
-        $title = matchElement('Titel', $xml);
-        $interviewdate = matchElement('InterviewDatum', $xml);
+    
+        // $title = matchElement('Titel', $xml);
+        // $interviewdate = matchElement('InterviewDatum', $xml);
+        // $mdRecords[$key]['title'] = $title;
+        // $mdRecords[$key]['interviewdate'] = $interviewdate;   
+        
 
-        $list[] = array('title' => $title, 'interviewdate' => $interviewdate);
-        $mdRecords[$key]['title'] = $title;
-        $mdRecords[$key]['interviewdate'] = $interviewdate;      
+        foreach($listviewparameters as $k =>$v) {
+            $heading = $v->heading;
+            $schemaValue = $v->schemaValue;
+            $match = matchElement($schemaValue, $xml);
+            $mdRecords[$key][$heading] = $match;
+        }
+        // die;
     }
+
+    // print_array($mdRecords);
+
+
     $smarty->assign('state', $state);
+    $smarty->assign('headings', $headings);
+
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
     $smarty->assign('title', $titleheader);

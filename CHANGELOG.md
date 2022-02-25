@@ -2,6 +2,9 @@
 
 ## 25-2-2022
 
+- listview configurable with .json file in config, two elements: 
+    - display value and 
+    - the extraction value from the cmdi record
 - extraction of list elements a bit softer, regexp
 
 ## 24-2-2022
