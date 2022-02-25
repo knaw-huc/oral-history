@@ -82,11 +82,11 @@ function list_records() {
     $profilename = getenv('PROFILE');
     $profile = $db->getProfileData($profilename); // new function 
     // print_array($profile);
-    $profile_id = $profile[0]['profile_id'];
+    $profile_id = $profile[0]['profile_id']; // hmm
     $state= 'records';
     $smarty->configLoad(ROOT . 'config/my.conf', 'Tabs');
     $parser = new Ccfparser();
-    $profile["json"] = $parser->cmdi2json($profile["content"]);
+    // $profile["json"] = $parser->cmdi2json($profile["content"]);
     $mdRecords = $db->getMetadataRecords($profile_id);
     // print_array($mdRecords);
     // die;
@@ -125,7 +125,7 @@ function list_records() {
         foreach($listviewparameters as $k =>$v) {
             $heading = $v->heading;
             $schemaValue = $v->schemaValue;
-            $match = matchElement($schemaValue, $xml);
+            $match = matchElement($schemaValue, $xml); // XML/PHP experts may adapt the function matchElement with proper XML extraction methods
             $mdRecords[$key][$heading] = $match;
         }
         // die;
@@ -225,6 +225,8 @@ function show_profile($profile, $state = 'profile')
 {
     global $smarty;
     global $db;
+    $title = getenv('TITLE');
+
     // print_array($profile); // hier is $profile het gehele profiel 
     // die;
     $smarty->configLoad(ROOT . 'config/my.conf', 'Tabs');
@@ -244,7 +246,7 @@ function show_profile($profile, $state = 'profile')
     $smarty->assign('state', $state);
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
-    $smarty->assign('title', 'CMDI profile');
+    $smarty->assign('title', $title);
     $smarty->view('profile');
 }
 
@@ -255,6 +257,7 @@ function show_metadata($name, $language, $recID)
     global $smarty;
     // echo 'hoi';
     // echo $name, $language, $recID;
+    $title = getenv('TITLE');
     $_SESSION["rec_id"] = $recID;
 
     $errors = array();
@@ -270,7 +273,7 @@ function show_metadata($name, $language, $recID)
     } else {
         if (!file_exists($tweakFile)) {
             $json = $parser->parseTweak($cmdi, null, null, $record);
-            $smarty->assign('title', 'CMDI Form');
+            $smarty->assign('title', $title);
             $smarty->assign('json', $json);
             $smarty->view('formPage');
         } else {
@@ -280,7 +283,7 @@ function show_metadata($name, $language, $recID)
             } else {
                 $json = $parser->parseTweak($cmdi, $tweakFile, $tweaker, $record);
                 if ($json) {
-                    $smarty->assign('title', 'CMDI Form');
+                    $smarty->assign('title', $title);
                     $smarty->assign('json', $json);
                     $smarty->view('formPage');
                 } else {

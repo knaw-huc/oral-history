@@ -23,9 +23,9 @@
     <body>
         <div id="wrapper">
         <div id="header">
-            CLARIAH CMDI Forms
+            {$title}
         </div>
-        <div id="user">Rob Zeeman</div>
+        <div id="user">{$user}</div>
         <div id="homeBtn"></div>
         <div id="content">
             {block name="content"}<div id="ccform"></div>{/block}

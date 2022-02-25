@@ -2,6 +2,8 @@
 
 ## 25-2-2022
 
+- environmental variables readout on formpage, title
+- test with new fieldnames, success
 - bugfix profile_id in listview
 - cleanup listview
 - listview configurable with .json file in config, two elements: 
