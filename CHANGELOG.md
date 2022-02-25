@@ -2,6 +2,8 @@
 
 ## 25-2-2022
 
+- bugfix profile_id in listview
+- cleanup listview
 - listview configurable with .json file in config, two elements: 
     - display value and 
     - the extraction value from the cmdi record

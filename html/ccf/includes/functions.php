@@ -139,6 +139,10 @@ function list_records() {
 
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
+    $smarty->assign('profile_id', $profile_id);
+    $smarty->assign('profilename', $profilename);
+
+    // profilename    
     $smarty->assign('title', $titleheader);
     $smarty->view('list_records');
 }
