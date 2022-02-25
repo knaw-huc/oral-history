@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 25-2-2022
+
+- extraction of list elements a bit softer, regexp
 
 ## 24-2-2022
 

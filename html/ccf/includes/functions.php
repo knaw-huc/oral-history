@@ -80,7 +80,7 @@ function list_records() {
     global $db;
     $titleheader = getenv('TITLE');
     $profilename = getenv('PROFILE');
-    $profile = $db->getProfileData($profilename);
+    $profile = $db->getProfileData($profilename); // new function 
     // print_array($profile);
     $profile_id = $profile[0]['profile_id'];
     $state= 'records';
@@ -90,32 +90,44 @@ function list_records() {
     $mdRecords = $db->getMetadataRecords($profile_id);
     // print_array($mdRecords);
     // die;
-    // DONE EXTRACT WITH THE IDS the relevant information from the XML files, date of interview and title
+    // DONE EXTRACT WITH THE IDS the relevant information from the JSON XML files, date of interview and title
  
     $list = array();
     foreach($mdRecords as $key => $value) {
         $recID = $value['id'];
-        $json = parse_metadata($profilename, 'en', $recID);
-        $jsonphp = json_decode($json);
-        $content = $jsonphp->record[2]->value[0]->value; // horrible hard
-        $title = $content[0]->value;
-        $interviewdate = $content[1]->value;
+
+        // $json = parse_metadata($profilename, 'en', $recID);
+        // $jsonphp = json_decode($json);
+        // $content = $jsonphp->record[2]->value[0]->value; // horrible hard not future proof
+        // $title = $content[0]->value;
+        // $interviewdate = $content[1]->value;
+
+        $recordpath = CMDI_RECORD_PATH . 'md' . $recID . '/metadata/' . METADATA_FILENAME;
+        $xml =  file_get_contents($recordpath);
+
+        //TODO put the extra elements in configuration
+        $title = matchElement('Titel', $xml);
+        $interviewdate = matchElement('InterviewDatum', $xml);
+
         $list[] = array('title' => $title, 'interviewdate' => $interviewdate);
         $mdRecords[$key]['title'] = $title;
-        $mdRecords[$key]['interviewdate'] = $interviewdate;
-
+        $mdRecords[$key]['interviewdate'] = $interviewdate;      
     }
-    // print_array($mdRecords);
- 
-    // die;
     $smarty->assign('state', $state);
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
     $smarty->assign('title', $titleheader);
     $smarty->view('list_records');
+}
+
+function matchElement($needle, $haystack) {
+    preg_match("|<cmd:$needle.*?>(.+?)</cmd:$needle>|", $haystack, $matches);
+    return $matches[1];
 
 }
-function parse_metadata($name, $language, $recID) // 'copy from show_metadata it returns the cmdi converted to json instead of showing
+
+
+function parse_metadata($name, $language, $recID) // new function 'copy' from show_metadata it returns the cmdi converted to json instead of showing
 {
     global $smarty;
     // echo 'hoi';
