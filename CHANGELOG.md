@@ -2,6 +2,8 @@
 
 ## 25-2-2022
 
+- adapted readme, still in development
+- env in python initiation script
 - environmental variables readout on formpage, title
 - test with new fieldnames, success
 - bugfix profile_id in listview

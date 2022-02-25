@@ -12,7 +12,7 @@ services:
     php-apache:
         build:
             context: .
-            dockerfile: Dockerfile.dev
+            dockerfile: Dockerfile
         ports:
             - 80:80
         volumes: 
@@ -23,7 +23,12 @@ services:
             PROFILE_ID: "p_163300033799"
             SUBTITLE: "All you need for development and light entertainment "
             THUIS: "http://localhost/ccf/"
-            TZ: "Europe/Amsterdam"               
+            TZ: "Europe/Amsterdam"
+            DB_SERVER: mysql
+            DB_USER: root
+            DB_PASSWD: rood
+            DB_NAME: cmdi_forms
+
 
 volumes:
     mysqldb:       

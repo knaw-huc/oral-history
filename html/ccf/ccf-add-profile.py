@@ -2,16 +2,25 @@
 
 from datetime import date
 import os.path
+import os
 import sys
 import getpass
 import mysql.connector
 from mputility import testDatabase
 
 # db CONSTANTS
-USER = 'root'
-PASSWORD = 'rood'
-HOST = 'mysql'
-DATABASE = 'cmdi_forms'
+DB_USER = os.getenv('DB_USER')
+DB_PASSWD = os.getenv('DB_PASSWD')
+DB_SERVER = os.getenv('DB_SERVER')
+DB_NAME = os.getenv('DB_NAME')
+
+# print(DB_PASSWD)
+# exit(1)
+
+# USER = 'root'
+# PASSWORD = 'rood'
+# HOST = 'mysql'
+# DATABASE = 'cmdi_forms'
 
 # PATHS
 DATA='/var/www/html/ccf/data/'
@@ -62,9 +71,9 @@ sql = ( "INSERT INTO profiles (name, description, content, owner, created, langu
 )
 
 data = (PROFILE, DESCR, profilexml, WHOAMI, TODAY, 'en', tweakxml)
-cnx = mysql.connector.connect(user=USER, password=PASSWORD,
-                                host=HOST,
-                                database=DATABASE)
+cnx = mysql.connector.connect(user=DB_USER, password=DB_PASSWD,
+                                host=DB_SERVER,
+                                database=DB_NAME)
 cursor = cnx.cursor()   
 cursor.execute(sql, data)
 

@@ -1,7 +1,6 @@
 <?php
 
-define('DB_SERVER', 'mysql');
-define('DB_USER', 'root');
-define('DB_PASSWD', 'rood');
-define('DB_NAME', 'cmdi_forms');
-
+define('DB_SERVER', getenv('DB_SERVER'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASSWD',getenv('DB_PASSWD'));
+define('DB_NAME', getenv('DB_NAME'));
