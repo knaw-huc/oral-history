@@ -39,7 +39,15 @@
                 <Element name="Opleiding" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Component name="Stationering" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="Organisatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                    <Element name="Locatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="Locatie" CardinalityMin="0" CardinalityMax="1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>DDR</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
                     <Element name="Titel" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
                     <Element name="Type" CardinalityMin="1" CardinalityMax="1">
                         <ValueScheme>
@@ -61,30 +69,20 @@
             </Component>
         </Component>
         <Component name="Beschrijving" CardinalityMin="1" CardinalityMax="1">
-            <Element name="Samenvatting" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            <Element name="Onderwerp" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
-            <Element name="spatialCoverage" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
-            <Component name="TemporalCoverage" CardinalityMin="0" CardinalityMax="1">
+            <Element name="Samenvatting" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="Onderwerp" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
+            <Element name="spatialCoverage" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
+            <Component name="TemporalCoverage" CardinalityMin="1" CardinalityMax="1">
                 <Element name="Van" ValueScheme="gYear" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="Tot" ValueScheme="gYear" CardinalityMin="1" CardinalityMax="1"/>
             </Component>
         </Component>
         <Component name="Opname" CardinalityMin="1" CardinalityMax="unbounded">
             <Element name="Duur" ValueScheme="time" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            <Element name="Volgorde" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="volgorde" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
             <Component name="Rechten" CardinalityMin="1" CardinalityMax="1">
                 <Component name="Toestemmingverklaring" CardinalityMin="0" CardinalityMax="1">
                     <Element name="aanvullendeBepalingen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                </Component>
-            </Component>
-            <Component name="Inhoud" CardinalityMin="0" CardinalityMax="1">
-                <Component name="Sectie" CardinalityMin="1" CardinalityMax="unbounded">
-                    <Element name="Tijdstip" ValueScheme="time" CardinalityMin="1" CardinalityMax="1"/>
-                    <Element name="Onderwerp" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                    <Component name="Periode" CardinalityMin="1" CardinalityMax="1">
-                        <Element name="Van" ValueScheme="gYear" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                        <Element name="Tot" ValueScheme="gYear" CardinalityMin="1" CardinalityMax="1"/>
-                    </Component>
                 </Component>
             </Component>
         </Component>
