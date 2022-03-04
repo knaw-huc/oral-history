@@ -1,5 +1,7 @@
 function setEvents() {
-    var home = 'http://localhost/ccf';
+    // var home = 'http://localhost/ccf';
+    let home = '/ccf';
+
 
     $("#profileDataNavigator li").on("click", function () {
         if (!$(this).hasClass("profileDataActiveTab"))

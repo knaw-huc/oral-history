@@ -30,5 +30,4 @@ class Mysmarty extends Smarty
 		return parent::fetch($resource_name, $cache_id);
 	}
 } // END class smarty_library
-?>
 

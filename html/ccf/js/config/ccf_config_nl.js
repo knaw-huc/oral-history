@@ -1,5 +1,7 @@
-// var server = 'http://www.huc.localhost/clarin_cmdi_forms/';
 let server = 'http://localhost/ccf/'
+
+// let server = window.location.protocol + "//" + window.location.host + "/" + "ccf/";
+// console.log('server: ', server);
 
 var ccfOptions = {
     uploadButton: {

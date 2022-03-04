@@ -21,7 +21,7 @@ services:
             TITLE: "Oral history editor "
             PROFILE: "Interview"
             PROFILE_ID: "p_163300033799"
-            SUBTITLE: "All you need for development and light entertainment "
+            SUBTITLE: "All you need for development"
             THUIS: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: mysql
