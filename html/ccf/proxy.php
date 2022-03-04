@@ -6,9 +6,10 @@ $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
 
 // DEPENDANT UPON $endpoint
 
-$type = 'skos'; // from url?
+$type = 'skos'; // from?
+$vocabulary = 'duplo'; // from?
 if($type === 'skos') { // switch
-    $specifics = 'rest/v1/iso639-3/search?unique=1amp;query=';
+    $specifics = "rest/v1/$vocabulary/search?unique=yes&query=";
 } else {
 
     // stub
@@ -20,6 +21,7 @@ $endpoint = $endpoint . $specifics;
 
 $restQuery = $endpoint . $_GET["q"] . "*";
 // echo $restQuery;
+// die;
 
 // die;
 // $ch = curl_init($url . $_GET["q"]);

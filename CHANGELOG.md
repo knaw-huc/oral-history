@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 4-3-2022
+
+- proxy working with skos
+
+## 3-3--2022
+
+- new interview (& tweak) file
+
 ## 25-2-2022
 
 - adapted readme, still in development

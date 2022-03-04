@@ -29,7 +29,7 @@ In development...
     docker exec -i <dockerid> python3 ccf/ccf-add-profile.py Interview 'Oral History'
     # dockerid from the php-apache container
 
-## visit the profiles
+## show a list of the records
 
     http://localhost/ccf/
 

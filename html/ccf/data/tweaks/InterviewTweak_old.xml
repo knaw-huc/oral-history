@@ -6,10 +6,10 @@
     <Component name="Interview">
         <Component name="Opname">
             <clariah:resource>all</clariah:resource>
-            <Component name="Rechten">
-                <Component name="Toestemmingverklaring">
-                    <clariah:resource>all</clariah:resource>
-                </Component>
+        </Component>
+        <Component name="Rechten">
+            <Component name="Toestemmingverklaring">
+                <clariah:resource>all</clariah:resource>
             </Component>
         </Component>
     </Component>

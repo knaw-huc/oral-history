@@ -80,10 +80,11 @@
         <Component name="Opname" CardinalityMin="1" CardinalityMax="unbounded">
             <Element name="Duur" ValueScheme="time" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="volgorde" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
-            <Component name="Rechten" CardinalityMin="1" CardinalityMax="1">
-                <Component name="Toestemmingverklaring" CardinalityMin="0" CardinalityMax="1">
-                    <Element name="aanvullendeBepalingen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                </Component>
+            <Element name="tijdstip" ValueScheme="dateTime" CardinalityMin="1" CardinalityMax="1"/>
+        </Component>
+        <Component name="Rechten" CardinalityMin="1" CardinalityMax="1">
+            <Component name="Toestemmingverklaring" CardinalityMin="0" CardinalityMax="1">
+                <Element name="aanvullendeBepalingen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
     </Component>
