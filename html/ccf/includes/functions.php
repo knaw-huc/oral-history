@@ -284,6 +284,8 @@ function show_metadata($name, $language, $recID)
                 $json = $parser->parseTweak($cmdi, $tweakFile, $tweaker, $record);
                 if ($json) {
                     $smarty->assign('title', $title);
+                    // echo $json;die;
+
                     $smarty->assign('json', $json);
                     $smarty->view('formPage');
                 } else {

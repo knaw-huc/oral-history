@@ -1,8 +1,13 @@
 <?php
-
 // $endpoint = "https://vocabularies.clarin.eu/clavas/public/api/autocomplete/";
-
+function print_array($array) {
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+}
 $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
+// $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
+
 
 // DEPENDANT UPON $endpoint
 
@@ -42,9 +47,24 @@ $json = json_decode($json);
 if (!$json) {
     $json = "";
 }
-$retArray = array("query" => "Unit", "suggestions" => $json);
+
+// $php = json_decode($json);
+// print_array($json);
+$results = $json->results;
+
+// print_array($results);
+$suggestions = [];
+foreach($results as $obj){
+    $suggestions[] = $obj->prefLabel; // SKOS thingie
+}
+// print_array($sug);
+// die;
+
+$retArray = array("query" => "Unit", "suggestions" => $suggestions);
 
 header('Content-Type: application/json; charset=utf-8');
 // waarom is bovenstaande json header er niet?
 
 echo json_encode($retArray);
+
+

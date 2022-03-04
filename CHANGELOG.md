@@ -2,7 +2,11 @@
 
 ## 4-3-2022
 
-- proxy working with skos
+- autocomplete working
+- proxy.php adapted, educated guess for the input of autocomplete, worked out well
+- added stuff to Tweakfile analog like Meertens Collections, titel => Diplomatieke Titel
+- skosmos proxy working with skos test: http://localhost/ccf/proxy.php?q=c
+- adapted some endpoint variables in js and php
 
 ## 3-3--2022
 
