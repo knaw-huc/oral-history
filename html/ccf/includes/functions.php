@@ -349,20 +349,47 @@ function download_record($id)
 
 }
 
+
+function deleteDir($dirPath) {
+    if (! is_dir($dirPath)) {
+        throw new InvalidArgumentException("$dirPath must be a directory");
+    }
+    if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
+        $dirPath .= '/';
+    }
+    $files = glob($dirPath . '*', GLOB_MARK);
+    foreach ($files as $file) {
+        if (is_dir($file)) {
+            deleteDir($file);
+        } else {
+            unlink($file);
+        }
+    }
+    rmdir($dirPath);
+}
+
 function delete_record($id)
 {
     global $db;
 
-    $folderToRemove = sprintf("%s/%s/%s", CMDI_RECORD_PATH, METADATA_PATH, METADATA_FILENAME);
+    // $folderToRemove = sprintf("%s/%s/%s", CMDI_RECORD_PATH, METADATA_PATH, METADATA_FILENAME);
+
+    $id = (int) $id;
+    $folderToRemove = CMDI_RECORD_PATH . 'md' . $id . '/'; 
+    // echo $folderToRemove;
+    // die;
     try {
         $db->removeRecord($id);
-        rmdir($folderToRemove);
-
+        deleteDir($folderToRemove);
+        $start = BASE_URL;    
+        header("Location: $start");
+        exit;
         return true;
     } catch (Exception $e) {
         echo "Error: ", $e->getMessage(), "\n";
         return false;
     }
+
 }
 
 function show_errors($errors)

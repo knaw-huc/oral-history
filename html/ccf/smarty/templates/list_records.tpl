@@ -19,7 +19,7 @@
                             <td>{$record.creation_date}</td>
                             <td><a href="{$home_path}index.php?page=metadata&id={$record.id}" title="Edit metadata"><img src="{$home_path}img/edit.png" height="16px" width="16px"></a></td>
                             <td><a href="{$home_path}index.php?page=profile&id={$record.id}&action=download_record" title="Download"><img src="{$home_path}img/download.png" height="16px" width="16px"></a></td>
-                            <td><a href="#" title="Delete" class="myBtn" id="myBtn{$record.id}" onclick="deleteRecord({$record.id}, {$profile_id});"><img src="{$home_path}img/bin.png" height="16px" width="16px"></a></td>
+                            <td><a href="{$home_path}index.php?page=profile&id={$record.id}&action=delete_record" title="Delete" class="myBtn delete" id="myBtn{$record.id}" onclick="deleteRecord({$record.id}, {$profile_id});"><img src="{$home_path}img/bin.png" height="16px" width="16px"></a></td>
                         </tr>
                     {/foreach}
                 </table>
@@ -30,42 +30,21 @@
     </div>
 
 
-{literal}
-    <!-- JQuery -->
-    <script type="text/javascript">
-        function deleteRecord(recordId, profileId) {
-            let myBtn = document.getElementById(recordId);
+<script>
+    {literal}
+    $(document).ready(function ()
+    {
+        $('.delete').click(function () {
+            var answer = confirm('Dit record wordt verwijderd! This record will be removed! OK?');
+            return answer; // answer is a boolean
+        });
 
-            $( "#dialog-confirm" ).dialog({
-                resizable: false,
-                height: "auto",
-                width: 400,
-                modal: true,
-                buttons: {
-                    "DELETE": function() {
-                        console.log("Deleting record: [" + recordId + "]\n");
-                        $.ajax({
-                            url: 'index.php?page=profile&id=' + recordId + '&action=delete_record&profile_id=' + profileId,
-                            success: function() {
-                                console.log("done");
-                                location.reload();
-                            },
-                            error: function() {
-                                console.log("failed");
-                            }
-                        });
-                        $( this ).dialog( "close" );
 
-                    },
-                    Cancel: function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-            });
-        }
+    });
+    {/literal}
+</script>
 
-    </script>
 
-{/literal}
+
 
 {/block}

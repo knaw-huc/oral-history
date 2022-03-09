@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 9-30-2022
+
+- cleanup after record delete
+- removed ajax from the delete action
+- delete didn't work well
+
 ## 4-3-2022
 
 - autocomplete working
