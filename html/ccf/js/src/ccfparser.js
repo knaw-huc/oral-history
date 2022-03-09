@@ -204,9 +204,13 @@ var formBuilder = {
             btn.setAttribute('value', '+');
             btn.setAttribute('class', 'compBtn');
             btn.setAttribute('data-source', component.ID);
-            if (component.attributes.resource !== undefined || component.attributes.CardinalityMin === '0') {
+            // if (component.attributes.resource !== undefined || component.attributes.CardinalityMin === 0) {
+            //     $(btn).hide();
+            // }
+
+            if (component.attributes.CardinalityMin === 0) {
                 $(btn).hide();
-            }
+            }            
             btn.onclick = function (e) {
                 var next = clone.nextClonePostfix();
                 var that = $(this);
