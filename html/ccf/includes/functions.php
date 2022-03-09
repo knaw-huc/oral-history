@@ -1,6 +1,6 @@
 <?php
 
-include_once("mptutility.php");
+include_once("utility.php");
 
 $smarty = new Mysmarty();
 $db = new db();
@@ -90,9 +90,9 @@ function list_records() {
     $parser = new Ccfparser();
     // $profile["json"] = $parser->cmdi2json($profile["content"]);
     $mdRecords = $db->getMetadataRecords($profile_id);
-    print_array($mdRecords);
+    // print_array($mdRecords);
 
-    $mdRecords = getMetadataRecords($profile_id);
+    // $mdRecords = getMetadataRecords($profile_id);
 
 
     // die;
