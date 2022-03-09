@@ -1,5 +1,7 @@
 <?php
 
+include_once("mptutility.php");
+
 $smarty = new Mysmarty();
 $db = new db();
 
@@ -88,7 +90,11 @@ function list_records() {
     $parser = new Ccfparser();
     // $profile["json"] = $parser->cmdi2json($profile["content"]);
     $mdRecords = $db->getMetadataRecords($profile_id);
-    // print_array($mdRecords);
+    print_array($mdRecords);
+
+    $mdRecords = getMetadataRecords($profile_id);
+
+
     // die;
     // DONE EXTRACT WITH THE IDS the relevant information from the JSON XML files, date of interview and title
  
@@ -406,8 +412,3 @@ function create_map($filename)
     }
 }
 
-function print_array($array) {
-    echo '<pre>';
-    print_r($array);
-    echo '</pre>';
-}

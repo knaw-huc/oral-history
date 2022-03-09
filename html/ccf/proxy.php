@@ -1,10 +1,7 @@
 <?php
 // $endpoint = "https://vocabularies.clarin.eu/clavas/public/api/autocomplete/";
-function print_array($array) {
-    echo '<pre>';
-    print_r($array);
-    echo '</pre>';
-}
+include_once("includes/utility.php");
+
 $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
 
 // $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;

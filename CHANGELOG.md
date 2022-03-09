@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## 9-30-2022
+
+
+## 9-3-2022
 
 - cleanup after record delete
 - removed ajax from the delete action
