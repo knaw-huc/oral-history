@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y libc-client-dev libfreetype6-dev libmcr
 
 RUN apt-get update && apt-get install -y curl vim mariadb-client python3 python3-pip
 RUN pip3 install mysql-connector
-COPY .profiles/profile.xml /var/www/html/ccf/data/profiles/profile.xml
-COPY .profiles/profileTweak.xml /var/www/html/ccf/data/tweaks/profileTweak.xml
+COPY profiles/profile.xml /var/www/html/ccf/data/profiles/profile.xml
+COPY profiles/profileTweak.xml /var/www/html/ccf/data/tweaks/profileTweak.xml
 
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && a2enmod rewrite && a2enmod headers && service apache2 restart
