@@ -1,1 +1,702 @@
-            obj = {"id":"clarin.eu:cr1:p_1633000337998","content":[{"type":"Component","level":1,"ID":"6228d36787d44","attributes":{"name":"Interview","label":"Interview","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1},"content":[{"type":"Element","level":2,"ID":"6228d36787d5b","attributes":{"name":"Titel","label":"Titel","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","Multilingual":"true","duplicate":"yes","initialOrder":1}},{"type":"Element","level":2,"ID":"6228d36787d63","attributes":{"name":"InterviewDatum","label":"InterviewDatum","ValueScheme":"date","CardinalityMin":"1","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":2}},{"type":"Element","level":2,"ID":"6228d36787d79","attributes":{"name":"Interviewer","label":"Interviewer","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","initialOrder":3}},{"type":"Component","level":2,"ID":"6228d36787d7c","attributes":{"name":"Geinterviewde","label":"Geinterviewde","CardinalityMin":"1","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":4},"content":[{"type":"Element","level":3,"ID":"6228d36787d81","attributes":{"name":"geboorteDatum","label":"geboorteDatum","ValueScheme":"date","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":3,"ID":"6228d36787d84","attributes":{"name":"rol","label":"rol","CardinalityMin":"0","CardinalityMax":"1","ValueScheme":[[{"value":"partner"}]],"initialOrder":2}},{"type":"Component","level":3,"ID":"6228d36787d90","attributes":{"name":"Naam","label":"Naam","CardinalityMin":"1","CardinalityMax":"1","initialOrder":3},"content":[{"type":"Element","level":4,"ID":"6228d36787d94","attributes":{"name":"titel","label":"titel","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":4,"ID":"6228d36787d97","attributes":{"name":"voornaam","label":"voornaam","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","initialOrder":2}},{"type":"Element","level":4,"ID":"6228d36787d9a","attributes":{"name":"tussenvoegsel","label":"tussenvoegsel","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","initialOrder":3}},{"type":"Element","level":4,"ID":"6228d36787d9e","attributes":{"name":"achternaam","label":"achternaam","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","initialOrder":4}}]},{"type":"Component","level":3,"ID":"6228d36787da9","attributes":{"name":"Contact","label":"Contact","initialOrder":4},"content":[{"type":"Element","level":4,"ID":"6228d36787dac","attributes":{"name":"Person","label":"Person","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":1}},{"type":"Element","level":4,"ID":"6228d36787db0","attributes":{"name":"Address","label":"Address","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":2}},{"type":"Element","level":4,"ID":"6228d36787db5","attributes":{"name":"Email","label":"Email","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":3}},{"type":"Element","level":4,"ID":"6228d36787db9","attributes":{"name":"Organisation","label":"Organisation","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","Multilingual":"true","initialOrder":4}},{"type":"Element","level":4,"ID":"6228d36787dbd","attributes":{"name":"Telephone","label":"Telephone","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":5}},{"type":"Element","level":4,"ID":"6228d36787dc0","attributes":{"name":"Website","label":"Website","ValueScheme":"anyURI","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":6}}]},{"type":"Component","level":3,"ID":"6228d36787dc5","attributes":{"name":"Carriere","label":"Carriere","CardinalityMin":"0","CardinalityMax":"1","initialOrder":5},"content":[{"type":"Element","level":4,"ID":"6228d36787dc8","attributes":{"name":"Opleiding","label":"Opleiding","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","initialOrder":1}},{"type":"Component","level":4,"ID":"6228d36787dcd","attributes":{"name":"Stationering","label":"Stationering","CardinalityMin":"1","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":2},"content":[{"type":"Element","level":5,"ID":"6228d36787dd0","attributes":{"name":"Organisatie","label":"Organisatie","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":1}},{"type":"Element","level":5,"ID":"6228d36787dd4","attributes":{"name":"Locatie","label":"Locatie","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","initialOrder":2}},{"type":"Element","level":5,"ID":"6228d36787dd7","attributes":{"name":"Titel","label":"Diplomatieke Titel (ambass.)","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","autoCompleteURI":"http:\/\/localhost\/ccf\/","initialOrder":3}},{"type":"Element","level":5,"ID":"6228d36787ddc","attributes":{"name":"Type","label":"Type","CardinalityMin":"1","CardinalityMax":"1","ValueScheme":[[{"value":"departement"},{"value":"detachering"},{"value":"post"},{"value":"buiten"}]],"initialOrder":4}},{"type":"Component","level":5,"ID":"6228d36787de6","attributes":{"name":"Periode","label":"Periode","CardinalityMin":"1","CardinalityMax":"1","initialOrder":5},"content":[{"type":"Element","level":6,"ID":"6228d36787de9","attributes":{"name":"Van","label":"Van","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":6,"ID":"6228d36787dec","attributes":{"name":"Tot","label":"Tot","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":2}}]}]}]}]},{"type":"Component","level":2,"ID":"6228d36787df4","attributes":{"name":"Beschrijving","label":"Beschrijving","CardinalityMin":"1","CardinalityMax":"1","initialOrder":5},"content":[{"type":"Element","level":3,"ID":"6228d36787df7","attributes":{"name":"Samenvatting","label":"Samenvatting","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","Multilingual":"true","duplicate":"yes","initialOrder":1}},{"type":"Element","level":3,"ID":"6228d36787dfb","attributes":{"name":"Onderwerp","label":"Onderwerp","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","Multilingual":"true","duplicate":"yes","initialOrder":2}},{"type":"Element","level":3,"ID":"6228d36787dff","attributes":{"name":"spatialCoverage","label":"spatialCoverage","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","Multilingual":"true","duplicate":"yes","initialOrder":3}},{"type":"Component","level":3,"ID":"6228d36787e03","attributes":{"name":"TemporalCoverage","label":"TemporalCoverage","CardinalityMin":"0","CardinalityMax":"1","initialOrder":4},"content":[{"type":"Element","level":4,"ID":"6228d36787e06","attributes":{"name":"Van","label":"Van","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":4,"ID":"6228d36787e09","attributes":{"name":"Tot","label":"Tot","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":2}}]}]},{"type":"Component","level":2,"ID":"6228d36787e0e","attributes":{"name":"Opname","label":"Opname","CardinalityMin":"1","CardinalityMax":"unbounded","duplicate":"yes","resource":"all","initialOrder":6},"content":[{"type":"Element","level":3,"ID":"6228d36787e13","attributes":{"name":"Duur","label":"Duur","ValueScheme":"time","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":3,"ID":"6228d36787e16","attributes":{"name":"Volgorde","label":"Volgorde","ValueScheme":"int","CardinalityMin":"1","CardinalityMax":"1","initialOrder":2}},{"type":"Component","level":3,"ID":"6228d36787e19","attributes":{"name":"Rechten","label":"Rechten","CardinalityMin":"1","CardinalityMax":"1","initialOrder":3},"content":[{"type":"Component","level":4,"ID":"6228d36787e1c","attributes":{"name":"Toestemmingverklaring","label":"Toestemmingverklaring","CardinalityMin":"0","CardinalityMax":"1","resource":"all","initialOrder":1},"content":[{"type":"Element","level":5,"ID":"6228d36787e21","attributes":{"name":"aanvullendeBepalingen","label":"aanvullendeBepalingen","ValueScheme":"string","CardinalityMin":"0","CardinalityMax":"1","initialOrder":1}}]}]},{"type":"Component","level":3,"ID":"6228d36787e27","attributes":{"name":"Inhoud","label":"Inhoud","CardinalityMin":"0","CardinalityMax":"1","initialOrder":4},"content":[{"type":"Component","level":4,"ID":"6228d36787e2a","attributes":{"name":"Sectie","label":"Sectie","CardinalityMin":"1","CardinalityMax":"unbounded","duplicate":"yes","initialOrder":1},"content":[{"type":"Element","level":5,"ID":"6228d36787e2d","attributes":{"name":"Tijdstip","label":"Tijdstip","ValueScheme":"time","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":5,"ID":"6228d36787e30","attributes":{"name":"Onderwerp","label":"Onderwerp","ValueScheme":"string","CardinalityMin":"1","CardinalityMax":"1","Multilingual":"true","duplicate":"yes","initialOrder":2}},{"type":"Component","level":5,"ID":"6228d36787e33","attributes":{"name":"Periode","label":"Periode","CardinalityMin":"1","CardinalityMax":"1","initialOrder":3},"content":[{"type":"Element","level":6,"ID":"6228d36787e36","attributes":{"name":"Van","label":"Van","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":1}},{"type":"Element","level":6,"ID":"6228d36787e3a","attributes":{"name":"Tot","label":"Tot","ValueScheme":"gYear","CardinalityMin":"1","CardinalityMax":"1","initialOrder":2}}]}]}]}]}]}]};
+            obj = {
+                "id": "clarin.eu:cr1:p_1633000337998",
+                "content": [
+                    {
+                        "type": "Component",
+                        "level": 1,
+                        "ID": "6228d36787d44",
+                        "attributes": {
+                            "name": "Interview",
+                            "label": "Interview",
+                            "CardinalityMin": "1",
+                            "CardinalityMax": "1",
+                            "initialOrder": 1
+                        },
+                        "content": [
+                            {
+                                "type": "Element",
+                                "level": 2,
+                                "ID": "6228d36787d5b",
+                                "attributes": {
+                                    "name": "Titel",
+                                    "label": "Titel",
+                                    "ValueScheme": "string",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "1",
+                                    "Multilingual": "true",
+                                    "duplicate": "yes",
+                                    "initialOrder": 1
+                                }
+                            },
+                            {
+                                "type": "Element",
+                                "level": 2,
+                                "ID": "6228d36787d63",
+                                "attributes": {
+                                    "name": "InterviewDatum",
+                                    "label": "InterviewDatum",
+                                    "ValueScheme": "date",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "unbounded",
+                                    "duplicate": "yes",
+                                    "initialOrder": 2
+                                }
+                            },
+                            {
+                                "type": "Element",
+                                "level": 2,
+                                "ID": "6228d36787d79",
+                                "attributes": {
+                                    "name": "Interviewer",
+                                    "label": "Interviewer",
+                                    "ValueScheme": "string",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "1",
+                                    "initialOrder": 3
+                                }
+                            },
+                            {
+                                "type": "Component",
+                                "level": 2,
+                                "ID": "6228d36787d7c",
+                                "attributes": {
+                                    "name": "Geinterviewde",
+                                    "label": "Geinterviewde",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "unbounded",
+                                    "duplicate": "yes",
+                                    "initialOrder": 4
+                                },
+                                "content": [
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787d81",
+                                        "attributes": {
+                                            "name": "geboorteDatum",
+                                            "label": "geboorteDatum",
+                                            "ValueScheme": "date",
+                                            "CardinalityMin": "1",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787d84",
+                                        "attributes": {
+                                            "name": "rol",
+                                            "label": "rol",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "ValueScheme": [
+                                                [
+                                                    {
+                                                        "value": "partner"
+                                                    }
+                                                ]
+                                            ],
+                                            "initialOrder": 2
+                                        }
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787d90",
+                                        "attributes": {
+                                            "name": "Naam",
+                                            "label": "Naam",
+                                            "CardinalityMin": "1",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 3
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787d94",
+                                                "attributes": {
+                                                    "name": "titel",
+                                                    "label": "titel",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 1
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787d97",
+                                                "attributes": {
+                                                    "name": "voornaam",
+                                                    "label": "voornaam",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 2
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787d9a",
+                                                "attributes": {
+                                                    "name": "tussenvoegsel",
+                                                    "label": "tussenvoegsel",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 3
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787d9e",
+                                                "attributes": {
+                                                    "name": "achternaam",
+                                                    "label": "achternaam",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 4
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787da9",
+                                        "attributes": {
+                                            "name": "Contact",
+                                            "label": "Contact",
+                                            "initialOrder": 4
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787dac",
+                                                "attributes": {
+                                                    "name": "Person",
+                                                    "label": "Person",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 1
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787db0",
+                                                "attributes": {
+                                                    "name": "Address",
+                                                    "label": "Address",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 2
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787db5",
+                                                "attributes": {
+                                                    "name": "Email",
+                                                    "label": "Email",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 3
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787db9",
+                                                "attributes": {
+                                                    "name": "Organisation",
+                                                    "label": "Organisation",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "Multilingual": "true",
+                                                    "initialOrder": 4
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787dbd",
+                                                "attributes": {
+                                                    "name": "Telephone",
+                                                    "label": "Telephone",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 5
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787dc0",
+                                                "attributes": {
+                                                    "name": "Website",
+                                                    "label": "Website",
+                                                    "ValueScheme": "anyURI",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 6
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787dc5",
+                                        "attributes": {
+                                            "name": "Carriere",
+                                            "label": "Carriere",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 5
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787dc8",
+                                                "attributes": {
+                                                    "name": "Opleiding",
+                                                    "label": "Opleiding",
+                                                    "ValueScheme": "string",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 1
+                                                }
+                                            },
+                                            {
+                                                "type": "Component",
+                                                "level": 4,
+                                                "ID": "6228d36787dcd",
+                                                "attributes": {
+                                                    "name": "Stationering",
+                                                    "label": "Stationering",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 2
+                                                },
+                                                "content": [
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787dd0",
+                                                        "attributes": {
+                                                            "name": "Organisatie",
+                                                            "label": "Organisatie",
+                                                            "ValueScheme": "string",
+                                                            "CardinalityMin": "0",
+                                                            "CardinalityMax": "unbounded",
+                                                            "duplicate": "yes",
+                                                            "initialOrder": 1
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787dd4",
+                                                        "attributes": {
+                                                            "name": "Locatie",
+                                                            "label": "Locatie",
+                                                            "ValueScheme": "string",
+                                                            "CardinalityMin": "0",
+                                                            "CardinalityMax": "1",
+                                                            "initialOrder": 2
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787dd7",
+                                                        "attributes": {
+                                                            "name": "Titel",
+                                                            "label": "Diplomatieke Titel (ambass.)",
+                                                            "ValueScheme": "string",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "autoCompleteURI": "http:\/\/localhost\/ccf\/",
+                                                            "initialOrder": 3
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787ddc",
+                                                        "attributes": {
+                                                            "name": "Type",
+                                                            "label": "Type",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "ValueScheme": [
+                                                                [
+                                                                    {
+                                                                        "value": "departement"
+                                                                    },
+                                                                    {
+                                                                        "value": "detachering"
+                                                                    },
+                                                                    {
+                                                                        "value": "post"
+                                                                    },
+                                                                    {
+                                                                        "value": "buiten"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "initialOrder": 4
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Component",
+                                                        "level": 5,
+                                                        "ID": "6228d36787de6",
+                                                        "attributes": {
+                                                            "name": "Periode",
+                                                            "label": "Periode",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "initialOrder": 5
+                                                        },
+                                                        "content": [
+                                                            {
+                                                                "type": "Element",
+                                                                "level": 6,
+                                                                "ID": "6228d36787de9",
+                                                                "attributes": {
+                                                                    "name": "Van",
+                                                                    "label": "Van",
+                                                                    "ValueScheme": "gYear",
+                                                                    "CardinalityMin": "1",
+                                                                    "CardinalityMax": "1",
+                                                                    "initialOrder": 1
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "Element",
+                                                                "level": 6,
+                                                                "ID": "6228d36787dec",
+                                                                "attributes": {
+                                                                    "name": "Tot",
+                                                                    "label": "Tot",
+                                                                    "ValueScheme": "gYear",
+                                                                    "CardinalityMin": "1",
+                                                                    "CardinalityMax": "1",
+                                                                    "initialOrder": 2
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Component",
+                                "level": 2,
+                                "ID": "6228d36787df4",
+                                "attributes": {
+                                    "name": "Beschrijving",
+                                    "label": "Beschrijving",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "1",
+                                    "initialOrder": 5
+                                },
+                                "content": [
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787df7",
+                                        "attributes": {
+                                            "name": "Samenvatting",
+                                            "label": "Samenvatting",
+                                            "ValueScheme": "string",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "Multilingual": "true",
+                                            "duplicate": "yes",
+                                            "initialOrder": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787dfb",
+                                        "attributes": {
+                                            "name": "Onderwerp",
+                                            "label": "Onderwerp",
+                                            "ValueScheme": "string",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "Multilingual": "true",
+                                            "duplicate": "yes",
+                                            "initialOrder": 2
+                                        }
+                                    },
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787dff",
+                                        "attributes": {
+                                            "name": "spatialCoverage",
+                                            "label": "spatialCoverage",
+                                            "ValueScheme": "string",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "Multilingual": "true",
+                                            "duplicate": "yes",
+                                            "initialOrder": 3
+                                        }
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787e03",
+                                        "attributes": {
+                                            "name": "TemporalCoverage",
+                                            "label": "TemporalCoverage",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 4
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787e06",
+                                                "attributes": {
+                                                    "name": "Van",
+                                                    "label": "Van",
+                                                    "ValueScheme": "gYear",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 1
+                                                }
+                                            },
+                                            {
+                                                "type": "Element",
+                                                "level": 4,
+                                                "ID": "6228d36787e09",
+                                                "attributes": {
+                                                    "name": "Tot",
+                                                    "label": "Tot",
+                                                    "ValueScheme": "gYear",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "1",
+                                                    "initialOrder": 2
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Component",
+                                "level": 2,
+                                "ID": "6228d36787e0e",
+                                "attributes": {
+                                    "name": "Opname",
+                                    "label": "Opname",
+                                    "CardinalityMin": "1",
+                                    "CardinalityMax": "unbounded",
+                                    "duplicate": "yes",
+                                    "resource": "all",
+                                    "initialOrder": 6
+                                },
+                                "content": [
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787e13",
+                                        "attributes": {
+                                            "name": "Duur",
+                                            "label": "Duur",
+                                            "ValueScheme": "time",
+                                            "CardinalityMin": "1",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "Element",
+                                        "level": 3,
+                                        "ID": "6228d36787e16",
+                                        "attributes": {
+                                            "name": "Volgorde",
+                                            "label": "Volgorde",
+                                            "ValueScheme": "int",
+                                            "CardinalityMin": "1",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 2
+                                        }
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787e19",
+                                        "attributes": {
+                                            "name": "Rechten",
+                                            "label": "Rechten",
+                                            "CardinalityMin": "1",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 3
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Component",
+                                                "level": 4,
+                                                "ID": "6228d36787e1c",
+                                                "attributes": {
+                                                    "name": "Toestemmingverklaring",
+                                                    "label": "Toestemmingverklaring",
+                                                    "CardinalityMin": "0",
+                                                    "CardinalityMax": "1",
+                                                    "resource": "all",
+                                                    "initialOrder": 1
+                                                },
+                                                "content": [
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787e21",
+                                                        "attributes": {
+                                                            "name": "aanvullendeBepalingen",
+                                                            "label": "aanvullendeBepalingen",
+                                                            "ValueScheme": "string",
+                                                            "CardinalityMin": "0",
+                                                            "CardinalityMax": "1",
+                                                            "initialOrder": 1
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Component",
+                                        "level": 3,
+                                        "ID": "6228d36787e27",
+                                        "attributes": {
+                                            "name": "Inhoud",
+                                            "label": "Inhoud",
+                                            "CardinalityMin": "0",
+                                            "CardinalityMax": "1",
+                                            "initialOrder": 4
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "Component",
+                                                "level": 4,
+                                                "ID": "6228d36787e2a",
+                                                "attributes": {
+                                                    "name": "Sectie",
+                                                    "label": "Sectie",
+                                                    "CardinalityMin": "1",
+                                                    "CardinalityMax": "unbounded",
+                                                    "duplicate": "yes",
+                                                    "initialOrder": 1
+                                                },
+                                                "content": [
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787e2d",
+                                                        "attributes": {
+                                                            "name": "Tijdstip",
+                                                            "label": "Tijdstip",
+                                                            "ValueScheme": "time",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "initialOrder": 1
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Element",
+                                                        "level": 5,
+                                                        "ID": "6228d36787e30",
+                                                        "attributes": {
+                                                            "name": "Onderwerp",
+                                                            "label": "Onderwerp",
+                                                            "ValueScheme": "string",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "Multilingual": "true",
+                                                            "duplicate": "yes",
+                                                            "initialOrder": 2
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "Component",
+                                                        "level": 5,
+                                                        "ID": "6228d36787e33",
+                                                        "attributes": {
+                                                            "name": "Periode",
+                                                            "label": "Periode",
+                                                            "CardinalityMin": "1",
+                                                            "CardinalityMax": "1",
+                                                            "initialOrder": 3
+                                                        },
+                                                        "content": [
+                                                            {
+                                                                "type": "Element",
+                                                                "level": 6,
+                                                                "ID": "6228d36787e36",
+                                                                "attributes": {
+                                                                    "name": "Van",
+                                                                    "label": "Van",
+                                                                    "ValueScheme": "gYear",
+                                                                    "CardinalityMin": "1",
+                                                                    "CardinalityMax": "1",
+                                                                    "initialOrder": 1
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "Element",
+                                                                "level": 6,
+                                                                "ID": "6228d36787e3a",
+                                                                "attributes": {
+                                                                    "name": "Tot",
+                                                                    "label": "Tot",
+                                                                    "ValueScheme": "gYear",
+                                                                    "CardinalityMin": "1",
+                                                                    "CardinalityMax": "1",
+                                                                    "initialOrder": 2
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            };

@@ -22,7 +22,7 @@ ENV DB_SERVER mysql
 ENV DB_USER root
 ENV DB_PASSWD rood
 ENV DB_NAME cmdi_forms
-ENV THUIS "http://localhost/ccf/"
+ENV BASE_URL "http://localhost/ccf/"
 
 COPY html /var/www/html
 

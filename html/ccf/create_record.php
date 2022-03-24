@@ -31,6 +31,8 @@ function emptySample() {
     emptyDirectory(CMDI_RECORD_PATH . "resources/");
 }
 
+
+
 function emptyDirectory($dir) {
     $files = glob("$dir*"); 
     foreach ($files as $file) { 
@@ -38,3 +40,4 @@ function emptyDirectory($dir) {
             unlink($file); 
     }
 }
+

@@ -51,7 +51,8 @@ function show_page($params)
             break;
         case "metadata":
             if (isset($params["id"]) && ($profile = $db->getProfileByMetaDataID($params["id"]))) {
-                // print_r($params);
+                // print_array($params);
+                // print_array($profile);
                 // print_r($profile); // $params["id"] = 1 (in de URL)levert op: 'Interview', 'en', 5
                 show_metadata($profile[0]["name"], $profile[0]["language"], $params["id"]);
             } else {
@@ -80,8 +81,8 @@ function show_page($params)
 function list_records() {
     global $smarty;
     global $db;
-    $titleheader = getenv('TITLE');
-    $profilename = getenv('PROFILE');
+    $titleheader = TITLE;
+    $profilename = PROFILE;
     $profile = $db->getProfileData($profilename); // new function 
     // print_array($profile);
     $profile_id = $profile[0]['profile_id']; // hmm

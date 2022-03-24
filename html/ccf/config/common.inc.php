@@ -1,6 +1,8 @@
 <?php
 define('APPLICATION_NAME', 'CLARIAH CMDI Forms');
-define('BASE_URL', getenv("THUIS"));
+define('BASE_URL', getenv("BASE_URL"));
+define('TITLE', getenv("TITLE"));
+define('PROFILE', getenv("PROFILE"));
 
 // define('BASE_URL', 'http://localhost/ccf/');
 define('ROOT', '/var/www/html/ccf/');

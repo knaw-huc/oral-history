@@ -17,6 +17,8 @@ services:
             - 80:80
         volumes: 
             - ./html:/var/www/html/ # during development
+            - ./data:/var/www/html/ccf/data/
+            # - ./profiles/:/var/www/html/ccf/data/profiles/
             # - ./html/ccf/data:/var/www/html/ccf/data
             # - cmdirecords:/var/www/html/ccf/data/records         
         environment:
@@ -24,12 +26,12 @@ services:
             PROFILE: "Interview"
             PROFILE_ID: "p_163300033799"
             SUBTITLE: "All you need for development"
-            # THUIS: "http://localhost/ccf/"
+            BASE_URL: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"
-            # DB_SERVER: mysql
-            # DB_USER: root
-            # DB_PASSWD: rood
-            # DB_NAME: cmdi_forms
+            DB_SERVER: mysql
+            DB_USER: root
+            DB_PASSWD: rood
+            DB_NAME: cmdi_forms
 
 
 volumes:
