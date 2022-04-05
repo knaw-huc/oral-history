@@ -10,9 +10,15 @@
         <Component name="Geinterviewde">
             <Component name="Carriere">
                 <Component name="Stationering">
+                    <Element name="Post">
+                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy?vocabulary=diplget-posts</clariah:autoCompleteURI>
+                    </Element>
+                    <Element name="Departement">
+                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy?vocabulary=diplget-departments</clariah:autoCompleteURI>
+                    </Element>
                     <Element name="Titel">
                         <clariah:label xml:lang="nl">Diplomatieke Titel (ambass.)</clariah:label>
-                        <clariah:autoCompleteURI>http://localhost/ccf/</clariah:autoCompleteURI>
+                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy?vocabulary=diplget-roles</clariah:autoCompleteURI>
                     </Element>
                 </Component>
             </Component>
