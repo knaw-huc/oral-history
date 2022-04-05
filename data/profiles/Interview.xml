@@ -35,11 +35,13 @@
                 <Element name="Website" ConceptLink="http://hdl.handle.net/11459/CCR_C-63_95ec8724-267a-8689-a04d-50ae515bbacf" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded"/>
             </Component>
             <Component name="Carriere" CardinalityMin="0" CardinalityMax="1">
-                <Element name="Opleiding" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Element name="Opleiding" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Component name="Stationering" CardinalityMin="1" CardinalityMax="unbounded">
-                    <Element name="Organisatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                    <Element name="Locatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                    <Element name="Titel" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                    <Element name="Organisatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="Post" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" Multilingual="true"/>
+                    <Element name="Departement" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+                    <Element name="Locatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+                    <Element name="Titel" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
                     <Element name="Type" CardinalityMin="1" CardinalityMax="1">
                         <ValueScheme>
                             <Vocabulary>
