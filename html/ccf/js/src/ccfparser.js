@@ -395,6 +395,7 @@ var formBuilder = {
                 control.setAttribute('id', element.ID);
                 if (element.attributes.autoCompleteURI !== undefined) {
                     control.setAttribute("data-auto", "yes");
+                    control.setAttribute("data-uri", element.attributes.autoCompleteURI);
                 }
                 break;
         }
@@ -547,7 +548,8 @@ function hideComponentFields() {
 function createAutoCompletes() {
     $("input[data-auto='yes']").each(function () {
         $(this).devbridgeAutocomplete({
-            serviceUrl: server + 'proxy.php',
+            //serviceUrl: server + 'proxy.php',
+            serviceUrl: $(this).attr("data-uri"),
             dataType: 'text',
             paramName: 'q'
         });
@@ -557,7 +559,8 @@ function createAutoCompletes() {
 function addAutoComplete(clonedComponent) {
     clonedComponent.find("input[data-auto='yes']").each(function () {
         $(this).devbridgeAutocomplete({
-            serviceUrl: server + 'proxy.php',
+            //serviceUrl: server + 'proxy.php',
+            serviceUrl: $(this).attr("data-uri"),
             dataType: 'text',
             paramName: 'q'
         });
