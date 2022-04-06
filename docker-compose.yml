@@ -17,7 +17,7 @@ services:
             - 80:80
         volumes: 
             - ./html:/var/www/html/ # during development
-            - ./data:/var/www/html/ccf/data/
+            # - ./data:/var/www/html/ccf/data/
             # - ./profiles/:/var/www/html/ccf/data/profiles/
             # - ./html/ccf/data:/var/www/html/ccf/data
             # - cmdirecords:/var/www/html/ccf/data/records         

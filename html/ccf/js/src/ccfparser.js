@@ -547,7 +547,9 @@ function hideComponentFields() {
 
 function createAutoCompletes() {
     $("input[data-auto='yes']").each(function () {
+        console.log('data-url', $(this).attr("data-uri"));
         $(this).devbridgeAutocomplete({
+            
             //serviceUrl: server + 'proxy.php',
             serviceUrl: $(this).attr("data-uri"),
             dataType: 'text',
