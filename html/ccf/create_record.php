@@ -16,7 +16,7 @@ require(dirname(__FILE__) . '/classes/CcfRecord.class.php');
 emptySample();
 $json = $_POST["ccData"];
 $profileID = $_POST["ccProfileID"];
-$struc = json_decode($json, 'JSON_OBJECT_AS_ARRAY');
+$struc = json_decode($json, 'JSON_OBJECT_AS_ARRAY'); // de recorddata die binnenkomt via ajax
 //error_log("OK");
 $cmdi = new DOMDocument();
 $cmdi->preserveWhiteSpace = false;

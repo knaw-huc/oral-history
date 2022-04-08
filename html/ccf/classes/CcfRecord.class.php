@@ -12,6 +12,7 @@ class Ccfrecord
     {
         $date = date("Y-m-d");
         $editor = $this->getEditor();
+        $selflink = $this->getSelfLink();
         $headerItems = $cmdiRecord->getElementsByTagNameNS('http://www.clarin.eu/cmd/1', 'Header')->item(0);
 
         foreach ($headerItems->childNodes as $item) {
@@ -25,6 +26,9 @@ class Ccfrecord
                 case "cmd:MdCreator":
                     $item->nodeValue = $editor;
                     break;
+                case "cmd:MdSelfLink":
+                    $item->nodeValue = $selflink;
+                    break;
             }
         }
         $nodes = $cmdiRecord->getElementsByTagNameNS('http://www.clarin.eu/cmd/1', 'Components');
@@ -37,14 +41,26 @@ class Ccfrecord
         return $cmdiRecord;
     }
 
-    private function getEditor() {
+    private function getEditor()
+    {
         $editor = EDITOR;
-        if($_SERVER['PHP_AUTH_USER']){
+        if ($_SERVER['PHP_AUTH_USER']) {
             $editor = $_SERVER['PHP_AUTH_USER'];
         }
         return $editor;
     }
 
+    private function getSelfLink()
+    {
+        $selflink = 'unl://' ;
+        // TODO determine unique id
+        $uniquenumber = $_SESSION["rec_id"];
+        return $selflink . $uniquenumber;
+    }
+    // private function getUniqueNumber() {
+
+    //     return 3;
+    // }
 
     private function processChildren($arrayParts, $node, $cmdi)
     {
