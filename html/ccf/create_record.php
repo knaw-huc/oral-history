@@ -20,7 +20,7 @@ $struc = json_decode($json, 'JSON_OBJECT_AS_ARRAY');
 //error_log("OK");
 $cmdi = new DOMDocument();
 $cmdi->preserveWhiteSpace = false;
-$cmdi->load(dirname(__FILE__) . '/data/record_template.xml');
+$cmdi->load(dirname(__FILE__) . '/data/record_template.xml'); // hard coded Rob Zeeman
 $record = new Ccfrecord();
 $cmdi = $record->createComponents($struc, $profileID, $cmdi, CMDI_RECORD_PATH . "md" . $_SESSION["rec_id"] . "/resources/", CMDI_UPLOAD_PATH);
 $cmdi->save(dirname(__FILE__) . '/data/records/inprogress/md' . $_SESSION["rec_id"] . '/' . METADATA_PATH . '/' . METADATA_FILENAME);
