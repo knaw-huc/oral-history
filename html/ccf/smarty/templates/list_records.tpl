@@ -1,7 +1,9 @@
 {extends file="standardPage.tpl"}
 {block name="content"}
+
+
     <h2>{$title}: list of records </h2>
-                <table id="resultTable">
+                <table id="resultTable" class="sortable">
                     <tr>
                     {foreach from=$headings item=heading}
                         <th>{$heading}</th>
@@ -45,6 +47,7 @@
 </script>
 
 
+<script type="text/javascript" src="{$home_path}js/src/sorttable.js"></script>
 
 
 {/block}
