@@ -248,3 +248,11 @@ table tr td {
 .newRecField {
     display: table-cell;
 }
+
+
+table.sortable tbody tr:nth-child(2n) td {
+    background: white;
+  }
+  table.sortable tbody tr:nth-child(2n+1) td {
+    background: #ddd;
+  }

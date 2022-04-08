@@ -14,7 +14,7 @@
                         <th></th>
                     </tr>
                     {foreach from=$records item=record}
-                        <tr class="{cycle values="odd,even"}">
+                        <tr>
                         {foreach from=$headings item=heading}
                             <td>{$record[$heading]}</td>
                         {/foreach}
@@ -47,7 +47,7 @@
 </script>
 
 
-<script type="text/javascript" src="{$home_path}js/src/sorttable.js"></script>
+                <script type="text/javascript" src="{$home_path}js/src/sorttable.js"></script>
 
 
 {/block}
