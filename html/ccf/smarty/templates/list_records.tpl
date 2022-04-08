@@ -2,7 +2,7 @@
 {block name="content"}
 
 
-    <h2>{$title}: list of records </h2>
+    <h2>list of records </h2>
                 <table id="resultTable" class="sortable">
                     <tr>
                     {foreach from=$headings item=heading}

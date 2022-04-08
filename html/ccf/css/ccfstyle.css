@@ -10,7 +10,7 @@ and open the template in the editor.
 
 .component{
 border:1px solid #000;
-padding: 10px;
+padding: 12px;
 }
 
 .component:first-child{
