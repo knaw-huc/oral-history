@@ -14,13 +14,15 @@
     {
         "heading": "Voornaam",
         "schemaValue": "voornaam"
-    },   
+    }, 
+    
+    {
+        "heading": "tussenv.",
+        "schemaValue": "tussenvoegsel"
+    }, 
     {
         "heading": "Achternaam",
         "schemaValue": "achternaam"
-    },
-    {
-        "heading": "Organisatie",
-        "schemaValue": "Organisation"
     }
+   
 ]
