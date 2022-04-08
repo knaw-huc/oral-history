@@ -7,6 +7,8 @@
         <cmd:MdCreator>Rob Zeeman</cmd:MdCreator>
         <cmd:MdCreationDate></cmd:MdCreationDate>
         <cmd:MdProfile></cmd:MdProfile>
+        <cmd:MdSelfLink></cmd:MdSelfLink>
+
     </cmd:Header>
     <cmd:Resources/>
     <cmd:Components/>

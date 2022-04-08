@@ -3,12 +3,16 @@
 if (!defined('BASE_URL'))
     exit('No direct script access allowed');
 
-class Ccfrecord {
+class Ccfrecord
+{
 
     var $resources = array();
 
-    function createComponents($inputComponents, $profileID, $cmdiRecord, $resourcePath, $uploadPath) {
+    function createComponents($inputComponents, $profileID, $cmdiRecord, $resourcePath, $uploadPath)
+    {
         $date = date("Y-m-d");
+        $editor = $this->getEditor();
+        $selflink = $this->getSelfLink();
         $headerItems = $cmdiRecord->getElementsByTagNameNS('http://www.clarin.eu/cmd/1', 'Header')->item(0);
 
         foreach ($headerItems->childNodes as $item) {
@@ -19,6 +23,12 @@ class Ccfrecord {
                 case "cmd:MdProfile":
                     $item->nodeValue = $profileID;
                     break;
+                case "cmd:MdCreator":
+                    $item->nodeValue = $editor;
+                    break;
+                case "cmd:MdSelfLink":
+                    $item->nodeValue = $selflink;
+                    break;
             }
         }
         $nodes = $cmdiRecord->getElementsByTagNameNS('http://www.clarin.eu/cmd/1', 'Components');
@@ -27,11 +37,33 @@ class Ccfrecord {
         if (!is_null($resourcePath) && !is_null($uploadPath)) {
             $this->processResources($cmdiRecord, $resourcePath, $uploadPath);
         }
-        
+
         return $cmdiRecord;
     }
 
-    private function processChildren($arrayParts, $node, $cmdi) {
+    private function getEditor()
+    {
+        $editor = EDITOR;
+        if ($_SERVER['PHP_AUTH_USER']) {
+            $editor = $_SERVER['PHP_AUTH_USER'];
+        }
+        return $editor;
+    }
+
+    private function getSelfLink()
+    {
+        $selflink = 'unl://' ;
+        // TODO determine unique id
+        $uniquenumber = $_SESSION["rec_id"];
+        return $selflink . $uniquenumber;
+    }
+    // private function getUniqueNumber() {
+
+    //     return 3;
+    // }
+
+    private function processChildren($arrayParts, $node, $cmdi)
+    {
         usort($arrayParts, array(__CLASS__, 'cmp'));
         foreach ($arrayParts as $part) {
             if ($part["type"] == 'component') {
@@ -53,7 +85,8 @@ class Ccfrecord {
         }
     }
 
-    static function cmp($a, $b) {
+    static function cmp($a, $b)
+    {
         if ($a["sortOrder"] == $b["sortOrder"]) {
             return 0;
         } else {
@@ -62,7 +95,8 @@ class Ccfrecord {
         //return strcmp($a["sortOrder"], $b["sortOrder"]);
     }
 
-    private function processElements($name, $items, $node, $cmdi) {
+    private function processElements($name, $items, $node, $cmdi)
+    {
         foreach ($items as $item) {
             $newNode = $cmdi->createElement('cmd:' . $name, $item["value"]);
             if (count($item["attributes"])) {
@@ -70,7 +104,7 @@ class Ccfrecord {
                 foreach ($attributes as $key => $attribute) {
                     if ($key == "lang") {
                         $newNode->setAttribute("xml:lang", $attribute);
-                    }else{
+                    } else {
                         $newNode->setAttribute($key, $attribute);
                     }
                 }
@@ -79,7 +113,8 @@ class Ccfrecord {
         }
     }
 
-    private function processResources($cmdi, $resourcePath, $uploadPath) {
+    private function processResources($cmdi, $resourcePath, $uploadPath)
+    {
         $nodes = $cmdi->getElementsByTagNameNS('http://www.clarin.eu/cmd/1', 'Resources');
         $node = $nodes->item(0);
         $newNode = $cmdi->createElement('cmd:ResourceProxyList', NULL);
@@ -104,10 +139,10 @@ class Ccfrecord {
         $node->appendChild($newNode);
     }
 
-    private function moveResource($file, $resourcePath, $uploadPath) {
+    private function moveResource($file, $resourcePath, $uploadPath)
+    {
         if (file_exists($uploadPath . $file)) {
             rename($uploadPath . $file, $resourcePath . $file);
         }
     }
-
 }

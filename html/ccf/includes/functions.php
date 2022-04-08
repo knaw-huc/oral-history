@@ -154,6 +154,7 @@ function list_records() {
     $smarty->view('list_records');
 }
 
+
 function matchElement($needle, $haystack) {
     preg_match("|<cmd:$needle.*?>(.+?)</cmd:$needle>|", $haystack, $matches);
     return $matches[1];
