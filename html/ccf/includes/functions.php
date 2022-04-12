@@ -1,6 +1,8 @@
 <?php
 
 include_once("utility.php");
+$user = getUser();
+// echo $user;
 
 $smarty = new Mysmarty();
 $db = new db();
@@ -81,6 +83,7 @@ function show_page($params)
 function list_records() {
     global $smarty;
     global $db;
+    global $user;
     $titleheader = TITLE;
     $profilename = PROFILE;
     $profile = $db->getProfileData($profilename); // new function 
@@ -143,6 +146,7 @@ function list_records() {
 
     $smarty->assign('state', $state);
     $smarty->assign('headings', $headings);
+    $smarty->assign('user', $user);
 
     $smarty->assign('records', $mdRecords);
     $smarty->assign('profile', $profile);
@@ -263,6 +267,8 @@ function show_profile($profile, $state = 'profile')
 function show_metadata($name, $language, $recID)
 {
     global $smarty;
+    global $user;
+
     // echo 'hoi';
     // echo $name, $language, $recID;
     $title = getenv('TITLE');
@@ -275,6 +281,8 @@ function show_metadata($name, $language, $recID)
     $parser = new Ccfparser();
     $record = get_record_file($recID);
     $smarty->assign('lang', $language);
+    $smarty->assign('user', $user);
+
     if (!file_exists($cmdi)) {
         $errors[] = "Profile $name not found on disc!";
         show_errors($errors);

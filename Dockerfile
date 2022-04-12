@@ -23,7 +23,8 @@ ENV DB_USER root
 ENV DB_PASSWD rood
 ENV DB_NAME cmdi_forms
 ENV BASE_URL "http://localhost/ccf/"
+RUN htpasswd -b -c /var/www/htp oral oral
 
-COPY html /var/www/html
+# COPY html /var/www/html
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && a2enmod rewrite && a2enmod headers && service apache2 restart

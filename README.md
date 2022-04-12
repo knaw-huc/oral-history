@@ -33,6 +33,8 @@ In development...
 
     http://localhost/ccf/
 
+WATCH IT: login with oral oral
+
 ## Permissions (just once)
 
 cd smarty/

@@ -13,3 +13,8 @@ function initialize() {
     }
 
 }
+
+function getUser(){
+
+    return $_SERVER['PHP_AUTH_USER'];
+}
