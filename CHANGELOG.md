@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 13-04-2022
+
+- make the tweakfile independent of localhost / baseurl
+- new InterviewProfile
+- new Tweakfile
+
 ## 12-04-2022
 
 - very basic login
@@ -18,7 +24,7 @@
 - skosmos proxy working with skos test: http://localhost/ccf/proxy.php?q=c
 - adapted some endpoint variables in js and php
 
-## 3-3--2022
+## 3-3-2022
 
 - new interview (& tweak) file
 

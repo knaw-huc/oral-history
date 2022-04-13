@@ -11,14 +11,17 @@
             <Component name="Carriere">
                 <Component name="Stationering">
                     <Element name="Post">
-                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy.php?vocabulary=diplget-posts</clariah:autoCompleteURI>
+                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=diplget-posts</clariah:autoCompleteURI>
                     </Element>
                     <Element name="Departement">
-                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy.php?vocabulary=diplget-departments</clariah:autoCompleteURI>
+                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=diplget-departments</clariah:autoCompleteURI>
                     </Element>
                     <Element name="Titel">
                         <clariah:label xml:lang="nl">Diplomatieke Titel (ambass.)</clariah:label>
-                        <clariah:autoCompleteURI>http://localhost/ccf/skos_proxy.php?vocabulary=diplget-roles</clariah:autoCompleteURI>
+                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=diplget-roles</clariah:autoCompleteURI>
+                    </Element>
+					 <Element name="Locatie">
+                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=diplget-cities</clariah:autoCompleteURI>
                     </Element>
                 </Component>
             </Component>
