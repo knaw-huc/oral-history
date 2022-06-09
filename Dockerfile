@@ -23,7 +23,7 @@ ENV DB_USER root
 ENV DB_PASSWD rood
 ENV DB_NAME cmdi_forms
 ENV BASE_URL "http://localhost/ccf/"
-RUN htpasswd -b -c /var/www/htp oral oral
+RUN htpasswd -b -c /var/www/htp test test
 
 # COPY html /var/www/html
 

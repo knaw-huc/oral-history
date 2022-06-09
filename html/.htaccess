@@ -3,4 +3,4 @@ AuthName "Restricted Area"
 # (Following line optional)
 AuthBasicProvider file
 AuthUserFile "/var/www/htp"
-Require user oral
+Require user test

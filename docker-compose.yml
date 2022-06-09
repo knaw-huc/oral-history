@@ -22,7 +22,7 @@ services:
             # - ./html/ccf/data:/var/www/html/ccf/data
             # - cmdirecords:/var/www/html/ccf/data/records         
         environment:
-            TITLE: "Oral history editor "
+            TITLE: "HuC generic Editor  "
             PROFILE: "Interview"
             PROFILE_ID: "p_163300033799"
             SUBTITLE: "All you need for development"
