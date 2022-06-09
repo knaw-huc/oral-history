@@ -8,14 +8,17 @@ In development...
 
     docker-compose up -d
 
-## Important locations (configuration files), different for each app
+## Important locations and configuration, different for each app
 
+    docker-compose.yml 
+    # adapt TITLE and (PROFILE, not really neccesary yet. For future env extraction in the init script)
 
     html/ccf/data/profiles/Profilename.xml
     html/ccf/data/profiles/ProfilenameTweak.xml
 
     html/ccf/config/listview.json
-    # extracts names and data from the profile for the listview
+    # extracts names and data from the profile for the listview in this app
+
 
 ## JUST ONCE
 
@@ -65,6 +68,6 @@ chmod 777 uploads/ records/ records/inprogress/
 
  ## clean up
 
-    docker exec -i <dockerid>   mysql -uroot -prood  -e "drop  database cmdi_forms"
-    docker exec -i <dockerid> rm -fr docker exec -i <dockerid> rm -fr /var/www/html/ccf/data/records/inprogress/
+    docker exec -i <docker-mariadb-id>   mysql -uroot -prood  -e "drop  database cmdi_forms"
+    docker exec -i <docker-php-id> rm -fr /var/www/html/ccf/data/records/inprogress/
 
