@@ -1,5 +1,12 @@
 # CHANGELOG
 
+
+## 9-06-2022
+
+- walkthrough / tested it like a new customer, from installation to running
+- rewrote README 
+- cleanup superfluous profiles
+
 ## 13-04-2022
 
 - removed fake folders, was confusing
