@@ -3,6 +3,7 @@
 
 ## 28-7-2022
 
+- adapted skos_proxy.php for matching words
 - delete record gave a wrong redirect, fixed
 - added check on non login
 - removed .htaccess file, not necessary for testing
