@@ -53,13 +53,7 @@ TODO: script this process
 
     http://localhost/ccf/
 
-<<<<<<< HEAD
-## login
 
-WATCH IT: login with oral oral
-=======
-WATCH IT: login with test test (basic authentication)
->>>>>>> 15060d4fef4f60eeae42c5ebfb0e75c75050d0bd
 
 ## Permissions (just once)
 

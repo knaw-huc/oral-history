@@ -1,7 +1,7 @@
 <?php
 
 include_once("utility.php");
-$user = getUser();
+// $user = getUser();
 // echo $user;
 
 $smarty = new Mysmarty();

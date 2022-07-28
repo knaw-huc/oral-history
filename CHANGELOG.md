@@ -4,6 +4,8 @@
 ## 28-7-2022
 
 - added check on non login
+- removed .htaccess file, not necessary for testing
+
 ## 9-06-2022
 
 - walkthrough / tested it like a new customer, from installation to running
