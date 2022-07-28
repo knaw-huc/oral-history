@@ -1,6 +1,12 @@
 # CHANGELOG
 
+
+## 28-7-2022
+
+- added check on non login
+
 ## 13-04-2022
+
 
 - removed fake folders, was confusing
 - make the tweakfile independent of localhost / baseurl
