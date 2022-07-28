@@ -37,7 +37,9 @@ function show_page($params)
                     // delete record; action delete
                     $profile_id = $params["profile_id"];
                     delete_record($recordId);
-                    header("Location: " . BASE_URL . "index.php?page=profile&id=$profile_id&state=records");
+                    // header("Location: " . BASE_URL . "index.php?page=profile&id=$profile_id&state=records");
+                    header("Location: " . BASE_URL . "index.php");
+
                 }
             } else {
                 // no action; show profile page
