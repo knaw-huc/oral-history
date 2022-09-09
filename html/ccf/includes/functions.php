@@ -40,7 +40,11 @@ function show_page($params)
                     // header("Location: " . BASE_URL . "index.php?page=profile&id=$profile_id&state=records");
                     header("Location: " . BASE_URL . "index.php");
 
-                }
+                } elseif ($action == "show_record") {
+                    $recordId = $params["id"];
+                    showCMDI(($recordId));
+
+                }    
             } else {
                 // no action; show profile page
                 if (isset($params["id"]) && ($profile = $db->getProfile($params["id"]))) {
@@ -315,9 +319,32 @@ function show_metadata($name, $language, $recID)
     }
 }
 
+// http://localhost/ccf/index.php?page=profile&id=33&action=get_record_file
+
+
+
+function showCMDI($id) {
+    // echo $id;
+    // echo 'hoi';
+    $fileName = CMDI_RECORD_PATH . "md$id/metadata/record.cmdi";
+    // echo $fileName;
+    if(file_exists($fileName)){
+        // echo 'yep';
+    } else {
+        // echo 'nope';
+    }header('Content-type: text/xml');
+    $xml = file_get_contents($fileName);
+    // echo count($xml);
+    echo $xml;
+    die;
+}
+
 function get_record_file($id)
 {
     $fileName = CMDI_RECORD_PATH . "md$id/metadata/record.cmdi";
+    // echo $fileName;
+
+
     if (file_exists($fileName)) {
         return $fileName;
     } else {

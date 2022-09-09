@@ -12,6 +12,8 @@
                         <th><a href="{$home_path}index.php?page=new_rec&profile={$profile_id}" id="addRec"><img src="{$home_path}img/add.ico" height="16px" width="16px"></a></th>
                         <th></th>
                         <th></th>
+                        <th></th>
+
                     </tr>
                     {foreach from=$records item=record}
                         <tr>
@@ -22,6 +24,8 @@
                             <td><a href="{$home_path}index.php?page=metadata&id={$record.id}" title="Edit metadata"><img src="{$home_path}img/edit.png" height="16px" width="16px"></a></td>
                             <td><a href="{$home_path}index.php?page=profile&id={$record.id}&action=download_record" title="Download"><img src="{$home_path}img/download.png" height="16px" width="16px"></a></td>
                             <td><a href="{$home_path}index.php?page=profile&id={$record.id}&action=delete_record" title="Delete" class="myBtn delete" id="myBtn{$record.id}" onclick="deleteRecord({$record.id}, {$profile_id});"><img src="{$home_path}img/bin.png" height="16px" width="16px"></a></td>
+                            <td><a href="{$home_path}index.php?page=profile&id={$record.id}&action=show_record" title="Show CMDI">CMDI</a></td>
+        
                         </tr>
                     {/foreach}
                 </table>
