@@ -59,11 +59,11 @@ TODO: script this process
 
 login php container
 
-cd smarty/
-chmod 777 templates_c
-cd ..
-cd data
-chmod 777 uploads/ records/ records/inprogress/ 
+    cd smarty/
+    chmod 777 templates_c
+    cd ..
+    cd data
+    chmod 777 uploads/ records/ records/inprogress/ 
 
 
  ## clean up
