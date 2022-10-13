@@ -24,7 +24,7 @@ In development...
 
 TODO: script this process
 
-## Create Database (just once)
+### Create Database
     docker ps
     # obtain container-id's, one for mariadb, one for php-apache
 
@@ -34,14 +34,14 @@ TODO: script this process
     docker exec -i <docker-mariadb-id>  mysql -uroot -prood cmdi_forms < cmdi_forms.sql
     # dockerid from the mariadb container
     
-## create folders wiht right privileges
+### create folders wiht right privileges
     # if not exists probably also not neccesary
     docker exec -i <docker-php-id> mkdir /var/www/html/ccf/data/records/inprogress/
 
     docker exec -i <docker-php-id> chmod 777 /var/www/html/ccf/data/records/inprogress/
 
 
-## Permissions PHP container (just once)
+### Permissions PHP container
 
 login php container
 
