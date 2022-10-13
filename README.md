@@ -11,7 +11,7 @@ In development...
 ## Important locations and configuration, different for each app
 
     docker-compose.yml 
-    # adapt TITLE and (PROFILE, not really neccesary yet. For future env extraction in the init script)
+    # adapt TITLE and PROFILE, the name of the profile must be the name of the XML profile file without the xml extension
 
     html/ccf/data/profiles/Profilename.xml
     html/ccf/data/profiles/ProfilenameTweak.xml
@@ -28,16 +28,28 @@ TODO: script this process
     docker ps
     # obtain container-id's, one for mariadb, one for php-apache
 
+    # if not exists, probably not necessary, database is created first time docker-compose is run
     docker exec -i <docker-mariadb-id>  mysql -uroot -prood  -e "create database cmdi_forms"
-    # if not exists
+    
     docker exec -i <docker-mariadb-id>  mysql -uroot -prood cmdi_forms < cmdi_forms.sql
     # dockerid from the mariadb container
     
 ## create folders wiht right privileges
-
+    # if not exists probably also not neccesary
     docker exec -i <docker-php-id> mkdir /var/www/html/ccf/data/records/inprogress/
-    # if not exists
+
     docker exec -i <docker-php-id> chmod 777 /var/www/html/ccf/data/records/inprogress/
+
+
+## Permissions PHP container (just once)
+
+login php container
+
+    cd smarty/
+    chmod 777 templates_c
+    cd ..
+    cd data
+    chmod 777 uploads/ records/ records/inprogress/ 
 
 
 ## IMPORTANT get the Profile running
@@ -52,18 +64,6 @@ TODO: script this process
 ## show a list of the records
 
     http://localhost/ccf/
-
-
-
-## Permissions (just once)
-
-login php container
-
-    cd smarty/
-    chmod 777 templates_c
-    cd ..
-    cd data
-    chmod 777 uploads/ records/ records/inprogress/ 
 
 
  ## clean up

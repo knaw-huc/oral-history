@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 13-10-2022
+
+- rewrote README
+
 ## 9-9-2022
 
 - added showCMDI function for diagnostics
