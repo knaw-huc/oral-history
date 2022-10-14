@@ -1,28 +1,6 @@
 [
     {
-        "heading": "Titel",
-        "schemaValue": "Titel"
-    },
-    {
-        "heading": "Interview Datum",
-        "schemaValue": "Opnamedatum"
-    },
-    {
-        "heading": "Interviewer",
-        "schemaValue": "Interviewer"
-    },
-    {
-        "heading": "Voornaam",
-        "schemaValue": "voornaam"
-    }, 
-    
-    {
-        "heading": "tussenv.",
-        "schemaValue": "tussenvoegsel"
-    }, 
-    {
-        "heading": "Achternaam",
-        "schemaValue": "achternaam"
-    }
-   
+        "heading": "Identifier",
+        "schemaValue": "identifier"
+    }   
 ]

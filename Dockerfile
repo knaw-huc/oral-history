@@ -20,7 +20,7 @@ RUN pip3 install mysql-connector
 
 ENV DB_SERVER mysql
 ENV DB_USER root
-ENV DB_PASSWD rood
+ENV DB_PASSWD ${DB_PASSWD:-rood}
 ENV DB_NAME cmdi_forms
 ENV BASE_URL "http://localhost/ccf/"
 RUN htpasswd -b -c /var/www/htp test test
@@ -28,3 +28,7 @@ RUN htpasswd -b -c /var/www/htp test test
 # COPY html /var/www/html
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && a2enmod rewrite && a2enmod headers && service apache2 restart
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
