@@ -31,7 +31,7 @@
         <div id="content">
             {block name="content"}<table>
             <tr>
-                <td><div id="scan"><img src="{$home_path}/data/records/inprogress/md1/resources/1.jpg"/></div></td>
+                <td><div id="scan"><img width="100px" src="{$home_path}/data/records/inprogress/md1/resources/1.jpg"/></div></td>
                 <td><div id="ccform"></div></td>
             </tr>
             </table>{/block}
