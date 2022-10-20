@@ -29,7 +29,12 @@
         <div id="user">{$user}</div>
         <div id="homeBtn"></div>
         <div id="content">
-            {block name="content"}<div id="ccform"></div>{/block}
+            {block name="content"}<table>
+            <tr>
+                <td><div id="scan"><img src="{$home_path}/data/records/inprogress/md1/resources/1.jpg"/></div></td>
+                <td><div id="ccform"></div></td>
+            </tr>
+            </table>{/block}
         </div>
         </div>
     </body>
