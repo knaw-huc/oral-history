@@ -21,9 +21,9 @@ services:
         volumes: 
             - ./html:/var/www/html/ # during development       
         environment:
-            TITLE: "HuC generic Editor"
-            PROFILE: "Vragenlijst"
-            SUBTITLE: "All you need for development"
+            TITLE: "Vocabulary Editor"
+            PROFILE: "Vocabulary"
+            SUBTITLE: "Maintain vocabs"
             BASE_URL: "http://localhost/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: mysql
