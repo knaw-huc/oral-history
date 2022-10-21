@@ -2,7 +2,7 @@ video
 inprogress
 __pycache__
 .idea
-scripts
+#scripts
 docker
 .vscode
 *.zip
@@ -122,3 +122,4 @@ dist
 
 # if a profile has been loaded
 *.loaded
+scripts/saxon-he-10.5.jar
