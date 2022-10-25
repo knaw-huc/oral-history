@@ -19,6 +19,12 @@
             setEvents();
             formBuilder.start(obj);
             {literal}}{/literal});
+            var scan=obj.record[2].value[0].value[1].value[0].value;
+            console.log("scan:" + scan);
+            var src = document.getElementById("scan").src;
+            console.log("old src:" + src);
+            document.getElementById("scan").src= src + scan;
+            console.log("new src:" + document.getElementById("scan").src);
         </script>
     </head>
     <body>
@@ -31,7 +37,7 @@
         <div id="content">
             {block name="content"}<table>
             <tr>
-                <td><div id="scan"><img width="100px" src="{$home_path}/data/records/inprogress/md1/resources/1.jpg"/></div></td>
+                <td><div><img id="scan" width="100px" src="{$home_path}/data/records/inprogress"/></div></td>
                 <td><div id="ccform"></div></td>
             </tr>
             </table>{/block}
