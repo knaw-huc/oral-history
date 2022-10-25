@@ -19,12 +19,8 @@
             setEvents();
             formBuilder.start(obj);
             {literal}}{/literal});
-            var scan=obj.record[2].value[0].value[1].value[0].value;
-            console.log("scan:" + scan);
-            var src = document.getElementById("scan").src;
-            console.log("old src:" + src);
-            document.getElementById("scan").src= src + scan;
-            console.log("new src:" + document.getElementById("scan").src);
+            let scan = obj.record[2].value[0].value[1].value[0]['value'];
+            //console.log("scan: " + scan);
         </script>
     </head>
     <body>
@@ -43,5 +39,14 @@
             </table>{/block}
         </div>
         </div>
+
+        <script>
+            // 'manipulating objects in a generated html page only works if you put the jscript below the html.
+            // console.log("document: " + document);
+            let src = document.getElementById('scan').src;
+            // console.log("old src:" + src);
+            document.getElementById("scan").src = src + scan;
+            // console.log("new src:" + document.getElementById("scan").src);
+        </script>
     </body>
 </html>
