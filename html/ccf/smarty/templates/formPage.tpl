@@ -35,7 +35,7 @@
                 {block name="content"}
                 <table>
                 <tr>
-                <td><div><img id="scan" width="200px" src="{$home_path}data/records/inprogress"/></div></td>
+                <td><div><img id="scan" width="400px" src="{$home_path}data/records/inprogress"/></div></td>
                 <td><div id="ccform"></div></td>
                 </tr>
                 </table>{/block}
@@ -50,6 +50,9 @@
             // console.log("new src:" + document.getElementById("scan").src);
             const viewer = new Viewer(document.getElementById('scan'), {
                 inline: true,
+                toolbar: false,
+                backdrop: false,
+                minHeight: 300,
                 viewed() {
                     viewer.zoomTo(1);
                 },
