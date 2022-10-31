@@ -1,2 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/1" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1440426460262/xsd" CMDVersion="1.2"><cmd:Header><cmd:MdCreator>KNAW editor</cmd:MdCreator><cmd:MdCreationDate>2022-10-25</cmd:MdCreationDate><cmd:MdProfile>clarin.eu:cr1:p_1653377925727</cmd:MdProfile><cmd:MdSelfLink>unl://1</cmd:MdSelfLink></cmd:Header><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/><cmd:IsPartOfList/></cmd:Resources><cmd:Components><cmd:Vragenlijst><cmd:identifier>test</cmd:identifier><cmd:Scan><cmd:file>/data/scans/1.jpg</cmd:file></cmd:Scan></cmd:Vragenlijst></cmd:Components></cmd:CMD>
+<?xml version="1.0"?>
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CMDVersion="1.1" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.1/profiles/clarin.eu:cr1:p_1653377925727/xsd"><cmd:Header><cmd:MdProfile>clarin.eu:cr1:p_1653377925727</cmd:MdProfile></cmd:Header><cmd:Resources><cmd:ResourceProxyList>
+            <cmd:ResourceProxy id="s">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/IN/N7/N7_1956_A1-B49_001.pdf</cmd:ResourceRef>
+            </cmd:ResourceProxy>            
+            <cmd:ResourceProxy id="p1">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-0_links.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <cmd:ResourceProxy id="p2">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-0_rechts.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <cmd:ResourceProxy id="p3">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-1_links.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <cmd:ResourceProxy id="p4">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-1_rechts.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <cmd:ResourceProxy id="p5">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-2_links.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <cmd:ResourceProxy id="p6">
+                <cmd:ResourceType>Resource</cmd:ResourceType>
+                <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-2_rechts.jpg</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+            <!-- enz. -->
+        </cmd:ResourceProxyList><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components>
+        <cmd:Vragenlijst>
+            <cmd:identifier>N7<!-- directory --></cmd:identifier>
+            <cmd:aantalPaginas>0</cmd:aantalPaginas>
+            <cmd:Scan ref="s">
+                <cmd:identifier>N7_1956_A1-B49_001-2<!-- filename zonder extension --></cmd:identifier>
+                <cmd:aantalPaginas>6</cmd:aantalPaginas>
+                <cmd:Pagina ref="p1">
+                    <cmd:nr>1</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <cmd:Pagina ref="p2">
+                    <cmd:nr>2</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <cmd:Pagina ref="p3">
+                    <cmd:nr>3</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <cmd:Pagina ref="p4">
+                    <cmd:nr>4</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <cmd:Pagina ref="p5">
+                    <cmd:nr>5</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <cmd:Pagina ref="p6">
+                    <cmd:nr>6</cmd:nr>
+                    <!--<cmdp:type>als verwacht</cmdp:type>-->
+                </cmd:Pagina>
+                <!-- enz -->
+            </cmd:Scan>
+        </cmd:Vragenlijst>
+    </cmd:Components></cmd:CMD>
