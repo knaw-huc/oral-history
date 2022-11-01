@@ -22,8 +22,15 @@
             setEvents();
             formBuilder.start(obj);
             {literal}}{/literal});
-            let scan = obj.record[2].value[0].value[1].value[0]['value'];
-            //console.log("scan: " + scan);
+            let scan = obj.record[2].value[0].value[2].value[0]['value'];
+            scan = obj.record[1].value[0].value[1].value[1]['value'];
+//            console.log("obj: " + JSON.stringify(obj, null, 4));
+            //console.log("1: "+ JSON.stringify(obj.record[2], null, 4));
+//            console.log("2: "+ JSON.stringify(obj.record[2].value, null, 4));
+ //           console.log("2a: "+ JSON.stringify(obj.record[2].value[0], null, 4));
+  //          console.log("3: "+ JSON.stringify(obj.record[2].value[0].value[2], null, 4));
+   //         console.log("4: "+ JSON.stringify(obj.record[2].value[0].value[2].value[0], null, 4));
+            console.log("scan: " + scan);
         </script>
     </head>
     <body>
