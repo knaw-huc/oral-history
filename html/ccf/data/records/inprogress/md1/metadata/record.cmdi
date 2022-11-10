@@ -1,9 +1,14 @@
 <?xml version="1.0"?>
-<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CMDVersion="1.1" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.1/profiles/clarin.eu:cr1:p_1653377925727/xsd"><cmd:Header><cmd:MdProfile>clarin.eu:cr1:p_1653377925727</cmd:MdProfile></cmd:Header><cmd:Resources><cmd:ResourceProxyList>
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CMDVersion="1.1" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.1/profiles/clarin.eu:cr1:p_1653377925727/xsd">
+    <cmd:Header>
+        <cmd:MdProfile>clarin.eu:cr1:p_1653377925727</cmd:MdProfile>
+    </cmd:Header>
+    <cmd:Resources>
+        <cmd:ResourceProxyList>
             <cmd:ResourceProxy id="s">
                 <cmd:ResourceType>Resource</cmd:ResourceType>
                 <cmd:ResourceRef>/IN/N7/N7_1956_A1-B49_001.pdf</cmd:ResourceRef>
-            </cmd:ResourceProxy>            
+            </cmd:ResourceProxy>
             <cmd:ResourceProxy id="p1">
                 <cmd:ResourceType>Resource</cmd:ResourceType>
                 <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-0_links.jpg</cmd:ResourceRef>
@@ -29,7 +34,11 @@
                 <cmd:ResourceRef>/OUT/N7/N7_1956_A1-B49_001-2_rechts.jpg</cmd:ResourceRef>
             </cmd:ResourceProxy>
             <!-- enz. -->
-        </cmd:ResourceProxyList><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components>
+        </cmd:ResourceProxyList>
+        <cmd:JournalFileProxyList/>
+        <cmd:ResourceRelationList/>
+    </cmd:Resources>
+    <cmd:Components>
         <cmd:Vragenlijst>
             <cmd:identifier>N7<!-- directory --></cmd:identifier>
             <cmd:aantalPaginas>0</cmd:aantalPaginas>
@@ -63,4 +72,5 @@
                 <!-- enz -->
             </cmd:Scan>
         </cmd:Vragenlijst>
-    </cmd:Components></cmd:CMD>
+    </cmd:Components>
+</cmd:CMD>
