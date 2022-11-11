@@ -462,6 +462,10 @@ function cloneElement(obj) {
             $(this).attr('id', id + '_' + next);
             $(this).html("");
         });
+    clonedElement.find(".input_element").each(
+        function () {
+            $(this).val("");
+        });
     clonedElement.find(".language_dd").each(
         function () {
             $(this).attr('id', 'lang_' + tempID);
@@ -515,6 +519,11 @@ function cloneComponent(e) {
     });
     clonedComponent.find(".expander").each(function () {
         $(this).on("click", function() {showHideComponent(this)});
+    });
+    clonedComponent.find(".language_dd").each(function () {
+        var id = $(this).attr('id');
+        $(this).attr('id', 'lang_' + id + '_' + next);
+        $(this).val(language);
     });
     clonedComponent.find(".uploader").each(function () {
         var id = $(this).attr("id");
