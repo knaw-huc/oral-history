@@ -63,7 +63,7 @@ var formBuilder = {
             label.innerHTML = element.attributes.label;
         }
         if (element.attributes.ValueScheme === 'date') {
-            label.innerHTML = label.innerHTML + ' (' + ccfOptions.alert.date_string + ')';
+            label.innerHTML = label.innerHTML + ' (' + ccfOptions[language].alert.date_string + ')';
         }
         input = document.createElement('div');
         input.setAttribute('class', 'control');
@@ -83,7 +83,7 @@ var formBuilder = {
                 option.innerHTML = this.languages[key];
                 dropdown.appendChild(option);
             }
-            $(dropdown).val(ccfOptions.language);
+            $(dropdown).val(language);
             input.appendChild(dropdown);
         }
         if (element.attributes.attributeList !== undefined) {
@@ -143,7 +143,7 @@ var formBuilder = {
                         clonedElement.find(".language_dd").each(
                                 function () {
                                     $(this).attr('id', 'lang_' + tempID);
-                                    $(this).val(ccfOptions.language);
+                                    $(this).val(language);
                                 });
                         clonedElement.find(".element_attribute").each(
                                 function () {
@@ -459,7 +459,7 @@ var formBuilder = {
         buttonFrame.setAttribute('id', 'btnFrame');
         var control = document.createElement('input');
         control.setAttribute('type', 'button');
-        control.setAttribute('value', ccfOptions.submitButton.label);
+        control.setAttribute('value', ccfOptions[language].submitButton.label);
         control.setAttribute('id', 'OKbtn');
         control.onclick = function () {
             validate();
@@ -467,16 +467,16 @@ var formBuilder = {
         buttonFrame.appendChild(control);
         var control = document.createElement('input');
         control.setAttribute('type', 'button');
-        control.setAttribute('value', ccfOptions.saveButton.label);
+        control.setAttribute('value', ccfOptions[language].saveButton.label);
         control.setAttribute('id', 'saveBtn');
         control.onclick = function () {
             sendForm();
         };
         buttonFrame.appendChild(control);
-        if (ccfOptions.resetButton !== null && ccfOptions.resetButton !== undefined) {
+        if (ccfOptions[language].resetButton !== null && ccfOptions[language].resetButton !== undefined) {
             var control = document.createElement('input');
             control.setAttribute('type', 'button');
-            control.setAttribute('value', ccfOptions.resetButton.label);
+            control.setAttribute('value', ccfOptions[language].resetButton.label);
             control.setAttribute('id', 'resetBtn');
             control.onclick = function () {
                 history.back();
@@ -641,14 +641,14 @@ function addUploadTrigger(obj) {
     msg.setAttribute("id", "msg" + that.attr("id"));
     msg.setAttribute("class", "headerMsg");
     msg.innerHTML = 'Uploading...';
-    //console.log(ccfOptions.uploadButton.actionURI);
+    //console.log(ccfOptions[language].uploadButton.actionURI);
     that.parent().parent().append(msg);
     var formdata = new FormData();
     if ($(obj).prop('files').length > 0) {
         file = $(obj).prop('files')[0];
         formdata.append("file", file);
         $.ajax({
-            url: ccfOptions.uploadButton.actionURI,
+            url: ccfOptions[language].uploadButton.actionURI,
             type: "POST",
             data: formdata,
             processData: false,
@@ -720,7 +720,7 @@ function sendForm() {
     var form = document.createElement('form');
     $(form).attr('id', 'ccSendForm');
     $(form).attr('method', 'post');
-    $(form).attr('action', ccfOptions.saveButton.actionURI);
+    $(form).attr('action', ccfOptions[language].saveButton.actionURI);
     var inputField = document.createElement('input');
     $(inputField).attr('type', 'hidden');
     $(inputField).attr('name', 'ccData');
@@ -875,7 +875,7 @@ function parseRecord(obj, set) {
 }
 
 
-function getLanguage(obj) {
+function    getLanguage(obj) {
     if (obj.attributes !== undefined) {
         for (var key in obj.attributes) {
             if (key === 'xml:lang') {
@@ -997,9 +997,9 @@ function validateInput(key) {
     $("[data-validation-profile=" + key + "]").each(function () {
         if (validationProfiles[key].attributes.CardinalityMin === '1' && this.value === "" && $(this).parent().parent().attr("class") !== 'disabledElement' && $(this).parent().parent().parent().attr("class") !== 'disabledComponent') {
             inputOK = false;
-            $("#errorMsg_" + this.id).html(ccfOptions.alert.mandatory_field);
+            $("#errorMsg_" + this.id).html(ccfOptions[language].alert.mandatory_field);
             var error = document.createElement('p');
-            $(error).html(validationProfiles[key].attributes.label + ccfOptions.alert.mandatory_field_box);
+            $(error).html(validationProfiles[key].attributes.label + ccfOptions[language].alert.mandatory_field_box);
             $(errorSpace).append(error);
         } else {
             $("#errorMsg_" + this.id).html("");
@@ -1008,9 +1008,9 @@ function validateInput(key) {
             var str = this.value;
             if (!isValidDate(str)) {
                 inputOK = false;
-                $("#errorMsg_" + this.id).html(ccfOptions.alert.no_valid_date);
+                $("#errorMsg_" + this.id).html(ccfOptions[language].alert.no_valid_date);
                 var error = document.createElement('p');
-                $(error).html(validationProfiles[key].attributes.label + ccfOptions.alert.no_valid_date_box);
+                $(error).html(validationProfiles[key].attributes.label + ccfOptions[language].alert.no_valid_date_box);
                 $(errorSpace).append(error);
             }
         }
@@ -1018,9 +1018,9 @@ function validateInput(key) {
             var str = this.value;
             if (!isInteger(str)) {
                 inputOK = false;
-                $("#errorMsg_" + this.id).html(ccfOptions.alert.int_field);
+                $("#errorMsg_" + this.id).html(ccfOptions[language].alert.int_field);
                 var error = document.createElement('p');
-                $(error).html(validationProfiles[key].attributes.label + ccfOptions.alert.int_field_box);
+                $(error).html(validationProfiles[key].attributes.label + ccfOptions[language].alert.int_field_box);
                 $(errorSpace).append(error);
             }
         }
@@ -1029,7 +1029,7 @@ function validateInput(key) {
                 for (var att in validationProfiles[key].attributes.attributeList) {
                     if (validationProfiles[key].attributes.attributeList[att].Required === 'true' && $("#attr_" + validationProfiles[key].attributes.attributeList[att].name + "_" + this.id).val() === "") {
                         inputOK = false;
-                        $("#errorMsg_" + this.id).html(ccfOptions.alert.attr_not_empty_field);
+                        $("#errorMsg_" + this.id).html(ccfOptions[language].alert.attr_not_empty_field);
                     }
                 }
             }
@@ -1058,9 +1058,9 @@ function validateTextArea(key) {
     $("[data-validation-profile=" + key + "]").each(function () {
         if (validationProfiles[key].attributes.CardinalityMin === '1' && this.value === "" && $(this).parent().parent().attr("class") !== 'disabledElement' && $(this).parent().parent().parent().attr("class") !== 'disabledComponent') {
             inputOK = false;
-            $("#errorMsg_" + this.id).html(ccfOptions.alert.mandatory_field);
+            $("#errorMsg_" + this.id).html(ccfOptions[language].alert.mandatory_field);
             var error = document.createElement('p');
-            $(error).html(validationProfiles[key].attributes.label + ccfOptions.alert.mandatory_field_box);
+            $(error).html(validationProfiles[key].attributes.label + ccfOptions[language].alert.mandatory_field_box);
             $(errorSpace).append(error);
         } else {
             $("#errorMsg_" + this.id).html("");
@@ -1071,7 +1071,7 @@ function validateTextArea(key) {
                     console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
-                        $("#errorMsg_" + this.id).html(ccfOptions.alert.attr_not_empty_field);
+                        $("#errorMsg_" + this.id).html(ccfOptions[language].alert.attr_not_empty_field);
                     }
                 }
             }
@@ -1083,9 +1083,9 @@ function validateSelect(key) {
     $("[data-validation-profile=" + key + "]").each(function () {
         if (validationProfiles[key].attributes.CardinalityMin === '1' && this.selectedIndex === 0 && $(this).parent().parent().attr("class") !== 'disabledElement' && $(this).parent().parent().parent().attr("class") !== 'disabledComponent') {
             inputOK = false;
-            $("#errorMsg_" + this.id).html(ccfOptions.alert.mandatory_field);
+            $("#errorMsg_" + this.id).html(ccfOptions[language].alert.mandatory_field);
             var error = document.createElement('p');
-            $(error).html(validationProfiles[key].attributes.label + ccfOptions.alert.mandatory_field_box);
+            $(error).html(validationProfiles[key].attributes.label + ccfOptions[language].alert.mandatory_field_box);
             $(errorSpace).append(error);
         } else {
             $("#errorMsg_" + this.id).html("");
@@ -1096,7 +1096,7 @@ function validateSelect(key) {
                     console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
-                        $("#errorMsg_" + this.id).html(ccfOptions.alert.attr_not_empty_field);
+                        $("#errorMsg_" + this.id).html(ccfOptions[language].alert.attr_not_empty_field);
                     }
                 }
             }
