@@ -99,6 +99,8 @@ var formBuilder = {
                         if (element.attributes.readonly !== undefined && element.attributes.readonly === "yes") {
                             attr_field.setAttribute('readonly', true);
                         }
+
+
                 }
                 input.appendChild(attr_field);
             }
@@ -216,7 +218,7 @@ var formBuilder = {
             btn.setAttribute('data-source', component.ID);
             if (component.attributes.resource !== undefined || component.attributes.CardinalityMin === '0') {
                 $(btn).hide();
-            }            
+            }
             btn.onclick = function (e) {
                 var next = clone.nextClonePostfix();
                 var that = $(this);
@@ -372,6 +374,9 @@ var formBuilder = {
 
             control.appendChild(option);
         }
+        /*if (element.attributes.autoValue !== undefined) {
+            control.setAttribute("value", element.attributes.autoValue);
+        }*/
         return control;
     },
     createTextInputField: function (element) {
@@ -403,11 +408,15 @@ var formBuilder = {
                 control.setAttribute('id', element.ID);
                 if (element.attributes.autoCompleteURI !== undefined) {
                     control.setAttribute("data-auto", "yes");
-                    control.setAttribute("data-uri", element.attributes.autoCompleteURI);
                 }
                 break;
         }
         if (element.attributes.readonly !== undefined && element.attributes.readonly === "yes") {
+            control.setAttribute("readonly", true);
+        }
+
+        //TODO: weghalen als tweak klaar is
+        if (element.attributes.name.indexOf('mmdc_') >= 0) {
             control.setAttribute("readonly", true);
         }
 
@@ -457,14 +466,16 @@ var formBuilder = {
     createButtons: function () {
         var buttonFrame = document.createElement('div');
         buttonFrame.setAttribute('id', 'btnFrame');
-        var control = document.createElement('input');
+
+        /*var control = document.createElement('input');
         control.setAttribute('type', 'button');
         control.setAttribute('value', ccfOptions.submitButton.label);
         control.setAttribute('id', 'OKbtn');
         control.onclick = function () {
             validate();
         };
-        buttonFrame.appendChild(control);
+        buttonFrame.appendChild(control);*/
+
         var control = document.createElement('input');
         control.setAttribute('type', 'button');
         control.setAttribute('value', ccfOptions.saveButton.label);
@@ -473,6 +484,7 @@ var formBuilder = {
             sendForm();
         };
         buttonFrame.appendChild(control);
+
         if (ccfOptions.resetButton !== null && ccfOptions.resetButton !== undefined) {
             var control = document.createElement('input');
             control.setAttribute('type', 'button');
@@ -506,10 +518,8 @@ var formBuilder = {
         buttonFrame.appendChild(errorSpace);
         $("#ccform").append(buttonFrame);
     },
-    // languages: ['aa', 'ab', 'ae', 'af', 'ak', 'am', 'an', 'ar', 'as', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs', 'ca', 'ce', 'ch', 'co', 'cr', 'cs', 'cu', 'cv', 'cy', 'da', 'de', 'dv', 'dz', 'ee', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'ff', 'fi', 'fj', 'fo', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gu', 'gv', 'ha', 'he', 'hi', 'ho', 'hr', 'ht', 'hu', 'hy', 'hz', 'ia', 'id', 'ie', 'ig', 'ii', 'ik', 'io', 'is', 'it', 'iu', 'ja', 'jv', 'ka', 'kg', 'ki', 'kj', 'kk', 'kl', 'km', 'kn', 'ko', 'kr', 'ks', 'ku', 'kv', 'kw', 'ky', 'la', 'lb', 'lg', 'li', 'ln', 'lo', 'lt', 'lu', 'lv', 'mg', 'mh', 'mi', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'na', 'nb', 'nd', 'ne', 'ng', 'nl', 'nn', 'no', 'nr', 'nv', 'ny', 'oc', 'oj', 'om', 'or', 'os', 'pa', 'pi', 'pl', 'ps', 'pt', 'qu', 'rm', 'rn', 'ro', 'ru', 'rw', 'sa', 'sc', 'sd', 'se', 'sg', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'to', 'tr', 'ts', 'tt', 'tw', 'ty', 'ug', 'uk', 'ur', 'uz', 've', 'vi', 'vo', 'wa', 'wo', 'xh', 'yi', 'yo', 'za', 'zh', 'zu'],
-
-    languages: ['nl', 'en'],
-
+    //languages: ['aa', 'ab', 'ae', 'af', 'ak', 'am', 'an', 'ar', 'as', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs', 'ca', 'ce', 'ch', 'co', 'cr', 'cs', 'cu', 'cv', 'cy', 'da', 'de', 'dv', 'dz', 'ee', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'ff', 'fi', 'fj', 'fo', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gu', 'gv', 'ha', 'he', 'hi', 'ho', 'hr', 'ht', 'hu', 'hy', 'hz', 'ia', 'id', 'ie', 'ig', 'ii', 'ik', 'io', 'is', 'it', 'iu', 'ja', 'jv', 'ka', 'kg', 'ki', 'kj', 'kk', 'kl', 'km', 'kn', 'ko', 'kr', 'ks', 'ku', 'kv', 'kw', 'ky', 'la', 'lb', 'lg', 'li', 'ln', 'lo', 'lt', 'lu', 'lv', 'mg', 'mh', 'mi', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'na', 'nb', 'nd', 'ne', 'ng', 'nl', 'nn', 'no', 'nr', 'nv', 'ny', 'oc', 'oj', 'om', 'or', 'os', 'pa', 'pi', 'pl', 'ps', 'pt', 'qu', 'rm', 'rn', 'ro', 'ru', 'rw', 'sa', 'sc', 'sd', 'se', 'sg', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'to', 'tr', 'ts', 'tt', 'tw', 'ty', 'ug', 'uk', 'ur', 'uz', 've', 'vi', 'vo', 'wa', 'wo', 'xh', 'yi', 'yo', 'za', 'zh', 'zu'],
+    languages: ['ara', 'eng', 'fra', 'ofs', 'ghc', 'deu', 'grc', 'heb', 'isl', 'gle', 'ita', 'lat', 'yid', 'gml', 'mis', 'nld', 'dum', 'pro', 'spa', 'zxx'],
     controlHash: []
 };
 
@@ -612,11 +622,8 @@ function expandComponent(obj) {
 
 function createAutoCompletes() {
     $("input[data-auto='yes']").each(function () {
-        console.log('data-url', $(this).attr("data-uri"));
         $(this).devbridgeAutocomplete({
-            
-            //serviceUrl: server + 'proxy.php',
-            serviceUrl: $(this).attr("data-uri"),
+            serviceUrl: server + 'proxy.php',
             dataType: 'text',
             paramName: 'q'
         });
@@ -626,8 +633,7 @@ function createAutoCompletes() {
 function addAutoComplete(clonedComponent) {
     clonedComponent.find("input[data-auto='yes']").each(function () {
         $(this).devbridgeAutocomplete({
-            //serviceUrl: server + 'proxy.php',
-            serviceUrl: $(this).attr("data-uri"),
+            serviceUrl: server + 'proxy.php',
             dataType: 'text',
             paramName: 'q'
         });
@@ -641,7 +647,6 @@ function addUploadTrigger(obj) {
     msg.setAttribute("id", "msg" + that.attr("id"));
     msg.setAttribute("class", "headerMsg");
     msg.innerHTML = 'Uploading...';
-    //console.log(ccfOptions.uploadButton.actionURI);
     that.parent().parent().append(msg);
     var formdata = new FormData();
     if ($(obj).prop('files').length > 0) {
@@ -660,7 +665,6 @@ function addUploadTrigger(obj) {
                 that.hide();
             },
             error: function (result) {
-                console.log(result);
                 that.parent().parent().find(".headerMsg").html('ERROR!');
             }
         });
@@ -908,7 +912,6 @@ function duplicateField(obj, set) {
                 var id = $(this).attr('data-validation-profile');
                 $(this).val(obj.value);
                 tempID = id + '_' + next;
-                console.log(tempID);
                 $(this).attr('id', tempID);
             });
     clonedElement.find(".errorMsg").each(
@@ -927,7 +930,7 @@ function duplicateField(obj, set) {
                 $(this).attr('id', "attr_" + $(this).attr("data-attribute_name") + "_" + tempID);
                 $(this).val(obj.attributes[$(this).attr("data-attribute_name")]);
                 //$(this).val("");
-                console.log(obj);
+                //console.log(obj);
             });
    
     clonedElement.insertAfter(btn.parent());
@@ -1068,7 +1071,7 @@ function validateTextArea(key) {
         if (validationProfiles[key].attributes.attributeList !== undefined) {
             if (this.value !== "") {
                 for (var att in validationProfiles[key].attributes.attributeList) {
-                    console.log(validationProfiles[key].attributes.attributeList[att].Required);
+                    //console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
                         $("#errorMsg_" + this.id).html(ccfOptions.alert.attr_not_empty_field);
@@ -1093,7 +1096,7 @@ function validateSelect(key) {
         if (validationProfiles[key].attributes.attributeList !== undefined) {
             if (this.value !== "") {
                 for (var att in validationProfiles[key].attributes.attributeList) {
-                    console.log(validationProfiles[key].attributes.attributeList[att].Required);
+                    //console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
                         $("#errorMsg_" + this.id).html(ccfOptions.alert.attr_not_empty_field);
