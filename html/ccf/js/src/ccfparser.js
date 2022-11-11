@@ -110,7 +110,7 @@ var formBuilder = {
             btn.setAttribute('value', '+');
             btn.setAttribute('class', 'btn');
             btn.setAttribute('data-source', element.ID);
-            btn.onclick = cloneElement;
+            $(btn).on("click", function() {cloneElement(btn)});
             input.appendChild(btn);
         }
         html.appendChild(label);
@@ -141,7 +141,7 @@ var formBuilder = {
         var span = document.createElement("span");
         span.innerHTML = "▼ ";
         span.setAttribute("class", "collapser");
-        $(span).on("click", showHideComponent);
+        $(span).on("click", thisShowHideComponent);
         header.appendChild(span);
         var span = document.createElement("span");
         span.innerHTML = component.attributes.label;
@@ -480,7 +480,6 @@ function cloneComponent(e) {
     var next = clone.nextClonePostfix();
     var that = $(this);
     e.preventDefault();
-    console.log("Groeten van Antal");
     clonedComponent = that.parent().parent().clone();
     clonedComponent.addClass("clonedComponent");
     clonedComponent.attr("id", clonedComponent.attr("id") + '_' + next);
@@ -507,12 +506,15 @@ function cloneComponent(e) {
         var id = $(this).attr("id");
         $(this).attr('id', id + '_' + next);
         $(this).val("");
-        //console.log("Groeten van de clone");
     });
-    //console.log("Groeten van Maarten en Menzo");
     clonedComponent.find(".btn").each(function () {
         $(this).on("click", function() {cloneElement(this)});
-        console.log($(this));
+    });
+    clonedComponent.find(".collapser").each(function () {
+        $(this).on("click", function() {showHideComponent(this)});
+    });
+    clonedComponent.find(".expander").each(function () {
+        $(this).on("click", function() {showHideComponent(this)});
     });
     clonedComponent.find(".uploader").each(function () {
         var id = $(this).attr("id");
@@ -539,8 +541,8 @@ function expandAll() {
     $(".expander").click();
 }
 
-function showHideComponent() {
-    var that = $(this);
+function showHideComponent(obj) {
+    var that = $(obj);
     if ($(that).hasClass("expander")) {
         $(that).addClass('collapser').removeClass('expander');
         $(that).html("▼ ");
@@ -550,6 +552,11 @@ function showHideComponent() {
         $(that).html("▶ ");
         collapseComponent(that);
     }
+}
+
+function thisShowHideComponent() {
+    var that = $(this);
+    showHideComponent(that);
 }
 
 function showComponentFields() {
