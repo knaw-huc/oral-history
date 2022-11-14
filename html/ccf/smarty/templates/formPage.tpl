@@ -70,7 +70,8 @@
                 navbar: true,
                 toolbar: true,
                 backdrop: false,
-                minHeight: 300,
+                minHeight: 600,
+                minWidth: 400,
                 viewed() {
                     viewer.zoomTo(1);
                 },
