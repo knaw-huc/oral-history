@@ -49,7 +49,7 @@
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
                 <div>
-                <ul id="scans">
+                <ul id="scans" style="display: none;">
                 </ul>
                 </div>
                 </td>
@@ -67,6 +67,7 @@
             //console.log("new src:" + document.getElementById("scans"));
             const viewer = new Viewer(document.getElementById('scans'), {
                 inline: true,
+                navbar: true,
                 toolbar: true,
                 backdrop: false,
                 minHeight: 300,
