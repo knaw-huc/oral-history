@@ -25,15 +25,15 @@
             let scan = obj.record[2].value[0].value[2].value[0]['value'];
             scan = obj.record[1].value[0].value[1].value[1]['value'];
             len = obj.record[1].value[0].value.length;
-            for (i=1;i<len;i++) {
-                console.log("scan: " + JSON.stringify(obj.record[1].value[0].value[i].value[1].value, null, 4));
+            //console.log("len: "+ len);
+            let scans = '';
+            for (i=1;i<len-1;i++) {
+                scans += '<li><img src="{$home_path}data/records/inprogress/' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
+            //    console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
             }
-            //console.log("1: "+ JSON.stringify(obj.record[2], null, 4));
-//            console.log("2: "+ JSON.stringify(obj.record[2].value, null, 4));
- //           console.log("2a: "+ JSON.stringify(obj.record[2].value[0], null, 4));
-  //          console.log("3: "+ JSON.stringify(obj.record[2].value[0].value[2], null, 4));
-   //         console.log("4: "+ JSON.stringify(obj.record[2].value[0].value[2].value[0], null, 4));
-   //         console.log("scan: " + scan);
+
+            let scan1 = obj.record[1].value[0].value[1].value[1].value;
+            let scan2 = obj.record[1].value[0].value[2].value[1].value;
         </script>
     </head>
     <body>
@@ -45,7 +45,14 @@
                 {block name="content"}
                 <table>
                 <tr>
-                <td><div><img id="scan" width="400px" src="{$home_path}data/records/inprogress"/></div></td>
+                <td>
+               <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
+                </div> -->
+                <div>
+                <ul id="scans">
+                </ul>
+                </div>
+                </td>
                 <td><div id="ccform"></div></td>
                 </tr>
                 </table>{/block}
@@ -53,14 +60,14 @@
         </div>
         <script>
             // 'manipulating objects in a generated html page only works if you put the jscript below the html.
-            // console.log("document: " + document);
-            let src = document.getElementById('scan').src;
-            // console.log("old src:" + src);
-            document.getElementById("scan").src = src + scan;
-            // console.log("new src:" + document.getElementById("scan").src);
-            const viewer = new Viewer(document.getElementById('scan'), {
+            let src = document.getElementById('scans').src;
+            //console.log("old src:" + document.getElementById('scans'));
+            const scansList = document.querySelector("#scans");
+            scansList.innerHTML += scans;
+            //console.log("new src:" + document.getElementById("scans"));
+            const viewer = new Viewer(document.getElementById('scans'), {
                 inline: true,
-                toolbar: false,
+                toolbar: true,
                 backdrop: false,
                 minHeight: 300,
                 viewed() {
