@@ -45,7 +45,7 @@
                 {block name="content"}
                 <table>
                 <tr>
-                <td>
+                <td style="width: 50%;">
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
                 <div>
@@ -53,6 +53,7 @@
                 </ul>
                 </div>
                 </td>
+                <td style="width: 10%;"><br/></td>
                 <td><div id="ccform"></div></td>
                 </tr>
                 </table>{/block}
