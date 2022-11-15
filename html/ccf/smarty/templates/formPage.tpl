@@ -45,10 +45,10 @@
                 {block name="content"}
                 <table>
                 <tr>
-                <td style="width: 50%;">
+                <td style="width: 40%;">
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
-                <div>
+                <div style="position: fixed;">
                 <ul id="scans" style="display: none;">
                 </ul>
                 </div>
