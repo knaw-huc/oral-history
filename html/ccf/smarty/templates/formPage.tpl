@@ -45,7 +45,7 @@
                 {block name="content"}
                 <table>
                 <tr>
-                <td style="width: 40%;">
+                <td style="width: 45%;">
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
                 <div style="position: fixed;">
@@ -71,8 +71,8 @@
                 navbar: true,
                 toolbar: true,
                 backdrop: false,
-                minHeight: 600,
-                minWidth: 400,
+                minHeight: 700,
+                minWidth: 600,
                 viewed() {
                     viewer.zoomTo(1);
                 },
