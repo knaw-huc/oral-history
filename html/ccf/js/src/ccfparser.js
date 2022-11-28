@@ -55,6 +55,7 @@ var formBuilder = {
         }
         html.setAttribute('data-name', element.attributes.name);
         html.setAttribute('data-order', element.attributes.initialOrder);
+        html.setAttribute('data-rootID', element.ID);
         label = document.createElement('div');
         label.setAttribute('class', 'label');
         if (element.attributes.CardinalityMin > 0) {
@@ -637,7 +638,6 @@ function expandComponent(obj) {
 
 function createAutoCompletes() {
     $("input[data-auto='yes']").each(function () {
-        console.log('data-url', $(this).attr("data-uri"));
         $(this).devbridgeAutocomplete({
             
             //serviceUrl: server + 'proxy.php',
@@ -666,7 +666,6 @@ function addUploadTrigger(obj) {
     msg.setAttribute("id", "msg" + that.attr("id"));
     msg.setAttribute("class", "headerMsg");
     msg.innerHTML = 'Uploading...';
-    //console.log(ccfOptions[language].uploadButton.actionURI);
     that.parent().parent().append(msg);
     var formdata = new FormData();
     if ($(obj).prop('files').length > 0) {
@@ -685,7 +684,6 @@ function addUploadTrigger(obj) {
                 that.hide();
             },
             error: function (result) {
-                console.log(result);
                 that.parent().parent().find(".headerMsg").html('ERROR!');
             }
         });
@@ -715,7 +713,6 @@ function validate() {
         //validateAttributes(key);
     }
     if (inputOK) {
-        //console.log(validationProfiles);
         sendForm();
     } else {
         $("#errorSpace").append(errorSpace);
@@ -873,7 +870,7 @@ function parseRecord(obj, set) {
 //                        var ref = obj[key].attributes.ref;
 //                        $("div[data-name='" + obj[key].name + "']").
 //                    }
-//                    console.log(uploads[ref]);
+//
 //            }
                 parseRecord(obj[key].value, newSet);
             } else {
@@ -933,7 +930,6 @@ function duplicateField(obj, set) {
                 var id = $(this).attr('data-validation-profile');
                 $(this).val(obj.value);
                 tempID = id + '_' + next;
-                console.log(tempID);
                 $(this).attr('id', tempID);
             });
     clonedElement.find(".errorMsg").each(
@@ -951,8 +947,6 @@ function duplicateField(obj, set) {
             function () {
                 $(this).attr('id', "attr_" + $(this).attr("data-attribute_name") + "_" + tempID);
                 $(this).val(obj.attributes[$(this).attr("data-attribute_name")]);
-                //$(this).val("");
-                console.log(obj);
             });
    
     clonedElement.insertAfter(btn.parent());
@@ -1093,7 +1087,6 @@ function validateTextArea(key) {
         if (validationProfiles[key].attributes.attributeList !== undefined) {
             if (this.value !== "") {
                 for (var att in validationProfiles[key].attributes.attributeList) {
-                    console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
                         $("#errorMsg_" + this.id).html(ccfOptions[language].alert.attr_not_empty_field);
@@ -1118,7 +1111,6 @@ function validateSelect(key) {
         if (validationProfiles[key].attributes.attributeList !== undefined) {
             if (this.value !== "") {
                 for (var att in validationProfiles[key].attributes.attributeList) {
-                    console.log(validationProfiles[key].attributes.attributeList[att].Required);
                     if (validationProfiles[key].attributes.attributeList[att].Required) {
                         inputOK = false;
                         $("#errorMsg_" + this.id).html(ccfOptions[language].alert.attr_not_empty_field);

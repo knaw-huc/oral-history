@@ -15,7 +15,7 @@
         <script>
             obj = {$json};
             $('document').ready(function(){literal}{{/literal}
-            setEvents();
+            //setEvents();
             formBuilder.start(obj);
             {literal}}{/literal});
         </script>
