@@ -22,8 +22,8 @@
             setEvents();
             formBuilder.start(obj);
             {literal}}{/literal});
-            let scan = obj.record[2].value[0].value[2].value[0]['value'];
-            scan = obj.record[1].value[0].value[1].value[1]['value'];
+//            let scan = obj.record[2].value[0].value[2].value[0]['value'];
+//            scan = obj.record[1].value[0].value[1].value[1]['value'];
             len = obj.record[1].value[0].value.length;
             //console.log("len: "+ len);
             let scans = '';
@@ -32,8 +32,6 @@
             //    console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
             }
 
-            let scan1 = obj.record[1].value[0].value[1].value[1].value;
-            let scan2 = obj.record[1].value[0].value[2].value[1].value;
         </script>
     </head>
     <body>
@@ -77,6 +75,9 @@
                     viewer.zoomTo(1);
                 },
             });
+            function showScan(scan) {
+                viewer.view(scan);
+            };
         </script>
     </body>
 </html>
