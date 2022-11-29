@@ -55,7 +55,6 @@ var formBuilder = {
         }
         html.setAttribute('data-name', element.attributes.name);
         html.setAttribute('data-order', element.attributes.initialOrder);
-        html.setAttribute('data-rootID', element.ID);
         label = document.createElement('div');
         label.setAttribute('class', 'label');
         if (element.attributes.CardinalityMin > 0) {
@@ -457,24 +456,25 @@ function cloneElement(obj) {
             tempID = id + '_' + next;
             $(this).attr('id', tempID);
         });
+    clonedElement.find(".input_element").each(
+        function () {
+            $(this).attr("id", $(this).attr("data-validation-profile") + "_" + next);
+            $(this).val("");
+        });
     clonedElement.find(".errorMsg").each(
         function () {
             var id = $(this).attr('id');
-            $(this).attr('id', id + '_' + next);
+            $(this).attr('id', "errorMsg_" + $(this).parent().children(':nth-child(1)').attr("data-validation-profile") + '_' + next);
             $(this).html("");
-        });
-    clonedElement.find(".input_element").each(
-        function () {
-            $(this).val("");
         });
     clonedElement.find(".language_dd").each(
         function () {
-            $(this).attr('id', 'lang_' + tempID);
+            $(this).attr('id', 'lang_' + $(this).parent().children(':nth-child(1)').attr("data-validation-profile") + '_' + next);
             $(this).val(language);
         });
     clonedElement.find(".element_attribute").each(
         function () {
-            $(this).attr('id', "attr_" + $(this).attr("data-attribute_name") + "_" + tempID);
+            $(this).attr('id', "attr_" + $(this).attr("data-attribute_name") + "_" + $(this).parent().children(':nth-child(1)').attr("data-validation-profile"));
             $(this).val("");
         });
     clonedElement.insertAfter(that.parent());
@@ -484,6 +484,7 @@ function cloneElement(obj) {
 function cloneComponent(e) {
     var next = clone.nextClonePostfix();
     var that = $(this);
+    var tmpElID
     e.preventDefault();
     clonedComponent = that.parent().parent().clone();
     clonedComponent.addClass("clonedComponent");
@@ -501,17 +502,15 @@ function cloneComponent(e) {
         function () {
             $(this).remove();
         });
+    clonedComponent.find(".input_element").each(function () {
+        $(this).attr('id', $(this).attr("data-validation-profile") + '_' + next.toString());
+        $(this).val("");
+    });
     clonedComponent.find(".errorMsg").each(
         function () {
             $(this).html('');
-            var id = $(this).attr('id');
-            $(this).attr('id', id + '_' + next);
+            $(this).attr('id', "errorMsg_" + $(this).parent().children(":nth-child(1)").attr("data-validation-profile") + '_' + next.toString());
         });
-    clonedComponent.find(".input_element").each(function () {
-        var id = $(this).attr("id");
-        $(this).attr('id', id + '_' + next);
-        $(this).val("");
-    });
     clonedComponent.find(".btn").each(function () {
         $(this).on("click", function() {cloneElement(this)});
     });
@@ -522,13 +521,11 @@ function cloneComponent(e) {
         $(this).on("click", function() {showHideComponent(this)});
     });
     clonedComponent.find(".language_dd").each(function () {
-        var id = $(this).attr('id');
-        $(this).attr('id', 'lang_' + id + '_' + next);
+        $(this).attr('id', 'lang_' + $(this).parent().children(":nth-child(1)").attr("data-validation-profile") + '_' + next.toString());
         $(this).val(language);
     });
     clonedComponent.find(".uploader").each(function () {
-        var id = $(this).attr("id");
-        $(this).attr('id', id + '_' + next);
+        $(this).attr('id', 'upload_' + $(this).parent().children(":nth-child(1)").attr("data-validation-profile") + '_' + next.toString());
         $(this).val("");
         $(this).show();
         $(this).on("change", function () {
@@ -739,6 +736,7 @@ function sendForm() {
         }
     });
     var ret = JSON.stringify(formValues);
+    console.log(ret);
     var form = document.createElement('form');
     $(form).attr('id', 'ccSendForm');
     $(form).attr('method', 'post');
