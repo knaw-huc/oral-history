@@ -75,6 +75,8 @@
                     viewer.zoomTo(1);
                 },
             });
+            // function koppelen aan pagina's cue:class="page"
+            // aanroepen met nr van pagina (en dan 1 aftrekken)
             function showScan(scan) {
                 viewer.view(scan);
             };
