@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/ccfstyle.css" type="text/css" />
         <link rel="stylesheet" href="css/autocomplete.css" type="text/css" />
         <link rel="stylesheet" href="css/viewer.css" />
+        <link rel="stylesheet" href="css/vlb_extras.css" />
         <script type="text/javascript" src="{$home_path}js/lib/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="{$home_path}js/lib/jquery.autocomplete.js"></script>
         {* <script type="text/javascript" src="{$home_path}js/config/ccf_config{if !isset($lang)}_en{else}_nl{$lang}{/if}.js"></script> *}
@@ -28,8 +29,8 @@
             //console.log("len: "+ len);
             let scans = '';
             for (i=1;i<len-1;i++) {
-                scans += '<li><img src="{$home_path}data/records/inprogress/' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
-            //    console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
+                scans += '<li><img src="{$home_path}data/records/inprogress/md1/resources' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
+                console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
             }
 
         </script>
@@ -41,9 +42,9 @@
             <div id="homeBtn"></div>
             <div id="content">
                 {block name="content"}
-                <table>
+                <table style="width: 100%">
                 <tr>
-                <td style="width: 45%;">
+                <td style="width: 25%;">
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
                 <div style="position: fixed;">
@@ -51,7 +52,7 @@
                 </ul>
                 </div>
                 </td>
-                <td style="width: 10%;"><br/></td>
+                <td style="width: 5%;"><br/></td>
                 <td><div id="ccform"></div></td>
                 </tr>
                 </table>{/block}

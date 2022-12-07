@@ -7,6 +7,9 @@ docker
 .vscode
 *.zip
 tmp
+# VLB images
+IN
+OUT
 #resources
 voorbeelden
 templates_c
