@@ -29,7 +29,8 @@
             //console.log("len: "+ len);
             let scans = '';
             for (i=1;i<len-1;i++) {
-                scans += '<li><img src="{$home_path}data/records/inprogress/md1/resources' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
+                scans += '<li><img src="{$home_path}data/records/inprogress/' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
+                //scans += '<li><img src="{$home_path}data/records/inprogress/md1/resources' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
                 console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
             }
 
@@ -44,7 +45,7 @@
                 {block name="content"}
                 <table style="width: 100%">
                 <tr>
-                <td style="width: 25%;">
+                <td style="width: 40%;">
                <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
                 </div> -->
                 <div style="position: fixed;">
@@ -76,10 +77,18 @@
                     viewer.zoomTo(1);
                 },
             });
+            console.log("add eventListener");
+            console.log(document.querySelectorAll('div[data-order]'));
+            document.querySelectorAll("div").forEach(item => {
+                item.onClick() = function() { //handle click
+                    showScan(item[data-order]); }
+                });
+            //document.getElementById('ccform').addEventListener("click",showScan());
             // function koppelen aan pagina's cue:class="page"
             // aanroepen met nr van pagina (en dan 1 aftrekken)
             function showScan(scan) {
-                viewer.view(scan);
+                console.log("clcked: "+scan);
+                viewer.view(scan-1);
             };
         </script>
     </body>
