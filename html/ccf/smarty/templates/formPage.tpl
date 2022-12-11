@@ -1,72 +1,38 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>{$title}</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/ccfstyle.css" type="text/css" />
-        <link rel="stylesheet" href="css/autocomplete.css" type="text/css" />
-        <link rel="stylesheet" href="css/viewer.css" />
-        <link rel="stylesheet" href="css/vlb_extras.css" />
-        <script type="text/javascript" src="{$home_path}js/lib/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="{$home_path}js/lib/jquery.autocomplete.js"></script>
-        {* <script type="text/javascript" src="{$home_path}js/config/ccf_config{if !isset($lang)}_en{else}_nl{$lang}{/if}.js"></script> *}
-        <script type="text/javascript" src="{$home_path}js/config/ccf_config{if !isset($lang)}_en{else}_{$lang}{/if}.js"></script>
-        <script type="text/javascript" src="{$home_path}js/src/ccfparser.js"></script>
-        <script type="text/javascript" src="{$home_path}js/src/ccforms.js"></script>
-        <script src="{$home_path}js/src/viewer.js"></script>
-        <script>
-            // import Viewer from 'viewer.js';
-            obj = {$json};
-            $('document').ready(function(){literal}{{/literal}
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{$title}</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/ccfstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="css/autocomplete.css" type="text/css"/>
+    <link rel="stylesheet" href="css/viewer.css"/>
+    <link rel="stylesheet" href="css/vlb_extras.css"/>
+    <script type="text/javascript" src="{$home_path}js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{$home_path}js/lib/jquery.autocomplete.js"></script>
+    {* <script type="text/javascript" src="{$home_path}js/config/ccf_config{if !isset($lang)}_en{else}_nl{$lang}{/if}.js"></script> *}
+    <script type="text/javascript"
+            src="{$home_path}js/config/ccf_config{if !isset($lang)}_en{else}_{$lang}{/if}.js"></script>
+    <script type="text/javascript" src="{$home_path}js/src/ccfparser.js"></script>
+    <script type="text/javascript" src="{$home_path}js/src/ccforms.js"></script>
+    <script src="{$home_path}js/src/scanHandler.js"></script>
+    <script src="{$home_path}js/src/viewer.js"></script>
+    <script>
+        // import Viewer from 'viewer.js';
+        obj = {$json};
+        obj2 = JSON.parse(JSON.stringify(obj));
+
+        $('document').ready(function () {literal}{{/literal}
             setEvents();
             formBuilder.start(obj);
-            {literal}}{/literal});
-//            let scan = obj.record[2].value[0].value[2].value[0]['value'];
-//            scan = obj.record[1].value[0].value[1].value[1]['value'];
-            len = obj.record[1].value[0].value.length;
+
+            let len = obj2.record[1].value[0].value.length;
             //console.log("len: "+ len);
             let scans = '';
-            for (i=1;i<len-1;i++) {
-                scans += '<li><img src="{$home_path}data/records/inprogress/' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
-                //scans += '<li><img src="{$home_path}data/records/inprogress/md1/resources' + obj.record[1].value[0].value[i].value[1].value + '"></li>';
-                console.log("scan: " + obj.record[1].value[0].value[i].value[1].value);
+            for (i = 1; i < len - 1; i++) {
+                $("#scans").append(createScanListElement("{$home_path}data/records/inprogress/md1/resources" + obj2.record[1].value[0].value[i].value[1].value));
             }
-
-        </script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">{$title}</div>
-            <div id="user">{$user}</div>
-            <div id="homeBtn"></div>
-            <div id="content">
-                {block name="content"}
-                <table style="width: 100%">
-                <tr>
-                <td style="width: 40%;">
-               <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
-                </div> -->
-                <div style="position: fixed;">
-                <ul id="scans" style="display: none;">
-                </ul>
-                </div>
-                </td>
-                <td style="width: 5%;"><br/></td>
-                <td><div id="ccform"></div></td>
-                </tr>
-                </table>{/block}
-            </div>
-        </div>
-        <script>
-            // 'manipulating objects in a generated html page only works if you put the jscript below the html.
-            let src = document.getElementById('scans').src;
-            //console.log("old src:" + document.getElementById('scans'));
-            const scansList = document.querySelector("#scans");
-            scansList.innerHTML += scans;
-            //console.log("new src:" + document.getElementById("scans"));
-            const viewer = new Viewer(document.getElementById('scans'), {
+            viewer = new Viewer(document.getElementById('scans'), {
                 inline: true,
                 navbar: true,
                 toolbar: true,
@@ -77,19 +43,37 @@
                     viewer.zoomTo(1);
                 },
             });
-            console.log("add eventListener");
-            console.log(document.querySelectorAll('div[data-order]'));
-            document.querySelectorAll("div").forEach(item => {
-                item.onClick() = function() { //handle click
-                    showScan(item[data-order]); }
-                });
-            //document.getElementById('ccform').addEventListener("click",showScan());
-            // function koppelen aan pagina's cue:class="page"
-            // aanroepen met nr van pagina (en dan 1 aftrekken)
-            function showScan(scan) {
-                console.log("clcked: "+scan);
-                viewer.view(scan-1);
-            };
-        </script>
-    </body>
+            scanHandler();
+            {literal}}{/literal});
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">{$title}</div>
+    <div id="user">{$user}</div>
+    <div id="homeBtn"></div>
+    <div id="content">
+        {block name="content"}
+            <table style="width: 100%">
+            <tr>
+                <td style="width: 40%;">
+                    <!-- <div><img id="scan" src="{$home_path}data/records/inprogress" alt="Scan"/>
+                </div> -->
+                    <div style="position: fixed;">
+                        <ul id="scans" style="display: none;">
+                        </ul>
+                    </div>
+                </td>
+                <td style="width: 5%;"><br/></td>
+                <td>
+                    <div id="ccform"></div>
+                </td>
+            </tr>
+            </table>{/block}
+    </div>
+</div>
+<script>
+
+</script>
+</body>
 </html>

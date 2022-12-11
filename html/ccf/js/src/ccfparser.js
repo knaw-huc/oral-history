@@ -339,6 +339,9 @@ var formBuilder = {
                     } else {
                         control.setAttribute('value', element.attributes.autoValue.value);
                     }
+                    if (element.attributes.class !== undefined) {
+                        control.setAttribute('data-class', element.attributes.class);
+                    }
 
             }
         }
@@ -396,6 +399,9 @@ var formBuilder = {
                 if (element.attributes.autoCompleteURI !== undefined) {
                     control.setAttribute("data-auto", "yes");
                     control.setAttribute("data-uri", element.attributes.autoCompleteURI);
+                }
+                if (element.attributes.class !== undefined) {
+                    control.setAttribute('data-class', element.attributes.class);
                 }
                 break;
         }
