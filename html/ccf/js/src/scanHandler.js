@@ -14,7 +14,12 @@ function scanHandler() {
 
 function showScan(scan) {
     console.log("clcked: " + scan);
-    viewer.view(scan - 1);
+    try {
+        viewer.view(scan - 1);
+    } catch (error) {
+        console.log(error);
+    }
+
 };
 
 function createScanListElement(path) {
