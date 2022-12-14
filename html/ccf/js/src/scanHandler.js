@@ -3,17 +3,17 @@
 function scanHandler() {
 
 
-    console.log($("input[data-class='page']"));
-    $("input[data-class='page']").each(function () {
+    console.log($("div[data-class='page']"));
+    $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
-            showScan($(this).val());
+            showScan($(this).children(1).children(1).children(0).val());
         });
     })
 }
 
 
 function showScan(scan) {
-    console.log("clcked: " + scan);
+    console.log("clicked: " + scan);
     try {
         viewer.view(scan - 1);
     } catch (error) {

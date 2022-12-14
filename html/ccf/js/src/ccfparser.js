@@ -176,6 +176,9 @@ var formBuilder = {
         html.setAttribute('id', component.ID);
         html.setAttribute('data-name', component.attributes.name);
         html.setAttribute('data-order', component.attributes.initialOrder);
+        if (component.attributes.class !== undefined) {
+            html.setAttribute('data-class', component.attributes.class);
+        }
         header = document.createElement('div');
         header.setAttribute('class', 'componentHeader');
         header.innerHTML = component.attributes.label;
