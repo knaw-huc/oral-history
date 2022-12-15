@@ -16,7 +16,7 @@
             <Element name="commentaarScan" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:inputHeight="8" cue:inputWidth="60" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="commentaarFile" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:inputHeight="8" cue:inputWidth="60" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="aantalPaginas" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
-            <Component name="Pagina" CardinalityMin="1" CardinalityMax="unbounded" cue:class="page" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+            <Component name="Pagina" CardinalityMin="1" CardinalityMax="unbounded" cue:class="page" cue:hideBtn="yes" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <Element name="nr" ValueScheme="int" CardinalityMin="1" CardinalityMax="1" readonly="yes" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="type" CardinalityMin="1" CardinalityMax="1">
                     <ValueScheme>

@@ -284,6 +284,9 @@ class Ccfparser {
                 case 'cue:class':
                     $retArray["class"] = $attribute->nodeValue;
                     break;
+                case 'cue:hideBtn':
+                    $retArray["hideBtn"] = $attribute->nodeValue;
+                    break;
             }
         }
 

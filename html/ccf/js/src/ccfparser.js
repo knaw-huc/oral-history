@@ -199,7 +199,7 @@ var formBuilder = {
             objectDisplay = true;
         }
 
-        if (component.attributes.CardinalityMax !== '1')
+        if (component.attributes.CardinalityMax !== '1' && component.attributes.hideBtn === undefined)
         {
             //header.innerHTML = component.attributes.label;
             var btn = document.createElement('input');
