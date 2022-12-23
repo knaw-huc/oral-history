@@ -125,4 +125,6 @@ dist
 
 # if a profile has been loaded
 *.loaded
+
+# resources
 html/ccf/data/records/inprogress/resources/
