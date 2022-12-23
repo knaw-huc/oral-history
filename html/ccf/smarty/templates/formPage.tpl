@@ -30,7 +30,7 @@
             //console.log("len: "+ len);
             let scans = '';
             for (i = 1; i < len - 1; i++) {
-                $("#scans").append(createScanListElement("{$home_path}data/records/inprogress/md1/resources" + obj2.record[1].value[0].value[i].value[1].value));
+                $("#scans").append(createScanListElement("{$home_path}data/records/inprogress/" + obj2.record[1].value[0].value[i].value[1].value));
             }
             viewer = new Viewer(document.getElementById('scans'), {
                 inline: true,

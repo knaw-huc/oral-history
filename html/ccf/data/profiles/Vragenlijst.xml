@@ -10,25 +10,38 @@
         <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         <Element name="commentaarLijst" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
         <Element name="aantalPaginas" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
-        <Element name="map" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        <Element name="Status" CardinalityMin="1" CardinalityMax="1">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>nog te doen</item>
+                        <item>bezig</item>
+                        <item>gedaan</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
         <Component name="Scan" CardinalityMin="1" CardinalityMax="1">
-            <Element name="file" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="commentaarScan" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="commentaarFile" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="aantalPaginas" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
-            <Component name="Pagina" CardinalityMin="1" CardinalityMax="unbounded" cue:class="page">
+            <Component name="Pagina" CardinalityMin="1" CardinalityMax="unbounded">
                 <Element name="nr" ValueScheme="int" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Element name="kloekeCode" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                <Element name="inzending" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
+                <Element name="volgorde" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
                 <Element name="type" CardinalityMin="1" CardinalityMax="1">
                     <ValueScheme>
                         <Vocabulary>
                             <enumeration>
-                                <item>verwacht</item>
+                                <item>als verwacht</item>
                                 <item>losse aanvulling</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
-                <Element name="commentaarPagina" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                <Element name="commentaarPagina" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             </Component>
         </Component>
     </Component>
