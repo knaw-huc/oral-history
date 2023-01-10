@@ -9,7 +9,7 @@
     <Component name="Vragenlijst" CardinalityMin="1" CardinalityMax="1">
         <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         <Element name="commentaarLijst" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:inputHeight="8" cue:inputWidth="60" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-        <Element name="aantalPaginas" ValueScheme="int" CardinalityMin="1" CardinalityMax="1"/>
+        <Element name="aantalPaginas" ValueScheme="int" CardinalityMin="1" CardinalityMax="1" cue:class="pageCount" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         <Element name="map" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
         <Component name="Scan" CardinalityMin="1" CardinalityMax="1">
             <Element name="file" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
