@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -d /tmp/html ]
+then
+    cp -r /tmp/html /var/www/
+fi
+
 mkdir -p \
     /var/www/html/ccf/data/records/inprogress/ \
     /var/www/html/ccf/data/uploads

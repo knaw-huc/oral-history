@@ -13,7 +13,9 @@ services:
 
     # huc-editor backend & frontend
     php-apache:
-        image: huccmdiapp:latest
+        build:
+            context: .
+            dockerfile: Dockerfile.serve
         ports:
             - 80:80
         volumes: 
@@ -32,6 +34,32 @@ services:
             - ccf
         depends_on:
             - mysql
+            - editor
+            - parser
+            - app
+
+    # CMDI editor
+    editor:
+        image: ghcr.io/knaw-huc/huc-generic-editor:latest
+        volumes:
+            - ccf-html:/tmp/html
+        entrypoint: ["cp", "-r", "/usr/share/nginx/html/css", "/usr/share/nginx/html/js", "/tmp/html/ccf/"]
+        depends_on:
+            - app
+    # CMDI parser
+    parser:
+        image: ghcr.io/knaw-huc/clariah-cmdi-parser:latest
+        volumes:
+            - ccf-html:/tmp/html
+        entrypoint: ["cp", "-r", "/var/www/html/classes", "/var/www/html/tweaker", "/tmp/html/ccf/"]
+        depends_on:
+            - app
+    # CMDI app
+    app:
+        image: huccmdiapp:latest
+        volumes:
+            - ccf-html:/tmp/html
+        entrypoint: ["cp", "-r", "/var/www/html", "/tmp/"]
 
 networks:
     ccf:
