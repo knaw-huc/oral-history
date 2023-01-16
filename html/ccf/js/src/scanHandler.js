@@ -7,14 +7,21 @@ function pageCount() {
     console.log("pageCount= " + pageCount);
 }
 
+function checkPrev() {
+    console.log("checkPrev");
+    return 1;
+}
+
 function setVolgorde(kloeke,volgordeveld) {
     console.log("setVolgorde");
     kloekeCode = kloeke[0].children[1].children[0]["value"];
     console.log("kloekecode: " + kloekeCode);
     if(kloekeCode!='') {
         console.log('kloekecode not empty')
-        volgordeveld[0].children[1].children[0].value = 1; // ["value"];
-//        volgorde.setValue('1');
+        volgordeveld[0].children[1].children[0].value = 1;
+    } else {
+        // check previous page
+        // volgordeveld[0].children[1].children[0].value = checkPrev() + 1;
     }
     volgorde = volgordeveld[0].children[1].children[0]["value"];
     console.log("volgorde: " + volgorde);
