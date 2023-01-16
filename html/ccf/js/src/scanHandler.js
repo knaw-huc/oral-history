@@ -1,13 +1,38 @@
 
 
+var pageCount;
+
+function pageCount() {
+    pageCount = $("input[data-class='pageCount']").val();
+    console.log("pageCount= " + pageCount);
+}
+
+function setVolgorde(kloeke,volgordeveld) {
+    console.log("setVolgorde");
+    kloekeCode = kloeke[0].children[1].children[0]["value"];
+    console.log("kloekecode: " + kloekeCode);
+    if(kloekeCode!='') {
+        console.log('kloekecode not empty')
+        volgordeveld[0].children[1].children[0].value = 1; // ["value"];
+//        volgorde.setValue('1');
+    }
+    volgorde = volgordeveld[0].children[1].children[0]["value"];
+    console.log("volgorde: " + volgorde);
+}
+
 function scanHandler() {
 
     // TODO: luister naar data-class=pageCount, zet globale variabele pageCount
 
-    console.log($("div[data-class='page']"));
+//    console.log($("div[data-class='page']"));
+    pageCount();
     $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
             showScan($(this).children(1).children(1).children(0).val());
+//            $(this).children().find('volgorde')['']
+//            console.log($(this).find('div[name="volgorde"]'))
+//            console.log("volgorde: " + $(this).find('div[name="volgorde"]').val())
+            setVolgorde($(this).find('div[data-name="kloekeCode"]'), $(this).find('div[data-name="volgorde"]'));
             //TODO:
             // we moeten een lijst maken van de pagina's in deze response:
             // 1. de huidige
@@ -35,6 +60,7 @@ function scanHandler() {
 
 function showScan(scan) {
     console.log("clicked: " + scan);
+    console.log("pageCount: " + pageCount);
     try {
         viewer.view(scan - 1);
     } catch (error) {
