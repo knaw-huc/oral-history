@@ -2,64 +2,90 @@
 
 var pageCount;
 
+// works:
 function pageCount() {
     pageCount = $("input[data-class='pageCount']").val();
     console.log("pageCount= " + pageCount);
 }
 
-function checkPrev(page) {
-    console.log("checkPrev");
-    return 1;
+// this one refuses to work:
+function number(page) {
+    return page.find('div[data-name="number"]').children(1).children(1).children(0).val();
 }
 
+// works:
 function setVolgorde(page, number) {
     page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = number;
 }
 
+// works:
 function volgorde(page) {
     return page.find('div[data-name="volgorde"]')[0].children[1].children[0].value;
 }
 
+// works:
 function kloeke(page) {
-    let kloekeCode = page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
-    return kloekeCode;
+    return page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
+}
+
+// doesn't return proper value:
+function pageType(page) {
+    try {
+        return page.find('div[data-name="pageType"]')[0].children[1].children[0]["value"];
+    } catch(error) {
+        return '';
+    }
 }
 
 function checkPrevious(currentPage) {
+    console.log("checkPrevious");
+//    numberCP = number(currentPage);
+//    console.log('number(currentPage): ' + numberCP);
     kloekeCode = kloeke(currentPage);
     if (kloekeCode != '') {
         console.log('set volgorde = 1');
         setVolgorde(currentPage, 1);
         return;
     }
-    console.log("setVolgorde");
+    console.log('kloeke code empty');
     let pages = $("div[data-class='page']");
     let c = 0;
+    let pageFound = false;
     for (page in pages) {
+//        console.log('number(currentPage): ' + numberCP);
+//        console.log('number(page): ' + number(page));
+//        console.log(JSON.stringify(page));
+//        console.log(JSON.stringify(currentPage));
         if (page == currentPage) {
+//        if (number(page) == numberCP) {
+            pageFound = true;
             break;
         }
         c += 1;
     }
+    console.log('pagefound: ' + pageFound);
     console.log('c: ' + c);
 
-/*    //pages[c] is de huidige pagina
+    /*
+    //pages[c] is de huidige pagina
     let f = c;
-    while kloeke(pages[f]).val()=='' {
-        f -= ;
+    while kloeke(pages[f])=='' {
+        f -= 1;
+        // check op null ??
     }
     //pages[f] is de eerste pagina van een respons
     let v = c;
-    while type(pages[v]).val()!='verwacht' {
+    while typePage(pages[v])!='verwacht' {
         v -= 1;
+        // check op null ??
     }
     //pages[v ]is de laatste pagina 'zoals verwacht'
-    setVolgorde(pages[c]), volgorde(pages[v])).val() + 1);
-*/
-    
+    setVolgorde(pages[c], volgorde(pages[v]) + 1);
+
+    */
 
 
-    console.log('kloeke code: ' + kloeke(currentPage));
+//    console.log('kloeke code: ' + kloeke(currentPage));
 /*    console.log(kloeke.parentNode);
     console.log(kloeke.prevObject);
     console.log(kloeke.prevObject[0]);
@@ -101,8 +127,10 @@ function scanHandler() {
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
             console.log("volgorde: " + $(this).find('div[name="volgorde"]').val())
-            console.log('kloekecode: ');
-            console.log(kloeke($(this)));
+            console.log("volgorde 2: " + volgorde($(this)));
+            console.log('kloekecode: ' + kloeke($(this)));
+            console.log('number: ' + number($(this)));
+            console.log('type: ' + pageType($(this)));
             checkPrevious($(this));
 
             //TODO:
