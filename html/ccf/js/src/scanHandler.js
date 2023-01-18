@@ -7,24 +7,86 @@ function pageCount() {
     console.log("pageCount= " + pageCount);
 }
 
-function checkPrev() {
+function checkPrev(page) {
     console.log("checkPrev");
     return 1;
 }
 
-function setVolgorde(kloeke,volgordeveld) {
+function setVolgorde(page, number) {
+    page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = number;
+}
+
+function volgorde(page) {
+    return page.find('div[data-name="volgorde"]')[0].children[1].children[0].value;
+}
+
+function kloeke(page) {
+    let kloekeCode = page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
+    return kloekeCode;
+}
+
+function checkPrevious(currentPage) {
+    kloekeCode = kloeke(currentPage);
+    if (kloekeCode != '') {
+        console.log('set volgorde = 1');
+        setVolgorde(currentPage, 1);
+        return;
+    }
     console.log("setVolgorde");
-    kloekeCode = kloeke[0].children[1].children[0]["value"];
-    console.log("kloekecode: " + kloekeCode);
-    if(kloekeCode!='') {
+    let pages = $("div[data-class='page']");
+    let c = 0;
+    for (page in pages) {
+        if (page == currentPage) {
+            break;
+        }
+        c += 1;
+    }
+    console.log('c: ' + c);
+
+/*    //pages[c] is de huidige pagina
+    let f = c;
+    while kloeke(pages[f]).val()=='' {
+        f -= ;
+    }
+    //pages[f] is de eerste pagina van een respons
+    let v = c;
+    while type(pages[v]).val()!='verwacht' {
+        v -= 1;
+    }
+    //pages[v ]is de laatste pagina 'zoals verwacht'
+    setVolgorde(pages[c]), volgorde(pages[v])).val() + 1);
+*/
+    
+
+
+    console.log('kloeke code: ' + kloeke(currentPage));
+/*    console.log(kloeke.parentNode);
+    console.log(kloeke.prevObject);
+    console.log(kloeke.prevObject[0]);
+    console.log(kloeke.prevObject[0]['previousSibling']);
+    */
+//    let prevkloekeCode = kloeke.prevObject[0]['previousSibling'].children[1].children[0]["value"];
+//    console.log('prev kc: ' + prevkloekeCode)
+    //console.log(kloeke.find('div[data-class="page"]').div);
+    //console.log(kloeke.find('div[data-class="page"]').div.previousSibling);
+    //console.log(kloeke.find('div[data-class="page"]').prevObject);
+    //console.log(kloeke.find('div[data-class="page"]').prevObject.prevObject);
+    //console.log(kloeke.find('previousSibling'));
+//    console.log(kloeke.prevObject[0].children[1].children[1].children[0].val());
+//    let kloekeCode = kloeke[0].children[1].children[0]["value"];
+//    console.log("kloekecode: " + kloekeCode);
+/*    if(kloekeCode!='') {
         console.log('kloekecode not empty')
         volgordeveld[0].children[1].children[0].value = 1;
     } else {
+        console.log("page: " + volgordeveld[0]);
+        checkPrev(volgordeveld);
         // check previous page
-        // volgordeveld[0].children[1].children[0].value = checkPrev() + 1;
+        volgordeveld[0].children[1].children[0].value = checkPrev() + 1;
     }
     volgorde = volgordeveld[0].children[1].children[0]["value"];
     console.log("volgorde: " + volgorde);
+*/
 }
 
 function scanHandler() {
@@ -38,8 +100,11 @@ function scanHandler() {
             showScan($(this).children(1).children(1).children(0).val());
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
-//            console.log("volgorde: " + $(this).find('div[name="volgorde"]').val())
-            setVolgorde($(this).find('div[data-name="kloekeCode"]'), $(this).find('div[data-name="volgorde"]'));
+            console.log("volgorde: " + $(this).find('div[name="volgorde"]').val())
+            console.log('kloekecode: ');
+            console.log(kloeke($(this)));
+            checkPrevious($(this));
+
             //TODO:
             // we moeten een lijst maken van de pagina's in deze response:
             // 1. de huidige
