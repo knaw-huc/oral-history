@@ -9,8 +9,33 @@ function pageCount() {
 }
 
 // this one refuses to work:
+// seems to work???
 function number(page) {
-    return page.find('div[data-name="number"]').children(1).children(1).children(0).val();
+    console.log('find number');
+    console.log(page);
+    try {
+        console.log('first try');
+        return page.find('div[data-name="nr"]').children(1).children(0).val();
+    } catch(error) {
+        //try {
+            console.log('second try');
+            console.log(page);
+            console.log(page["children"]);
+            console.log(page["children"]["1"]);
+            console.log(page["children"]["1"]["children"]["1"]);
+            console.log(page["children"]["1"]["children"]["1"]["children"]);
+            console.log(page["children"]["1"]["children"]["1"]["children"]["0"]);
+            console.log(page["children"]["1"]["children"]["1"]["children"]["0"]["value"]);
+            return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
+//            console.log(page.children(1));
+//            console.log(page.children(1).children(1));
+//            console.log(page.children(1).children(1).children(0));
+//            console.log(page.children(1).children(1).children(0).value);
+//            return page.children(1).children(1).children(0).value;
+        //} catch(error) {
+            //return '';
+        //}
+    }
 }
 
 // works:
@@ -39,8 +64,8 @@ function pageType(page) {
 
 function checkPrevious(currentPage) {
     console.log("checkPrevious");
-//    numberCP = number(currentPage);
-//    console.log('number(currentPage): ' + numberCP);
+    numberCP = number(currentPage);
+    console.log('number(currentPage): ' + numberCP);
     kloekeCode = kloeke(currentPage);
     if (kloekeCode != '') {
         console.log('set volgorde = 1');
@@ -51,13 +76,31 @@ function checkPrevious(currentPage) {
     let pages = $("div[data-class='page']");
     let c = 0;
     let pageFound = false;
-    for (page in pages) {
-//        console.log('number(currentPage): ' + numberCP);
-//        console.log('number(page): ' + number(page));
+//    for (const prop in pages) {
+//        console.log(`pages.${prop} = ${pages[prop]}`);
+//    }
+    /*
+    for (const element of pages) {
+        console.log(c);
+        console.log(element);
+        console.log(number(element));
+        if (element == currentPage) {
+            console.log('found: ' + c);
+            break;
+        }
+        c += 1;
+    }
+    c = 0;
+*/
+
+    for (const page in pages) {
+        console.log(page);
+//        console.log(pages[c]);
+        console.log('number(page): ' + number(pages[page]));
 //        console.log(JSON.stringify(page));
 //        console.log(JSON.stringify(currentPage));
-        if (page == currentPage) {
-//        if (number(page) == numberCP) {
+//        if (`${pages[page]}` == currentPage) {
+        if (number(pages[page]) == numberCP) {
             pageFound = true;
             break;
         }
@@ -65,6 +108,7 @@ function checkPrevious(currentPage) {
     }
     console.log('pagefound: ' + pageFound);
     console.log('c: ' + c);
+    console.log(pages[c])
 
     /*
     //pages[c] is de huidige pagina
@@ -72,6 +116,9 @@ function checkPrevious(currentPage) {
     while kloeke(pages[f])=='' {
         f -= 1;
         // check op null ??
+        if (f<0) {
+            break;
+        }
     }
     //pages[f] is de eerste pagina van een respons
     let v = c;
@@ -129,7 +176,7 @@ function scanHandler() {
             console.log("volgorde: " + volgorde($(this)));
             console.log('kloekecode: ' + kloeke($(this)));
             console.log('number: ' + number($(this)));
-            console.log('type: ' + pageType($(this)));
+            console.log('pageType: ' + pageType($(this)));
             checkPrevious($(this));
 
             //TODO:
