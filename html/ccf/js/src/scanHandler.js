@@ -14,8 +14,8 @@ function number(page) {
 }
 
 // works:
-function setVolgorde(page, number) {
-    page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = number;
+function setVolgorde(page, volgorde) {
+    page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = volgorde;
 }
 
 // works:
@@ -126,8 +126,7 @@ function scanHandler() {
             showScan($(this).children(1).children(1).children(0).val());
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
-            console.log("volgorde: " + $(this).find('div[name="volgorde"]').val())
-            console.log("volgorde 2: " + volgorde($(this)));
+            console.log("volgorde: " + volgorde($(this)));
             console.log('kloekecode: ' + kloeke($(this)));
             console.log('number: ' + number($(this)));
             console.log('type: ' + pageType($(this)));
