@@ -11,21 +11,21 @@ function pageCount() {
 // this one refuses to work:
 // seems to work???
 function number(page) {
-    console.log('find number');
-    console.log(page);
+//    console.log('find number');
+//    console.log(page);
     try {
-        console.log('first try');
+//        console.log('first try');
         return page.find('div[data-name="nr"]').children(1).children(0).val();
     } catch(error) {
         //try {
-            console.log('second try');
+/*            console.log('second try');
             console.log(page);
             console.log(page["children"]);
             console.log(page["children"]["1"]);
             console.log(page["children"]["1"]["children"]["1"]);
             console.log(page["children"]["1"]["children"]["1"]["children"]);
             console.log(page["children"]["1"]["children"]["1"]["children"]["0"]);
-            console.log(page["children"]["1"]["children"]["1"]["children"]["0"]["value"]);
+            console.log(page["children"]["1"]["children"]["1"]["children"]["0"]["value"]); */
             return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
 //            console.log(page.children(1));
 //            console.log(page.children(1).children(1));
@@ -40,25 +40,55 @@ function number(page) {
 
 // works:
 function setVolgorde(page, volgorde) {
-    page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = volgorde;
+    try {
+        page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = volgorde;
+    } catch(error) {
+        console.log('setVolgorde: ' + error);
+        page["children"]["4"]["children"]["1"]["children"]["0"]["value"] = volgorde;
+    }
 }
 
 // works:
 function volgorde(page) {
-    return page.find('div[data-name="volgorde"]')[0].children[1].children[0].value;
+    console.log('volgorde');
+    try {
+        return page.find('div[data-name="volgorde"]')[0].children[1].children[0].value;
+    } catch(error) {
+        console.log(page);
+        console.log(page["children"]["4"]);
+        console.log(page["children"]["4"]["children"]["1"]);
+        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
+        return page["children"]["4"]["children"]["1"]["children"]["0"]["value"];
+    }
 }
 
 // works:
 function kloeke(page) {
-    return page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
-}
+    try {
+        return page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
+    } catch(error) {
+        return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
+    }
+ }
 
 // doesn't return proper value:
 function pageType(page) {
     try {
         return page.find('div[data-name="pageType"]')[0].children[1].children[0]["value"];
     } catch(error) {
-        return '';
+        try {
+            return page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+        } catch(error) {
+            console.log(page);
+            console.log(page["children"]);
+//            console.log(page["children"]["5"]);
+//            console.log(page["children"]["5"]["children"]);
+//            console.log(page["children"]["5"]["children"]["1"]);
+//            console.log(page["children"]["5"]["children"]["1"]["children"]);
+//            console.log(page["children"]["5"]["children"]["1"]["children"]["0"]);
+//            console.log(page["children"]["5"]["children"]["1"]["children"]["0"]["value"]);
+            return '';
+        }
     }
 }
 
@@ -94,9 +124,9 @@ function checkPrevious(currentPage) {
 */
 
     for (const page in pages) {
-        console.log(page);
+//        console.log(page);
 //        console.log(pages[c]);
-        console.log('number(page): ' + number(pages[page]));
+//        console.log('number(page): ' + number(pages[page]));
 //        console.log(JSON.stringify(page));
 //        console.log(JSON.stringify(currentPage));
 //        if (`${pages[page]}` == currentPage) {
@@ -110,10 +140,10 @@ function checkPrevious(currentPage) {
     console.log('c: ' + c);
     console.log(pages[c])
 
-    /*
     //pages[c] is de huidige pagina
     let f = c;
-    while kloeke(pages[f])=='' {
+    let kloekeFound = false;
+    while (kloeke(pages[f])=='') {
         f -= 1;
         // check op null ??
         if (f<0) {
@@ -121,15 +151,33 @@ function checkPrevious(currentPage) {
         }
     }
     //pages[f] is de eerste pagina van een respons
+    if (f>-1) {
+        kloekeFound = true;
+    }
+    console.log('kloekefound: ' + kloekeFound);
+    console.log('f: ' + f);
+
     let v = c;
-    while typePage(pages[v])!='verwacht' {
+    let verwachtFound = false;
+    while (pageType(pages[v])!='verwacht') {
         v -= 1;
         // check op null ??
+        if (v<0) {
+            break;
+        }
     }
     //pages[v ]is de laatste pagina 'zoals verwacht'
-    setVolgorde(pages[c], volgorde(pages[v]) + 1);
+    console.log('v: ' + v);
+    if (v>-1) {
+        verwachtFound = true;
+    }
+    console.log('verwachtfound: ' + verwachtFound);
+    if (verwachtFound) {
+        console.log('volgorde pages[v]: ' + volgorde(pages[v]));
+    }
 
-    */
+    setVolgorde(pages[c], parseInt(volgorde(pages[v])) + 1);
+    console.log('volgorde set???');
 
 
 //    console.log('kloeke code: ' + kloeke(currentPage));
