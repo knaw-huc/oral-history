@@ -22,7 +22,7 @@ function setVolgorde(page, volgorde) {
     try {
         page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = volgorde;
     } catch(error) {
-        console.log('setVolgorde: ' + error);
+//        console.log('setVolgorde: ' + error);
         page["children"]["4"]["children"]["1"]["children"]["0"]["value"] = volgorde;
     }
 }
@@ -33,10 +33,10 @@ function volgorde(page) {
     try {
         return page.find('div[data-name="volgorde"]')[0].children[1].children[0].value;
     } catch(error) {
-        console.log(page);
-        console.log(page["children"]["4"]);
-        console.log(page["children"]["4"]["children"]["1"]);
-        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
+//        console.log(page);
+//        console.log(page["children"]["4"]);
+//        console.log(page["children"]["4"]["children"]["1"]);
+//        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
         return page["children"]["4"]["children"]["1"]["children"]["0"]["value"];
     }
 }
@@ -58,6 +58,7 @@ function pageType(page) {
         try {
             return page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
         } catch(error) {
+            console.log(error);
             console.log(page);
             console.log(page["children"]);
             return '';
@@ -73,8 +74,8 @@ function checkPrevious(currentPage) {
         setVolgorde(currentPage, 1);
         return;
     }
-    // kloekecode empty
 
+    // kloekecode empty
     let pages = $("div[data-class='page']");
     let c = 0;
     let pageFound = false;
@@ -119,13 +120,17 @@ function checkPrevious(currentPage) {
     if (v>-1) {
         verwachtFound = true;
     }
-    console.log('verwachtfound: ' + verwachtFound);
+    console.log('verwacht found: ' + verwachtFound);
     if (verwachtFound) {
         console.log('volgorde pages[v]: ' + volgorde(pages[v]));
     }
-
-    setVolgorde(pages[c], parseInt(volgorde(pages[v])) + 1);
-    console.log('volgorde is set.');
+    prevVolgorde = parseInt(volgorde(pages[v]));
+    if (prevVolgorde < pageCount) {
+        setVolgorde(pages[c], prevVolgorde + 1);
+        console.log('volgorde is set.');
+    } else {
+        console.log('volgorde would exceed pageCount');
+    }
 }
 
 function scanHandler() {
