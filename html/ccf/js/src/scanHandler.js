@@ -21,21 +21,16 @@ function setInzending(page, inzending) {
     try {
         page.find('div[data-name="inzending"]')[0].children[1].children[0].value = inzending;
     } catch(error) {
-//        console.log('setInzending: ' + error);
         page["children"]["3"]["children"]["1"]["children"]["0"]["value"] = inzending;
     }
 }
 
-// works?:
-function inzending(page) {
-    console.log('inzending');
+// works:
+function getInzending(page) {
+    console.log('get inzending');
     try {
         return page.find('div[data-name="inzending"]')[0].children[1].children[0].value;
     } catch(error) {
-//        console.log(page);
-//        console.log(page["children"]["4"]);
-//        console.log(page["children"]["4"]["children"]["1"]);
-//        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
         return page["children"]["3"]["children"]["1"]["children"]["0"]["value"];
     }
 }
@@ -90,17 +85,7 @@ function pageType(page) {
     }
 }
 
-function checkPrevious(currentPage) {
-    numberCP = number(currentPage);
-    kloekeCode = kloeke(currentPage);
-    if (kloekeCode != '') {
-        console.log('set volgorde = 1');
-        setVolgorde(currentPage, 1);
-        return;
-    }
-
-    // kloekecode empty
-    let pages = $("div[data-class='page']");
+function getCurrentPage(pages,numberCP) {
     let c = 0;
     let pageFound = false;
     for (const page in pages) {
@@ -111,7 +96,29 @@ function checkPrevious(currentPage) {
         c += 1;
     }
     console.log('pagefound: ' + pageFound);
+    if (pageFound) {
+        return c;
+    } else {
+        return -1;
+    }
+}
+
+function checkPrevious(currentPage) {
+    let pages = $("div[data-class='page']");
+    numberCP = number(currentPage);
+    let c = getCurrentPage(pages, numberCP);
+    let prevInzending = parseInt(getInzending(pages[c - 1]));
+    kloekeCode = kloeke(currentPage);
+    if (kloekeCode != '') {
+        console.log('set volgorde = 1');
+        setVolgorde(currentPage, 1);
+        setInzending(pages[c],prevInzending + 1);
+        return;
+    }
+
+    // kloekecode empty
     console.log('c: ' + c);
+    setInzending(pages[c],prevInzending);
 
     //pages[c] is de huidige pagina
     let f = c;
