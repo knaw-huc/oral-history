@@ -1,6 +1,5 @@
 
-
-var pageCount;
+var pageCount
 
 // works:
 function pageCount() {
@@ -14,6 +13,30 @@ function number(page) {
         return page.find('div[data-name="nr"]').children(1).children(0).val();
     } catch(error) {
         return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
+    }
+}
+
+// works:
+function setInzending(page, inzending) {
+    try {
+        page.find('div[data-name="inzending"]')[0].children[1].children[0].value = inzending;
+    } catch(error) {
+//        console.log('setInzending: ' + error);
+        page["children"]["3"]["children"]["1"]["children"]["0"]["value"] = inzending;
+    }
+}
+
+// works?:
+function inzending(page) {
+    console.log('inzending');
+    try {
+        return page.find('div[data-name="inzending"]')[0].children[1].children[0].value;
+    } catch(error) {
+//        console.log(page);
+//        console.log(page["children"]["4"]);
+//        console.log(page["children"]["4"]["children"]["1"]);
+//        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
+        return page["children"]["3"]["children"]["1"]["children"]["0"]["value"];
     }
 }
 
@@ -58,10 +81,11 @@ function pageType(page) {
         try {
             return page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
         } catch(error) {
-            console.log(error);
-            console.log(page);
-            console.log(page["children"]);
-            return '';
+            try {
+                return page["0"]["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+            } catch(error) {
+                console.log(error);
+            }
         }
     }
 }
@@ -129,7 +153,13 @@ function checkPrevious(currentPage) {
         setVolgorde(pages[c], prevVolgorde + 1);
         console.log('volgorde is set.');
     } else {
-        console.log('volgorde would exceed pageCount');
+        console.log('pageType: ' + pageType(currentPage));
+        if (pageType(currentPage) == 'losse aanvulling') {
+            setVolgorde(pages[c], prevVolgorde + 1);
+            console.log('volgorde is set. (extra page)');
+        } else {
+            console.log('volgorde would exceed pageCount');
+        }
     }
 }
 
