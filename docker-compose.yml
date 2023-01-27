@@ -3,7 +3,7 @@ services:
     mysql:
         image: mariadb:10.5
         volumes: 
-            - mysqldb:/var/lib/mysql
+            - vlb-mysqldb:/var/lib/mysql
             - ./cmdi_forms.sql:/docker-entrypoint-initdb.d/cmdi_forms.sql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
@@ -39,5 +39,4 @@ networks:
     ccf:
         external: false
 volumes:
-    mysqldb:       
-    cmdirecords:
+    vlb-mysqldb:       
