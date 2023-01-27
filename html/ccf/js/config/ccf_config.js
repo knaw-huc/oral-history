@@ -8,10 +8,12 @@ var ccfOptions = {
         actionURI: server + 'upload.php'
     },
     submitButton: {
+        actionJS: 'statusGedaan',
         actionURI: 'create_record.php',
         label: 'OK'
     },
     saveButton: {
+        actionJS: 'statusBezig',
         actionURI: 'create_record.php',
         label: 'Bewaar'  
     },

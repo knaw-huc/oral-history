@@ -30,6 +30,7 @@ services:
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
+            VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
         networks:
             - ccf
         depends_on:

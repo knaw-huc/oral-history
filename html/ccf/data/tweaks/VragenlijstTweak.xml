@@ -23,12 +23,12 @@
                     <ValueScheme>
                         <Vocabulary>
                             <enumeration>
-                                <item>verwacht</item>
+                                <item>als verwacht</item>
                                 <item>losse aanvulling</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
-                    <AutoValue>verwacht</AutoValue>
+                    <AutoValue>als verwacht</AutoValue>
                 </Element>
                 <Element name="commentaarPagina" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:inputHeight="8" cue:inputWidth="60" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>

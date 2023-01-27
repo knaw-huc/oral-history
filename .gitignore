@@ -2,7 +2,7 @@ video
 #inprogress
 __pycache__
 .idea
-scripts
+scripts/saxon-he-10.5.jar
 docker
 .vscode
 *.zip
