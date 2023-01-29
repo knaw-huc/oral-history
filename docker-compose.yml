@@ -26,7 +26,7 @@ services:
             TITLE: "HuC generic Editor"
             PROFILE: "Vragenlijst"
             SUBTITLE: "All you need for development"
-            BASE_URL: "http://localhost/ccf/"
+            BASE_URL: "https://vlb.sd.di.huc.knaw.nl/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: mysql
             DB_USER: root
