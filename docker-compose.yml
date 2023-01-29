@@ -17,8 +17,8 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
-#        ports:
-#            - 80:80
+        ports:
+            - 80:80
         volumes: 
 #            - ./html:/var/www/html/ # during development       
             - vlb-records:/var/www/html/ccf/data/records/inprogress      
