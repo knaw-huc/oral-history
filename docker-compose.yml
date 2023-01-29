@@ -1,10 +1,11 @@
 version: '2'
 services: 
     mysql:
-        image: mariadb:10.5
+        build:
+            context: .
+            dockerfile: ./Dockerfile.mariadb
         volumes: 
             - vlb-mysqldb:/var/lib/mysql
-            - ./cmdi_forms.sql:/docker-entrypoint-initdb.d/cmdi_forms.sql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
@@ -15,7 +16,7 @@ services:
     php-apache:
         build:
             context: .
-            dockerfile: Dockerfile
+            dockerfile: ./Dockerfile
 #        ports:
 #            - 80:80
         volumes: 
