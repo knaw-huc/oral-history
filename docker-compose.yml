@@ -19,7 +19,8 @@ services:
 #        ports:
 #            - 80:80
         volumes: 
-            - ./html:/var/www/html/ # during development       
+#            - ./html:/var/www/html/ # during development       
+            - vlb-records:/var/www/html/ccf/data/records/inprogress      
         environment:
             TITLE: "HuC generic Editor"
             PROFILE: "Vragenlijst"
@@ -39,4 +40,5 @@ networks:
     ccf:
         external: false
 volumes:
-    vlb-mysqldb:       
+    vlb-mysqldb: 
+    vlb-records:      
