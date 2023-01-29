@@ -33,7 +33,7 @@ services:
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
             VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
-            VIRTUAL_PORT: 8123
+            VIRTUAL_PORT: 80
         networks:
             - ccf
         depends_on:
