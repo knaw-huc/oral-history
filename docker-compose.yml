@@ -40,7 +40,8 @@ services:
             - mysql
 networks:
     ccf:
-        external: false
+    external:
+      name: nginxproxynetwork
 volumes:
     vlb-mysqldb: 
     vlb-records:      
