@@ -2,7 +2,8 @@
 
 mkdir -p \
     /var/www/html/ccf/data/records/inprogress/ \
-    /var/www/html/ccf/data/uploads
+    /var/www/html/ccf/data/uploads \
+    /var/www/html/ccf/smarty/templates_c
 
 chmod uga+rwx \
     /var/www/html/ccf/data/uploads/ \
