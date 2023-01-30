@@ -1,10 +1,10 @@
 
-var pageCount
+var page_count
 
 // works:
 function pageCount() {
-    pageCount = $("input[data-class='pageCount']").val();
-    console.log("pageCount= " + pageCount);
+    page_count = $("input[data-class='pageCount']").val();
+    console.log("pageCount= " + page_count);
 }
 
 // works
@@ -156,7 +156,7 @@ function checkPrevious(currentPage) {
         console.log('volgorde pages[v]: ' + volgorde(pages[v]));
     }
     prevVolgorde = parseInt(volgorde(pages[v]));
-    if (prevVolgorde < pageCount) {
+    if (prevVolgorde < page_count) {
         setVolgorde(pages[c], prevVolgorde + 1);
         console.log('volgorde is set.');
     } else {
@@ -173,11 +173,13 @@ function checkPrevious(currentPage) {
 function scanHandler() {
 
     // TODO: luister naar data-class=pageCount, zet globale variabele pageCount
-
+    $("input[data-class='pageCount']").on("click", function() {
+            pageCount(); })
+   
 //    console.log($("div[data-class='page']"));
-    pageCount();
     $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
+            pageCount();
             showScan($(this).children(1).children(1).children(0).val());
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
@@ -214,7 +216,7 @@ function scanHandler() {
 
 function showScan(scan) {
     console.log("clicked: " + scan);
-    console.log("pageCount: " + pageCount);
+    console.log("pageCount: " + page_count);
     try {
         viewer.view(scan - 1);
     } catch (error) {
