@@ -8,40 +8,34 @@
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
-            <xsl:comment>identity</xsl:comment>
+            <xsl:comment>identity[<xsl:value-of select="local-name()"/>]</xsl:comment>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
     </xsl:template>
     
     <xsl:template match="cmd:Resources">
-        <xsl:comment>cmd:Resources</xsl:comment>
-        <xsl:copy-of select="document($rec)//cmd:Resources"/>
-    </xsl:template>
-
-    <xsl:template match="cmd:Vragenlijst">
         <xsl:copy>
-            <xsl:apply-templates select="@*"/>
-            <xsl:comment>cmd:Vragenlijst</xsl:comment>
-            <xsl:apply-templates select="node()"/>
+            <xsl:comment>cmd:Resources</xsl:comment>
+            <xsl:apply-templates select="document($rec)//cmd:ResourceProxyList"/>
         </xsl:copy>
     </xsl:template>
-    
-    <xsl:template match="cmd:Scan" priority="10">
+
+    <xsl:template match="*[local-name()='cmd:Scan']" priority="10">
         <xsl:comment>cmd:Scan</xsl:comment>
         <cmd:Scan ref="s">
             <xsl:apply-templates select="@*"/>
-            <xsl:apply-templates select="cmd:id"/>
-            <xsl:apply-templates select="cmd:commentaarScan"/>
-            <xsl:apply-templates select="cmd:aantalPaginas"/>
-            <xsl:apply-templates select="cmd:Pagina">
-                <xsl:sort select="cmd:nr" data-type="number"/>
+            <xsl:apply-templates select="*[local-name()='cmd:id']"/>
+            <xsl:apply-templates select="*[local-name()='cmd:commentaarScan']"/>
+            <xsl:apply-templates select="*[local-name()='cmd:aantalPaginas']"/>
+            <xsl:apply-templates select="*[local-name()='cmd:Pagina']">
+                <xsl:sort select="*[local-name()='cmd:nr']" data-type="number"/>
             </xsl:apply-templates>
         </cmd:Scan>        
     </xsl:template>
 
-    <xsl:template match="cmd:Pagina" priority="10">
+    <xsl:template match="*[local-name()='cmd:Pagina']" priority="10">
         <xsl:comment>cmd:Pagina</xsl:comment>
-        <cmd:Pagina ref="p{cmd:nr}">
+        <cmd:Pagina ref="p{*[local-name()='cmd:nr']}">
             <xsl:apply-templates select="@*|node()"/>
         </cmd:Pagina>
     </xsl:template>
