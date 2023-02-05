@@ -1,7 +1,7 @@
 [
     {
         "heading": "Identifier",
-        "schemaValue": "identifier"
+        "schemaValue": "id"
     }, 
     {
         "heading": "Status",
