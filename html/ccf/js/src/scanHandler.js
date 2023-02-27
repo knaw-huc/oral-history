@@ -139,14 +139,13 @@ function checkPrevious(currentPage) {
 
     let v = c - 1;
     let verwachtFound = false;
-    while (pageType(pages[v])!='als verwacht') {
+    while (pageType(pages[v])!='als verwacht' && pageType(pages[v])!='losse aanvulling') {
         v -= 1;
-        // check op null ??
         if (v<0) {
             break;
         }
     }
-    //pages[v ]is de laatste pagina 'als verwacht'
+    // pages[v] is de laatste pagina 'als verwacht'
     console.log('v: ' + v);
     if (v>-1) {
         verwachtFound = true;
