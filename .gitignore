@@ -124,7 +124,7 @@ dist
 .tern-port
 
 # if a profile has been loaded
-*.loaded
+html/ccf/data/profiles/*.loaded
 
 # resources
 html/ccf/data/records/inprogress/resources/
