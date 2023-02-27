@@ -25,6 +25,7 @@
                             <enumeration>
                                 <item>als verwacht</item>
                                 <item>losse aanvulling</item>
+                                <item>verwijderen</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
