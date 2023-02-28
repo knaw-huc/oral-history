@@ -70,19 +70,24 @@ function kloeke(page) {
 
 // works
 function pageType(page) {
+    let result = '--';
     try {
-        return page.find('div[data-name="pageType"]')[0].children[1].children[0]["value"];
+        result =  page.find('div[data-name="pageType"]')[0].children[1].children[0]["value"];
     } catch(error) {
         try {
-            return page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+            result = page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
         } catch(error) {
             try {
-                return page["0"]["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+                result = page["0"]["children"]["5"]["children"]["1"]["children"]["0"]["value"];
             } catch(error) {
                 console.log(error);
             }
         }
     }
+    if (result=='verwijderen') {
+        setVolgorde(page, 0);
+    }
+    return result;
 }
 
 function getCurrentPage(pages,numberCP) {
