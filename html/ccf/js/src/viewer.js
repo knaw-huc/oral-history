@@ -1797,6 +1797,7 @@
       if (this.hiding || this.played || index < 0 || index >= this.length || this.viewed && index === this.index) {
         return this;
       }
+      jumpToPage(index);
       if (!this.isShown) {
         this.index = index;
         return this.show();

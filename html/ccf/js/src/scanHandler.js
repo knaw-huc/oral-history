@@ -174,6 +174,18 @@ function checkPrevious(currentPage) {
     }
 }
 
+function jumpToPage(index) {
+    // console.log('jumpToPage: ' + index + ' (' + index.constructor.name + ')');
+    $("div[data-class='page']").each(
+        function () {
+            let val = Number($(this).children(1).children(1).children(0).val());
+            // console.log(val + ' (' + val.constructor.name + ')');
+            if (val === index + 1) {
+                this.scrollIntoView();
+            }
+        });
+}
+
 function scanHandler() {
 
     // TODO: luister naar data-class=pageCount, zet globale variabele pageCount
