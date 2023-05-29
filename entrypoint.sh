@@ -16,8 +16,8 @@ if [ ! -f /var/www/html/ccf/data/profiles/${PROFILE}.loaded ]; then
     python3 /var/www/html/ccf/ccf-add-profile.py ${PROFILE} "${TITLE}"
     touch /var/www/html/ccf/data/profiles/${PROFILE}.loaded
     
-    if [ -f /var/www/html/ccf/data/records/records.sql ]; then
-        cat /var/www/html/ccf/data/records/records.sql | mysql "--host=${DB_SERVER}" "--user=${DB_USER}" "--password=${DB_PASSWD}" "--database=${DB_NAME}"
+    if [ -f /var/www/html/ccf/data/records/inprogress/records.sql ]; then
+        cat /var/www/html/ccf/data/records/inprogress/records.sql | mysql "--host=${DB_SERVER}" "--user=${DB_USER}" "--password=${DB_PASSWD}" "--database=${DB_NAME}"
     fi
 fi
 
