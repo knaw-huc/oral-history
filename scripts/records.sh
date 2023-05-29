@@ -1,10 +1,10 @@
 #!/bin/bash
 
-IN="/Users/menzowi/Documents/Projects/VLB/scans/microfiches/D4/cmdi"
+IN="/Users/menzowi/Documents/Projects/VLB/scans/microfiches/V1/cmdi"
 OUT="/Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/records/inprogress"
 EXT="xml"
 CREATOR="records.sh"
-DATE="2022-10-21"
+DATE="2023-05-29"
 
 for REC in `find ${IN} -type f -name "*.${EXT}"`; do
     echo "REC[${REC}]"
