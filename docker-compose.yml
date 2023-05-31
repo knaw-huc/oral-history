@@ -20,15 +20,16 @@ services:
         ports:
             - 8123:80
         volumes: 
-#            - ./html:/var/www/html/ # during development       
-#            - vlb-records:/var/www/html/ccf/data/records/inprogress      
-            - /var/www/html/ccf/data/records/:/data/vragenlijsten/records
-            - /var/www/html/ccf/data/resources/:/data/vragenlijsten/resources
+            - /data/vragenlijsten/records/:/var/www/html/ccf/data/records/
+            - /data/vragenlijsten/resources/:/var/www/html/ccf/data/resources/
+#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/records:/var/www/html/ccf/data/records
+#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/resources:/var/www/html/ccf/data/resources
         environment:
             TITLE: "HuC generic Editor"
             PROFILE: "Vragenlijst"
             SUBTITLE: "All you need for development"
             BASE_URL: "https://vlb.sd.di.huc.knaw.nl/ccf/"
+#            BASE_URL: "http://0.0.0.0:8123/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: mysql
             DB_USER: root
@@ -42,6 +43,7 @@ services:
             - mysql
 networks:
   ccf:
+#    external: false
     external:
       name: nginxproxynetwork
 volumes:
