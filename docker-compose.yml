@@ -22,7 +22,8 @@ services:
         volumes: 
 #            - ./html:/var/www/html/ # during development       
 #            - vlb-records:/var/www/html/ccf/data/records/inprogress      
-            - /var/www/html/ccf/data/records/inprogress:/data/vragenlijsten
+            - /var/www/html/ccf/data/records/:/data/vragenlijsten/records
+            - /var/www/html/ccf/data/resources/:/data/vragenlijsten/resources
         environment:
             TITLE: "HuC generic Editor"
             PROFILE: "Vragenlijst"
