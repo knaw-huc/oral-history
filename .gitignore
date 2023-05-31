@@ -127,4 +127,4 @@ dist
 html/ccf/data/profiles/*.loaded
 
 # resources
-html/ccf/data/records/inprogress/resources/
+html/ccf/data/resources/
