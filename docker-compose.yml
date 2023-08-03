@@ -1,6 +1,6 @@
 version: '2'
 services: 
-    mysql:
+    vlb-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
@@ -10,10 +10,10 @@ services:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - ccf 
+            - vlb-network 
 
     # huc-editor backend & frontend
-    php-apache:
+    vlb-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
@@ -31,18 +31,18 @@ services:
             BASE_URL: "https://vlb.sd.di.huc.knaw.nl/ccf/"
 #            BASE_URL: "http://0.0.0.0:8123/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: mysql
+            DB_SERVER: vlb-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
             VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
             VIRTUAL_PORT: 80
         networks:
-            - ccf
+            - vlb-network
         depends_on:
-            - mysql
+            - vlb-mysql
 networks:
-  ccf:
+  vlb-network:
 #    external: false
     external:
       name: nginxproxynetwork
