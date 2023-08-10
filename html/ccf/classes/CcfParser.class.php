@@ -117,7 +117,7 @@ class Ccfparser {
         $retArray = $this->_parseRecord($xml, $resources);
         return $retArray;
     }
-    
+
     private function _hasChild($p) {
         if ($p->hasChildNodes()) {
           foreach ($p->childNodes as $c) {
@@ -131,7 +131,7 @@ class Ccfparser {
     private function _parseRecord($xml, $resources) {
         $retArray = array();
         foreach ($xml->childNodes as $node) {
-            $name = substr($node->nodeName, 4);
+            $name = $node->localName;
             if ($node->hasChildNodes()) {
                 if (!$this->_hasChild($node)) {
                     $attributes = $this->_getValueAttributes($node, $resources);
@@ -280,6 +280,9 @@ class Ccfparser {
                     break;
                 case 'cue:readonly' :
                     $retArray["readonly"] = $attribute->nodeValue;
+                    break;
+                case 'cue:class':
+                    $retArray["class"] = $attribute->nodeValue;
                     break;
             }
         }

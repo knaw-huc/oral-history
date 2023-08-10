@@ -4,7 +4,7 @@
 
     <h2>list of records </h2>
                 <table id="resultTable" class="sortable">
-                    <tr>
+                    <thead><tr>
                     {foreach from=$headings item=heading}
                         <th>{$heading}</th>
                     {/foreach}
@@ -14,7 +14,7 @@
                         <th></th>
                         <th></th>
 
-                    </tr>
+                    </tr></thead><tbody>
                     {foreach from=$records item=record}
                         <tr>
                         {foreach from=$headings item=heading}
@@ -28,8 +28,17 @@
         
                         </tr>
                     {/foreach}
-                </table>
-           
+                    </tbody></table>
+                    <div id="paging-resultTable"></div>
+<script>
+    var datatable = new DataTable(document.querySelector('#resultTable'), {
+    pageSize: 25,
+    sort: [true, true, true, true],
+    filters: [true, true, 'select', 'select'],
+    filterText: 'Type to filter... ',
+    pagingDivSelector: "#paging-resultTable"
+    });
+</script>          
 
     <div id="dialog-confirm" title="Record Deletion Confirmation" style="display: none;">
         <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>This record will be permanently deleted and cannot be recovered. Are you sure?</p>

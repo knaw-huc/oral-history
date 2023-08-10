@@ -123,3 +123,6 @@ dist
 # if a profile has been loaded
 *.loaded
 scripts/saxon-he-10.5.jar
+
+html/ccf/data/records/inprogress.BAK
+html/ccf/data/records/records.sql.BAK

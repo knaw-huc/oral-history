@@ -1,10 +1,10 @@
 #!/bin/bash
 
-IN="/Users/menzowi/Documents/Projects/CLARIAH/Vocabularies/Registry/convert-yalc/output_cmdi"
+IN="/Users/menzowi/Documents/Projects/CLARIAH/Vocabularies/Registry/vocab-registry/data/records"
 OUT="/Users/menzowi/Documents/Projects/CLARIAH/Vocabularies/Registry/huc-cmdi-app/html/ccf/data/records/inprogress"
-EXT="xml"
+EXT="cmdi"
 CREATOR="records.sh"
-DATE="2022-10-21"
+DATE="2023-08-07"
 
 for REC in `find ${IN} -type f -name "*.${EXT}"`; do
     echo "REC[${REC}]"
@@ -17,5 +17,5 @@ for REC in `find ${IN} -type f -name "*.${EXT}"`; do
     mkdir -p ${OUT}/md${I}/resources
     ./xsl.sh -s:$REC -xsl:./strip.xsl > ${OUT}/md${I}/metadata/record.cmdi
 
-    echo "INSERT INTO metadata_records(id,name,profile_id,creator,creation_date) VALUES(${I},\"rec ${I}\",1,\"${CREATOR}\",\"${DATE}\");" >> records.sql
+    echo "INSERT INTO metadata_records(id,name,profile_id,creator,creation_date) VALUES(${I},\"rec ${I}\",1,\"${CREATOR}\",\"${DATE}\");" | tee -a /Users/menzowi/Documents/Projects/CLARIAH/Vocabularies/Registry/huc-cmdi-app/html/ccf/data/records/records.sql
 done

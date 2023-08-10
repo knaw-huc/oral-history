@@ -7,6 +7,7 @@
         <Status>development</Status>
     </Header>
     <Component name="Vocabulary" CardinalityMin="1" CardinalityMax="1">
+        <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         <Element name="type" CardinalityMin="1" CardinalityMax="1">
             <ValueScheme>
@@ -24,6 +25,31 @@
                 </Vocabulary>
             </ValueScheme>
         </Element>
+        <Element name="status" CardinalityMin="1" CardinalityMax="1">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>review</item>
+                        <item>reviewed</item>
+                        <item>delete</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Component name="License" ComponentRef="clarin.eu:cr1:c_1685529187073" ConceptLink="http://hdl.handle.net/11459/CCR_C-2457_45bbaa1a-7002-2ecd-ab9d-57a189f694a6" CardinalityMin="1" CardinalityMax="1">
+            <Element name="identifier" ConceptLink="http://hdl.handle.net/11459/CCR_C-6586_2c79d86a-5a75-0890-d407-7d9cb86b9beb" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>Identifier of the licence</Documentation>
+            </Element>
+            <Element name="label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>Display label for the licence: the official name or else a commonly understood label for the specific licence</Documentation>
+            </Element>
+            <Element name="url" ConceptLink="http://hdl.handle.net/11459/CCR_C-6586_2c79d86a-5a75-0890-d407-7d9cb86b9beb" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Reference to the content of the licence (if different from the identifier)</Documentation>
+            </Element>
+            <Component name="Description" ComponentRef="clarin.eu:cr1:c_1595321762411" CardinalityMin="0" CardinalityMax="unbounded">
+                <Element name="description" ConceptLink="http://hdl.handle.net/11459/CCR_C-2520_9eeedfb4-47d3-ddee-cfcb-99ac634bf1db" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            </Component>
+        </Component>
         <Component name="Location" ComponentRef="clarin.eu:cr1:c_1659015263855" CardinalityMin="1" CardinalityMax="unbounded">
             <Element name="uri" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="type" CardinalityMin="1" CardinalityMax="1">
@@ -37,20 +63,6 @@
                 </ValueScheme>
             </Element>
             <Element name="recipe" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-        </Component>
-        <Component name="Licence" ComponentRef="clarin.eu:cr1:c_1595321762457" ConceptLink="http://hdl.handle.net/11459/CCR_C-2457_45bbaa1a-7002-2ecd-ab9d-57a189f694a6" CardinalityMin="1" CardinalityMax="1">
-            <Element name="identifier" ConceptLink="http://hdl.handle.net/11459/CCR_C-6586_2c79d86a-5a75-0890-d407-7d9cb86b9beb" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-                <Documentation>Identifier of the licence</Documentation>
-            </Element>
-            <Element name="label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-                <Documentation>Display label for the licence: the official name or else a commonly understood label for the specific licence</Documentation>
-            </Element>
-            <Element name="url" ConceptLink="http://hdl.handle.net/11459/CCR_C-6586_2c79d86a-5a75-0890-d407-7d9cb86b9beb" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1">
-                <Documentation>Reference to the content of the licence (if different from the identifier)</Documentation>
-            </Element>
-            <Component name="Description" ComponentRef="clarin.eu:cr1:c_1595321762411" CardinalityMin="0" CardinalityMax="unbounded">
-                <Element name="description" ConceptLink="http://hdl.handle.net/11459/CCR_C-2520_9eeedfb4-47d3-ddee-cfcb-99ac634bf1db" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            </Component>
         </Component>
         <Component name="Description" ComponentRef="clarin.eu:cr1:c_1595321762411" CardinalityMin="0" CardinalityMax="1">
             <Element name="description" ConceptLink="http://hdl.handle.net/11459/CCR_C-2520_9eeedfb4-47d3-ddee-cfcb-99ac634bf1db" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>

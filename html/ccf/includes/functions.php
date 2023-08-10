@@ -166,9 +166,13 @@ function list_records() {
 
 
 function matchElement($needle, $haystack) {
-    preg_match("|<cmd:$needle.*?>(.+?)</cmd:$needle>|", $haystack, $matches);
-    return $matches[1];
-
+    $doc = new DOMDocument();
+    $doc->preserveWhiteSpace = false;
+    $doc->loadXML($haystack);
+    $query = "//cmd:$needle";
+    $xpath = new DOMXPath($doc);
+    $entries = $xpath->query($query);
+    return $entries[0]->nodeValue;
 }
 
 

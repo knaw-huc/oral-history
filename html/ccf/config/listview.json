@@ -1,6 +1,14 @@
 [
     {
+        "heading": "Identifier",
+        "schemaValue": "identifier"
+    },   
+    {
         "heading": "Name",
         "schemaValue": "title"
+    },   
+    {
+        "heading": "Status",
+        "schemaValue": "status"
     }   
 ]
