@@ -40,7 +40,7 @@
                 minHeight: 700,
                 minWidth: 600,
                 viewed() {
-                    viewer.zoomTo(1);
+                    viewer.zoomTo(0.9);
                 },
             });
             scanHandler();
