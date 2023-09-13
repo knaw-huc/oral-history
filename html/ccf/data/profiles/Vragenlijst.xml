@@ -37,6 +37,7 @@
                             <enumeration>
                                 <item>als verwacht</item>
                                 <item>losse aanvulling</item>
+                                <item>probleem</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
