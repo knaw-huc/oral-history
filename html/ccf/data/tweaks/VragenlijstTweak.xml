@@ -20,15 +20,6 @@
                 <Element name="kloekeCode" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:class="kloekeCode" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="nr" ValueScheme="int" CardinalityMin="1" CardinalityMax="1" readonly="yes" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1" cue:class="number"/>
                 <Element name="type" CardinalityMin="1" CardinalityMax="1" cue:class="pageType">
-                    <ValueScheme>
-                        <Vocabulary>
-                            <enumeration>
-                                <item>als verwacht</item>
-                                <item>losse aanvulling</item>
-                                <item>verwijderen</item>
-                            </enumeration>
-                        </Vocabulary>
-                    </ValueScheme>
                     <AutoValue>als verwacht</AutoValue>
                 </Element>
                 <Element name="commentaarPagina" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:inputHeight="8" cue:inputWidth="60" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
