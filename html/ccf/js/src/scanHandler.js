@@ -144,7 +144,8 @@ function checkPrevious(currentPage) {
 
     let v = c - 1;
     let verwachtFound = false;
-    while (pageType(pages[v])!='als verwacht' && pageType(pages[v])!='losse aanvulling') {
+    while (pageType(pages[v])!='als verwacht' && pageType(pages[v])!='losse aanvulling'
+        && pageType(pages[v])!='probleem') {
         v -= 1;
         if (v<0) {
             break;
