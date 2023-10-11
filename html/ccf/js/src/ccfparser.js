@@ -766,7 +766,8 @@ function parseElement(element) {
 function parseRecord(obj, set) {
     var nameStack = {};
     for (var key in obj) {
-        if (obj[key] !== null) {
+        if (obj[key] !== null && obj[key].name !== undefined) {
+            console.log(obj[key].name);
             if (nameStack[obj[key].name] === undefined) {
                 nameStack[obj[key].name] = 1;
             } else {
@@ -776,11 +777,13 @@ function parseRecord(obj, set) {
                 if (nameStack[obj[key].name] > 1) {
                     duplicateComponent(obj[key], set);
                 }
+                console.log(obj[key].name);
                 if (set === null) {
                     var newSet = $("div[data-name='" + obj[key].name + "']").eq(nameStack[obj[key].name] - 1);
                 } else {
-                    var newSet = $(set).find("div[data-name='" + obj[key].name + "']").eq(nameStack[obj[key].name] - 1);
+                    var newSet = $(set).children("div[data-name='" + obj[key].name + "']").eq(nameStack[obj[key].name] - 1);
                 }
+                console.log(newSet);
 
 //                if (obj[key].attributes !== undefined) {
 //                    if (obj[key].attributes.ref !== undefined) {
