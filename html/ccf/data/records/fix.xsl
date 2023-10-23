@@ -10,7 +10,6 @@
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
-            <xsl:comment>identity[<xsl:value-of select="local-name()"/>]</xsl:comment>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
     </xsl:template>
