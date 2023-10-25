@@ -12,7 +12,7 @@ function number(page) {
     try {
         return page.find('div[data-name="nr"]').children(1).children(0).val();
     } catch(error) {
-        return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
+        return page["children"]["2"]["children"]["1"]["children"]["0"]["value"];
     }
 }
 
@@ -21,7 +21,7 @@ function setInzending(page, inzending) {
     try {
         page.find('div[data-name="inzending"]')[0].children[1].children[0].value = inzending;
     } catch(error) {
-        page["children"]["3"]["children"]["1"]["children"]["0"]["value"] = inzending;
+        page["children"]["4"]["children"]["1"]["children"]["0"]["value"] = inzending;
     }
 }
 
@@ -31,7 +31,7 @@ function getInzending(page) {
     try {
         return page.find('div[data-name="inzending"]')[0].children[1].children[0].value;
     } catch(error) {
-        return page["children"]["3"]["children"]["1"]["children"]["0"]["value"];
+        return page["children"]["4"]["children"]["1"]["children"]["0"]["value"];
     }
 }
 
@@ -41,7 +41,7 @@ function setVolgorde(page, volgorde) {
         page.find('div[data-name="volgorde"]')[0].children[1].children[0].value = volgorde;
     } catch(error) {
 //        console.log('setVolgorde: ' + error);
-        page["children"]["4"]["children"]["1"]["children"]["0"]["value"] = volgorde;
+        page["children"]["5"]["children"]["1"]["children"]["0"]["value"] = volgorde;
     }
 }
 
@@ -55,7 +55,7 @@ function volgorde(page) {
 //        console.log(page["children"]["4"]);
 //        console.log(page["children"]["4"]["children"]["1"]);
 //        console.log(page["children"]["4"]["children"]["1"]["children"]["0"]);
-        return page["children"]["4"]["children"]["1"]["children"]["0"]["value"];
+        return page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
     }
 }
 
@@ -64,7 +64,7 @@ function kloeke(page) {
     try {
         return page.find('div[data-name="kloekeCode"]')[0].children[1].children[0]["value"];
     } catch(error) {
-        return page["children"]["1"]["children"]["1"]["children"]["0"]["value"];
+        return page["children"]["2"]["children"]["1"]["children"]["0"]["value"];
     }
  }
 
@@ -75,10 +75,10 @@ function pageType(page) {
         result =  page.find('div[data-name="pageType"]')[0].children[1].children[0]["value"];
     } catch(error) {
         try {
-            result = page["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+            result = page["children"]["6"]["children"]["1"]["children"]["0"]["value"];
         } catch(error) {
             try {
-                result = page["0"]["children"]["5"]["children"]["1"]["children"]["0"]["value"];
+                result = page["0"]["children"]["6"]["children"]["1"]["children"]["0"]["value"];
             } catch(error) {
                 console.log(error);
             }
@@ -179,7 +179,8 @@ function jumpToPage(index) {
     // console.log('jumpToPage: ' + index + ' (' + index.constructor.name + ')');
     $("div[data-class='page']").each(
         function () {
-            let val = Number($(this).children(1).children(1).children(0).val());
+            /* terecht gewijzigd ? */
+            let val = Number($(this).children(2).children(1).children(0).val());
             // console.log(val + ' (' + val.constructor.name + ')');
             if (val === index + 1) {
                 this.scrollIntoView();
@@ -197,7 +198,8 @@ function scanHandler() {
     $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
             pageCount();
-            showScan($(this).children(1).children(1).children(0).val());
+            /* terecht gewijzigd ? */
+            showScan($(this).children(2).children(1).children(0).val());
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
             console.log("volgorde: " + volgorde($(this)));
