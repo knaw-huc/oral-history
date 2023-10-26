@@ -179,7 +179,7 @@ function jumpToPage(index) {
     // console.log('jumpToPage: ' + index + ' (' + index.constructor.name + ')');
     $("div[data-class='page']").each(
         function () {
-	    let id = $(this).children()[2].children[1].children[0].getAttribute('id');
+            let id = document.evaluate('div[@data-name="nr"]/div[@class="control"]/input/@id',this,null,XPathResult.STRING_TYPE,null).stringValue;
             let val = Number(document.getElementById(id).value);
             // console.log(val + ' (' + val.constructor.name + ')');
             if (val === index + 1) {
@@ -198,7 +198,7 @@ function scanHandler() {
     $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
             pageCount();
-	    let id = $(this).children()[2].children[1].children[0].getAttribute('id');
+            let id = document.evaluate('div[@data-name="nr"]/div[@class="control"]/input/@id',this,null,XPathResult.STRING_TYPE,null).stringValue;
             let val = Number(document.getElementById(id).value);
             showScan(val);
 //            $(this).children().find('volgorde')['']
