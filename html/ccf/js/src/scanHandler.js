@@ -179,8 +179,8 @@ function jumpToPage(index) {
     // console.log('jumpToPage: ' + index + ' (' + index.constructor.name + ')');
     $("div[data-class='page']").each(
         function () {
-            /* terecht gewijzigd ? */
-            let val = Number($(this).children(2).children(1).children(0).val());
+	    let id = $(this).children()[2].children[1].children[0].getAttribute('id');
+            let val = Number(document.getElementById(id).value);
             // console.log(val + ' (' + val.constructor.name + ')');
             if (val === index + 1) {
                 this.scrollIntoView();
@@ -198,8 +198,9 @@ function scanHandler() {
     $("div[data-class='page']").each(function () {
         $(this).on("click", function () {
             pageCount();
-            /* terecht gewijzigd ? */
-            showScan($(this).children(2).children(1).children(0).val());
+	    let id = $(this).children()[2].children[1].children[0].getAttribute('id');
+            let val = Number(document.getElementById(id).value);
+            showScan(val);
 //            $(this).children().find('volgorde')['']
 //            console.log($(this).find('div[name="volgorde"]'))
             console.log("volgorde: " + volgorde($(this)));
