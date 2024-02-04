@@ -1,14 +1,10 @@
 [
     {
-        "heading": "Vragenlijst",
-        "schemaValue": "identifier"
-    }, 
-    {
-        "heading": "Scan",
-        "schemaValue": "id"
+        "heading": "Dataset",
+        "schemaValue": "title"
     }, 
     {
         "heading": "Status",
-        "schemaValue": "Status"
+        "schemaValue": "status"
     }   
 ]

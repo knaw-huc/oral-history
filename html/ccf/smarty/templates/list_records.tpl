@@ -35,8 +35,8 @@
 
 var datatable = new DataTable(document.querySelector('#resultTable'), {
     pageSize: 25,
-    sort: [true, true, true, true],
-    filters: ['select', true, 'select', 'select'],
+    sort: [true, true, true],
+    filters: [true,'select', 'select'],
     filterText: 'Type to filter... ',
     pagingDivSelector: "#paging-resultTable"
 });

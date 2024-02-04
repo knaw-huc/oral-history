@@ -1,50 +1,48 @@
 version: '2'
 services: 
-    vlb-mysql:
+    nde-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - vlb-mysqldb:/var/lib/mysql
+            - nde-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - vlb-network 
+            - nde-network 
 
     # huc-editor backend & frontend
-    vlb-php-apache:
+    nde-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
         ports:
             - 8123:80
-        volumes: 
-            - /data/vragenlijsten/records/:/var/www/html/ccf/data/records/
-            - /data/vragenlijsten/resources/:/var/www/html/ccf/data/resources/
-#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/records:/var/www/html/ccf/data/records
-#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/resources:/var/www/html/ccf/data/resources
+        volumes:
+            - ./data/records/:/var/www/html/ccf/data/records/
+            - ./data/resources/:/var/www/html/ccf/data/resources/
         environment:
-            TITLE: "HuC generic Editor"
-            PROFILE: "Vragenlijst"
-            SUBTITLE: "All you need for development"
-            BASE_URL: "https://vlb.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8123/ccf/"
+            TITLE: "NDE DCat Editor"
+            PROFILE: "DCat"
+            SUBTITLE: "your way to INEO"
+#            BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8123/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: vlb-mysql
+            DB_SERVER: nde-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
-            VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
-            VIRTUAL_PORT: 80
+#            VIRTUAL_HOST: "nde.sd.di.huc.knaw.nl"
+#            VIRTUAL_PORT: 80
         networks:
-            - vlb-network
+            - nde-network
         depends_on:
-            - vlb-mysql
+            - nde-mysql
 networks:
-  vlb-network:
-#    external: false
-    external:
-      name: nginxproxynetwork
+  nde-network:
+    external: false
+#    external:
+#      name: nginxproxynetwork
 volumes:
-    vlb-mysqldb: 
+    nde-mysqldb:

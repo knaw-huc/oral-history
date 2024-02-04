@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+    <Header>
+        <ID>clarin.eu:cr1:p_1650879720846</ID>
+    </Header>
+    <Component name="DCat" CardinalityMin="1" CardinalityMax="1">
+        <Component name="Dataset">
+            <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
+            <Component name="Distribution" ConceptLink="http://www.w3.org/ns/dcat#distribution">
+                <Element name="description" ConceptLink="http://purl.org/dc/terms/description" ValueScheme="string" cue:inputHeight="8" cue:inputWidth="60"/>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>
