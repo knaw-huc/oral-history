@@ -26,6 +26,7 @@ var ccfOptions = {
       no_valid_date: 'Dit is geen geldige datum!',
       no_valid_date_box: ': geen geldige datum',
       date_string: 'jjjj-mm-dd',
+      anyURI_string: 'uri of url',
       int_field: 'De waarde van dit veld moet numeriek zijn!',
       int_field_box: ': moet numeriek zijn!',
       attr_not_empty_field: 'Attribuut is verplicht'

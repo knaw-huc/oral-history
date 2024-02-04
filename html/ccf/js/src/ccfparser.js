@@ -64,6 +64,9 @@ var formBuilder = {
         if (element.attributes.ValueScheme === 'date') {
             label.innerHTML = label.innerHTML + ' (' + ccfOptions.alert.date_string + ')';
         }
+        if (element.attributes.ValueScheme === 'anyURI') {
+            label.innerHTML = label.innerHTML + ' (' + ccfOptions.alert.anyURI_string + ')';
+        }
         input = document.createElement('div');
         input.setAttribute('class', 'control');
         control = this.createControl(element);
