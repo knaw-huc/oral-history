@@ -35,7 +35,8 @@ if __name__ == "__main__":
     args = arguments()
     inputdir = args['inputdir']
     teller = 0
-    count_status = {}
+    count_location_type = {}
+    status = ''
 
     all_files = glob.glob(inputdir + "**/*.cmdi", recursive = True)     
     stderr(len(all_files))
@@ -47,14 +48,19 @@ if __name__ == "__main__":
         try:
             status = root.findall('.//cmd:status',ns)[0].text
         except IndexError:
-            stderr(f'no status: {f}')
             status = 'unknown'
-        if status in count_status:
-            count_status[status] += 1
+        try:
+            location_type = root.findall('.//cmd:Location/cmd:type',ns)[0].text
+        except IndexError:
+            location_type = 'unknown'
+        if not location_type=='homepage':
+            stderr(f'{location_type}: {f} ({status})')
+        if location_type in count_location_type:
+            count_location_type[location_type] += 1
         else:
-            count_status[status] = 1
+            count_location_type[location_type] = 1
 
-    stderr(count_status)
+    stderr(count_location_type)
     stderr(f'total: {teller}')
     stderr(datetime.today().strftime("einde: %H:%M:%S"))
 
