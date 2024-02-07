@@ -18,7 +18,7 @@ services:
             context: .
             dockerfile: ./Dockerfile
         ports:
-            - 8123:80
+            - 8124:80
         volumes:
             - ./data/records/:/var/www/html/ccf/data/records/
             - ./data/resources/:/var/www/html/ccf/data/resources/
@@ -27,7 +27,7 @@ services:
             PROFILE: "DCat"
             SUBTITLE: "your way to INEO"
             BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8123/ccf/"
+#            BASE_URL: "http://0.0.0.0:8124/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: nde-mysql
             DB_USER: root
