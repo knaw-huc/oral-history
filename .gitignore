@@ -2,7 +2,7 @@ video
 #inprogress
 __pycache__
 .idea
-scripts
+scripts/saxon-he-10.5.jar
 docker
 .vscode
 *.zip
@@ -124,4 +124,7 @@ dist
 .tern-port
 
 # if a profile has been loaded
-*.loaded
+html/ccf/data/profiles/*.loaded
+
+# resources
+html/ccf/data/resources/

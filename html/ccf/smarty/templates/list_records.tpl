@@ -3,8 +3,8 @@
 
 
     <h2>list of records </h2>
-                <table id="resultTable" class="sortable">
-                    <tr>
+                <table id="resultTable" class="table table-bordered">
+                    <thead><tr>
                     {foreach from=$headings item=heading}
                         <th>{$heading}</th>
                     {/foreach}
@@ -14,7 +14,7 @@
                         <th></th>
                         <th></th>
 
-                    </tr>
+                    </tr></thead><tbody>
                     {foreach from=$records item=record}
                         <tr>
                         {foreach from=$headings item=heading}
@@ -28,7 +28,19 @@
         
                         </tr>
                     {/foreach}
-                </table>
+                </tbody></table>
+                <div id="paging-resultTable"></div>
+                <script>
+
+
+var datatable = new DataTable(document.querySelector('#resultTable'), {
+    pageSize: 25,
+    sort: [true, true, true, true],
+    filters: ['select', true, 'select', 'select'],
+    filterText: 'Type to filter... ',
+    pagingDivSelector: "#paging-resultTable"
+});
+                </script>
            
 
     <div id="dialog-confirm" title="Record Deletion Confirmation" style="display: none;">

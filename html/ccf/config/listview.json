@@ -1,6 +1,14 @@
 [
     {
-        "heading": "Identifier",
+        "heading": "Vragenlijst",
         "schemaValue": "identifier"
+    }, 
+    {
+        "heading": "Scan",
+        "schemaValue": "id"
+    }, 
+    {
+        "heading": "Status",
+        "schemaValue": "Status"
     }   
 ]

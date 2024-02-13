@@ -1,42 +1,54 @@
-version: '3'
+version: '2'
 services: 
-    mysql:
-        image: mariadb:10.5
+    vlb-mysql:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - mysqldb:/var/lib/mysql
-            - ./cmdi_forms.sql:/docker-entrypoint-initdb.d/cmdi_forms.sql
+            - vlb-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - ccf 
+            - vlb-network 
 
     # huc-editor backend & frontend
-    php-apache:
+    vlb-php-apache:
         build:
             context: .
-            dockerfile: Dockerfile
+            dockerfile: ./Dockerfile
         ports:
-            - 80:80
+            - 8123:80
         volumes: 
-            - ./html:/var/www/html/ # during development       
+            - /data/vragenlijsten/records/:/var/www/html/ccf/data/records/
+            - /data/vragenlijsten/resources/:/var/www/html/ccf/data/resources/
+#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/records:/var/www/html/ccf/data/records
+#            - /Users/menzowi/Documents/Projects/VLB/huc-cmdi-app/html/ccf/data/resources:/var/www/html/ccf/data/resources
         environment:
             TITLE: "HuC generic Editor"
             PROFILE: "Vragenlijst"
             SUBTITLE: "All you need for development"
-            BASE_URL: "http://localhost/ccf/"
+            BASE_URL: "https://vlb.sd.di.huc.knaw.nl/ccf/"
+#            BASE_URL: "http://0.0.0.0:8123/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: mysql
+            DB_SERVER: vlb-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
+            VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
+            VIRTUAL_PORT: 80
+        labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.vlb.entrypoints=http"
+        - "traefik.http.routers.vlb.rule=Host(`vlb.sd.di.huc.knaw.nl`)"
         networks:
-            - ccf
+            - vlb-network
         depends_on:
-            - mysql
+            - vlb-mysql
 networks:
-    ccf:
-        external: false
+  vlb-network:
+#    external: false
+    external:
+      name: traefik-public
 volumes:
-    mysqldb:       
-    cmdirecords:
+    vlb-mysqldb: 
