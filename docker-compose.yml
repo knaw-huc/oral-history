@@ -33,8 +33,10 @@ services:
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
-            VIRTUAL_HOST: "nde.sd.di.huc.knaw.nl"
-            VIRTUAL_PORT: 80
+        labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.sd-skosmos-fuseki.entrypoints=http"
+        - "traefik.http.routers.sd-skosmos-fuseki.rule=Host(`nde.sd.di.huc.knaw.nl`)"
         networks:
             - nde-network
         depends_on:
@@ -43,6 +45,6 @@ networks:
   nde-network:
 #    external: false
     external:
-      name: nginxproxynetwork
+      name: traefik-public
 volumes:
     nde-mysqldb:
