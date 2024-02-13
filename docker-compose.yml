@@ -37,6 +37,10 @@ services:
             DB_NAME: cmdi_forms
             VIRTUAL_HOST: "vlb.sd.di.huc.knaw.nl"
             VIRTUAL_PORT: 80
+        labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.vlb.entrypoints=http"
+        - "traefik.http.routers.vlb.rule=Host(`vlb.sd.di.huc.knaw.nl`)"
         networks:
             - vlb-network
         depends_on:
@@ -45,6 +49,6 @@ networks:
   vlb-network:
 #    external: false
     external:
-      name: nginxproxynetwork
+      name: traefik-public
 volumes:
     vlb-mysqldb: 
