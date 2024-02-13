@@ -35,7 +35,7 @@ services:
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.nde-fuseki.entrypoints=http"
+        - "traefik.http.routers.nde.entrypoints=http"
         - "traefik.http.routers.nde.rule=Host(`nde.sd.di.huc.knaw.nl`)"
         networks:
             - nde-network
