@@ -45,10 +45,10 @@ if __name__ == "__main__":
         ns = get_element_namespaces(f)
         tree = ET.parse(f)
         root = tree.getroot()
-        try:
-            status = root.findall('.//cmd:status',ns)[0].text
-        except IndexError:
-            status = 'unknown'
+        #try:
+        status = root.findall('.//cmd:status',ns)[0].text
+        #except IndexError:
+        #    status = 'unknown'
         try:
             location_type = root.findall('.//cmd:Location/cmd:type',ns)[0].text
         except IndexError:
