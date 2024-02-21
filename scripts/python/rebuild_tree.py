@@ -116,7 +116,8 @@ if __name__ == "__main__":
                 tree.write(uitvoer, encoding='utf-8')
             else:
                 ET.indent(tree, space='    ', level=0)
-                tree.write(uitvoer, encoding='utf-8')
+                tree.write(f, encoding='utf-8')
+                uitvoer = f
             try:
                 xsd.validate(uitvoer)
             except Exception as e:
