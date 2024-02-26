@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+    <Header>
+        <ID>clarin.eu:cr1:p_1653377925723</ID>
+    </Header>
+    <Component name="Vocabulary">
+        <Component name="License">
+            <Component name="Description">
+                <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
+            </Component>
+        </Component>
+        <Component name="Description">
+            <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
+        </Component>
+        <Component name="Location" CardinalityMin="1" CardinalityMax="unbounded">
+            <Element name="type" cue:default="homepage">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>homepage</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+        </Component>
+        <Component name="Assessement" CardinalityMin="1" CardinalityMax="1">
+            <Component name="Review">
+                <Element name="review" cue:inputHeight="8" cue:inputWidth="60"/>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>
