@@ -21,6 +21,7 @@
                         <item>sql ddl</item>
                         <item>cow</item>
                         <item>linkml</item>
+                        <item>rdfs</item>
                     </enumeration>
                 </Vocabulary>
             </ValueScheme>
@@ -58,11 +59,24 @@
                         <enumeration>
                             <item>homepage</item>
                             <item>endpoint</item>
+                            <item>dump</item>
                         </enumeration>
                     </Vocabulary>
                 </ValueScheme>
             </Element>
-            <Element name="recipe" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="recipe" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>sparql</item>
+                            <item>skosmos</item>
+                            <item>elastic</item>
+                            <item>solr</item>
+                            <item>rdf</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
         </Component>
         <Component name="Description" ComponentRef="clarin.eu:cr1:c_1595321762411" CardinalityMin="0" CardinalityMax="1">
             <Element name="description" ConceptLink="http://hdl.handle.net/11459/CCR_C-2520_9eeedfb4-47d3-ddee-cfcb-99ac634bf1db" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
@@ -202,11 +216,24 @@
                             <enumeration>
                                 <item>homepage</item>
                                 <item>endpoint</item>
+                                <item>dump</item>
                             </enumeration>
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
-                <Element name="recipe" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                <Element name="recipe" CardinalityMin="0" CardinalityMax="1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>sparql</item>
+                                <item>skosmos</item>
+                                <item>elastic</item>
+                                <item>solr</item>
+                                <item>rdf</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
             </Component>
         </Component>
         <Component name="Tag" CardinalityMin="0" CardinalityMax="unbounded">
