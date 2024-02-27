@@ -12,7 +12,7 @@
         <Component name="Description">
             <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
         </Component>
-        <Component name="Location" CardinalityMin="1" CardinalityMax="unbounded">
+        <Component name="Location">
             <Element name="type" cue:default="homepage">
                 <ValueScheme>
                     <Vocabulary>
