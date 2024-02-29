@@ -3,8 +3,8 @@
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
         <cmd:MdCreationDate>2023-12-14</cmd:MdCreationDate>
-        <cmd:MdProfile>clarin.eu:cr1:p_1653377925723</cmd:MdProfile>
         <cmd:MdSelfLink>unl://223</cmd:MdSelfLink>
+        <cmd:MdProfile>clarin.eu:cr1:p_1653377925723</cmd:MdProfile>
     </cmd:Header>
     <cmd:Resources>
         <cmd:ResourceProxyList/>
