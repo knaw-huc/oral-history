@@ -4,6 +4,18 @@
         <ID>clarin.eu:cr1:p_1653377925723</ID>
     </Header>
     <Component name="Vocabulary">
+	        <Element name="status" CardinalityMin="1" CardinalityMax="1">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>review</item>
+                        <item>reviewed</item>
+                        <item>delete</item>
+                        <item>dataset</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
         <Component name="License">
             <Component name="Description">
                 <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
@@ -11,17 +23,6 @@
         </Component>
         <Component name="Description">
             <Element name="description" cue:inputHeight="8" cue:inputWidth="60"/>
-        </Component>
-        <Component name="Location">
-            <Element name="type" cue:default="homepage">
-                <ValueScheme>
-                    <Vocabulary>
-                        <enumeration>
-                            <item>homepage</item>
-                        </enumeration>
-                    </Vocabulary>
-                </ValueScheme>
-            </Element>
         </Component>
         <Component name="Assessement" CardinalityMin="1" CardinalityMax="1">
             <Component name="Review">
