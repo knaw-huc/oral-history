@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:cmd="http://www.clarin.eu/cmd/"
-    xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925727/xsd"
+    xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1708423613599/xsd"
     CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>Rob Zeeman</cmd:MdCreator>

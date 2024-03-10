@@ -26,8 +26,8 @@ services:
             TITLE: "NDE DCat Editor"
             PROFILE: "DCat"
             SUBTITLE: "your way to INEO"
-            BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8124/ccf/"
+#            BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8124/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: nde-mysql
             DB_USER: root
@@ -43,8 +43,8 @@ services:
             - nde-mysql
 networks:
   nde-network:
-#    external: false
-    external:
-      name: traefik-public
+    external: false
+#    external:
+#      name: traefik-public
 volumes:
     nde-mysqldb:

@@ -1,13 +1,12 @@
 <?php
 include_once("includes/utility.php");
 
-
-$ch = curl_init("https://skosmos.sd.di.huc.knaw.nl/rest/v1/" . $_GET["vocabulary"] . "/search?unique=yes&query=" . "*" .  $_GET["q"] . "*");
+$ch = curl_init("https://vocabs.acdh.oeaw.ac.at/rest/v1/" . $_GET["vocabulary"] . "/search?unique=yes&query=" . "*" .  $_GET["q"] . "*");
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/text'));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $json = curl_exec($ch);
-// echo $json;
+//echo $json;
 $json = json_decode($json, true);
 if (!$json) {
     $json = "";

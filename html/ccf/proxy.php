@@ -2,7 +2,7 @@
 // $endpoint = "https://vocabularies.clarin.eu/clavas/public/api/autocomplete/";
 include_once("includes/utility.php");
 
-$endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
+$endpoint = "http://vocabs.acdh.oeaw.ac.at/";
 
 // $endpoint = "https://skosmos.sd.di.huc.knaw.nl/" ;
 // https://skosmos.sd.di.huc.knaw.nl/rest/v1/duplo/search?query=c*&unique=yes

@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Header>
-        <ID>clarin.eu:cr1:p_1650879720846</ID>
-        <Name>DCat</Name>
-        <Description>Mimic NDE DCat requirements</Description>
+        <ID>clarin.eu:cr1:p_1708423613599</ID>
+        <Name>HI</Name>
+        <Description>Huygens Dataset</Description>
         <Status>development</Status>
+        <DerivedFrom>clarin.eu:cr1:p_1650879720846</DerivedFrom>
     </Header>
-    <Component name="DCat" CardinalityMin="1" CardinalityMax="1">
+    <Component name="HI" CardinalityMin="1" CardinalityMax="1">
         <Component name="Dataset" ConceptLink="http://www.w3.org/ns/dcat#Dataset" CardinalityMin="1" CardinalityMax="1">
             <Element name="title" ConceptLink="http://purl.org/dc/terms/title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            <Element name="status" ValueScheme="string" CardinalityMin="1" CardinalityMax="1">
-            <ValueScheme>
-                <Vocabulary>
-                    <enumeration>
-                        <item>under construction</item>
-                        <item>ready to publish</item>
-                    </enumeration>
-                </Vocabulary>
-            </ValueScheme>
-            </Element>
             <Element name="license" ConceptLink="http://purl.org/dc/terms/license" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
             <Element name="publisher" ConceptLink="http://purl.org/dc/terms/publisher" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
             <Element name="description" ConceptLink="http://purl.org/dc/terms/description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
@@ -40,6 +31,11 @@
                 <Element name="title" ConceptLink="http://purl.org/dc/terms/title" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="byteSize" ConceptLink="http://www.w3.org/ns/dcat#byteSize" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             </Component>
+        </Component>
+        <Component name="INEO" CardinalityMin="0" CardinalityMax="1">
+            <Element name="intro" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="researchActivity" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="researchDomain" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
     </Component>
 </ComponentSpec>
