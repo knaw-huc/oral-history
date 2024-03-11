@@ -39,6 +39,9 @@
             <Element name="researchActivity">
                 <clariah:autoCompleteURI>skos_proxy.php?vocabulary=tadirah</clariah:autoCompleteURI>
             </Element>
+            <Element name="researchDomain">
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo</clariah:autoCompleteURI>
+            </Element>
         </Component>
     </Component>
 </ComponentSpec>
