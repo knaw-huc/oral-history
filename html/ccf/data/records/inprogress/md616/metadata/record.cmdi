@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-awol</cmd:identifier>
+            <cmd:identifier>awol</cmd:identifier>
             <cmd:title xml:lang="en">AtomOwl Vocabulary Specification</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -291,6 +291,14 @@ Atom being built on RDF is very easily extensible.  It meshes very well with oth
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

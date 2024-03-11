@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-rdand</cmd:identifier>
+            <cmd:identifier>rdand</cmd:identifier>
             <cmd:title xml:lang="en">RDA element sets: Nomen datatype properties</cmd:title>
             <cmd:type>rdfs</cmd:type>
             <cmd:status>review</cmd:status>
@@ -74,6 +74,14 @@
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

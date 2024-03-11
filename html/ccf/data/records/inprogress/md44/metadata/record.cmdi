@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-frapo</cmd:identifier>
+            <cmd:identifier>frapo</cmd:identifier>
             <cmd:title xml:lang="en">Funding, Research Administration and Projects Ontology (FRAPO)</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -84,6 +84,14 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

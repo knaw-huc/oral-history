@@ -14,15 +14,12 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-dnbt</cmd:identifier>
+            <cmd:identifier>dnbt</cmd:identifier>
             <cmd:title xml:lang="en">DNB Metadata Terms</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:url>https://creativecommons.org/publicdomain/zero/1.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">The DNB RDF Vocabulary is a collection of classes, properties and datatypes used within the DNB's linked data service.  It complements the [GND Ontology](dnb/gndo) which is specifically geared towards authority data from the Integrated Authority File (GND), whereas this vocabulary is more general-purpose.</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://d-nb.info/standards/elementset/dnb#</cmd:uri>
@@ -77,6 +74,17 @@
                     <cmd:type>endpoint</cmd:type>
                 </cmd:Location>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">The DNB RDF Vocabulary is a collection of classes, properties and datatypes used within the DNB's linked data service.  It complements the [GND Ontology](dnb/gndo) which is specifically geared towards authority data from the Integrated Authority File (GND), whereas this vocabulary is more general-purpose.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

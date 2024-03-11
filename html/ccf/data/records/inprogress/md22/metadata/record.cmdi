@@ -14,16 +14,13 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-doco</cmd:identifier>
+            <cmd:identifier>doco</cmd:identifier>
             <cmd:title xml:lang="en">Document Components Ontology (DoCo)</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">unknown</cmd:label>
                 <cmd:url>http://rightsstatements.org/vocab/UND/1.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">The Document Components Ontology (DoCO) in an ontology that provides a structured vocabulary written of document components, both structural (e.g., block, inline, paragraph, section, chapter) and rhetorical (e.g., introduction, discussion, acknowledgements, reference list, figure, appendix).</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>http://www.sparontologies.net/ontologies/doco</cmd:uri>
@@ -75,6 +72,17 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">The Document Components Ontology (DoCO) in an ontology that provides a structured vocabulary written of document components, both structural (e.g., block, inline, paragraph, section, chapter) and rhetorical (e.g., introduction, discussion, acknowledgements, reference list, figure, appendix).</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

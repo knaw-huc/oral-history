@@ -9,7 +9,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-iso_19130</cmd:identifier>
+            <cmd:identifier>iso_19130</cmd:identifier>
             <cmd:title xml:lang="en">Geographic information — Imagery sensor models for geopositioning — Part 1: Fundamentals</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -167,6 +167,14 @@ ISO/TS 19130:2010 does not specify either how users derive geoposition data or t
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

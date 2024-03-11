@@ -9,7 +9,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-gndo</cmd:identifier>
+            <cmd:identifier>gndo</cmd:identifier>
             <cmd:title xml:lang="en">GND Ontology</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -79,6 +79,14 @@ To ensure compatibility, the GND ontology aligns with already established vocabu
                     <cmd:Namespaces/>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

@@ -9,7 +9,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-iso_19115</cmd:identifier>
+            <cmd:identifier>iso_19115</cmd:identifier>
             <cmd:title xml:lang="en">Geographic information — Metadata</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -421,6 +421,14 @@ NOTE Certain mandatory metadata elements may not apply to these other forms of d
                     <cmd:type>endpoint</cmd:type>
                 </cmd:Location>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

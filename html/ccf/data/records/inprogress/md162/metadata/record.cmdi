@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-iso_19104</cmd:identifier>
+            <cmd:identifier>iso_19104</cmd:identifier>
             <cmd:title xml:lang="en">Geographic information — Terminology (ISO 19104:2016)</cmd:title>
             <cmd:type>rdfs</cmd:type>
             <cmd:status>review</cmd:status>
@@ -173,6 +173,14 @@ ISO 19104:2016 is applicable to International Standards and Technical Specificat
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

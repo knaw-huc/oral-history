@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-reg-status</cmd:identifier>
+            <cmd:identifier>reg-status</cmd:identifier>
             <cmd:title xml:lang="en">Open Metadata Registry Status Vocabulary</cmd:title>
             <cmd:type>skos</cmd:type>
             <cmd:status>review</cmd:status>
@@ -122,6 +122,14 @@
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

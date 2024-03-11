@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-cp</cmd:identifier>
+            <cmd:identifier>cp</cmd:identifier>
             <cmd:title xml:lang="en">INSPIRE Cadastral Parcels</cmd:title>
             <cmd:type>rdfs</cmd:type>
             <cmd:status>review</cmd:status>
@@ -294,6 +294,14 @@ During the derivation, the following mappings, alignments, and omissions have be
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

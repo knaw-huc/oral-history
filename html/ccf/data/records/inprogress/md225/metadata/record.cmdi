@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-iolite</cmd:identifier>
+            <cmd:identifier>iolite</cmd:identifier>
             <cmd:title xml:lang="en">Information Objects Ontology</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -35,6 +35,14 @@
   - copies, reproductions, etc.
   - cultural combination of information objects (reuse, mixing, metaphorical blending).</cmd:description>
             </cmd:Description>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

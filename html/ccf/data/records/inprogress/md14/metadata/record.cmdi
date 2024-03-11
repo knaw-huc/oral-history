@@ -14,15 +14,12 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-ipo</cmd:identifier>
+            <cmd:identifier>ipo</cmd:identifier>
             <cmd:title xml:lang="en">Issue Procedure Ontology (IPO)</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:url>https://creativecommons.org/licenses/by/3.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">Vocabulary for describing issues (or problems) and corresponding symptoms and solutions to a broad variety of contexts.  It is intended to provide a generic, reusable core ontology that can be extended or specialized for use in domain-specific situations, aimed at supporting Linked Data publishing.  The solutions are represented by procedures, which are possible workflows for solving corresponding issues.</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>http://ipocore.sourceforge.net</cmd:uri>
@@ -69,6 +66,17 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">Vocabulary for describing issues (or problems) and corresponding symptoms and solutions to a broad variety of contexts.  It is intended to provide a generic, reusable core ontology that can be extended or specialized for use in domain-specific situations, aimed at supporting Linked Data publishing.  The solutions are represented by procedures, which are possible workflows for solving corresponding issues.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

@@ -14,16 +14,13 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-patent</cmd:identifier>
+            <cmd:identifier>patent</cmd:identifier>
             <cmd:title xml:lang="en">Patent Ontology</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">unknown</cmd:label>
                 <cmd:url>http://rightsstatements.org/vocab/UND/1.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">An ontology for representing information about patent applications, patents and patent documents.</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://data.epo.org/linked-data/download</cmd:uri>
@@ -200,6 +197,17 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">An ontology for representing information about patent applications, patents and patent documents.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

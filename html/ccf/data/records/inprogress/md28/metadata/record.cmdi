@@ -14,17 +14,25 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-dawgt</cmd:identifier>
+            <cmd:identifier>dawgt</cmd:identifier>
             <cmd:title xml:lang="en">Vocabulary for DAWG Test Cases</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">unknown</cmd:label>
                 <cmd:url>http://rightsstatements.org/vocab/UND/1.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">Vocabulary for DAWG test cases.</cmd:description>
-                </cmd:Description>
             </cmd:License>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">Vocabulary for DAWG test cases.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

@@ -9,7 +9,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-ui</cmd:identifier>
+            <cmd:identifier>ui</cmd:identifier>
             <cmd:title xml:lang="en">Ontology for User Interface description, Hints and Forms</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -19,6 +19,14 @@
             <cmd:Description>
                 <cmd:description xml:lang="en">The User Interface ontology allows the definition of forms for processing RDF model data, and include a bootstrap form for editing forms.  It allows user interface hints such as background colors, can be associated with objects and classes.</cmd:description>
             </cmd:Description>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

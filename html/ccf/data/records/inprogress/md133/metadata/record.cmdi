@@ -14,7 +14,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-rs</cmd:identifier>
+            <cmd:identifier>rs</cmd:identifier>
             <cmd:title xml:lang="en">Vocabulary for Recording Query Result Set</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -25,6 +25,14 @@
             <cmd:Description>
                 <cmd:description xml:lang="en">Vocabulary for recording query result set.</cmd:description>
             </cmd:Description>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

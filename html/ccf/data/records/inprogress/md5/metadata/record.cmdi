@@ -14,15 +14,12 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-reco</cmd:identifier>
+            <cmd:identifier>reco</cmd:identifier>
             <cmd:title xml:lang="en">RECommendations Ontology (RECO)</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:url>https://creativecommons.org/licenses/by-sa/3.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">The RECO ontology defines the vocabulary for representing preferences-as-constraints and preferences-as-ratings as RDF graphs.  This lightweight vocabulary provides domain-independent means to describe user profiles in a coherent and context-aware way.  RECO has been designed as an extension of both [Friend-Of-A-Friend (FOAF)](/none/foaf) and [Who Am I! (WAI)](/treelogic/wai) ontologies.</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>http://purl.org/reco#</cmd:uri>
@@ -65,6 +62,17 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">The RECO ontology defines the vocabulary for representing preferences-as-constraints and preferences-as-ratings as RDF graphs.  This lightweight vocabulary provides domain-independent means to describe user profiles in a coherent and context-aware way.  RECO has been designed as an extension of both [Friend-Of-A-Friend (FOAF)](/none/foaf) and [Who Am I! (WAI)](/treelogic/wai) ontologies.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

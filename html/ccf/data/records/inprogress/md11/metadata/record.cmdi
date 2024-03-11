@@ -14,15 +14,12 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-dbo</cmd:identifier>
+            <cmd:identifier>dbo</cmd:identifier>
             <cmd:title xml:lang="en">DBpedia Ontology</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:url>https://creativecommons.org/licenses/by-sa/3.0/</cmd:url>
-                <cmd:Description>
-                    <cmd:description xml:lang="en">Ontology for DBpedia.</cmd:description>
-                </cmd:Description>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://wiki.dbpedia.org</cmd:uri>
@@ -250,6 +247,17 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
+            <cmd:Description>
+                <cmd:description xml:lang="en">Ontology for DBpedia.</cmd:description>
+            </cmd:Description>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

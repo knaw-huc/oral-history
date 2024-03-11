@@ -9,7 +9,7 @@
     </cmd:Resources>
     <cmd:Components>
         <cmd:Vocabulary>
-            <cmd:identifier>yalc-iso_19110</cmd:identifier>
+            <cmd:identifier>iso_19110</cmd:identifier>
             <cmd:title xml:lang="en">Geographic information — Methodology for feature cataloguing</cmd:title>
             <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
@@ -174,6 +174,14 @@ ISO 19110:2016 may be used as a basis for defining the universe of discourse bei
                     <cmd:type>endpoint</cmd:type>
                 </cmd:Location>
             </cmd:Version>
+            <cmd:Assessement>
+                <cmd:Recommendation>
+                    <cmd:Rating>appears</cmd:Rating>
+                    <cmd:Publisher>
+                        <cmd:name>YALC</cmd:name>
+                    </cmd:Publisher>
+                </cmd:Recommendation>
+            </cmd:Assessement>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>
