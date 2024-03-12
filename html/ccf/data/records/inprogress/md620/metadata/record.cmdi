@@ -42,7 +42,8 @@ Brick is free and open-sourced under the BSD 3-Clause license.  The source code 
                 <cmd:version>1.3.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://brickschema.org/schema/1.3.0/Brick.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

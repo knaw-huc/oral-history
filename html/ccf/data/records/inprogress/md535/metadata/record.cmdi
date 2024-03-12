@@ -27,12 +27,8 @@
                 <cmd:version>0.15.3</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://comicmeta.org/cbo/cbo.owl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-cbo</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe>doc</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

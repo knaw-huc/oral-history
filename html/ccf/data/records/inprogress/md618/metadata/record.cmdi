@@ -32,7 +32,8 @@ For example, all national postal organizations throughout the world exchange int
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/03166/VersionUndefined/ISO03166CountryCodes.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

@@ -34,22 +34,8 @@
                 <cmd:validFrom>2020-06-30T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://spec.edmcouncil.org/fibo/vocabulary/master/2020Q2/fibo-vP.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://cache.vocabs.dev.clariah.nl/fibo-skos@2020-06-30.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                    <cmd:recipe/>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://skosmos.vocabs.dev.clariah.nl/fibo__2020_06_30</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe>skosmos</cmd:recipe>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://sparql.vocabs.dev.clariah.nl/vocabs?default-graph-uri=urn%3Avocab%3Afibo-skos%402020-06-30</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                    <cmd:recipe>sparql</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

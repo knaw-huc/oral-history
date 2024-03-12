@@ -30,12 +30,8 @@
                 <cmd:validFrom>2016-10-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>http://downloads.dbpedia.org/2016-10/dbpedia_2016-10.owl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-dbo</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe>doc</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

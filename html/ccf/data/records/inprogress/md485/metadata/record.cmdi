@@ -32,7 +32,8 @@ This model has been developed by the partners of the [Cinelab project](http://ad
                 <cmd:version>0.1.2</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/wouterbeek/cinelab/master/cinelab.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

@@ -33,7 +33,8 @@ Parameters which are attributes of spatial locations or features, but which are 
                 <cmd:validFrom>2009-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19111/-2/2009/ExtensionForParametricValues.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

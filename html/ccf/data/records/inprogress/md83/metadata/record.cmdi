@@ -33,8 +33,8 @@
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://download.data.ordnancesurvey.co.uk/os-linked-data/50KGaz.zip</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                    <cmd:recipe>access disabled</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

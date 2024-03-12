@@ -35,6 +35,7 @@
                 <cmd:Location>
                     <cmd:uri>https://data.dnb.de/opendata/bib_lds.nt.gz</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

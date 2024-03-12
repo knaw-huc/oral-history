@@ -37,11 +37,6 @@
                     <cmd:type>dump</cmd:type>
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-gno</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe/>
-                </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
                         <cmd:Subjects>

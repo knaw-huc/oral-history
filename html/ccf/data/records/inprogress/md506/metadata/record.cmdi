@@ -28,7 +28,8 @@
                 <cmd:version>1.31</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/cultureelerfgoed/CEO/master/CEO_v1.31.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

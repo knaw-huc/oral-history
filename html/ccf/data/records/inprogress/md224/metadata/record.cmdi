@@ -33,7 +33,8 @@
                 <cmd:version>13.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://schema.org/version/latest/schemaorg-all-https.nq</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Version>

@@ -38,7 +38,7 @@ It uses the [SKOS](/w3c/skos), [SKOS-XL](/w3c/skos-xl), ISO 25964; [DC](/dcmi/dc
                 <cmd:validFrom>2016-04-25 </cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>http://vocab.getty.edu/ontology.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>

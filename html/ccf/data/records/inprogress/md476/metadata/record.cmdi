@@ -27,7 +27,8 @@
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://op.europa.eu/euvoc-portlet/download?cellarURI=http://publications.europa.eu/resource/cellar/65a89dcf-d9e8-11e9-9c4e-01aa75ed71a1.0001.01/DOC_1&amp;fileName=DET_Alignment_EuroVoc.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

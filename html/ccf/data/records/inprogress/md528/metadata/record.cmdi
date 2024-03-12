@@ -35,7 +35,8 @@ A standardized interface for positioning allows the integration of reliable posi
                 <cmd:validFrom>2019-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19116/2019/PositioningServices.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -165,7 +166,8 @@ A standardized interface for positioning allows the integration of reliable posi
                 <cmd:validFrom>2004-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19116/2004/PositioningServices.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

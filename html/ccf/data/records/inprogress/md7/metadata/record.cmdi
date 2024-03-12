@@ -43,7 +43,8 @@
                 <cmd:validFrom>2011-12-06T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>http://www.w3.org/ns/owl-profile/RL</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

@@ -41,7 +41,8 @@ ISO 19110:2016 may be used as a basis for defining the universe of discourse bei
                 <cmd:validFrom>2016-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19110/2016/MethodologyForFeatureCataloguing.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -171,7 +172,8 @@ ISO 19110:2016 may be used as a basis for defining the universe of discourse bei
                 <cmd:validFrom>2005-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19110/2005/MethodologyForFeatureCataloguing.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

@@ -34,7 +34,8 @@ FIBO OWL is published in two releases:
                 <cmd:validFrom>2020-06-30T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://spec.edmcouncil.org/fibo/ontology/master/2020Q2/prod.ttl.zip</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

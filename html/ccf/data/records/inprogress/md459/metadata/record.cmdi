@@ -30,7 +30,8 @@ CRMsci uses and extends the CIDOC CRM (ISO21127) as a general ontology of human 
                 <cmd:version>1.2.6</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.cidoc-crm.org/crmsci/sites/default/files/CRMsci_v1.2.6.rdfs</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

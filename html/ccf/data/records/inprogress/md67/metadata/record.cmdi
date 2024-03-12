@@ -33,12 +33,8 @@
                 <cmd:version>1.3</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://op.europa.eu/documents/3938058/7399866/eli.owl/</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-eli</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe>doc</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -369,11 +365,8 @@
                 <cmd:version>1.4</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://op.europa.eu/documents/3938058/11669184/eli.owl/</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://publications.europa.eu/resource/cellar/917d16b5-28f6-11e8-b5fe-01aa75ed71a1.0001.01/DOC_1</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

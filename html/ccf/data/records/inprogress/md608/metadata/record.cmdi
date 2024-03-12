@@ -28,7 +28,8 @@
                 <cmd:version>1.4.2</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://github.com/SPAROntologies/po/raw/master/docs/2013-07-16/po.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

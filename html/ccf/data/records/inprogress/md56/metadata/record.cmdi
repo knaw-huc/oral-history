@@ -35,12 +35,8 @@
                 <cmd:validFrom>2020-07-31</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>http://www.w3id.org/bot/bot.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-bot</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe>doc</cmd:recipe>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

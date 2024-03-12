@@ -39,6 +39,7 @@
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/SPAROntologies/amo/master/docs/current/amo.nt</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

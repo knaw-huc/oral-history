@@ -57,7 +57,8 @@
                 <cmd:validFrom>2016-08-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

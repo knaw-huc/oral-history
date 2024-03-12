@@ -40,7 +40,8 @@ This document is applicable to digital geographic data, and its principles may b
                 <cmd:validFrom>2019-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19112/2019/SpatialReferencingByGeographicIdentifier.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -344,7 +345,8 @@ This document is applicable to digital geographic data, and its principles may b
                 <cmd:validFrom>2003-01-01T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19112/2003/SpatialReferencingByGeographicIdentifier.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

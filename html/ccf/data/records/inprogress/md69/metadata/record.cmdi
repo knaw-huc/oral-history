@@ -90,7 +90,8 @@
                 <cmd:validFrom>2008-07-22</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/RinkeHoekstra/lkif-core/master/time.owl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

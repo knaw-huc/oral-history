@@ -47,6 +47,7 @@ The contents are automatically updated from the Finlex service.</cmd:description
                 <cmd:Location>
                     <cmd:uri>https://data.finlex.fi/download/rdf/kho-nq.zip</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

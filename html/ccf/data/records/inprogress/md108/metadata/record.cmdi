@@ -40,7 +40,8 @@
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://linked.art/model/profile/ontologies/linkedart_crm_enhancements.xml</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -223,7 +224,8 @@
             <cmd:Version>
                 <cmd:Location>
                     <cmd:uri>https://linked.art/ns/terms/index.xml</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

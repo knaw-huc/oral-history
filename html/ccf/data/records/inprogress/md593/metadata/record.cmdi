@@ -30,7 +30,8 @@
                 <cmd:version>0.7</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.cidoc-crm.org/crminf/sites/default/files/CRMinf_v0.7_.rdfs</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

@@ -29,7 +29,8 @@
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://rdaregistry.info/Elements/n/object.nt</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -66,7 +67,8 @@
                 <cmd:validFrom>2023-09</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v5.0.17</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

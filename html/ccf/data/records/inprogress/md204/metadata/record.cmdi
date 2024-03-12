@@ -35,7 +35,8 @@ The historic examples included works with concrete/visual poetic sensibilities f
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/wouterbeek/sackner-archive/master/vocab.trig</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

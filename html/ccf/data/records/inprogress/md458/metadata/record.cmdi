@@ -33,7 +33,8 @@ After considering the above-mentioned models and other related and inspiring one
                 <cmd:validFrom>2011-03-23T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/SPAROntologies/literal/master/docs/current/literal.nt</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

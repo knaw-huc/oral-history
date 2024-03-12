@@ -39,6 +39,7 @@
                 <cmd:Location>
                     <cmd:uri>http://www.w3.org/ns/lemon/lexicog</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

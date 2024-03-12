@@ -39,7 +39,8 @@ We invite you to explore the data through our data browser, download our entire 
                 <cmd:version>2.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://ld.iospress.nl/download/iospress-dataset.tar.gz</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

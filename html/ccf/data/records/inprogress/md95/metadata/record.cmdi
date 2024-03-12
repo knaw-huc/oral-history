@@ -34,7 +34,8 @@
                 <cmd:validFrom>2013-05-24</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://lov.linkeddata.es/dataset/lov/vocabs/voaf/versions/2013-05-24.n3</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

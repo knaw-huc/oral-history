@@ -207,7 +207,8 @@ Sources of queries are typically logs of triple stores or web servers in general
                 <cmd:version>2.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://hobbitdata.informatik.uni-leipzig.de/lsqv2/dumps/dbpedia/bench-dbpedia.3.5.1.log-lsq2.nt.bz2</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

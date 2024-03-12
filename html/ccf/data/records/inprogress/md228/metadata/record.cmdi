@@ -601,14 +601,16 @@
                 <cmd:version>snapshot-2021-09</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://databus.dbpedia.org/dbpedia/mappings/mappingbased-objects/2021.06.01/mappingbased-objects_lang=en.ttl.bz2</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Version>
                 <cmd:version>snapshot-2021-06</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://databus.dbpedia.org/vehnem/replaced-iris/short-abstracts/2021.06.01/short-abstracts_lang=zh_uris=en.ttl.bz2</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

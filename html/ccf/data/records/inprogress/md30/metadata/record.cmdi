@@ -36,6 +36,7 @@
                 <cmd:Location>
                     <cmd:uri>http://current.geneontology.org/ontology/go.owl</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

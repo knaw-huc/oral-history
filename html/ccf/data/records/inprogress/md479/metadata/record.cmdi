@@ -28,7 +28,8 @@
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://lov.linkeddata.es/dataset/lov/vocabs/swrc/versions/2007-06-22.n3</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

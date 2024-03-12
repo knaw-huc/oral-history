@@ -39,7 +39,8 @@ The focus of each AAT record is a concept.  Linked to each concept are terms, re
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://vocab.getty.edu/dataset/ulan/explicit.zip</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Version>

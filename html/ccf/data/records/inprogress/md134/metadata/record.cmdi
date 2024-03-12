@@ -35,7 +35,7 @@ VAEM stands for “Vocabulary for Attaching Essential Metadata”.  What VAEM re
                 <cmd:version>2.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.linkedmodel.org/2.0/schema/SCHEMA_vaem-v2.0.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>

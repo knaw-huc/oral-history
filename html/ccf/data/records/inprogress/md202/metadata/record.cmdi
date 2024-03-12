@@ -16,7 +16,7 @@
         <cmd:Vocabulary>
             <cmd:identifier>deo</cmd:identifier>
             <cmd:title xml:lang="en">Document Elements Ontology (DEO)</cmd:title>
-            <cmd:type>rdfs</cmd:type>
+            <cmd:type>owl</cmd:type>
             <cmd:status>review</cmd:status>
             <cmd:License>
                 <cmd:identifier>CC 4.0</cmd:identifier>
@@ -37,18 +37,9 @@
                 <cmd:version>2015-07-03</cmd:version>
                 <cmd:validFrom>2015-07-03T00:00:00</cmd:validFrom>
                 <cmd:Location>
-                    <cmd:uri>http://purl.org/spar/deo.nt</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
-                </cmd:Location>
-                <cmd:Location>
                     <cmd:uri>https://sparontologies.github.io/deo/current/deo.xml</cmd:uri>
                     <cmd:type>dump</cmd:type>
                     <cmd:recipe>rdf</cmd:recipe>
-                </cmd:Location>
-                <cmd:Location>
-                    <cmd:uri>https://registry.vocabs.dev.clariah.nl/doc/yalc-deo</cmd:uri>
-                    <cmd:type>homepage</cmd:type>
-                    <cmd:recipe/>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

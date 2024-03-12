@@ -80,7 +80,8 @@ The data triples in this ontology instantiate `FinRegOnt` classes `USC_Title`, `
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

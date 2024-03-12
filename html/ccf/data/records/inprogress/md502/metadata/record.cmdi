@@ -28,7 +28,8 @@
                 <cmd:version>0.1</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://xmlns.com/wot/0.1/index.rdf</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

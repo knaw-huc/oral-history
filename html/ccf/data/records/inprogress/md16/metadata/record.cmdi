@@ -30,7 +30,8 @@
                 <cmd:version>3.34</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

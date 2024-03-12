@@ -50,7 +50,8 @@
                 <cmd:validFrom>2020-03-23</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://raw.githubusercontent.com/Geonovum/NEN3610-Linkeddata/gh-pages/NEN3610-LD/vocabulaire.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

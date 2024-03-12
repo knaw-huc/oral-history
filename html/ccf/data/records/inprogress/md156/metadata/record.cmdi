@@ -39,6 +39,7 @@ The Staatsbibliothek zu Berlin – Preußischer Kulturbesitz and the German Nati
                 <cmd:Location>
                     <cmd:uri>https://data.dnb.de/opendata/zdb_lds.ttl.gz</cmd:uri>
                     <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

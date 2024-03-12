@@ -32,7 +32,8 @@ Note: The SCOVO vocabulary is deprecated. We strongly advise to use the [Data Cu
                 <cmd:validFrom>2012-08-09T00:00:00</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>http://vocab.deri.ie/scovo.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

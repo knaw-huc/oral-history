@@ -32,7 +32,8 @@ Wikidata also provides support to many other sites and services beyond just Wiki
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.nt.bz2</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

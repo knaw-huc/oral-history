@@ -33,7 +33,8 @@
                 <cmd:version>3.2.1</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.cidoc-crm.org/crmdig/sites/default/files/CRMdig_v3.2.1.rdfs</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
@@ -106,14 +107,16 @@
                 <cmd:validFrom>2022-06-01</cmd:validFrom>
                 <cmd:Location>
                     <cmd:uri>https://cidoc-crm.org/rdfs/7.1.2/CIDOC_CRM_v7.1.2.rdfs</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Version>
                 <cmd:version>3.2</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.cidoc-crm.org/crmdig/sites/default/files/CRMdig_v3.2.rdfs</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
             <cmd:Assessement>

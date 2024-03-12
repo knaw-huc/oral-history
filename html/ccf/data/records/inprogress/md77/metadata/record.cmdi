@@ -32,7 +32,8 @@
                 <cmd:version>1.52</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://www.w3.org/2000/10/swap/pim/doc#</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>

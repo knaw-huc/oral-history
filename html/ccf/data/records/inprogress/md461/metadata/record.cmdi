@@ -33,7 +33,8 @@ The ontology can be browsed here: &lt;http://biohackathon.org/resource/faldo&gt;
                 <cmd:version>1.0</cmd:version>
                 <cmd:Location>
                     <cmd:uri>http://biohackathon.org/resource/faldo.ttl</cmd:uri>
-                    <cmd:type>endpoint</cmd:type>
+                    <cmd:type>dump</cmd:type>
+                    <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
                 <cmd:Summary>
                     <cmd:Statements>
