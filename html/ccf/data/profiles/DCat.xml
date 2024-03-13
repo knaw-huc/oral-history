@@ -11,7 +11,9 @@
         <Component name="Dataset" ConceptLink="http://www.w3.org/ns/dcat#Dataset" CardinalityMin="1" CardinalityMax="1">
             <Element name="title" ConceptLink="http://purl.org/dc/terms/title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="license" ConceptLink="http://purl.org/dc/terms/license" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
-            <Element name="publisher" ConceptLink="http://purl.org/dc/terms/publisher" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="publisher" ConceptLink="http://purl.org/dc/terms/publisher" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:ccf_default="https://www.huygens.knaw.nl/" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <AutoValue>ccf_default</AutoValue>
+            </Element>
             <Element name="description" ConceptLink="http://purl.org/dc/terms/description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
             <Element name="keyword" ConceptLink="http://www.w3.org/ns/dcat#keyword" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
             <Element name="landingPage" ConceptLink="http://www.w3.org/ns/dcat#landingPage" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded"/>
@@ -35,7 +37,37 @@
         <Component name="INEO" CardinalityMin="0" CardinalityMax="1">
             <Element name="intro" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="researchActivity" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
-            <Element name="researchDomain" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="researchDomain" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="informationType" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="mediaType" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="Access" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            <Element name="Version" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="status" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>active</item>
+                            <item>inactive</item>
+                            <item>concept</item>
+                            <item>moved</item>
+                            <item>suspended</item>
+                            <item>unsupported</item>
+                            <item>work in progress</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="language" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="provenance" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            <Element name="Learn" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            <Element name="community" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="resourceHost" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="resourceOwner" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="development" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            <Element name="funding" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            <Element name="contactForGeneralQuestions" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="contactForResearchQuestions" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="contactForReportingAProblem" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
     </Component>
 </ComponentSpec>
