@@ -39,6 +39,16 @@
             <Element name="researchActivity" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
             <Element name="researchDomain" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
             <Element name="informationType" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="resourceType" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>data</item>
+                            <item>tools</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
             <Element name="mediaType" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
             <Element name="Access" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
             <Element name="Version" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
