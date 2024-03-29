@@ -50,7 +50,13 @@
                 <clariah:autoCompleteURI>skos_proxy.php?vocabulary=tadirah</clariah:autoCompleteURI>
             </Element>
             <Element name="researchDomain">
-                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo</clariah:autoCompleteURI>
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
+            </Element>
+            <Element name="informationType">
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-informationtypes</clariah:autoCompleteURI>
+            </Element>
+            <Element name="mediaType">
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-mediatypes</clariah:autoCompleteURI>
             </Element>
         </Component>
     </Component>
