@@ -1,19 +1,19 @@
 version: '2'
 services: 
-    nde-mysql:
+    hide-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - nde-mysqldb:/var/lib/mysql
+            - hide-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - nde-network 
+            - hide-network 
 
     # huc-editor backend & frontend
-    nde-php-apache:
+    hide-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
@@ -23,28 +23,27 @@ services:
             - ./data/records/:/var/www/html/ccf/data/records/
             - ./data/resources/:/var/www/html/ccf/data/resources/
         environment:
-            TITLE: "NDE DCat Editor"
-            PROFILE: "DCat"
-            SUBTITLE: "your way to INEO"
-            BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8124/ccf/"
+            TITLE: "HI Data Envelope Editor"
+            PROFILE: "DataEnvelope"
+            SUBTITLE: "your way to a FAIR dataset"
+#            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8124/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: nde-mysql
+            DB_SERVER: hide-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.nde.entrypoints=http"
-        - "traefik.http.routers.nde.rule=Host(`nde.sd.di.huc.knaw.nl`)"
+        - "traefik.http.routers.hide.entrypoints=http"
+        - "traefik.http.routers.hide.rule=Host(`hide.sd.di.huc.knaw.nl`)"
         networks:
-            - nde-network
+            - hide-network
         depends_on:
-            - nde-mysql
+            - hide-mysql
 networks:
-  nde-network:
-#    external: false
-    external:
-      name: traefik-public
+  hide-network:
+#    external: true 
+#    name: traefik-public
 volumes:
-    nde-mysqldb:
+    hide-mysqldb:

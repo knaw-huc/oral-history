@@ -27,9 +27,11 @@ class Ccfparser {
     function parseTweak($cmdifile, $tweakfile = null, $tweaker = null, $record = null) {
         $jsonArray = array();
 
+        //$cmdifile = $this->_get_profile($uri);
         if (is_null($tweakfile)) {
             $xml = new DOMDocument();
             $xml->preserveWhiteSpace = false;
+            //$xml->loadXML($cmdifile);
             $xml->load($cmdifile);
         } else {
             $xml = $this->_tweak($cmdifile, $tweakfile, $tweaker);
@@ -48,9 +50,27 @@ class Ccfparser {
 
     /* Private functions */
 
+    private function _get_profile($uri) {
+        $options = array('Origin: ' . $_ENV["https://cmdiform.sd.di.huc.knaw.nl"], 'Access-Control-Request-Method: POST', 'Access-Control-Request-Headers: X-Requested-With');
+        try {
+            $ch = curl_init($uri);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $options);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $response = curl_exec($ch);
+            curl_close($ch);
+        } catch (Exception $e) {
+            $response = $e;
+            echo $e;
+        }
+
+        return $response;
+    }
+        
     private function _tweak($cmdifile, $tweakfile, $tweaker) {
         $error_level = error_reporting();
-        error_reporting(0);
+        //error_reporting(0);
+        error_reporting(E_ALL);
         $profile = new DOMDocument();
         $profile->preserveWhiteSpace = false;
         $profile->load($cmdifile);
@@ -264,7 +284,10 @@ class Ccfparser {
                     break;
                 case 'name':
                     $retArray["name"] = $attribute->nodeValue;
-                    $retArray["label"] = $attribute->nodeValue;
+                    $retArray["label"] = preg_replace('/(?<! )(?<!^)(?<![A-Z])[A-Z]/ ', ' $0', $attribute->nodeValue);
+                    if (strlen($retArray["label"])) {
+                        $retArray["label"][0] = strtoupper($retArray["label"][0]);
+                    }
                     break;
                 case 'cue:displayOrder':
                     $retArray["displayOrder"] = $attribute->nodeValue;
@@ -310,6 +333,9 @@ class Ccfparser {
                 case 'clariah:resource':
                     $retArray["resource"] = $child->nodeValue;
                     break;
+                case 'clariah:explanation':
+                    $retArray["explanation"] = $child->nodeValue;
+                     break;
                 case 'AttributeList':
                     $retArray["attributeList"] = $this->_createAttributeList($child);
                     break;
