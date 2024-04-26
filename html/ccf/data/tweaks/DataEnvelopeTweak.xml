@@ -61,10 +61,10 @@
                     <clariah:explanation>Provide a free text account of the dataset or resource (limit 200 words). Include information about the content and topic of the data, sources and motivations for the dataset, benefits and the problems or use cases it is suitable for.</clariah:explanation>
                 </Element>
                 <Element name="genre">
-                    
+                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-informationtypes</clariah:autoCompleteURI>
                 </Element>
                 <Element name="topic">
-                    
+                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
                 </Element>
                 <Element name="languages">
                     
