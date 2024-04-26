@@ -26,8 +26,8 @@ services:
             TITLE: "HI Data Envelope Editor"
             PROFILE: "DataEnvelope"
             SUBTITLE: "your way to a FAIR dataset"
-#            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8124/ccf/"
+            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
+#            BASE_URL: "http://0.0.0.0:8124/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: hide-mysql
             DB_USER: root
@@ -43,7 +43,7 @@ services:
             - hide-mysql
 networks:
   hide-network:
-#    external: true 
-#    name: traefik-public
+    external: true 
+    name: traefik-public
 volumes:
     hide-mysqldb:
