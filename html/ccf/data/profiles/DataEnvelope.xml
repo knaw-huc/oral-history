@@ -85,7 +85,7 @@
                     </Element>
                     <Element name="other" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
-                <Component name="Contributors" CardinalityMin="1" CardinalityMax="unbounded">
+                <Component name="Contributor" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="Name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="ORCID" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
                     <Element name="Organisation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
@@ -252,7 +252,7 @@
                     <Element name="vocabulary" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="vocabularyLink" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
-                <Component name="dataFields" CardinalityMin="1" CardinalityMax="unbounded">
+                <Component name="dataField" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="dataFieldName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="dataFieldType" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="descriptionField" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
@@ -346,7 +346,7 @@
                 <Component name="biases" CardinalityMin="1" CardinalityMax="1">
                     <Element name="biases" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Component name="sensAttributes" CardinalityMin="1" CardinalityMax="1">
-                        <Element name="sensitiveAttributes" CardinalityMin="1" CardinalityMax="1">
+                        <Element name="sensitiveAttribute" CardinalityMin="1" CardinalityMax="1">
                             <ValueScheme>
                                 <Vocabulary>
                                     <enumeration>
@@ -367,7 +367,7 @@
                             </ValueScheme>
                         </Element>
                         <Element name="specify" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                        <Element name="unintentionalAttributes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                        <Element name="unintentionalAttribute" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     </Component>
                 </Component>
                 <Component name="ethicalReview" CardinalityMin="1" CardinalityMax="1">
@@ -426,7 +426,7 @@
             <Element name="other" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="domains" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="motivation" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Component name="Uses" CardinalityMin="1" CardinalityMax="unbounded">
+            <Component name="Use" CardinalityMin="1" CardinalityMax="unbounded">
                 <Element name="datasetUse" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                     <ValueScheme>
                         <Vocabulary>
