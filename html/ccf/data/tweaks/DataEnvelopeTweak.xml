@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:clariah="http://www.clariah.eu/">
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2">
     <Header>
         <ID>clarin.eu:cr1:p_1708423613607</ID>
+        <Name>DataEnvelope</Name>
+        <Description>Profile for Data Envelopes Editor</Description>
+        <Status>development</Status>
     </Header>
     <Component name="DataEnvelope">
         <Component name="BasicInformation">
@@ -10,6 +13,7 @@
             <Element name="title">
                 <clariah:label xml:lang="en">1.1. Title of Data-Envelope</clariah:label>
                 <clariah:explanation>BFollow the format: Dataset Name Version-X Data-Envelope Version-Y</clariah:explanation>
+                <!--cues-->
             </Element>
             <Component name="ContactDetails">
                 <clariah:label xml:lang="en">1.2. Contact Details</clariah:label>
@@ -17,431 +21,329 @@
                 <Element name="name">
                     <clariah:label xml:lang="en">Name</clariah:label>
                     <clariah:explanation>Full Name</clariah:explanation>
+                    <!--cues-->
                 </Element>
                 <Element name="orcidID">
                     <clariah:label xml:lang="en">ORCID ID</clariah:label>
+                    <!--cues-->
                 </Element>
                 <Element name="roleInProject">
                     <clariah:label xml:lang="en">Role in Project</clariah:label>
+
                 </Element>
             </Component>
             <Component name="Dates">
                 <clariah:label xml:lang="en">1.3. Data Envelope Dates</clariah:label>
                 <Element name="creationDateFrom">
                     <clariah:label xml:lang="en">Data-Envelope Creation Date</clariah:label>
+                    <!--cues-->
                 </Element>
                 <Element name="creationDateTo">
                     <clariah:label xml:lang="en">Data-Envelope Completion Date</clariah:label>
+                    <!--cues-->
                 </Element>
                 <Element name="publicationDate">
                     <clariah:label xml:lang="en">Data-Envelope Publication Date</clariah:label>
+                    <!--cues-->
                 </Element>
             </Component>
-            <Component name="FeedbackElaboration">
-                <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
-                <Element name="feedbackSectionOne">
-                    <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
-                    <clariah:explanation>Please use this space to provide any feedback on this section and to share any other insights or information you think would be useful for this level.</clariah:explanation>
-                </Element>
+            <Component name="feedbackElaboration">
+                <Element name="feedbackSectionOne"><!--cues--></Element>
             </Component>
         </Component>
         <Component name="BasicMetadata">
             <clariah:label xml:lang="en">Level 2: Basic Metadata</clariah:label>
             <Component name="Snapshot">
-                <Element name="title">
-                    
-                </Element>
-                <Element name="version">
-                    
-                </Element>
-                <Element name="URL">
-                    
-                </Element>
+                <Element name="title"><!--cues--></Element>
+                <Element name="version"><!--cues--></Element>
+                <Element name="URL"><!--cues--></Element>
                 <Element name="description">
                     <clariah:explanation>Provide a free text account of the dataset or resource (limit 200 words). Include information about the content and topic of the data, sources and motivations for the dataset, benefits and the problems or use cases it is suitable for.</clariah:explanation>
+                    <!--cues-->
                 </Element>
                 <Element name="genre">
                     <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-informationtypes</clariah:autoCompleteURI>
+                    <!--cues-->
                 </Element>
                 <Element name="topic">
                     <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
+                    <!--cues-->
                 </Element>
-                <Element name="languages">
-                    
-                </Element>
-                <Element name="GeographicalCoverage">
-                    
-                </Element>
+                <Element name="languages"><!--cues--></Element>
+                <Element name="GeographicalCoverage"><!--cues--></Element>
                 <Component name="TemporalCoverage">
-                    <Element name="yearFrom">
-                        
-                    </Element>
-                    <Element name="yearTo">
-                        
-                    </Element>
-                    <Element name="year">
-                        
-                    </Element>
+                    <Element name="yearFrom"><!--cues--></Element>
+                    <Element name="yearTo"><!--cues--></Element>
+                    <Element name="year"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="Dates">
-                <Element name="dateFrom">
-                    
-                </Element>
-                <Element name="dateTo">
-                    
-                </Element>
+                <Element name="dateFrom"><!--cues--></Element>
+                <Element name="dateTo"><!--cues--></Element>
             </Component>
             <Component name="Contributors">
                 <Component name="publishingOrganisation">
-                    <Element name="Name">
-                        
-                    </Element>
-                    <Element name="ROR">
-                        
-                    </Element>
-                    <Element name="type">
-                        
-                    </Element>
-                    <Element name="other">
-                        
-                    </Element>
+                    <Element name="Name"><!--cues--></Element>
+                    <Element name="ROR"><!--cues--></Element>
+                    <Element name="type"> </Element>
+                    <Element name="other"><!--cues--></Element>
                 </Component>
                 <Component name="Contributors">
-                    <Element name="Name">
-                        
-                    </Element>
-                    <Element name="ORCID">
-                        
-                    </Element>
-                    <Element name="Organisation">
-                        
-                    </Element>
-                    <Element name="ROR">
-                        
-                    </Element>
-                    <Element name="Role">
-                    </Element>
-                    <Element name="email">
-                        
-                    </Element>
+                    <Element name="Name"><!--cues--></Element>
+                    <Element name="ORCID"><!--cues--></Element>
+                    <Element name="Organisation"><!--cues--></Element>
+                    <Element name="ROR"><!--cues--></Element>
+                    <Element name="Role"> </Element>
+                    <Element name="email"><!--cues--></Element>
                 </Component>
                 <Component name="funding">
-                    <Element name="name">
-                        
-                    </Element>
-                    <Element name="ROR">
-                        
-                    </Element>
-                    <Element name="summary">
-                        
-                    </Element>
-                    <Element name="link">
-                        
-                    </Element>
+                    <Element name="name"><!--cues--></Element>
+                    <Element name="ROR"><!--cues--></Element>
+                    <Element name="summary"><!--cues--></Element>
+                    <Element name="link"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="distribution">
-                <Element name="datasetlink">
-                    
-                </Element>
-                <Element name="doi">
-                    
-                </Element>
-                <Element name="repository">
-                    
-                </Element>
+                <Element name="datasetlink"><!--cues--></Element>
+                <Element name="doi"><!--cues--></Element>
+                <Element name="repository"><!--cues--></Element>
                 <Component name="download">
-                    <Element name="link">
-                        
-                    </Element>
-                    <Element name="filetype">
-                        
-                    </Element>
-                    <Element name="filesize">
-                        
-                    </Element>
+                    <Element name="link"><!--cues--></Element>
+                    <Element name="filetype"><!--cues--></Element>
+                    <Element name="filesize"><!--cues--></Element>
                 </Component>
                 <Component name="citation">
-                    <Element name="citationInformation">
-                        
-                    </Element>
+                    <Element name="citationInformation"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="accessLicenses">
                 <Component name="licensingInformation">
-                    <Element name="identifier">
-                        
-                    </Element>
-                    <Element name="url">
-                        
-                    </Element>
+                    <Element name="identifier"><!--cues--></Element>
+                    <Element name="url"><!--cues--></Element>
                 </Component>
                 <Component name="access">
-                    <Element name="accessLevel">
-                    </Element>
+                    <Element name="accessLevel"> </Element>
                     <Component name="accessRestricted">
-                        <Element name="description">
-                            
-                        </Element>
-                        <Element name="url">
-                            
-                        </Element>
-                        <Element name="contactEmail">
-                            
-                        </Element>
-                        <Element name="accessPrereuqisites">
-                            
-                        </Element>
+                        <Element name="description"><!--cues--></Element>
+                        <Element name="url"><!--cues--></Element>
+                        <Element name="contactEmail"><!--cues--></Element>
+                        <Element name="accessPrereuqisites"><!--cues--></Element>
                     </Component>
                 </Component>
             </Component>
             <Component name="versionMaintenance">
                 <Component name="version">
-                    <Element name="currentVersion">
-                        
-                    </Element>
-                    <Element name="lastUpdated">
-                        
-                    </Element>
-                    <Element name="releaseDate">
-                        
-                    </Element>
+                    <Element name="currentVersion"><!--cues--></Element>
+                    <Element name="lastUpdated"><!--cues--></Element>
+                    <Element name="releaseDate"><!--cues--></Element>
                 </Component>
                 <Component name="maintenance">
-                    <Element name="maintenanceStatus">
-                    </Element>
+                    <Element name="maintenanceStatus"> </Element>
                 </Component>
                 <Component name="maintenancePlan">
-                    <Element name="updates">
-                        
-                    </Element>
-                    <Element name="feedback">
-                        
-                    </Element>
+                    <Element name="updates"><!--cues--></Element>
+                    <Element name="feedback"><!--cues--></Element>
                 </Component>
                 <Component name="nextUpdate">
-                    <Element name="versionAffected">
-                        
-                    </Element>
-                    <Element name="nextUpdate">
-                        
-                    </Element>
-                    <Element name="nextVersion">
-                        
-                    </Element>
+                    <Element name="versionAffected"><!--cues--></Element>
+                    <Element name="nextUpdate"><!--cues--></Element>
+                    <Element name="nextVersion"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="feedbackElaboration">
-                <Element name="feedbackSectionTwo">
-                    
-                </Element>
+                <Element name="feedbackSectionTwo"><!--cues--></Element>
             </Component>
         </Component>
         <Component name="Data">
             <Component name="DataResourceDescription">
-                <Element name="nameOfResource">
-                    
-                </Element>
-                <Element name="Description">
-                    
-                </Element>
-                <Element name="path">
-                    
-                </Element>
-                <Element name="format">
-                    
-                </Element>
-                <Element name="size">
-                    
-                </Element>
-                <Element name="date">
-                    
-                </Element>
-                <Element name="language">
-                    
-                </Element>
-                <Element name="encoding">
-                    
-                </Element>
+                <Element name="nameOfResource"><!--cues--></Element>
+                <Element name="Description"><!--cues--></Element>
+                <Element name="path"><!--cues--></Element>
+                <Element name="format"><!--cues--></Element>
+                <Element name="size"><!--cues--></Element>
+                <Element name="date"><!--cues--></Element>
+                <Element name="language"><!--cues--></Element>
+                <Element name="encoding"><!--cues--></Element>
                 <Component name="dataSubjects">
-                    <Element name="Subjects">
-                    </Element>
-                    <Element name="other">
-                        
-                    </Element>
+                    <Element name="Subjects"> </Element>
+                    <Element name="other"><!--cues--></Element>
                 </Component>
                 <Component name="dataModality">
-                    <Element name="modality">
-                    </Element>
-                    <Element name="other">
-                        
-                    </Element>
+                    <Element name="modality"> </Element>
+                    <Element name="other"><!--cues--></Element>
                 </Component>
                 <Component name="descriptiveStatistics">
-                    <Element name="statistics">
-                        
-                    </Element>
+                    <Element name="statistics"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="dataFields">
                 <Component name="usedVocabularies">
-                    <Element name="vocabulary">
-                        
-                    </Element>
-                    <Element name="vocabularyLink">
-                        
-                    </Element>
+                    <Element name="vocabulary"><!--cues--></Element>
+                    <Element name="vocabularyLink"><!--cues--></Element>
                 </Component>
                 <Component name="dataFields">
-                    <Element name="dataFieldName">
-                        
-                    </Element>
-                    <Element name="dataFieldType">
-                        
-                    </Element>
-                    <Element name="descriptionField">
-                        
-                    </Element>
-                    <Element name="sensitivity">
-                        
-                    </Element>
-                    <Element name="notableFeatures">
-                        
-                    </Element>
+                    <Element name="dataFieldName"><!--cues--></Element>
+                    <Element name="dataFieldType"><!--cues--></Element>
+                    <Element name="descriptionField"><!--cues--></Element>
+                    <Element name="sensitivity"><!--cues--></Element>
+                    <Element name="notableFeatures"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="dataExamples">
                 <Component name="typicalExample">
-                    <Element name="exampleDescription">
-                        
-                    </Element>
-                    <Element name="link">
-                        
-                    </Element>
+                    <Element name="description"><!--cues--></Element>
+                    <Element name="link"><!--cues--></Element>
                 </Component>
+                <Component name="atypicalExample">
+                    <Element name="atypdescription"><!--cues--></Element>
+                    <Element name="atyplink"><!--cues--></Element>
+                </Component>
+            </Component>
+            <Component name="errors">
+                <Element name="errordescription"><!--cues--></Element>
+            </Component>
+            <Component name="externalResources">
+                <Element name="resources"> </Element>
+                <Element name="links"><!--cues--></Element>
+            </Component>
+            <Component name="annotations">
+                <Component name="annotationWorkforce">
+                    <Element name="annotationWorkforceType"> </Element>
+                    <Element name="others"><!--cues--></Element>
+                </Component>
+                <Component name="annotationCharacteristics">
+                    <Element name="annotationType"><!--cues--></Element>
+                    <Element name="description"><!--cues--></Element>
+                    <Element name="totalAnnotations"><!--cues--></Element>
+                    <Element name="totalTokens"><!--cues--></Element>
+                    <Element name="avgTokensAnnotations"><!--cues--></Element>
+                    <Element name="metric"><!--cues--></Element>
+                </Component>
+            </Component>
+            <Component name="socialImpact">
+                <Component name="safety">
+                    <Element name="disclaimer"> </Element>
+                    <Element name="specify"><!--cues--></Element>
+                </Component>
+                <Component name="confidentiality">
+                    <Element name="confidentialityBin"> </Element>
+                    <Element name="specify"><!--cues--></Element>
+                </Component>
+                <Component name="biases">
+                    <Element name="biases"><!--cues--></Element>
+                    <Component name="sensAttributes">
+                        <Element name="sensitiveAttributes"> </Element>
+                        <Element name="specify"><!--cues--></Element>
+                        <Element name="unintentionalAttributes"><!--cues--></Element>
+                    </Component>
+                </Component>
+                <Component name="ethicalReview">
+                    <Element name="review"> </Element>
+                    <Element name="description"><!--cues--></Element>
+                    <Element name="outcomes"><!--cues--></Element>
+                    <Element name="link"><!--cues--></Element>
+                    <Component name="reviewContact">
+                        <Element name="name"><!--cues--></Element>
+                        <Element name="affiliation"><!--cues--></Element>
+                        <Element name="contact"><!--cues--></Element>
+                    </Component>
+                </Component>
+            </Component>
+            <Component name="dataProvenance">
+                <Element name="Name"><!--cues--></Element>
+                <Element name="path"><!--cues--></Element>
+                <Element name="description"><!--cues--></Element>
+                <Element name="creatorName"><!--cues--></Element>
+                <Element name="creatorOrganisation"><!--cues--></Element>
+                <Element name="yearPublication"><!--cues--></Element>
+                <Element name="language"><!--cues--></Element>
+                <Element name="notableFeatures"><!--cues--></Element>
+                <Element name="datasheetEnvelope"><!--cues--></Element>
+                <Element name="dataSelection"><!--cues--></Element>
+            </Component>
+            <Component name="digitalisationPipeline">
+                <Element name="digitalisationPipeline"><!--cues--></Element>
+            </Component>
+            <Component name="feedbackElaboration">
+                <Element name="feedbackSectionThree"><!--cues--></Element>
             </Component>
         </Component>
         <Component name="Uses">
-            <Element name="purposes">
-            </Element>
-            <Element name="other">
-                
-            </Element>
-            <Element name="domains">
-                
-            </Element>
-            <Element name="motivation">
-                
-            </Element>
+            <Element name="purposes"> </Element>
+            <Element name="other"><!--cues--></Element>
+            <Element name="domains"><!--cues--></Element>
+            <Element name="motivation"><!--cues--></Element>
             <Component name="Uses">
-                <Element name="datasetUse">
-                </Element>
-                <Element name="datasetUseSpecify">
-                    
-                </Element>
+                <Element name="datasetUse"> </Element>
+                <Element name="datasetUseSpecify"><!--cues--></Element>
                 <Component name="LinksToRelatedItems">
-                    <Element name="publications">
-                        
-                    </Element>
-                    <Element name="relatedDatasets">
-                        
-                    </Element>
-                    <Element name="modelTrainedByDataset">
-                        
-                    </Element>
+                    <Element name="publications"><!--cues--></Element>
+                    <Element name="relatedDatasets"><!--cues--></Element>
+                    <Element name="modelTrainedByDataset"><!--cues--></Element>
                 </Component>
                 <Component name="SuitableUseCase">
-                    <Element name="suitableUseCase">
-                        
-                    </Element>
-                    <Element name="additionalNotes">
-                        
-                    </Element>
+                    <Element name="suitableUseCase"><!--cues--></Element>
+                    <Element name="additionalNotes"><!--cues--></Element>
                 </Component>
                 <Component name="UnsuitableUseCase">
-                    <Element name="unsuitableUseCase">
-                        
-                    </Element>
-                    <Element name="additionalNotes">
-                        
-                    </Element>
+                    <Element name="unsuitableUseCase"><!--cues--></Element>
+                    <Element name="additionalNotes"><!--cues--></Element>
                 </Component>
                 <Component name="UseWithOtherData">
-                    <Element name="safetyLevel">
-                    </Element>
-                    <Element name="safetyLevelOther">
-                        
-                    </Element>
-                    <Element name="knownSafeDatasetsDataTypes">
-                        
-                    </Element>
-                    <Element name="bestPractices">
-                        
-                    </Element>
-                    <Element name="KnownUnsafeDatasetsDataTypes">
-                        
-                    </Element>
+                    <Element name="safetyLevel"> </Element>
+                    <Element name="safetyLevelOther"><!--cues--></Element>
+                    <Element name="knownSafeDatasetsDataTypes"><!--cues--></Element>
+                    <Element name="bestPractices"><!--cues--></Element>
+                    <Element name="KnownUnsafeDatasetsDataTypes"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="UseInMLOrAISystems">
-                <Element name="datasetUses">
-                </Element>
-                <Element name="otherDatasetUses">
-                    
-                </Element>
-                <Element name="notableFeatures">
-                    
-                </Element>
-                <Element name="knownCorrelations">
-                    
-                </Element>
-                <Element name="usageGuidelines">
-                    
-                </Element>
-                <Element name="dataSplits">
-                    
-                </Element>
+                <Element name="datasetUses"> </Element>
+                <Element name="otherDatasetUses"><!--cues--></Element>
+                <Element name="notableFeatures"><!--cues--></Element>
+                <Element name="knownCorrelations"><!--cues--></Element>
+                <Element name="usageGuidelines"><!--cues--></Element>
+                <Element name="dataSplits"><!--cues--></Element>
             </Component>
             <Component name="Sampling">
-                <Element name="safetyLevel">
-                </Element>
-                <Element name="otherSafetyLevel">
-                    
-                </Element>
-                <Element name="acceptableSamplingMethods">
-                </Element>
-                <Element name="otherAcceptableSamplingMethods"></Element>
-                <Element name="bestPractices"></Element>
-                <Element name="risksAndMitigations"></Element>
+                <Element name="safetyLevel"> </Element>
+                <Element name="otherSafetyLevel"><!--cues--></Element>
+                <Element name="acceptableSamplingMethods"> </Element>
+                <Element name="otherAcceptableSamplingMethods"><!--cues--></Element>
+                <Element name="bestPractices"><!--cues--></Element>
+                <Element name="risksAndMitigations"><!--cues--></Element>
+            </Component>
+            <Component name="feedbackElaboration">
+                <Element name="feedbackSectionFour"><!--cues--></Element>
             </Component>
         </Component>
         <Component name="HumanPerspective">
             <Component name="HumanAnnotators">
-                <Element name="annotatorDescription"></Element>
+                <Element name="annotatorDescription"><!--cues--></Element>
                 <Component name="AnnotationType">
-                    <Element name="taskType"></Element>
-                    <Element name="numberOfUniqueAnnotators"></Element>
-                    <Element name="expertiseOfAnnotators"></Element>
-                    <Element name="descriptionOfAnnotators"></Element>
-                    <Element name="compensation"></Element>
-                    <Element name="languageDistributionOfAnnotators"></Element>
-                    <Element name="numLanguageDistrib"></Element>
-                    <Element name="ageDistributionOfAnnotators"></Element>
-                    <Element name="numAgeDistrib"></Element>
-                    <Element name="geographicDistributionOfAnnotators"></Element>
-                    <Element name="genderDistributionOfAnnotators"></Element>
-                    <Element name="socioEconomicDistribOfAnnotators"></Element>
-                    <Element name="summaryOfAnnotationInstructions"></Element>
-                    <Element name="annotationPlatforms"></Element>
-                    <Element name="additionalNotes"></Element>
+                    <Element name="taskType"><!--cues--></Element>
+                    <Element name="numberOfUniqueAnnotators"><!--cues--></Element>
+                    <Element name="avgannotations"><!--cues--></Element>
+                    <Element name="expertiseOfAnnotators"><!--cues--></Element>
+                    <Element name="descriptionOfAnnotators"><!--cues--></Element>
+                    <Element name="compensation"><!--cues--></Element>
+                    <Element name="languageDistributionOfAnnotators"><!--cues--></Element>
+                    <Element name="numLanguageDistrib"><!--cues--></Element>
+                    <Element name="ageDistributionOfAnnotators"><!--cues--></Element>
+                    <Element name="numAgeDistrib"><!--cues--></Element>
+                    <Element name="geographicDistributionOfAnnotators"><!--cues--></Element>
+                    <Element name="genderDistributionOfAnnotators"><!--cues--></Element>
+                    <Element name="socioEconomicDistribOfAnnotators"><!--cues--></Element>
+                    <Element name="summaryOfAnnotationInstructions"><!--cues--></Element>
+                    <Element name="annotationPlatforms"><!--cues--></Element>
+                    <Element name="additionalNotes"><!--cues--></Element>
                 </Component>
             </Component>
             <Component name="Creators">
-                <Element name="creatorPositionality"></Element>
+                <Element name="creatorPositionality"><!--cues--></Element>
             </Component>
             <Component name="feedbackElaboration">
-                <Element name="feedbackSectionFive"></Element>
+                <Element name="feedbackSectionFive"><!--cues--></Element>
             </Component>
         </Component>
     </Component>

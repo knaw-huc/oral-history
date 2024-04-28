@@ -6,7 +6,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     
     <xsl:param name="tweakFile"/>
-    <xsl:variable name="tweak" select="document($tweakFile)"/>
+    <xsl:param name="tweak" select="document($tweakFile)"/>
     
     <xsl:template match="node() | @*">
         <xsl:copy>
@@ -24,7 +24,7 @@
             <xsl:message terminate="yes">ERR: only CMD 1.2 profile specifications can be processed by CCF!</xsl:message>
         </xsl:if>
         <xsl:if test="not($tweak/ComponentSpec)">
-            <xsl:message terminate="yes">ERR: only CMD tweaks can be processed by CCF!</xsl:message>
+            <xsl:message terminate="yes">ERR: only CMD tweaks can be processed by CCF! root is [<xsl:value-of select="local-name($tweak/*)"/>]</xsl:message>
         </xsl:if>
         <ComponentSpec xmlns:clariah="http://www.clariah.eu/">
             <xsl:apply-templates select="node() | @*">
