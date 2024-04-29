@@ -1,4 +1,4 @@
-#Get the cues spreadsheet into shape
+# Get the cues spreadsheet into shape
 Download the spreadsheet as CSV as `./tweaks/cues.csv`
 ```
 ./xsl.sh -it:main -xsl:file:$PWD/csv2xml.xsl "csv=file:$PWD/../tweaks/cues.csv" > ../tweaks/cues.xml
