@@ -64,9 +64,7 @@
                 </clariah:explanation>
             </xsl:if>
             <xsl:if test="normalize-space($r/c[@n='vocabulary (https://skosmos.sd.di.huc.knaw.nl/en/)'])!=''">
-                <clariah:explanation>
-                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=<xsl:value-of select="replace($r/c[@n='vocabulary (https://skosmos.sd.di.huc.knaw.nl/en/)'],'https://skosmos.sd.di.huc.knaw.nl/(.*)/en/','$1')"/></clariah:autoCompleteURI>
-                </clariah:explanation>
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=<xsl:value-of select="replace($r/c[@n='vocabulary (https://skosmos.sd.di.huc.knaw.nl/en/)'],'https://skosmos.sd.di.huc.knaw.nl/(.*)/en/','$1')"/></clariah:autoCompleteURI>
             </xsl:if>
             
             <xsl:choose>

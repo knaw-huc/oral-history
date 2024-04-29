@@ -78,17 +78,13 @@
                 <Element name="genre">
                     <clariah:label xml:lang="en">Genre</clariah:label>
                     <clariah:explanation>Choose one or more of the following genres that apply to the dataset/resource: </clariah:explanation>
-                    <clariah:explanation>
-                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-informationtypes</clariah:autoCompleteURI>
-                    </clariah:explanation>
+                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=ineo-informationtypes</clariah:autoCompleteURI>
                     <!--cues-->
                 </Element>
                 <Element name="topic">
                     <clariah:label xml:lang="en">Topic Classification</clariah:label>
                     <clariah:explanation>Choose one or more of the following topics that apply to the dataset/resource: </clariah:explanation>
-                    <clariah:explanation>
-                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
-                    </clariah:explanation>
+                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
                     <!--cues-->
                 </Element>
                 <Element name="languages">
@@ -668,9 +664,7 @@
             <Element name="domains">
                 <clariah:label xml:lang="en">Domain(s) of Application</clariah:label>
                 <clariah:explanation>Provide list of key domains of application that dataset has been designed for. </clariah:explanation>
-                <clariah:explanation>
-                    <clariah:autoCompleteURI>skos_proxy.php?vocabulary=domains vocabulary?</clariah:autoCompleteURI>
-                </clariah:explanation>
+                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=domains vocabulary?</clariah:autoCompleteURI>
                 <!--cues-->
             </Element>
             <Element name="motivation" cue:inputWidth="80" cue:inputHeight="6">
@@ -839,9 +833,7 @@
                     </Element>
                     <Element name="languageDistributionOfAnnotators">
                         <clariah:label xml:lang="en">Language distribution of annotators</clariah:label>
-                        <clariah:explanation>
-                            <clariah:autoCompleteURI>skos_proxy.php?vocabulary=language ID</clariah:autoCompleteURI>
-                        </clariah:explanation>
+                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=language ID</clariah:autoCompleteURI>
                         <!--cues-->
                     </Element>
                     <Element name="numLanguageDistrib"><!--cues--></Element>
