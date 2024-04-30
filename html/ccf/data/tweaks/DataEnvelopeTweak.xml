@@ -116,12 +116,12 @@
                 </Component>
             </Component>
             <Component name="Dates">
-                <clariah:label xml:lang="en">Dates</clariah:label>
+                <clariah:label xml:lang="en">2.2 Dates</clariah:label>
                 <Element name="dateFrom"><!--cues--></Element>
                 <Element name="dateTo"><!--cues--></Element>
             </Component>
             <Component name="Contributors">
-                <clariah:label xml:lang="en">Contributors </clariah:label>
+                <clariah:label xml:lang="en">2.3 Contributors </clariah:label>
                 <clariah:explanation>Specify the individuals or organizations that created, contributed to, and are sharing the dataset. This information is essential in identifying the dataset's provenance.</clariah:explanation>
                 <Component name="publishingOrganisation">
                     <clariah:label xml:lang="en">Publishing Organisation</clariah:label>
@@ -193,7 +193,7 @@
                 </Component>
             </Component>
             <Component name="distribution">
-                <clariah:label xml:lang="en">Distribution</clariah:label>
+                <clariah:label xml:lang="en">2.4 Distribution</clariah:label>
                 <Element name="datasetlink">
                     <clariah:label xml:lang="en">Dataset Link </clariah:label>
                     <clariah:explanation>If the dataset has its own dedicated website(s) or is hosted on sites such as zenodo, dataverse, marketplace, provide the url(s) here:</clariah:explanation>
@@ -236,7 +236,7 @@
                 </Component>
             </Component>
             <Component name="accessLicenses">
-                <clariah:label xml:lang="en">Licenses and Accesses</clariah:label>
+                <clariah:label xml:lang="en">2.5 Licenses and Accesses</clariah:label>
                 <clariah:explanation>Specify the license(s) and access levels under which the dataset is shared. This information is crucial in determining the appropriate re-use of datasets and access information.</clariah:explanation>
                 <Component name="licensingInformation">
                     <clariah:label xml:lang="en">Lincensing Information</clariah:label>
@@ -277,12 +277,12 @@
                             <clariah:explanation>Provide email for users to reach out with any questions or concerns regarding data access.</clariah:explanation>
                             <!--cues-->
                         </Element>
-                        <Element name="accessPrereuqisites"><!--cues--></Element>
+                        <Element name="accessPrerequisites"><!--cues--></Element>
                     </Component>
                 </Component>
             </Component>
             <Component name="versionMaintenance">
-                <clariah:label xml:lang="en">Dataset Version and Maintenance</clariah:label>
+                <clariah:label xml:lang="en">2.6 Dataset Version and Maintenance</clariah:label>
                 <Component name="version">
                     <clariah:label xml:lang="en">Version</clariah:label>
                     <clariah:explanation>Provide details about this version of the dataset:</clariah:explanation>
@@ -352,7 +352,7 @@
             <clariah:label xml:lang="en">Level 3: Data </clariah:label>
             <clariah:explanation>For each data resource/file in the dataset, fill in the following:</clariah:explanation>
             <Component name="DataResourceDescription">
-                <clariah:label xml:lang="en">Data Resource Description</clariah:label>
+                <clariah:label xml:lang="en">3.1 Data Resource Description</clariah:label>
                 <Element name="nameOfResource">
                     <clariah:label xml:lang="en">Name of Resource</clariah:label>
                     <!--cues-->
@@ -423,7 +423,7 @@
                 </Component>
             </Component>
             <Component name="dataFields">
-                <clariah:label xml:lang="en">Data Fields </clariah:label>
+                <clariah:label xml:lang="en">3.2 Data Fields </clariah:label>
                 <Component name="usedVocabularies">
                     <clariah:explanation>Provide information on linked open data schemes, controlled vocabularies, ontologies and taxonomies used during the establishment of the dataset.</clariah:explanation>
                     <Element name="vocabulary">
@@ -467,7 +467,7 @@
                 </Component>
             </Component>
             <Component name="dataExamples">
-                <clariah:label xml:lang="en">Data Point Examples</clariah:label>
+                <clariah:label xml:lang="en">3.3 Data Point Examples</clariah:label>
                 <Component name="typicalExample">
                     <clariah:label xml:lang="en">Typical Example</clariah:label>
                     <Element name="description" cue:inputWidth="60" cue:inputHeight="8">
@@ -496,7 +496,7 @@
                 </Component>
             </Component>
             <Component name="errors">
-                <clariah:label xml:lang="en">Errors, Noise, and Redundancies</clariah:label>
+                <clariah:label xml:lang="en">3.4 Errors, Noise, and Redundancies</clariah:label>
                 <clariah:explanation>Are there any errors, sources of noise, or redundancies in this resource?</clariah:explanation>
                 <Element name="errordescription" cue:inputWidth="60" cue:inputHeight="8">
                     <clariah:label xml:lang="en">Description</clariah:label>
@@ -505,7 +505,7 @@
                 </Element>
             </Component>
             <Component name="externalResources">
-                <clariah:label xml:lang="en">External Resources</clariah:label>
+                <clariah:label xml:lang="en">3.5 External Resources</clariah:label>
                 <Element name="resources">
                     <clariah:label xml:lang="en">Resources</clariah:label>
                     <clariah:explanation>Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, other datasets)?</clariah:explanation>
@@ -518,7 +518,7 @@
                 </Element>
             </Component>
             <Component name="annotations">
-                <clariah:label xml:lang="en">Annotation and Labeling </clariah:label>
+                <clariah:label xml:lang="en">3.6 Annotation and Labeling</clariah:label>
                 <clariah:explanation>Fill in this section to specify if any human or algorithmic annotation tasks were performed in the creation of your dataset resource.</clariah:explanation>
                 <Component name="annotationWorkforce">
                     <Element name="annotationWorkforceType">
@@ -544,7 +544,7 @@
                 </Component>
             </Component>
             <Component name="socialImpact">
-                <clariah:label xml:lang="en">Social Impact, Sensitivity, and Biases</clariah:label>
+                <clariah:label xml:lang="en">3.7 Social Impact, Sensitivity, and Biases</clariah:label>
                 <Component name="safety">
                     <clariah:label xml:lang="en">Safety Consideration</clariah:label>
                     <Element name="disclaimer">
@@ -602,7 +602,7 @@
                 </Component>
             </Component>
             <Component name="dataProvenance">
-                <clariah:label xml:lang="en">Data Provenance</clariah:label>
+                <clariah:label xml:lang="en">3.8 Data Provenance</clariah:label>
                 <clariah:explanation>For every source used to create this resource, provide the following information:</clariah:explanation>
                 <Element name="Name"><!--cues--></Element>
                 <Element name="path">
@@ -664,7 +664,6 @@
             <Element name="domains">
                 <clariah:label xml:lang="en">Domain(s) of Application</clariah:label>
                 <clariah:explanation>Provide list of key domains of application that dataset has been designed for. </clariah:explanation>
-                <clariah:autoCompleteURI>skos_proxy.php?vocabulary=domains vocabulary?</clariah:autoCompleteURI>
                 <!--cues-->
             </Element>
             <Element name="motivation" cue:inputWidth="80" cue:inputHeight="6">
@@ -707,26 +706,28 @@
                     <Element name="unsuitableUseCase"><!--cues--></Element>
                     <Element name="additionalNotes"><!--cues--></Element>
                 </Component>
-                <Component name="UseWithOtherData">
-                    <clariah:label xml:lang="en">4.2. Use with Other Data</clariah:label>
-                    <Element name="safetyLevel"> </Element>
-                    <Element name="safetyLevelOther">
-                        <clariah:label xml:lang="en">Other</clariah:label>
-                        <clariah:explanation>If "Other" was chosen above, please speciify</clariah:explanation>
-                        <!--cues-->
-                    </Element>
-                    <Element name="knownSafeDatasetsDataTypes" cue:inputWidth="80" cue:inputHeight="3">
-                        <clariah:label xml:lang="en">Known safe dataset(s) or data type(s)</clariah:label>
-                        <clariah:explanation>List the known datasets (provide link) or data types and corresponding transformations that are safe to join or aggregate this dataset with.</clariah:explanation>
-                        <!--cues-->
-                    </Element>
-                    <Element name="bestPractices"><!--cues--></Element>
-                    <Element name="KnownUnsafeDatasetsDataTypes">
-                        <clariah:label xml:lang="en">Known unsafe dataset(s) or Data Type(s)</clariah:label>
-                        <clariah:explanation>List the known datasets or data types and corresponding transformations that are unsafe to join or aggregate this dataset with.</clariah:explanation>
-                        <!--cues-->
-                    </Element>
-                </Component>
+            </Component>
+            <Component name="UseWithOtherData">
+                <clariah:label xml:lang="en">4.2. Use with Other Data</clariah:label>
+                <Element name="SafetyLevel">
+                    <clariah:label xml:lang="en">Safety Level</clariah:label>
+
+                </Element>
+                <Element name="safetyLevelOther">
+                    <clariah:label xml:lang="en">Other</clariah:label>
+                    <clariah:explanation>If "Other" was chosen above, please speciify</clariah:explanation>
+                    <!--cues-->
+                </Element>
+                <Element name="knownSafeDatasetsDataTypes" cue:inputWidth="80" cue:inputHeight="3">
+                    <clariah:label xml:lang="en">Known safe dataset(s) or data type(s)</clariah:label>
+                    <clariah:explanation>List the known datasets (provide link) or data types and corresponding transformations that are safe to join or aggregate this dataset with.</clariah:explanation>
+                    <!--cues-->
+                </Element>
+                <Element name="KnownUnsafeDatasetsDataTypes">
+                    <clariah:label xml:lang="en">Known unsafe dataset(s) or Data Type(s)</clariah:label>
+                    <clariah:explanation>List the known datasets or data types and corresponding transformations that are unsafe to join or aggregate this dataset with.</clariah:explanation>
+                    <!--cues-->
+                </Element>
             </Component>
             <Component name="UseInMLOrAISystems">
                 <clariah:label xml:lang="en">4.3 Use in ML or AI Systems</clariah:label>
@@ -789,7 +790,7 @@
                 </Element>
             </Component>
             <Component name="feedbackElaboration">
-                <clariah:label xml:lang="en">5.3. Feedback Elaboration</clariah:label>
+                <clariah:label xml:lang="en">4.5. Feedback Elaboration</clariah:label>
                 <Element name="feedbackSectionFour"><!--cues--></Element>
             </Component>
         </Component>
@@ -833,7 +834,6 @@
                     </Element>
                     <Element name="languageDistributionOfAnnotators">
                         <clariah:label xml:lang="en">Language distribution of annotators</clariah:label>
-                        <clariah:autoCompleteURI>skos_proxy.php?vocabulary=language ID</clariah:autoCompleteURI>
                         <!--cues-->
                     </Element>
                     <Element name="numLanguageDistrib"><!--cues--></Element>

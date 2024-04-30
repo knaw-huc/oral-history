@@ -69,8 +69,8 @@ class Ccfparser {
         
     private function _tweak($cmdifile, $tweakfile, $tweaker) {
         $error_level = error_reporting();
-        //error_reporting(0);
-        error_reporting(E_ALL);
+        error_reporting(0);
+        //error_reporting(E_ALL);
         $profile = new DOMDocument();
         $profile->preserveWhiteSpace = false;
         $profile->load($cmdifile);

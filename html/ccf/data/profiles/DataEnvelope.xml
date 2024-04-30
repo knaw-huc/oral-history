@@ -151,11 +151,11 @@
                             </Vocabulary>
                         </ValueScheme>
                     </Element>
-                    <Component name="accessRestricted" CardinalityMin="0" CardinalityMax="1">
+                    <Component name="accessRestricted" CardinalityMin="1" CardinalityMax="1">
                         <Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                         <Element name="url" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                         <Element name="contactEmail" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                        <Element name="accessPrereuqisites" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                        <Element name="accessPrerequisites" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
                     </Component>
                 </Component>
             </Component>
@@ -307,7 +307,7 @@
                     <Element name="others" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
                 <Component name="annotationCharacteristics" CardinalityMin="1" CardinalityMax="unbounded">
-                    <Element name="annotationType" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="annotationType" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="totalAnnotations" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="totalTokens" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
@@ -454,25 +454,24 @@
                     <Element name="unsuitableUseCase" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="additionalNotes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
-                <Component name="UseWithOtherData" CardinalityMin="1" CardinalityMax="1">
-                    <Element name="safetyLevel" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-                        <ValueScheme>
-                            <Vocabulary>
-                                <enumeration>
-                                    <item>Safe to use with other data</item>
-                                    <item>Conditionally safe to user with other data</item>
-                                    <item>Should not be used with other data</item>
-                                    <item>Unknown - then skip the rest of this subsection </item>
-                                    <item>Other (please specify)</item>
-                                </enumeration>
-                            </Vocabulary>
-                        </ValueScheme>
-                    </Element>
-                    <Element name="safetyLevelOther" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                    <Element name="knownSafeDatasetsDataTypes" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
-                    <Element name="bestPractices" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                    <Element name="KnownUnsafeDatasetsDataTypes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-                </Component>
+            </Component>
+            <Component name="UseWithOtherData" CardinalityMin="1" CardinalityMax="1">
+                <Element name="SafetyLevel" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item>Safe to use with other data</item>
+                                <item>Conditionally safe to use with other data</item>
+                                <item>Should not be used with other data</item>
+                                <item>Unknown - then skip the rest of this subsection</item>
+                                <item>Other (please specify)</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="safetyLevelOther" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                <Element name="knownSafeDatasetsDataTypes" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                <Element name="KnownUnsafeDatasetsDataTypes" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
             </Component>
             <Component name="UseInMLOrAISystems" CardinalityMin="1" CardinalityMax="1">
                 <Element name="datasetUses" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -540,8 +539,8 @@
         </Component>
         <Component name="HumanPerspective" CardinalityMin="1" CardinalityMax="1">
             <Component name="HumanAnnotators" CardinalityMin="1" CardinalityMax="1">
-                <Element name="annotatorDescription" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                <Component name="AnnotationType" CardinalityMin="0" CardinalityMax="unbounded">
+                <Element name="annotatorDescription" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Component name="AnnotationType" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="taskType" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="numberOfUniqueAnnotators" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="avgannotations" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
@@ -560,7 +559,7 @@
                     <Element name="additionalNotes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
             </Component>
-            <Component name="Creators" CardinalityMin="0" CardinalityMax="1">
+            <Component name="Creators" CardinalityMin="1" CardinalityMax="1">
                 <Element name="creatorPositionality" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
             <Component name="feedbackElaboration" CardinalityMin="1" CardinalityMax="1">
