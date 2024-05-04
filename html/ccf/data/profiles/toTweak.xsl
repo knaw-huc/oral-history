@@ -24,6 +24,7 @@
     </xsl:template>
     
     <xsl:template match="Component|Element">
+        <xsl:message>?DBG:<xsl:value-of select="local-name()"/>[<xsl:value-of select="@name"/>]</xsl:message>
         <xsl:copy copy-namespaces="no">
             <xsl:apply-templates select="@name"/>
             <xsl:variable name="a" select="ancestor-or-self::Component[2]/@name"/>
@@ -37,11 +38,11 @@
                     </xsl:when>
                     <xsl:when test="normalize-space($e)!=''">
                         <xsl:message>DBG: match c[<xsl:value-of select="$c"/>] and e[<xsl:value-of select="$e"/>]</xsl:message>
-                        <xsl:sequence select="$cues//r[normalize-space(c[@n='component'])=$c][normalize-space(c[@n='element'])=$e][normalize-space(c[@n='ancestor'])=$a or normalize-space(c[@n='ancestor'])='']"/>
+                        <xsl:sequence select="$cues//r[normalize-space(c[@n='SKIP'])=''][normalize-space(c[@n='component'])=$c][normalize-space(c[@n='element'])=$e][normalize-space(c[@n='ancestor'])=$a or normalize-space(c[@n='ancestor'])='']"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:message>DBG: match only c[<xsl:value-of select="$c"/>]</xsl:message>
-                        <xsl:sequence select="$cues//r[normalize-space(c[@n='component'])=$c][normalize-space(c[@n='element'])=''][normalize-space(c[@n='ancestor'])=$a or normalize-space(c[@n='ancestor'])='']"/>
+                        <xsl:sequence select="$cues//r[normalize-space(c[@n='SKIP'])=''][normalize-space(c[@n='component'])=$c][normalize-space(c[@n='element'])=''][normalize-space(c[@n='ancestor'])=$a or normalize-space(c[@n='ancestor'])='']"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
