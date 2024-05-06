@@ -11,7 +11,7 @@
             <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Component name="ContactDetails" CardinalityMin="1" CardinalityMax="unbounded">
                 <Element name="name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                <Element name="orcidID" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
+                <Element name="orcidID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="roleInProject" CardinalityMin="0" CardinalityMax="unbounded">
                     <ValueScheme>
                         <Vocabulary>
@@ -41,6 +41,11 @@
                 <Element name="creationDateTo" ValueScheme="date" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="publicationDate" ValueScheme="date" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
+            <Component name="authorDataEnvelope" CardinalityMin="1" CardinalityMax="1">
+                <Element name="name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Element name="orcidID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                <Element name="email" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            </Component>
             <Component name="feedbackElaboration" CardinalityMin="1" CardinalityMax="1">
                 <Element name="feedbackSectionOne" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
@@ -49,7 +54,6 @@
             <Component name="Snapshot" CardinalityMin="1" CardinalityMax="1">
                 <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="version" ValueScheme="decimal" CardinalityMin="1" CardinalityMax="1"/>
-                <Element name="URL" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="description" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
                 <Element name="genre" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded"/>
                 <Element name="genreOther" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
@@ -63,6 +67,7 @@
                     <Element name="yearFrom" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="yearTo" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="year" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+                    <Element name="additionalNotes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
             </Component>
             <Component name="Dates" CardinalityMin="1" CardinalityMax="1">
@@ -70,7 +75,7 @@
                 <Element name="dateTo" ValueScheme="date" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="datasetPublicationDate" ValueScheme="date" CardinalityMin="0" CardinalityMax="1"/>
             </Component>
-            <Component name="Contributors" CardinalityMin="1" CardinalityMax="1">
+            <Component name="CreatorsContributors" CardinalityMin="1" CardinalityMax="1">
                 <Component name="publishingOrganisation" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="Name" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="ROR" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
@@ -91,11 +96,11 @@
                     </Element>
                     <Element name="other" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
-                <Component name="Contributor" CardinalityMin="1" CardinalityMax="unbounded">
+                <Component name="Creators" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="Name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                    <Element name="ORCID" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
-                    <Element name="Organisation" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
-                    <Element name="ROR" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>
+                    <Element name="ORCID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="Organisation" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="ROR" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
                     <Element name="Role" CardinalityMin="0" CardinalityMax="unbounded">
                         <ValueScheme>
                             <Vocabulary>
@@ -119,6 +124,11 @@
                     </Element>
                     <Element name="email" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 </Component>
+                <Component name="contributors" CardinalityMin="1" CardinalityMax="unbounded">
+                    <Element name="name" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="organisation" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="descriptionContribution" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                </Component>
                 <Component name="funding" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="name" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Element name="ROR" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
@@ -128,7 +138,6 @@
             </Component>
             <Component name="distribution" CardinalityMin="1" CardinalityMax="1">
                 <Element name="datasetlink" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-                <Element name="doi" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="repository" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded"/>
                 <Component name="download" CardinalityMin="1" CardinalityMax="unbounded">
                     <Element name="link" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded"/>
@@ -290,7 +299,7 @@
                         </Vocabulary>
                     </ValueScheme>
                 </Element>
-                <Element name="links" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="unbounded"/>
+                <Element name="extResources" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
             </Component>
             <Component name="annotations" CardinalityMin="1" CardinalityMax="1">
                 <Component name="annotationCharacteristics" CardinalityMin="1" CardinalityMax="unbounded">
@@ -429,7 +438,7 @@
                 </ValueScheme>
             </Element>
             <Element name="other" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Element name="domains" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="domains" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
             <Element name="motivation" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Component name="Use" CardinalityMin="1" CardinalityMax="unbounded">
                 <Element name="datasetUse" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
