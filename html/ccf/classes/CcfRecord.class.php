@@ -98,7 +98,7 @@ class Ccfrecord
     private function processElements($name, $items, $node, $cmdi)
     {
         foreach ($items as $item) {
-            $newNode = $cmdi->createElement('cmd:' . $name, $item["value"]);
+            $newNode = $cmdi->createElement('cmd:' . $name, htmlspecialchars($item["value"]));
             if (count($item["attributes"])) {
                 $attributes = $item["attributes"];
                 foreach ($attributes as $key => $attribute) {
