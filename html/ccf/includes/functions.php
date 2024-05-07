@@ -44,7 +44,11 @@ function show_page($params)
                     $recordId = $params["id"];
                     showCMDI(($recordId));
 
-                }    
+                } elseif  ($action == "show_html") {
+                    $recordId = $params["id"];
+                    $profile = $db->getProfile($params["id"]);
+                    showHTML($profile[0]["name"],$recordId);
+                }  
             } else {
                 // no action; show profile page
                 if (isset($params["id"]) && ($profile = $db->getProfile($params["id"]))) {
@@ -342,6 +346,42 @@ function showCMDI($id) {
     echo $xml;
     die;
 }
+
+function showHTML($name,$id) {
+    //error_reporting(E_ALL);
+    //echo $name;
+    //echo $id;
+    //echo TOHTML;
+    $xsl = new DOMDocument;
+    $xsl->preserveWhiteSpace = false;
+    $xsl->load(TOHTML);
+
+    $proc = new XSLTProcessor;
+    $proc->importStyleSheet($xsl);
+
+    $tweakFile = TWEAK_PATH . $name . "Tweak.xml";
+    //echo $tweakFile;
+    $tweak = new DOMDocument;
+    $tweak->preserveWhiteSpace = false;
+    $tweak->load($tweakFile);
+    $params = array('tweak-uri' => $tweakFile,'style' => TOHTMLSTYLE);
+    $proc->setParameter('', $params);
+    //$proc->setParameter('tweak-doc', $tweak);
+    //$proc->setParameter('tweak-uri', 'file:' . $tweakFile);
+
+    $fileName = CMDI_RECORD_PATH . "md$id/metadata/record.cmdi";
+    //echo $fileName;
+    $rec = new DOMDocument;
+    $rec->preserveWhiteSpace = false;
+    $rec->load($fileName);
+
+    $html = $proc->transformToDoc($rec);
+
+    header('Content-type: text/html');
+    echo $html->saveXML();
+    die;
+}
+
 
 function get_record_file($id)
 {

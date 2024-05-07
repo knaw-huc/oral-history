@@ -36,7 +36,6 @@
                 <link href="{$style}" rel="stylesheet"/>
             </head>
             <body>
-                <xsl:value-of select="$tweak-uri"/>
                 <h1>
                     <xsl:call-template name="title"/>
                 </h1>
