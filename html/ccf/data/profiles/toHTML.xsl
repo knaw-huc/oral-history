@@ -4,8 +4,9 @@
     xmlns:clariah="http://www.clariah.eu/"
     exclude-result-prefixes="cmd"
     version="1.0">
-    
-    <xsl:param name="tweak-uri" select="'file:/Users/menzowi/Documents/Projects/hi-data-eveloppes/html/ccf/data/tweaks/DataEnvelopeTweak.xml'"/>
+
+    <xsl:param name="style" select="'style.css'"/>
+    <xsl:param name="tweak-uri" select="''"/>
     <xsl:param name="tweak-doc" select="document($tweak-uri)"/>
     
     <xsl:output method="html"/>
@@ -32,9 +33,10 @@
                 <title>
                     <xsl:call-template name="title"/>
                 </title>
-                <link href="style.css" rel="stylesheet"/>
+                <link href="{$style}" rel="stylesheet"/>
             </head>
             <body>
+                <xsl:value-of select="$tweak-uri"/>
                 <h1>
                     <xsl:call-template name="title"/>
                 </h1>

@@ -1,5 +1,7 @@
 <?php
 define('TWEAKER', dirname(dirname(__FILE__)) . '/tweaker/mergeTweak.xsl');
+define('TOHTML', dirname(dirname(__FILE__)) . '/data/profiles/toHTML.xsl');
+define('TOHTMLSTYLE', 'css/tohtml.css');
 define('CMDI_RECORD_PATH', dirname(dirname(__FILE__)) . '/data/records/inprogress/');
 define('CMDI_UPLOAD_PATH', dirname(dirname(__FILE__)) . '/data/uploads/');
 define('PROFILE_PATH', dirname(dirname(__FILE__)) . '/data/profiles/');
