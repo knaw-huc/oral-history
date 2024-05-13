@@ -375,7 +375,7 @@
                 </Component>
             </Component>
             <Component name="feedbackElaboration">
-                <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
+                <clariah:label xml:lang="en">2.7 Feedback and Elaboration</clariah:label>
                 <Element name="feedbackSectionTwo" cue:inputWidth="60" cue:inputHeight="8">
                     <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
                     <clariah:explanation>Please use this space to provide any feedback on this section and to share any other insights or information you think would be useful for this level.</clariah:explanation>
@@ -704,7 +704,12 @@
                 <Element name="digitalisationPipeline"><!--cues--></Element>
             </Component>
             <Component name="feedbackElaboration">
-                <Element name="feedbackSectionThree"><!--cues--></Element>
+                <clariah:label xml:lang="en">3.10 Feedback and Elaboration</clariah:label>
+                <Element name="feedbackSectionThree" cue:inputWidth="60" cue:inputHeight="8">
+                    <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
+                    <clariah:explanation>Please use this space to provide any feedback on this section and to share any other insights or information you think would be useful for this level.</clariah:explanation>
+                    <!--cues-->
+                </Element>
             </Component>
         </Component>
         <Component name="Uses">
