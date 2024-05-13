@@ -49,18 +49,18 @@
                 </Element>
             </Component>
             <Component name="authorDataEnvelope">
-                <clariah:label xml:lang="en">Author of Data-Envelope</clariah:label>
+                <clariah:label xml:lang="en">1.4 Author of Data-Envelope</clariah:label>
                 <clariah:explanation>Provide information on the author of the data-envelope.</clariah:explanation>
                 <Element name="name">
                     <clariah:label xml:lang="en">Name </clariah:label>
-                    <clariah:explanation>Provide the full name.</clariah:explanation>
+                    <clariah:explanation>Provide their full name.</clariah:explanation>
                     <!--cues-->
                 </Element>
                 <Element name="orcidID"><!--cues--></Element>
                 <Element name="email"><!--cues--></Element>
             </Component>
             <Component name="feedbackElaboration">
-                <clariah:label xml:lang="en">Feedback and Elaboration</clariah:label>
+                <clariah:label xml:lang="en">1.5 Feedback and Elaboration</clariah:label>
                 <Element name="feedbackSectionOne" cue:inputWidth="60" cue:inputHeight="8">
                     <clariah:label xml:lang="en">Feedback </clariah:label>
                     <clariah:explanation>Please use this space to provide any feedback on this section and to share any other insights or information you think would be useful for this level.</clariah:explanation>
@@ -125,12 +125,12 @@
                 <Component name="TemporalCoverage">
                     <Element name="yearFrom">
                         <clariah:label xml:lang="en">Temporal Coverage Start Date</clariah:label>
-                        <clariah:explanation>Provide temporal scope of the dataset</clariah:explanation>
+                        <clariah:explanation>Provide start year of temporal scope of the dataset </clariah:explanation>
                         <!--cues-->
                     </Element>
                     <Element name="yearTo">
                         <clariah:label xml:lang="en">Temporal Coverage End Date</clariah:label>
-                        <clariah:explanation>Provide temporal scope of the dataset</clariah:explanation>
+                        <clariah:explanation>Provide end date of temporal scope of the dataset</clariah:explanation>
                         <!--cues-->
                     </Element>
                     <Element name="year">
@@ -544,7 +544,7 @@
                 <clariah:label xml:lang="en">3.5 External Resources</clariah:label>
                 <Element name="resources">
                     <clariah:label xml:lang="en">Resources</clariah:label>
-                    <clariah:explanation>ex</clariah:explanation>
+                    <clariah:explanation>Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, other datasets)?</clariah:explanation>
 
                 </Element>
                 <Element name="extResources">
@@ -593,6 +593,7 @@
                 <Component name="biases">
                     <Element name="knownBiases" cue:inputWidth="60" cue:inputHeight="8">
                         <clariah:label xml:lang="en">Known Biases in the Resource</clariah:label>
+                        <clariah:explanation>Identify any known biases present in this dataset, such as stereotyping, underrepresentation, overrepresentation, or misrepresentation of certain social groups. Briefly describe the nature and, if possible, the extent of these biases to help users make informed decisions and mitigate potential harms.</clariah:explanation>
                         <!--cues-->
                     </Element>
                     <Component name="sensAttributes">
@@ -615,14 +616,32 @@
                     </Component>
                 </Component>
                 <Component name="ethicalReview">
-                    <Element name="review"> </Element>
+                    <clariah:label xml:lang="en">Ethical Review</clariah:label>
+                    <Element name="review">
+                        <clariah:label xml:lang="en">Review</clariah:label>
+                        <clariah:explanation>Was an ethical review conducted in order to create this dataset?</clariah:explanation>
+
+                    </Element>
                     <Element name="description"><!--cues--></Element>
-                    <Element name="outcomes"><!--cues--></Element>
+                    <Element name="outcomes" cue:inputWidth="60" cue:inputHeight="8">
+                        <clariah:label xml:lang="en">Outcomes </clariah:label>
+                        <clariah:explanation>Describe the outcomes of the ethical review, and how they influenced the dataset creation. </clariah:explanation>
+                        <!--cues-->
+                    </Element>
                     <Element name="link"><!--cues--></Element>
                     <Component name="reviewContact">
-                        <Element name="name"><!--cues--></Element>
+                        <clariah:label xml:lang="en">Ethical Review Contact</clariah:label>
+                        <Element name="name">
+                            <clariah:label xml:lang="en">Name</clariah:label>
+                            <clariah:explanation>Provide name of person who may be contacted in relation to questions on ethical review.</clariah:explanation>
+                            <!--cues-->
+                        </Element>
                         <Element name="affiliation"><!--cues--></Element>
-                        <Element name="contact"><!--cues--></Element>
+                        <Element name="contact">
+                            <clariah:label xml:lang="en">Email</clariah:label>
+                            <clariah:explanation>Provide their email address.</clariah:explanation>
+                            <!--cues-->
+                        </Element>
                     </Component>
                 </Component>
             </Component>
