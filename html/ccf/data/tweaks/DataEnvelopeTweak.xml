@@ -851,7 +851,11 @@
             </Component>
             <Component name="feedbackElaboration">
                 <clariah:label xml:lang="en">4.5. Feedback Elaboration</clariah:label>
-                <Element name="feedbackSectionFour"><!--cues--></Element>
+                <Element name="feedbackSectionFour" cue:inputWidth="80" cue:inputHeight="3">
+                    <clariah:label xml:lang="en">Feedback</clariah:label>
+                    <clariah:explanation>Please use this space to provide any feedback on this section and to share any other insights or information you think would be useful for this level.</clariah:explanation>
+                    <!--cues-->
+                </Element>
             </Component>
         </Component>
         <Component name="HumanPerspective">
