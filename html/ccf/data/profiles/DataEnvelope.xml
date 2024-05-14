@@ -41,7 +41,7 @@
                 <Element name="creationDateTo" ValueScheme="date" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="publicationDate" ValueScheme="date" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
-            <Component name="authorDataEnvelope" CardinalityMin="1" CardinalityMax="1">
+            <Component name="authorDataEnvelope" CardinalityMin="1" CardinalityMax="unbounded">
                 <Element name="name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="orcidID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="email" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
@@ -55,7 +55,7 @@
                 <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                 <Element name="version" ValueScheme="decimal" CardinalityMin="1" CardinalityMax="1"/>
                 <Element name="description" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
-                <Element name="genre" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded"/>
+                <Element name="genre" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
                 <Element name="genreOther" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
                 <Element name="topic" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded"/>
                 <Element name="topicOther" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
@@ -357,6 +357,7 @@
                 </Component>
                 <Component name="biases" CardinalityMin="1" CardinalityMax="1">
                     <Element name="knownBiases" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="stepsToReduceBias" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
                     <Component name="sensAttributes" CardinalityMin="1" CardinalityMax="1">
                         <Element name="sensitiveAttribute" CardinalityMin="1" CardinalityMax="1">
                             <ValueScheme>
@@ -417,7 +418,7 @@
                 <Element name="datasheetEnvelope" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1"/>
                 <Element name="dataSelection" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
-            <Component name="digitalisationPipeline" CardinalityMin="1" CardinalityMax="1">
+            <Component name="digitisation" CardinalityMin="1" CardinalityMax="1">
                 <Element name="digitalisationPipeline" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
             <Component name="feedbackElaboration" CardinalityMin="1" CardinalityMax="1">
