@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1721373443933</ID>
+        <Name>Adoptie</Name>
+        <Description>Profiel voor het adoptie project</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="Adoptie" CardinalityMin="1" CardinalityMax="1">
+        <Element name="IDnummer" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        <Component name="adoptieKind" CardinalityMin="1" CardinalityMax="1">
+            <Element name="geslacht" ConceptLink="https://schema.org/GenderType" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://schema.org/Male">mannelijk</item>
+                            <item ConceptLink="https://schema.org/Female" AppInfo="">vrouwelijk</item>
+                            <item>anders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geboortePeriode" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">1900-1904</item>
+                            <item ConceptLink="" AppInfo="">1905-1909</item>
+                            <item ConceptLink="" AppInfo="">1910-1914</item>
+                            <item ConceptLink="" AppInfo="">1915-1919</item>
+                            <item ConceptLink="" AppInfo="">1920-1924</item>
+                            <item ConceptLink="" AppInfo="">1925-1929</item>
+                            <item ConceptLink="" AppInfo="">1930-1934</item>
+                            <item ConceptLink="" AppInfo="">1935-1939</item>
+                            <item ConceptLink="" AppInfo="">1940-1944</item>
+                            <item ConceptLink="" AppInfo="">1945-1949</item>
+                            <item ConceptLink="" AppInfo="">1950-1954</item>
+                            <item ConceptLink="" AppInfo="">1955-1959</item>
+                            <item ConceptLink="" AppInfo="">1960-1964</item>
+                            <item ConceptLink="" AppInfo="">1965-1969</item>
+                            <item ConceptLink="" AppInfo="">1970-1974</item>
+                            <item ConceptLink="" AppInfo="">1975-1979</item>
+                            <item ConceptLink="" AppInfo="">1980-1984</item>
+                            <item ConceptLink="" AppInfo="">1985-1989</item>
+                            <item ConceptLink="" AppInfo="">1990-1994</item>
+                            <item ConceptLink="" AppInfo="">1995-1999</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geboorteProvincie" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+        </Component>
+        <Component name="biologischeOfAfstandsMoeder" CardinalityMin="1" CardinalityMax="1">
+            <Element name="geboortePeriodeBiologischeMoeder" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">1900-1904</item>
+                            <item ConceptLink="" AppInfo="">1905-1909</item>
+                            <item ConceptLink="" AppInfo="">1910-1914</item>
+                            <item ConceptLink="" AppInfo="">1915-1919</item>
+                            <item ConceptLink="" AppInfo="">1920-1924</item>
+                            <item ConceptLink="" AppInfo="">1925-1929</item>
+                            <item ConceptLink="" AppInfo="">1930-1934</item>
+                            <item ConceptLink="" AppInfo="">1935-1939</item>
+                            <item ConceptLink="" AppInfo="">1940-1944</item>
+                            <item ConceptLink="" AppInfo="">1945-1949</item>
+                            <item ConceptLink="" AppInfo="">1950-1954</item>
+                            <item ConceptLink="" AppInfo="">1955-1959</item>
+                            <item ConceptLink="" AppInfo="">1960-1964</item>
+                            <item ConceptLink="" AppInfo="">1965-1969</item>
+                            <item ConceptLink="" AppInfo="">1970-1974</item>
+                            <item ConceptLink="" AppInfo="">1975-1979</item>
+                            <item ConceptLink="" AppInfo="">1980-1984</item>
+                            <item ConceptLink="" AppInfo="">1985-1989</item>
+                            <item ConceptLink="" AppInfo="">1990-1994</item>
+                            <item ConceptLink="" AppInfo="">1995-1999</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="provincieWaarMoederWoonachtigIsVoorEventueelVertrekDoorgangshuisOfGastGezin" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="isBiologischeMoederMeederjarig-21JaarEnOuder" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="huwelijkseStaatBiologischeMoederOpMomentVanBevalling" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">ongehuwd</item>
+                            <item ConceptLink="" AppInfo="">gehuwd</item>
+                            <item ConceptLink="" AppInfo="">gescheiden</item>
+                            <item ConceptLink="" AppInfo="">verweduwd</item>
+                            <item ConceptLink="" AppInfo="">onbekend, niet gegeven</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="huwelijkseStaatBiologischeMoederOpMomentVanAdoptie" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">ongehuwd</item>
+                            <item ConceptLink="" AppInfo="">gehuwd</item>
+                            <item ConceptLink="" AppInfo="">gescheiden</item>
+                            <item ConceptLink="" AppInfo="">verweduwd</item>
+                            <item ConceptLink="" AppInfo="">onbekend, niet gegeven</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="lichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoeder" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="godsdienstBiologischeMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beroepBiologischeMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="genotenOnderwijsBiologischeMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beroepVaderVanDeBiologischeMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beroepMoederVanDeBiologischeMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beschijfGezinsSituatieBiologischeMoederVoorDanWelTijdensDeZwangerschap" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beschrijfGezinssituatieBiologischeMoederNaDeBevalling" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Component name="lichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoederComp" CardinalityMin="0" CardinalityMax="1">
+                <Element name="beperkingOfAandoeningMoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            </Component>
+        </Component>
+        <Component name="gegevensBiologischeVaderOfVerwekker" CardinalityMin="1" CardinalityMax="1">
+            <Element name="isDeVerwekkerBekend" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="aardSeksueleRelatieBiologischeMoederEnVerwekker" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">concensueel (bv. 'vriendje', 'vakantieliefde')</item>
+                            <item ConceptLink="" AppInfo="">niet-concensueel (incest)</item>
+                            <item ConceptLink="" AppInfo="">niet-concensueel (verkrachting)</item>
+                            <item>onduidelijk</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="sprakeVanFamilieRelatieTussenBiologischeMoederEnVerwekker" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="beschrijfRelatieTussenBiologischeMoederEnVerwekker" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="welkeAanvullendeInformatieVindenWeOverDeVerwekker" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="welkeInformatieVindenWeOverDeOudersVanDeVerwekker" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="isErSprakeVanPogingTotVaderschapsActie" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1"/>
+        </Component>
+        <Component name="ZwangerschapEnBevalling" CardinalityMin="1" CardinalityMax="1">
+            <Element name="informatiePeriodeZwangerschap" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Component name="verblijfDoorgangshuisBoolean" CardinalityMin="0" CardinalityMax="1">
+                <Element name="verblijfDoorgangshuisProvincie" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                <item ConceptLink="" AppInfo="">Elders</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="signatuurDoorgangshuis" CardinalityMin="1" CardinalityMax="1">
+                    <ValueScheme>
+                        <Vocabulary>
+                            <enumeration>
+                                <item AppInfo="">protestants</item>
+                                <item>katholiek</item>
+                                <item>neutraal</item>
+                            </enumeration>
+                        </Vocabulary>
+                    </ValueScheme>
+                </Element>
+                <Element name="informatiePeriodeDoorgangshuis" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                <Component name="gastGezinBoolean" CardinalityMin="0" CardinalityMax="1">
+                    <Element name="provincieGastgezin" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                                    <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                    <item ConceptLink="" AppInfo="">Elders</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Element name="informatieVerblijfGastgezin" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                    <Element name="informatieGastgezinBevalling" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+                </Component>
+            </Component>
+        </Component>
+        <Component name="NaBevalling" CardinalityMin="1" CardinalityMax="1">
+            <Element name="verblijftInKindertehuis" ValueScheme="boolean" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="Afstand" CardinalityMin="1" CardinalityMax="1">
+            <Element name="reden" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="Adoptie" CardinalityMin="1" CardinalityMax="1">
+            <Element name="periodePlaatsingPleeggezin" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="Overig" CardinalityMin="1" CardinalityMax="1">
+            <Element name="typenDocumenten" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+    </Component>
+</ComponentSpec>

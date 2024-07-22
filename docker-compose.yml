@@ -1,19 +1,19 @@
 version: '2'
 services: 
-    hide-mysql:
+    adoptie-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - hide-mysqldb:/var/lib/mysql
+            - adoptie-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - hide-network 
+            - adoptie-network 
 
     # huc-editor backend & frontend
-    hide-php-apache:
+    adoptie-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
@@ -23,27 +23,27 @@ services:
             - ./data/records/:/var/www/html/ccf/data/records/
             - ./data/resources/:/var/www/html/ccf/data/resources/
         environment:
-            TITLE: "HI Data Envelope Editor"
-            PROFILE: "DataEnvelope"
-            SUBTITLE: "your way to a FAIR dataset"
-            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8125/ccf/"
+            TITLE: "IISG Adoptie Editor"
+            PROFILE: "Adoptie"
+            SUBTITLE: ""
+#            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: hide-mysql
+            DB_SERVER: adoptie-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.hide.entrypoints=http"
-        - "traefik.http.routers.hide.rule=Host(`hide.sd.di.huc.knaw.nl`)"
+        - "traefik.http.routers.adoptie.entrypoints=http"
+        - "traefik.http.routers.adoptie.rule=Host(`adoptie.sd.di.huc.knaw.nl`)"
         networks:
-            - hide-network
+            - adoptie-network
         depends_on:
-            - hide-mysql
+            - adoptie-mysql
 networks:
-  hide-network:
-    external: true 
-    name: traefik-public
+  adoptie-network:
+    external: false #true 
+#    name: traefik-public
 volumes:
-    hide-mysqldb:
+    adoptie-mysqldb:

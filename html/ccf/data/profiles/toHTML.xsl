@@ -14,17 +14,7 @@
     <xsl:template match="text()"/>
     
     <xsl:template name="title">
-        <xsl:choose>
-            <xsl:when test="//cmd:BasicInformation/cmd:title[@xml:lang='en']">
-                <xsl:value-of select="//cmd:BasicInformation/cmd:title[@xml:lang='en'][1]"/>
-            </xsl:when>
-            <xsl:when test="//cmd:BasicInformation/cmd:title[normalize-space(@xml:lang)='']">
-                <xsl:value-of select="//cmd:BasicInformation/cmd:title[normalize-space(@xml:lang)=''][1]"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="//cmd:BasicInformation/cmd:title[1]"/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:value-of select="//cmd:IDnummer"/>
     </xsl:template>
     
     <xsl:template match="/">
