@@ -128,3 +128,6 @@ html/ccf/data/profiles/*.loaded
 
 # resources
 html/ccf/data/resources/
+html/ccf/data/profiles/saxon-he-10.5.jar
+html/ccf/data/tweaks/cues.csv
+html/ccf/data/tweaks/cues.xml
