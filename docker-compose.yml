@@ -26,8 +26,8 @@ services:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
             SUBTITLE: ""
-#            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8125/ccf/"
+            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
+#            BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: adoptie-mysql
             DB_USER: root
@@ -43,7 +43,7 @@ services:
             - adoptie-mysql
 networks:
   adoptie-network:
-    external: false #true 
-#    name: traefik-public
+    external: true 
+    name: traefik-public
 volumes:
     adoptie-mysqldb:
