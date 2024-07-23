@@ -18,7 +18,7 @@ services:
             context: .
             dockerfile: ./Dockerfile
         ports:
-            - 8125:80
+            - 8130:80
         volumes:
             - ./data/records/:/var/www/html/ccf/data/records/
             - ./data/resources/:/var/www/html/ccf/data/resources/
