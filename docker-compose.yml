@@ -18,7 +18,7 @@ services:
             context: .
             dockerfile: ./Dockerfile
         ports:
-            - 8135:80
+            - 8125:80
         volumes:
             - /data/hide/records/:/var/www/html/ccf/data/records/
             - /data/hide/resources/:/var/www/html/ccf/data/resources/
@@ -27,7 +27,7 @@ services:
             PROFILE: "DataEnvelope"
             SUBTITLE: "your way to a FAIR dataset"
             BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8135/ccf/"
+#            BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: hi-de-mysql
             DB_USER: root
