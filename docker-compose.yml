@@ -1,35 +1,45 @@
 version: '2'
-services: 
-    hi-de-mysql:
+services:
+
+    # MariaDB
+    hide-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
-        volumes: 
-            - hi-de-mysqldb:/var/lib/mysql
+        restart: unless-stopped
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
+        volumes: 
+            - hide-mysqldb:/var/lib/mysql
         networks:
-            - hi-de-network 
+            - hide-network 
 
-    # huc-editor backend & frontend
-    hi-de-php-apache:
+    # huc-editor backend & frontend 
+    hide-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
+        restart: unless-stopped
         ports:
             - 8125:80
         volumes:
-            - /data/hide/records/:/var/www/html/ccf/data/records/
-            - /data/hide/resources/:/var/www/html/ccf/data/resources/
+            #- /data/hide/records/:/var/www/html/ccf/data/records/
+            #- /data/hide/resources/:/var/www/html/ccf/data/resources/
+            #- /data/hide/htp:/var/www/html/htp
+            #- /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            - ./data/records/:/var/www/html/ccf/data/records/
+            - ./data/resources/:/var/www/html/ccf/data/resources/
+            - ./data/.htaccess:/var/www/html/ccf/.htaccess
+            - ./data/htp:/var/www/html/htp
         environment:
             TITLE: "HI Data Envelope Editor"
             PROFILE: "DataEnvelope"
             SUBTITLE: "your way to a FAIR dataset"
-            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8125/ccf/"
+            #BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: hi-de-mysql
+            DB_SERVER: hide-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
@@ -38,12 +48,44 @@ services:
         - "traefik.http.routers.hide.entrypoints=http"
         - "traefik.http.routers.hide.rule=Host(`hide.sd.di.huc.knaw.nl`)"
         networks:
-            - hi-de-network
+            - hide-network
         depends_on:
-            - hi-de-mysql
+            - hide-mysql
+
+    hide-backup:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.backup
+        restart: unless-stopped
+        environment:
+            BACKUP_HOUR: "01"
+            BACKUP_MINUTE: "15"
+            BACKUP_NAME: "hi-data_enveloppes"
+            BACKUP_LOCATION: "/backup/data"
+            BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
+            DB_SERVER: hide-mysql
+            DB_USER: root
+            DB_PASSWD: ${DB_PASSWD:-rood}
+            DB_NAME: cmdi_forms
+        volumes:
+            #- /backup/data:/backup/data
+            #- /data/hide/records/:/var/www/html/ccf/data/records/
+            #- /data/hide/resources/:/var/www/html/ccf/data/resources/
+            #- /data/hide/htp:/var/www/html/htp
+            #- /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            - ./backup:/backup/data
+            - ./data/records/:/data/records/
+            - ./data/resources/:/data/resources/
+            - ./data/.htaccess:/data/.htaccess
+            - ./data/htp:/data/htp
+        networks:
+            - hide-network
+        depends_on:
+            - hide-mysql
+
 networks:
-  hi-de-network:
-    external: true 
-    name: traefik-public
+  hide-network:
+#    external: true 
+#    name: traefik-public
 volumes:
-    hi-de-mysqldb:
+    hide-mysqldb:
