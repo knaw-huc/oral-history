@@ -1,49 +1,49 @@
 version: '2'
 services: 
-    hide-mysql:
+    hi-de-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - hide-mysqldb:/var/lib/mysql
+            - hi-de-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - hide-network 
+            - hi-de-network 
 
     # huc-editor backend & frontend
-    hide-php-apache:
+    hi-de-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
         ports:
             - 8125:80
         volumes:
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
+            - /data/hide/records/:/var/www/html/ccf/data/records/
+            - /data/hide/resources/:/var/www/html/ccf/data/resources/
         environment:
             TITLE: "HI Data Envelope Editor"
             PROFILE: "DataEnvelope"
             SUBTITLE: "your way to a FAIR dataset"
-            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "https://hi-de.sd.di.huc.knaw.nl/ccf/"
 #            BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: hide-mysql
+            DB_SERVER: hi-de-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
         - "traefik.http.routers.hide.entrypoints=http"
-        - "traefik.http.routers.hide.rule=Host(`hide.sd.di.huc.knaw.nl`)"
+        - "traefik.http.routers.hide.rule=Host(`hi-de.sd.di.huc.knaw.nl`)"
         networks:
-            - hide-network
+            - hi-de-network
         depends_on:
-            - hide-mysql
+            - hi-de-mysql
 networks:
-  hide-network:
+  hi-de-network:
     external: true 
     name: traefik-public
 volumes:
-    hide-mysqldb:
+    hi-de-mysqldb:
