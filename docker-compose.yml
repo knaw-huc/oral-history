@@ -17,6 +17,7 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
+            no-cache: true
         ports:
             - 8130:80
         volumes:
@@ -27,7 +28,7 @@ services:
             PROFILE: "Adoptie"
             SUBTITLE: ""
             BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8125/ccf/"
+#            BASE_URL: "http://0.0.0.0:8130/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: adoptie-mysql
             DB_USER: root
@@ -43,7 +44,7 @@ services:
             - adoptie-mysql
 networks:
   adoptie-network:
-    external: true 
+    external: true #false
     name: traefik-public
 volumes:
     adoptie-mysqldb:
