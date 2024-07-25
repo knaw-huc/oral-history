@@ -17,12 +17,15 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
-            no-cache: true
         ports:
             - 8130:80
         volumes:
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
+            - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
+            - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
+            - /data/iisg-adoptie/htp:/var/www/html/htp
+            - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/records:/var/www/html/ccf/data/records/
+            #- ./data/resources/:/var/www/html/ccf/data/resources/
         environment:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
