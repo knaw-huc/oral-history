@@ -7,7 +7,7 @@
     </Header>
     <Component name="Adoptie">
         <Element name="IDnummer"><clariah:label xml:lang="en">1. ID-nummer</clariah:label><clariah:explanation>incl. initialen invoerder</clariah:explanation><!--cues--></Element>
-        <Component name="adoptieKind"><clariah:label xml:lang="en">Adoptiekind</clariah:label><clariah:explanation>gegevens adoptiekind</clariah:explanation>
+        <Component name="AdoptieKind"><clariah:label xml:lang="en">Adoptiekind</clariah:label><clariah:explanation>gegevens adoptiekind</clariah:explanation>
             <Element name="geslacht"><clariah:label xml:lang="en">2. Geslacht kind</clariah:label>
                 
             </Element>
@@ -18,7 +18,7 @@
                 
             </Element>
         </Component>
-        <Component name="biologischeOfAfstandsMoeder"><clariah:label xml:lang="en">Biologische moeder</clariah:label><clariah:explanation>gegevens biologische moeder c.q. ‘afstandsmoeder’</clariah:explanation>
+        <Component name="BiologischeOfAfstandsMoeder"><clariah:label xml:lang="en">Biologische moeder</clariah:label><clariah:explanation>gegevens biologische moeder c.q. ‘afstandsmoeder’</clariah:explanation>
             <Element name="geboortePeriodeBiologischeMoeder"><clariah:label xml:lang="en">5. Geboorteperiode biologische moeder</clariah:label>
                 
             </Element>
@@ -39,100 +39,100 @@
             <Element name="beroepMoederVanDeBiologischeMoeder" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">15. Beroep moeder van biologische moeder</clariah:label><!--cues--></Element>
             <Element name="beschijfGezinsSituatieBiologischeMoederVoorDanWelTijdensDeZwangerschap" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">16. Beschrijf de gezinssituatie biologische moeder voor dan wel tijdens de zwangerschap</clariah:label><!--cues--></Element>
             <Element name="beschrijfGezinssituatieBiologischeMoederNaDeBevalling" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">17. Beschrijf de gezinssituatie biologische moeder na de bevalling</clariah:label><!--cues--></Element>
-            <Component name="lichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoederComp"><clariah:label xml:lang="en">10. Wordt er in de verslaglegging met betrekking tot biologische moeder verwezen naar een licht verstandelijke beperking of psychologische aandoening</clariah:label>
+            <Component name="LichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoederComp"><clariah:label xml:lang="en">10. Wordt er in de verslaglegging met betrekking tot biologische moeder verwezen naar een licht verstandelijke beperking of psychologische aandoening?</clariah:label>
                 <Element name="beperkingOfAandoeningMoeder" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">Indien ja, welke termen worden hiervoor gebruikt?</clariah:label><!--cues--></Element>
             </Component>
         </Component>
-        <Component name="gegevensBiologischeVaderOfVerwekker"><clariah:label xml:lang="en">Biologische vader</clariah:label><clariah:explanation>gegevens biologische vader c.q. verwekker</clariah:explanation>
-            <Element name="isDeVerwekkerBekend"><clariah:label xml:lang="en">18. Is de verwekker bekend</clariah:label><!--cues--></Element>
-            <Element name="aardSeksueleRelatieBiologischeMoederEnVerwekker"><clariah:label xml:lang="en">19. Wat is de aard van de seksuele relatie tussen biologische moeder en verwekker</clariah:label>
+        <Component name="GegevensBiologischeVaderOfVerwekker"><clariah:label xml:lang="en">Biologische vader</clariah:label><clariah:explanation>gegevens biologische vader c.q. verwekker</clariah:explanation>
+            <Element name="isDeVerwekkerBekend"><clariah:label xml:lang="en">18. Is de verwekker bekend?</clariah:label><!--cues--></Element>
+            <Element name="aardSeksueleRelatieBiologischeMoederEnVerwekker"><clariah:label xml:lang="en">19. Wat is de aard van de seksuele relatie tussen biologische moeder en verwekker?</clariah:label>
                 
             </Element>
-            <Element name="sprakeVanFamilieRelatieTussenBiologischeMoederEnVerwekker"><clariah:label xml:lang="en">20. Is er sprake van een familierelatie tussen biologische moeder en verwekker</clariah:label><!--cues--></Element>
-            <Element name="beschrijfRelatieTussenBiologischeMoederEnVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">21. Beschrijf de relatie tussen biologische moeder en verwekker</clariah:label><!--cues--></Element>
-            <Element name="welkeAanvullendeInformatieVindenWeOverDeVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">22. Welke aanvullende informatie vinden we over de verwekker</clariah:label><!--cues--></Element>
-            <Element name="welkeInformatieVindenWeOverDeOudersVanDeVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">23. Welke informatie vinden we over de ouders van de verwekker</clariah:label><!--cues--></Element>
-            <Element name="isErSprakeVanPogingTotVaderschapsActie"><clariah:label xml:lang="en">24. Is er sprake van poging tot vaderschapsactie</clariah:label><!--cues--></Element>
+            <Element name="sprakeVanFamilieRelatieTussenBiologischeMoederEnVerwekker"><clariah:label xml:lang="en">20. Is er sprake van een familierelatie tussen biologische moeder en verwekker?</clariah:label><!--cues--></Element>
+            <Element name="beschrijfRelatieTussenBiologischeMoederEnVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">21. Beschrijf de relatie tussen biologische moeder en verwekker?</clariah:label><!--cues--></Element>
+            <Element name="welkeAanvullendeInformatieVindenWeOverDeVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">22. Welke aanvullende informatie vinden we over de verwekker?</clariah:label><!--cues--></Element>
+            <Element name="welkeInformatieVindenWeOverDeOudersVanDeVerwekker" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">23. Welke informatie vinden we over de ouders van de verwekker?</clariah:label><!--cues--></Element>
+            <Element name="isErSprakeVanPogingTotVaderschapsActie"><clariah:label xml:lang="en">24. Is er sprake van poging tot vaderschapsactie?</clariah:label><!--cues--></Element>
         </Component>
         <Component name="ZwangerschapEnBevalling">
             <Element name="informatiePeriodeZwangerschap" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">25. Welke informatie wordt gedeeld over de periode van de zwangerschap?</clariah:label><!--cues--></Element>
-            <Component name="verblijfDoorgangshuisBoolean"><clariah:label xml:lang="en">26. Verblijven moeder en/of kind op enig moment in een doorgangshuis</clariah:label>
-                <Element name="verblijfDoorgangshuisProvincie"><clariah:label xml:lang="en">27. In welke provincie is dit doorgangshuis gevestigd</clariah:label>
+            <Component name="VerblijfDoorgangshuisBoolean"><clariah:label xml:lang="en">26. Verblijven moeder en/of kind op enig moment in een doorgangshuis?</clariah:label>
+                <Element name="verblijfDoorgangshuisProvincie"><clariah:label xml:lang="en">27. In welke provincie is dit doorgangshuis gevestigd?</clariah:label>
                     
                 </Element>
                 <Element name="signatuurDoorgangshuis"><clariah:label xml:lang="en">28. Signatuur doorgangshuis</clariah:label>
                     
                 </Element>
-                <Element name="informatiePeriodeDoorgangshuis" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">29. Welke informatie wordt gedeeld over de periode in het doorgangshuis</clariah:label><!--cues--></Element>
+                <Element name="informatiePeriodeDoorgangshuis" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">29. Welke informatie wordt gedeeld over de periode in het doorgangshuis?</clariah:label><!--cues--></Element>
             </Component>
-            <Component name="gastGezinBoolean"><clariah:label xml:lang="en">30. Verblijven moeder en/of kind op enig moment in een gastgezin</clariah:label>
-                <Element name="provincieGastgezin"><clariah:label xml:lang="en">31. In welke provincie is dit gastgezin woonachtig</clariah:label>
+            <Component name="GastGezinBoolean"><clariah:label xml:lang="en">30. Verblijven moeder en/of kind op enig moment in een gastgezin?</clariah:label>
+                <Element name="provincieGastgezin"><clariah:label xml:lang="en">31. In welke provincie is dit gastgezin woonachtig?</clariah:label>
                     
                 </Element>
-                <Element name="informatieVerblijfGastgezin" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">32. Welke informatie wordt gedeeld over het verblijf bij het gastgezin</clariah:label><!--cues--></Element>
-                <Element name="informatieGastgezinBevalling" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">33. Welke informatie wordt gedeeld over de bevalling</clariah:label><!--cues--></Element>
+                <Element name="informatieVerblijfGastgezin" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">32. Welke informatie wordt gedeeld over het verblijf bij het gastgezin?</clariah:label><!--cues--></Element>
+                <Element name="informatieGastgezinBevalling" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">33. Welke informatie wordt gedeeld over de bevalling?</clariah:label><!--cues--></Element>
             </Component>
         </Component>
         <Component name="NaBevalling">
-            <Element name="verblijftInKindertehuis"><clariah:label xml:lang="en">34. Verblijft het kind na de bevalling in een kindertehuis</clariah:label><!--cues--></Element>
-            <Element name="provincieKindertehuis">
+            <Element name="verblijftInKindertehuis"><clariah:label xml:lang="en">34. Verblijft het kind na de bevalling in een kindertehuis?</clariah:label><!--cues--></Element>
+            <Element name="provincieKindertehuis"><clariah:label xml:lang="en">35. In welke provincie is dit kindertehuis gevestigd?</clariah:label>
                 
             </Element>
-            <Element name="informatieKindertehuis"><!--cues--></Element>
-            <Element name="beperkingOfAnderStoornisKindertehuis"><!--cues--></Element>
+            <Element name="informatieKindertehuis" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">36. Welke informatie wordt gedeeld over het verblijf in het kindertehuis?</clariah:label><!--cues--></Element>
+            <Element name="beperkingOfAnderStoornisKindertehuis"><clariah:label xml:lang="en">37. Wordt er in de verslaglegging met betrekking tot het kind verwezen naar een licht verstandelijke beperking of andere stoornis in de ontwikkeling?</clariah:label><!--cues--></Element>
         </Component>
         <Component name="Afstand">
-            <Element name="redenAfstandAdoptieMoeder"><!--cues--></Element>
-            <Element name="redenAfstandAdoptieOudersMoeder"><!--cues--></Element>
-            <Element name="redenAfstandAdoptieAndereActoren"><!--cues--></Element>
-            <Element name="contactMoederKind"><!--cues--></Element>
-            <Element name="plaatsingsWensen"><!--cues--></Element>
-            <Element name="begeleidendeInstantiesPersonen"><!--cues--></Element>
-            <Component name="afstandsverklaring">
-                <Element name="tekstAfstandsverklaring"><!--cues--></Element>
+            <Element name="redenAfstandAdoptieMoeder" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">38. Wat en hoe wordt er geschreven over reden van afstand en adoptie, vanuit de biologische moeder?</clariah:label><!--cues--></Element>
+            <Element name="redenAfstandAdoptieOudersMoeder" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">39. Wat wordt er geschreven over reden van afstand en adoptie, vanuit de ouders van de biologische moeder?</clariah:label><!--cues--></Element>
+            <Element name="redenAfstandAdoptieAndereActoren" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">40. Wat wordt er geschreven over reden van afstand en adoptie, vanuit actoren anders dan (de ouders van) de biologische moeder? </clariah:label><!--cues--></Element>
+            <Element name="contactMoederKind" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">43. Welke informatie vinden we over het al dan niet (blijvend) contact tussen biologische moeder en kind na de adoptie? </clariah:label><!--cues--></Element>
+            <Element name="plaatsingsWensen" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">44. Worden er wensen uitgesproken door biologische moeder m.b.t. plaatsing adoptiegezin?</clariah:label><!--cues--></Element>
+            <Element name="begeleidendeInstantiesPersonen" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">45. Welke begeleidende instanties of individuen  worden genoemd?</clariah:label><!--cues--></Element>
+            <Component name="AfstandsverklaringBoolean"><clariah:label xml:lang="en">41. Bevat het dossier een ‘afstandsverklaring’ van de biologisch moeder? </clariah:label>
+                <Element name="tekstAfstandsverklaring" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">42. Noteer de tekst die op de ‘afstandsverklaring’ staat:</clariah:label><!--cues--></Element>
             </Component>
         </Component>
         <Component name="Adoptie">
-            <Element name="periodePlaatsingPleeggezin"><clariah:label xml:lang="en">46. Periode plaatsing in het pleeggezin</clariah:label>
+            <Element name="periodePlaatsingPleeggezin"><clariah:label xml:lang="en">46. Periode plaatsing in het pleeggezin:</clariah:label>
                 
             </Element>
-            <Element name="periodeAdoptieVerzoek">
+            <Element name="periodeAdoptieVerzoek"><clariah:label xml:lang="en">47. Periode adoptieverzoek:</clariah:label>
                 
             </Element>
-            <Element name="periodeAdoptieToewijzing">
+            <Element name="periodeAdoptieToewijzing"><clariah:label xml:lang="en">48. Periode adoptietoewijzing (vonnis):</clariah:label>
                 
             </Element>
-            <Element name="deltaVerzoekToewijzing">
+            <Element name="deltaVerzoekToewijzing"><clariah:label xml:lang="en">49. Hoeveel jaar zit er tussen verzoek en toewijzing adoptie? </clariah:label>
                 
             </Element>
-            <Element name="woonProvinciePleegAdoptieOuders">
+            <Element name="woonProvinciePleegAdoptieOuders"><clariah:label xml:lang="en">50. Woonprovincie pleeg- c.q. adoptiefouders:</clariah:label>
                 
             </Element>
-            <Element name="leeftijdKindPlaatsing"><!--cues--></Element>
-            <Element name="leeftijdKindAdoptieVerzoek"><!--cues--></Element>
-            <Element name="beroepPleegvader"><!--cues--></Element>
-            <Element name="beroepPleegMoeder"><!--cues--></Element>
-            <Element name="religiePleegOuders"><!--cues--></Element>
-            <Element name="rapportagePlaatsing"><!--cues--></Element>
-            <Element name="heeftPleeggezinKinderen"><!--cues--></Element>
-            <Element name="motivatieAdoptiePleegouders"><!--cues--></Element>
-            <Element name="rapportageToewijzing"><!--cues--></Element>
-            <Element name="begeleidendeInstantiesIndividuen"><!--cues--></Element>
-            <Component name="financieleInformatieBoolean">
-                <Element name="informatieFinancieleInformatie"><!--cues--></Element>
+            <Element name="leeftijdKindPlaatsing"><clariah:label xml:lang="en">51. Leeftijd kind bij plaatsing in pleeggezin (in hele jaren):</clariah:label><!--cues--></Element>
+            <Element name="leeftijdKindAdoptieVerzoek"><clariah:label xml:lang="en">52. Leeftijd kind bij adoptieverzoek (in hele jaren): </clariah:label><!--cues--></Element>
+            <Element name="beroepPleegvader" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">53. Beroep pleegvader</clariah:label><!--cues--></Element>
+            <Element name="beroepPleegMoeder" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">54. Beroep pleegmoeder</clariah:label><!--cues--></Element>
+            <Element name="religiePleegOuders" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">55. Religie pleegouders</clariah:label><!--cues--></Element>
+            <Element name="rapportagePlaatsing" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">56. Wat wordt gerapporteerd over de (toekomstige) plaatsing in het pleeggezin</clariah:label><!--cues--></Element>
+            <Element name="heeftPleeggezinKinderen"><clariah:label xml:lang="en">58. Heeft het pleeggezin eigen kinderen of andere pleeg- dan wel adoptiekinderen (voor dan wel na desbetreffende adoptie)?</clariah:label><!--cues--></Element>
+            <Element name="motivatieAdoptiePleegouders" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">59. Welke informatie vinden we over de motivatie van de pleegouders om te adopteren?</clariah:label><!--cues--></Element>
+            <Element name="rapportageToewijzing" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">60. Wat wordt er gerapporteerd over de toewijzing adoptie?</clariah:label><!--cues--></Element>
+            <Element name="begeleidendeInstantiesIndividuen" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">62. Welke begeleidende instanties of individuen worden genoemd?</clariah:label><!--cues--></Element>
+            <Component name="InformatieDerdenBoolean"><clariah:label xml:lang="en">57. Wordt er informatie over het adoptief-echtpaar ingewonnen bij derden?</clariah:label>
+                <Element name="informatieDerdenString" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">Zo ja, wie zijn dit en welke informatie delen zij over het echtpaar?</clariah:label><!--cues--></Element>
             </Component>
-            <Component name="informatieDerdenBoolean">
-                <Element name="informatieDerdenString"><!--cues--></Element>
-            </Component>
-            <Component name="adviesAdoptieRaadBoolean">
+            <Component name="AdviesAdoptieRaadBoolean" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">61. Is er sprake van Advies van de Centrale Adoptieraad (aan de rechter)?</clariah:label>
                 <Element name="adviesAdoptieRaadString"><!--cues--></Element>
+            </Component>
+            <Component name="FinancieleInformatieBoolean"><clariah:label xml:lang="en">63. Wordt er enige financiële informatie gedeeld?</clariah:label>
+                <Element name="informatieFinancieleInformatie" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">Noteer relevante informatie</clariah:label><!--cues--></Element>
             </Component>
         </Component>
         <Component name="Overig">
             <Element name="typenDocumenten" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">64. Welke (typen) documenten bevinden zich in het dossier (juridische documenten, rapportages, telefoonbriefjes, foto’s)</clariah:label><!--cues--></Element>
-            <Element name="opvallendeZaken"><!--cues--></Element>
-            <Component name="laterVerzoekInformatieBoolean">
-                <Element name="laterVerzoekInformatieString"><!--cues--></Element>
+            <Element name="opvallendeZaken" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">66. Wat viel je verder inhoudelijk op in dit dossier?</clariah:label><!--cues--></Element>
+            <Component name="LaterVerzoekInformatieBoolean"><clariah:label xml:lang="en">65. Bevat het dossier een later verzoek tot informatie over of door de betrokkenen? </clariah:label>
+                <Element name="laterVerzoekInformatieString" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">Noteer relevante informatie</clariah:label><!--cues--></Element>
             </Component>
         </Component>
     </Component>

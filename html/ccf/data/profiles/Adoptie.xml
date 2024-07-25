@@ -8,7 +8,7 @@
     </Header>
     <Component name="Adoptie" CardinalityMin="1" CardinalityMax="1">
         <Element name="IDnummer" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-        <Component name="adoptieKind" CardinalityMin="1" CardinalityMax="1">
+        <Component name="AdoptieKind" CardinalityMin="1" CardinalityMax="1">
             <Element name="geslacht" ConceptLink="https://schema.org/GenderType" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -69,7 +69,7 @@
                 </ValueScheme>
             </Element>
         </Component>
-        <Component name="biologischeOfAfstandsMoeder" CardinalityMin="1" CardinalityMax="1">
+        <Component name="BiologischeOfAfstandsMoeder" CardinalityMin="1" CardinalityMax="1">
             <Element name="geboortePeriodeBiologischeMoeder" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -156,11 +156,11 @@
             <Element name="beroepMoederVanDeBiologischeMoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="beschijfGezinsSituatieBiologischeMoederVoorDanWelTijdensDeZwangerschap" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="beschrijfGezinssituatieBiologischeMoederNaDeBevalling" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Component name="lichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoederComp" CardinalityMin="0" CardinalityMax="1">
+            <Component name="LichtVerstandelijkeBeperkingOfPsychologischeAandoeningMoederComp" CardinalityMin="0" CardinalityMax="1">
                 <Element name="beperkingOfAandoeningMoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
-        <Component name="gegevensBiologischeVaderOfVerwekker" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensBiologischeVaderOfVerwekker" CardinalityMin="1" CardinalityMax="1">
             <Element name="isDeVerwekkerBekend" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="aardSeksueleRelatieBiologischeMoederEnVerwekker" CardinalityMin="0" CardinalityMax="1">
                 <ValueScheme>
@@ -182,7 +182,7 @@
         </Component>
         <Component name="ZwangerschapEnBevalling" CardinalityMin="1" CardinalityMax="1">
             <Element name="informatiePeriodeZwangerschap" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            <Component name="verblijfDoorgangshuisBoolean" CardinalityMin="0" CardinalityMax="1">
+            <Component name="VerblijfDoorgangshuisBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="verblijfDoorgangshuisProvincie" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                     <ValueScheme>
                         <Vocabulary>
@@ -216,7 +216,7 @@
                 </Element>
                 <Element name="informatiePeriodeDoorgangshuis" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             </Component>
-            <Component name="gastGezinBoolean" CardinalityMin="0" CardinalityMax="1">
+            <Component name="GastGezinBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="provincieGastgezin" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                     <ValueScheme>
                         <Vocabulary>
@@ -273,7 +273,7 @@
             <Element name="contactMoederKind" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="plaatsingsWensen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="begeleidendeInstantiesPersonen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Component name="afstandsverklaring" CardinalityMin="0" CardinalityMax="1">
+            <Component name="AfstandsverklaringBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="tekstAfstandsverklaring" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
@@ -405,20 +405,20 @@
             <Element name="motivatieAdoptiePleegouders" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="rapportageToewijzing" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="begeleidendeInstantiesIndividuen" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Component name="financieleInformatieBoolean" CardinalityMin="0" CardinalityMax="1">
-                <Element name="informatieFinancieleInformatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-            </Component>
-            <Component name="informatieDerdenBoolean" CardinalityMin="0" CardinalityMax="1">
+            <Component name="InformatieDerdenBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="informatieDerdenString" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
-            <Component name="adviesAdoptieRaadBoolean" CardinalityMin="0" CardinalityMax="1">
+            <Component name="AdviesAdoptieRaadBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="adviesAdoptieRaadString" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            </Component>
+            <Component name="FinancieleInformatieBoolean" CardinalityMin="0" CardinalityMax="1">
+                <Element name="informatieFinancieleInformatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
         <Component name="Overig" CardinalityMin="1" CardinalityMax="1">
             <Element name="typenDocumenten" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="opvallendeZaken" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-            <Component name="laterVerzoekInformatieBoolean" CardinalityMin="0" CardinalityMax="1">
+            <Component name="LaterVerzoekInformatieBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="laterVerzoekInformatieString" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
