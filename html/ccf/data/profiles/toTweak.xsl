@@ -48,6 +48,9 @@
             </xsl:variable>
             <xsl:message>DBG: r[<xsl:value-of select="$r"/>]</xsl:message>
             <xsl:message>DBG: c[<xsl:value-of select="$c"/>] e[<xsl:value-of select="$e"/>] r[<xsl:value-of select="$r/@l"/>]</xsl:message>
+            <xsl:if test="normalize-space($r/c[@n='order'])!=''">
+                <xsl:attribute name="cue:displayOrder" select="$r/c[@n='order']"/>
+            </xsl:if>
             <xsl:if test="normalize-space($r/c[@n='textWidth (characters)'])!=''">
                 <xsl:attribute name="cue:inputWidth" select="$r/c[@n='textWidth (characters)']"/>
             </xsl:if>
