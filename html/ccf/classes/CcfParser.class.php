@@ -237,14 +237,10 @@ class Ccfparser {
         $retArr = array();
         $tempArr = array();
         foreach ($arr as $element) {
-            if ($element["type"] == "Component") {
-                $tempArr[] = $element;
+            if (isset($element["attributes"]["displayOrder"])) {
+                $retArr[] = $element;
             } else {
-                if (isset($element["attributes"]["displayOrder"])) {
-                    $retArr[] = $element;
-                } else {
-                    $tempArr[] = $element;
-                }
+                $tempArr[] = $element;
             }
         }
         usort($retArr, array(__CLASS__, 'cmp'));
