@@ -69,10 +69,10 @@ services:
             DB_NAME: cmdi_forms
         volumes:
             - /backup/data:/backup/data
-            - /data/hide/records/:/var/www/html/ccf/data/records/
-            - /data/hide/resources/:/var/www/html/ccf/data/resources/
-            - /data/hide/htp:/var/www/html/htp
-            - /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            - /data/hide/records/:/data/records/
+            - /data/hide/resources/:/data/resources/
+            - /data/hide/htp:/data/htp
+            - /data/hide/.htaccess:/data/.htaccess
             #- ./backup:/backup/data
             #- ./data/records/:/data/records/
             #- ./data/resources/:/data/resources/
