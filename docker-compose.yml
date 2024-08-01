@@ -20,21 +20,21 @@ services:
         ports:
             - 8135:80
         volumes:
-            #- /backup/data:/backup/data
-            #- /data/niod-yugo/records/:/var/www/html/ccf/data/records/
-            #- /data/niod-yugo/resources/:/var/www/html/ccf/data/resources/
-            #- /data/niod-yugo/htp:/var/www/html/htp
-            #- /data/niod-yugo/.htaccess:/var/www/html/ccf/.htaccess
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
-            - ./data/.htaccess:/var/www/html/ccf/.htaccess
-            - ./data/htp:/var/www/html/htp
+            - /backup/data:/backup/data
+            - /data/niod-yugo/records/:/var/www/html/ccf/data/records/
+            - /data/niod-yugo/resources/:/var/www/html/ccf/data/resources/
+            - /data/niod-yugo/htp:/var/www/html/htp
+            - /data/niod-yugo/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/records/:/var/www/html/ccf/data/records/
+            #- ./data/resources/:/var/www/html/ccf/data/resources/
+            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/htp:/var/www/html/htp
         environment:
             TITLE: "NIOD Yugoslavia Editor"
             PROFILE: "CollectionHolder"
-            SUBTITLE: "CollectionHolder"
-            #BASE_URL: "https://sd-yugoslavia.dev.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8135/ccf/"
+            SUBTITLE: "Collection Holder"
+            BASE_URL: "https://sd-yugoslavia.dev.huc.knaw.nl/ccf/"
+            #BASE_URL: "http://0.0.0.0:8135/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: yugoslavia-mysql
             DB_USER: root
@@ -64,23 +64,23 @@ services:
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         volumes:
-            #- /data/backup/:/backup/data # in prod change to /backup/data:/backup/data
-            #- /data/niod-yugo/records/:/data/records/
-            #- /data/niod-yugo/resources/:/data/resources/
-            #- /data/niod-yugo/htp:/data/htp
-            #- /data/niod-yugo/.htaccess:/data/.htaccess
-            - ./data/backup:/backup/data
-            - ./data/records/:/data/records/
-            - ./data/resources/:/data/resources/
-            - ./data/.htaccess:/data/.htaccess
-            - ./data/htp:/data/htp
+            - /data/backup/:/backup/data # in prod change to /backup/data:/backup/data
+            - /data/niod-yugo/records/:/data/records/
+            - /data/niod-yugo/resources/:/data/resources/
+            - /data/niod-yugo/htp:/data/htp
+            - /data/niod-yugo/.htaccess:/data/.htaccess
+            #- ./data/backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
         networks:
             - yugoslavia-network
         depends_on:
             - yugoslavia-mysql
 networks:
   yugoslavia-network:
-    #external: true
-    #name: traefik-public
+    external: true
+    name: traefik-public
 volumes:
     yugoslavia-mysqldb:
