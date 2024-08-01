@@ -23,12 +23,12 @@ services:
             - /backup/data:/backup/data
             - /data/nde/records/:/var/www/html/ccf/data/records/
             - /data/nde/resources/:/var/www/html/ccf/data/resources/
-            - /data/nde/htp:/var/www/html/htp
-            - /data/nde/.htaccess:/var/www/html/ccf/.htaccess
+            - /data/nde/htp:/var/www/htp
+            - /data/nde/.htaccess:/var/www/html/.htaccess
             #- ./data/records/:/var/www/html/ccf/data/records/
             #- ./data/resources/:/var/www/html/ccf/data/resources/
-            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/htp:/var/www/html/htp
+            #- ./data/.htaccess:/var/www/html/.htaccess
+            #- ./data/htp:/var/www/htp
         environment:
             TITLE: "NDE DCat Editor"
             PROFILE: "DCat"
