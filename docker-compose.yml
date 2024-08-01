@@ -48,7 +48,7 @@ services:
             - adoptie-network
         depends_on:
             - adoptie-mysql
-    iisg-adoptie-backup:
+    adoptie-backup:
         build:
             context: .
             dockerfile: ./Dockerfile.backup
@@ -80,7 +80,7 @@ services:
             - adoptie-mysql
 networks:
   adoptie-network:
-#    external: true
-#    name: traefik-public
+    external: true
+    name: traefik-public
 volumes:
     adoptie-mysqldb:
