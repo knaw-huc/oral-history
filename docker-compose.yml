@@ -33,8 +33,8 @@ services:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
             SUBTITLE: ""
-            #BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8130/ccf/"
+            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
+            #BASE_URL: "http://0.0.0.0:8130/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: adoptie-mysql
             DB_USER: root
