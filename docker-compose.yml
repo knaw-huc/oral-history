@@ -24,20 +24,20 @@ services:
         ports:
             - 8125:80
         volumes:
-            #- /data/hide/records/:/var/www/html/ccf/data/records/
-            #- /data/hide/resources/:/var/www/html/ccf/data/resources/
-            #- /data/hide/htp:/var/www/html/htp
-            #- /data/hide/.htaccess:/var/www/html/ccf/.htaccess
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
-            - ./data/.htaccess:/var/www/html/ccf/.htaccess
-            - ./data/htp:/var/www/html/htp
+            - /data/hide/records/:/var/www/html/ccf/data/records/
+            - /data/hide/resources/:/var/www/html/ccf/data/resources/
+            - /data/hide/htp:/var/www/html/htp
+            - /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/records/:/var/www/html/ccf/data/records/
+            #- ./data/resources/:/var/www/html/ccf/data/resources/
+            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/htp:/var/www/html/htp
         environment:
             TITLE: "HI Data Envelope Editor"
             PROFILE: "DataEnvelope"
             SUBTITLE: "your way to a FAIR dataset"
-            #BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8125/ccf/"
+            BASE_URL: "https://hide.sd.di.huc.knaw.nl/ccf/"
+            #BASE_URL: "http://0.0.0.0:8125/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: hide-mysql
             DB_USER: root
@@ -68,16 +68,16 @@ services:
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         volumes:
-            #- /backup/data:/backup/data
-            #- /data/hide/records/:/var/www/html/ccf/data/records/
-            #- /data/hide/resources/:/var/www/html/ccf/data/resources/
-            #- /data/hide/htp:/var/www/html/htp
-            #- /data/hide/.htaccess:/var/www/html/ccf/.htaccess
-            - ./backup:/backup/data
-            - ./data/records/:/data/records/
-            - ./data/resources/:/data/resources/
-            - ./data/.htaccess:/data/.htaccess
-            - ./data/htp:/data/htp
+            - /backup/data:/backup/data
+            - /data/hide/records/:/var/www/html/ccf/data/records/
+            - /data/hide/resources/:/var/www/html/ccf/data/resources/
+            - /data/hide/htp:/var/www/html/htp
+            - /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
         networks:
             - hide-network
         depends_on:
@@ -85,7 +85,7 @@ services:
 
 networks:
   hide-network:
-#    external: true 
-#    name: traefik-public
+    external: true 
+    name: traefik-public
 volumes:
     hide-mysqldb:
