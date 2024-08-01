@@ -20,14 +20,21 @@ services:
         ports:
             - 8124:80
         volumes:
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
+            - /backup/data:/backup/data
+            - /data/nde/records/:/var/www/html/ccf/data/records/
+            - /data/nde/resources/:/var/www/html/ccf/data/resources/
+            - /data/nde/htp:/var/www/html/htp
+            - /data/nde/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/records/:/var/www/html/ccf/data/records/
+            #- ./data/resources/:/var/www/html/ccf/data/resources/
+            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/htp:/var/www/html/htp
         environment:
             TITLE: "NDE DCat Editor"
             PROFILE: "DCat"
             SUBTITLE: "your way to INEO"
             BASE_URL: "https://nde.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8124/ccf/"
+            #BASE_URL: "http://0.0.0.0:8124/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: nde-mysql
             DB_USER: root
@@ -41,10 +48,39 @@ services:
             - nde-network
         depends_on:
             - nde-mysql
+    nde-backup:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.backup
+        restart: unless-stopped
+        environment:
+            BACKUP_HOUR: "01"
+            BACKUP_MINUTE: "24"
+            BACKUP_NAME: "hi-nde"
+            BACKUP_LOCATION: "/backup/data"
+            BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
+            DB_SERVER: nde-mysql
+            DB_USER: root
+            DB_PASSWD: ${DB_PASSWD:-rood}
+            DB_NAME: cmdi_forms
+        volumes:
+            - /backup/data:/backup/data
+            - /data/nde/records/:/data/records/
+            - /data/nde/resources/:/data/resources/
+            - /data/nde/htp:/data/htp
+            - /data/nde/.htaccess:/data/.htaccess
+            #- ./data/backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
+        networks:
+            - nde-network
+        depends_on:
+            - nde-mysql
 networks:
   nde-network:
-#    external: false
-    external:
-      name: traefik-public
+    external: true
+    name: traefik-public
 volumes:
     nde-mysqldb:

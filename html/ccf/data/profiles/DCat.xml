@@ -8,6 +8,17 @@
         <DerivedFrom>clarin.eu:cr1:p_1650879720846</DerivedFrom>
     </Header>
     <Component name="HI" CardinalityMin="1" CardinalityMax="1">
+        <Element name="ID" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        <Element name="status" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>under construction</item>
+                        <item>publish</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
         <Component name="Dataset" ConceptLink="http://www.w3.org/ns/dcat#Dataset" CardinalityMin="1" CardinalityMax="1">
             <Element name="title" ConceptLink="http://purl.org/dc/terms/title" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="license" ConceptLink="http://purl.org/dc/terms/license" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1"/>

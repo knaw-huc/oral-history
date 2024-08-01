@@ -128,3 +128,6 @@ html/ccf/data/profiles/*.loaded
 
 # resources
 html/ccf/data/resources/
+data/htp
+data/.htaccess
+data/backup/hi-nde.*.tar.gz
