@@ -26,12 +26,12 @@ services:
         volumes:
             - /data/hide/records/:/var/www/html/ccf/data/records/
             - /data/hide/resources/:/var/www/html/ccf/data/resources/
-            - /data/hide/htp:/var/www/html/htp
-            - /data/hide/.htaccess:/var/www/html/ccf/.htaccess
+            - /data/hide/htp:/var/www/htp
+            - /data/hide/.htaccess:/var/www/html/.htaccess
             #- ./data/records/:/var/www/html/ccf/data/records/
             #- ./data/resources/:/var/www/html/ccf/data/resources/
-            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/htp:/var/www/html/htp
+            #- ./data/.htaccess:/var/www/html/.htaccess
+            #- ./data/htp:/var/www/htp
         environment:
             TITLE: "HI Data Envelope Editor"
             PROFILE: "DataEnvelope"
