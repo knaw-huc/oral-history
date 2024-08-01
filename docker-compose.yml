@@ -20,12 +20,15 @@ services:
         ports:
             - 8130:80
         volumes:
+            - /backup/data:/backup/data
             - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
             - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
             - /data/iisg-adoptie/htp:/var/www/html/htp
             - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/records:/var/www/html/ccf/data/records/
+            #- ./data/records/:/var/www/html/ccf/data/records/
             #- ./data/resources/:/var/www/html/ccf/data/resources/
+            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/htp:/var/www/html/htp
         environment:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
@@ -45,9 +48,39 @@ services:
             - adoptie-network
         depends_on:
             - adoptie-mysql
+    iisg-adoptie-backup:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.backup
+        restart: unless-stopped
+        environment:
+            BACKUP_HOUR: "01"
+            BACKUP_MINUTE: "25"
+            BACKUP_NAME: "iisg-adoptie"
+            BACKUP_LOCATION: "/backup/data"
+            BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
+            DB_SERVER: adoptie-mysql
+            DB_USER: root
+            DB_PASSWD: ${DB_PASSWD:-rood}
+            DB_NAME: cmdi_forms
+        volumes:
+            - /backup/data:/backup/data
+            - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
+            - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
+            - /data/iisg-adoptie/htp:/var/www/html/htp
+            - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
+            #- ./data/backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
+        networks:
+            - adoptie-network
+        depends_on:
+            - adoptie-mysql
 networks:
   adoptie-network:
-    external: true #false
-    name: traefik-public
+#    external: true
+#    name: traefik-public
 volumes:
     adoptie-mysqldb:

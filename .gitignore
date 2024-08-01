@@ -131,3 +131,6 @@ html/ccf/data/resources/
 html/ccf/data/profiles/saxon-he-10.5.jar
 html/ccf/data/tweaks/cues.csv
 html/ccf/data/tweaks/cues.xml
+data/backup/.htaccess
+data/backup/htp
+data/backup/iisg-adoptie.2408010728.tar.gz
