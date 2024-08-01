@@ -33,8 +33,8 @@ services:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
             SUBTITLE: ""
-            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
-#            BASE_URL: "http://0.0.0.0:8130/ccf/"
+            #BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8130/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: adoptie-mysql
             DB_USER: root
@@ -65,10 +65,10 @@ services:
             DB_NAME: cmdi_forms
         volumes:
             - /backup/data:/backup/data
-            - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
-            - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
-            - /data/iisg-adoptie/htp:/var/www/html/htp
-            - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
+            - /data/iisg-adoptie/records/:/data/records/
+            - /data/iisg-adoptie/resources/:/data/resources/
+            - /data/iisg-adoptie/htp:/data/htp
+            - /data/iisg-adoptie/.htaccess:/data/.htaccess
             #- ./data/backup:/backup/data
             #- ./data/records/:/data/records/
             #- ./data/resources/:/data/resources/
