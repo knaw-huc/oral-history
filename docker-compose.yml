@@ -23,12 +23,12 @@ services:
             - /backup/data:/backup/data
             - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
             - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
-            - /data/iisg-adoptie/htp:/var/www/html/htp
-            - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
+            - /data/iisg-adoptie/htp:/var/www/htp
+            - /data/iisg-adoptie/.htaccess:/var/www/html/.htaccess
             #- ./data/records/:/var/www/html/ccf/data/records/
             #- ./data/resources/:/var/www/html/ccf/data/resources/
-            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/htp:/var/www/html/htp
+            #- ./data/.htaccess:/var/www/html/.htaccess
+            #- ./data/htp:/var/www/htp
         environment:
             TITLE: "IISG Adoptie Editor"
             PROFILE: "Adoptie"
