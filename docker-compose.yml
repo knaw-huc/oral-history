@@ -1,86 +1,86 @@
 version: '2'
 services: 
-    adoptie-mysql:
+    yugoslavia-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - adoptie-mysqldb:/var/lib/mysql
+            - yugoslavia-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - adoptie-network 
+            - yugoslavia-network 
 
     # huc-editor backend & frontend
-    adoptie-php-apache:
+    yugoslavia-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
         ports:
-            - 8130:80
+            - 8135:80
         volumes:
-            - /backup/data:/backup/data
-            - /data/iisg-adoptie/records/:/var/www/html/ccf/data/records/
-            - /data/iisg-adoptie/resources/:/var/www/html/ccf/data/resources/
-            - /data/iisg-adoptie/htp:/var/www/html/htp
-            - /data/iisg-adoptie/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/records/:/var/www/html/ccf/data/records/
-            #- ./data/resources/:/var/www/html/ccf/data/resources/
-            #- ./data/.htaccess:/var/www/html/ccf/.htaccess
-            #- ./data/htp:/var/www/html/htp
+            #- /backup/data:/backup/data
+            #- /data/niod-yugo/records/:/var/www/html/ccf/data/records/
+            #- /data/niod-yugo/resources/:/var/www/html/ccf/data/resources/
+            #- /data/niod-yugo/htp:/var/www/html/htp
+            #- /data/niod-yugo/.htaccess:/var/www/html/ccf/.htaccess
+            - ./data/records/:/var/www/html/ccf/data/records/
+            - ./data/resources/:/var/www/html/ccf/data/resources/
+            - ./data/.htaccess:/var/www/html/ccf/.htaccess
+            - ./data/htp:/var/www/html/htp
         environment:
-            TITLE: "IISG Adoptie Editor"
-            PROFILE: "Adoptie"
-            SUBTITLE: ""
-            BASE_URL: "https://adoptie.sd.di.huc.knaw.nl/ccf/"
-            #BASE_URL: "http://0.0.0.0:8130/ccf/"
+            TITLE: "NIOD Yugoslavia Editor"
+            PROFILE: "CollectionHolder"
+            SUBTITLE: "CollectionHolder"
+            #BASE_URL: "https://sd-yugoslavia.dev.huc.knaw.nl/ccf/"
+            BASE_URL: "http://0.0.0.0:8135/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: adoptie-mysql
+            DB_SERVER: yugoslavia-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.adoptie.entrypoints=http"
-        - "traefik.http.routers.adoptie.rule=Host(`adoptie.sd.di.huc.knaw.nl`)"
+        - "traefik.http.routers.sd-yugoslavia.entrypoints=http"
+        - "traefik.http.routers.sd-yugoslavia.rule=Host(`sd-yugoslavia.dev.huc.knaw.nl`)"
         networks:
-            - adoptie-network
+            - yugoslavia-network
         depends_on:
-            - adoptie-mysql
-    adoptie-backup:
+            - yugoslavia-mysql
+    yugoslavia-backup:
         build:
             context: .
             dockerfile: ./Dockerfile.backup
         restart: unless-stopped
         environment:
             BACKUP_HOUR: "01"
-            BACKUP_MINUTE: "25"
-            BACKUP_NAME: "iisg-adoptie"
+            BACKUP_MINUTE: "35"
+            BACKUP_NAME: "niod-yugo"
             BACKUP_LOCATION: "/backup/data"
             BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
-            DB_SERVER: adoptie-mysql
+            DB_SERVER: yugoslavia-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         volumes:
-            - /backup/data:/backup/data
-            - /data/iisg-adoptie/records/:/data/records/
-            - /data/iisg-adoptie/resources/:/data/resources/
-            - /data/iisg-adoptie/htp:/data/htp
-            - /data/iisg-adoptie/.htaccess:/data/.htaccess
-            #- ./data/backup:/backup/data
-            #- ./data/records/:/data/records/
-            #- ./data/resources/:/data/resources/
-            #- ./data/.htaccess:/data/.htaccess
-            #- ./data/htp:/data/htp
+            #- /data/backup/:/backup/data # in prod change to /backup/data:/backup/data
+            #- /data/niod-yugo/records/:/data/records/
+            #- /data/niod-yugo/resources/:/data/resources/
+            #- /data/niod-yugo/htp:/data/htp
+            #- /data/niod-yugo/.htaccess:/data/.htaccess
+            - ./data/backup:/backup/data
+            - ./data/records/:/data/records/
+            - ./data/resources/:/data/resources/
+            - ./data/.htaccess:/data/.htaccess
+            - ./data/htp:/data/htp
         networks:
-            - adoptie-network
+            - yugoslavia-network
         depends_on:
-            - adoptie-mysql
+            - yugoslavia-mysql
 networks:
-  adoptie-network:
-    external: true
-    name: traefik-public
+  yugoslavia-network:
+    #external: true
+    #name: traefik-public
 volumes:
-    adoptie-mysqldb:
+    yugoslavia-mysqldb:

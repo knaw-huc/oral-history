@@ -5,10 +5,10 @@ Download the spreadsheet as CSV as `./tweaks/cues.csv`
 ```
 
 # New tweak
-Download the CMDI 1.2 XML version to `./profiles/Adoptie.xml`
+Download the CMDI 1.2 XML version to `./profiles/$PROFILE.xml`
 ```
 cd profiles/
-./xsl.sh -xsl:file:$PWD/toTweak.xsl -s:file:$PWD/Adoptie.xml +cues=file:$PWD/../tweaks/cues.xml> ../tweaks/AdoptieTweak-new.xml
+./xsl.sh -xsl:file:$PWD/toTweak.xsl -s:file:$PWD/${PROFILE}.xml +cues=file:$PWD/../tweaks/cues.xml> ../tweaks/${PROFILE}Tweak-new.xml
 ```
 
 

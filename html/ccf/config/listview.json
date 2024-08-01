@@ -1,10 +1,18 @@
 [
     {
-        "heading": "Adoptie",
-        "schemaValue": "IDnummer"
+        "heading": "identifier",
+        "schemaValue": "identifier"
     }, 
     {
-        "heading": "Status",
+        "heading": "authorised form",
+        "schemaValue": "authorisedForm"
+    }, 
+    {
+        "heading": "type",
+        "schemaValue": "typeOfInstitution"
+    }, 
+    {
+        "heading": "status",
         "schemaValue": "status"
     }   
 ]

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1721373443934</ID>
+        <Name>CollectionHolder</Name>
+        <Description>Collection holder and its collections</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="CollectionHolder" CardinalityMin="1" CardinalityMax="1">
+        <Element name="status" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>under construction</item>
+                        <item>publish</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Component name="IdentityArea" ComponentRef="clarin.eu:cr1:c_1721373443935" CardinalityMin="1" CardinalityMax="1">
+            <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="typeOfInstitution" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>archive</item>
+                            <item>internation organisation</item>
+                            <item>military organisation</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Component name="Names" CardinalityMin="1" CardinalityMax="1">
+                <Element name="authorisedForm" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Element name="parallelForm" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+                <Element name="otherForm" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" Multilingual="true"/>
+            </Component>
+        </Component>
+        <Component name="Location" CardinalityMin="0" CardinalityMax="unbounded">
+            <Element name="street" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="Collection" CardinalityMin="1" CardinalityMax="unbounded">
+            <Component name="Fonds" CardinalityMin="0" CardinalityMax="unbounded">
+                <Component name="Subfonds" CardinalityMin="0" CardinalityMax="unbounded">
+                    <Component name="Subsubfonds" CardinalityMin="0" CardinalityMax="unbounded">
+                        <Component name="collectioncore" ComponentRef="clarin.eu:cr1:c_1721373443947" CardinalityMin="1" CardinalityMax="1">
+                            <Element name="referencecode" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                        </Component>
+                    </Component>
+                    <Component name="collectioncore" ComponentRef="clarin.eu:cr1:c_1721373443947" CardinalityMin="0" CardinalityMax="1">
+                        <Element name="referencecode" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    </Component>
+                </Component>
+                <Component name="collectioncore" ComponentRef="clarin.eu:cr1:c_1721373443947" CardinalityMin="0" CardinalityMax="1">
+                    <Element name="referencecode" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                </Component>
+            </Component>
+            <Component name="collectioncore" ComponentRef="clarin.eu:cr1:c_1721373443947" CardinalityMin="0" CardinalityMax="1">
+                <Element name="referencecode" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>
