@@ -121,7 +121,7 @@
             <Component name="InformatieDerdenBoolean" cue:displayOrder="57"><clariah:label xml:lang="en">57. Wordt er informatie over het adoptief-echtpaar ingewonnen bij derden?</clariah:label>
                 <Element name="informatieDerdenString" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">Zo ja, wie zijn dit en welke informatie delen zij over het echtpaar?</clariah:label><!--cues--></Element>
             </Component>
-            <Component name="AdviesAdoptieRaadBoolean" cue:displayOrder="61" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">61. Is er sprake van Advies van de Centrale Adoptieraad (aan de rechter)?</clariah:label>
+            <Component name="AdviesAdoptieRaadBoolean" cue:displayOrder="61"><clariah:label xml:lang="en">61. Is er sprake van Advies van de Centrale Adoptieraad (aan de rechter)?</clariah:label>
                 <Element name="adviesAdoptieRaadString"><!--cues--></Element>
             </Component>
             <Component name="FinancieleInformatieBoolean" cue:displayOrder="63"><clariah:label xml:lang="en">63. Wordt er enige financiële informatie gedeeld?</clariah:label>
