@@ -63,6 +63,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
@@ -117,6 +118,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
@@ -198,6 +200,7 @@
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                                 <item ConceptLink="" AppInfo="">Elders</item>
                             </enumeration>
                         </Vocabulary>
@@ -232,6 +235,7 @@
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                                 <item ConceptLink="" AppInfo="">Elders</item>
                             </enumeration>
                         </Vocabulary>
@@ -258,6 +262,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
@@ -390,6 +395,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
