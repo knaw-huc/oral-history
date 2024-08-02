@@ -20,21 +20,21 @@ services:
         ports:
             - 8135:80
         volumes:
-            #- /backup/data:/backup/data
-            #- /data/iisg-afstand/records/:/var/www/html/ccf/data/records/
-            #- /data/iisg-afstand/resources/:/var/www/html/ccf/data/resources/
-            #- /data/iisg-afstand/htp:/var/www/htp
-            #- /data/iisg-afstand/.htaccess:/var/www/html/.htaccess
-            - ./data/records/:/var/www/html/ccf/data/records/
-            - ./data/resources/:/var/www/html/ccf/data/resources/
-            - ./data/.htaccess:/var/www/html/.htaccess
-            - ./data/htp:/var/www/htp
+            - /backup/data:/backup/data
+            - /data/iisg-afstand/records/:/var/www/html/ccf/data/records/
+            - /data/iisg-afstand/resources/:/var/www/html/ccf/data/resources/
+            - /data/iisg-afstand/htp:/var/www/htp
+            - /data/iisg-afstand/.htaccess:/var/www/html/.htaccess
+            #- ./data/records/:/var/www/html/ccf/data/records/
+            #- ./data/resources/:/var/www/html/ccf/data/resources/
+            #- ./data/.htaccess:/var/www/html/.htaccess
+            #- ./data/htp:/var/www/htp
         environment:
             TITLE: "IISG afstand Editor"
             PROFILE: "Afstand"
             SUBTITLE: ""
-            #BASE_URL: "https://afstand.sd.di.huc.knaw.nl/ccf/"
-            BASE_URL: "http://0.0.0.0:8135/ccf/"
+            BASE_URL: "https://afstand.sd.di.huc.knaw.nl/ccf/"
+            #BASE_URL: "http://0.0.0.0:8135/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: afstand-mysql
             DB_USER: root
@@ -64,23 +64,23 @@ services:
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         volumes:
-            #- /backup/data:/backup/data
-            #- /data/iisg-afstand/records/:/data/records/
-            #- /data/iisg-afstand/resources/:/data/resources/
-            #- /data/iisg-afstand/htp:/data/htp
-            #- /data/iisg-afstand/.htaccess:/data/.htaccess
-            - ./data/backup:/backup/data
-            - ./data/records/:/data/records/
-            - ./data/resources/:/data/resources/
-            - ./data/.htaccess:/data/.htaccess
-            - ./data/htp:/data/htp
+            - /backup/data:/backup/data
+            - /data/iisg-afstand/records/:/data/records/
+            - /data/iisg-afstand/resources/:/data/resources/
+            - /data/iisg-afstand/htp:/data/htp
+            - /data/iisg-afstand/.htaccess:/data/.htaccess
+            #- ./data/backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
         networks:
             - afstand-network
         depends_on:
             - afstand-mysql
 networks:
   afstand-network:
-    #external: true
-    #name: traefik-public
+    external: true
+    name: traefik-public
 volumes:
     afstand-mysqldb:
