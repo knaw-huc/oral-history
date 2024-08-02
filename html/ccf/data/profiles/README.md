@@ -1,14 +1,14 @@
 # Get the cues spreadsheet into shape
-Download the spreadsheet as CSV as `./tweaks/cues.csv`
+Download the cues spreadsheet as CSV as `./tweaks/cues.csv`
 ```
 ./xsl.sh -it:main -xsl:file:$PWD/csv2xml.xsl "csv=file:$PWD/../tweaks/cues.csv" > ../tweaks/cues.xml
 ```
 
 # New tweak
-Download the CMDI 1.2 XML version to `./profiles/Adoptie.xml`
+Download the CMDI 1.2 XML version to `./profiles/Afstand.xml`
 ```
 cd profiles/
-./xsl.sh -xsl:file:$PWD/toTweak.xsl -s:file:$PWD/Adoptie.xml +cues=file:$PWD/../tweaks/cues.xml> ../tweaks/AdoptieTweak-new.xml
+./xsl.sh -xsl:file:$PWD/toTweak.xsl -s:file:$PWD/Afstand.xml +cues=file:$PWD/../tweaks/cues.xml> ../tweaks/AfstandTweak-new.xml
 ```
 
 

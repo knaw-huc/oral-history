@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1721373443948</ID>
+        <Name>Afstand</Name>
+        <Description>Profiel voor het afstand project</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="Afstand" CardinalityMin="1" CardinalityMax="1">
+        <Element name="IDnummer" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        <Component name="DossierAfstand" CardinalityMin="1" CardinalityMax="1">
+            <Documentation>Gegevens Dossier</Documentation>
+            <Element name="vestigingsprovincieRaad" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="betrokkenInstellingAfstand" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>Fiom; VBOK; etc., meerdere antwoorden mogelijk. </Documentation>
+            </Element>
+            <Element name="draagmoederschapDossier" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>ja/nee; indien ja, de gegevens uit dit dossier worden niet ingevoerd, een nieuw dossier dient aan de steekproef te worden toegevoegd</Documentation>
+            </Element>
+            <Element name="afstandOfBehoudKind" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item AppInfo="Er wordt afstand gedaan">afstand</item>
+                            <item AppInfo="Kind wordt behouden">behoud</item>
+                            <item AppInfo="Anders">anders</item>
+                            <item AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="dossierBevatAfstandsverklaring" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item AppInfo="Ja">ja</item>
+                            <item AppInfo="Nee">nee</item>
+                            <item AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="tekstVanAfstandsverklaring" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="ondertekeningAfstandsverklaring" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Niet van Toepassing">NVT</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="doorWieWordtAanmeldingGedaan" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Cliënte">1</item>
+                            <item ConceptLink="" AppInfo="2. Biologische vader">2</item>
+                            <item ConceptLink="" AppInfo="3. Ouder(s) van cliënte">3</item>
+                            <item ConceptLink="" AppInfo="4. Ouder(s) van biologische vader">4</item>
+                            <item ConceptLink="" AppInfo="5. Huisarts">5</item>
+                            <item ConceptLink="" AppInfo="6. Hulpverlener">6</item>
+                            <item ConceptLink="" AppInfo="7. School">7</item>
+                            <item ConceptLink="" AppInfo="8. Dominee/pastoor/imam">8</item>
+                            <item ConceptLink="" AppInfo="9. Ziekenhuis">9</item>
+                            <item ConceptLink="" AppInfo="10. Verloskundige">10</item>
+                            <item ConceptLink="" AppInfo="11. Anders">11</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="stadiumZwangerschapAanmelding" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Vul aantal weken in (bij benadering) of 'onbekend'</Documentation>
+            </Element>
+            <Element name="aantalContactenMaatschappelijkWerkerFiomOfAnders" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="domicilieClienteInstelling" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="officieelDocumentAanwezigOntheffingVoogdij" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="isHetAdoptieGeworden" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="zittenErEigenDocumentenClienteIn" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="documentLatereZoekactieBetrokkenen" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+        </Component>
+        <Component name="GegevensKind" CardinalityMin="1" CardinalityMax="1">
+            <Documentation>Gegevens kind</Documentation>
+            <Element name="geboorteperiodeKind" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">1900-1904</item>
+                            <item ConceptLink="" AppInfo="">1905-1909</item>
+                            <item ConceptLink="" AppInfo="">1910-1914</item>
+                            <item ConceptLink="" AppInfo="">1915-1919</item>
+                            <item ConceptLink="" AppInfo="">1920-1924</item>
+                            <item ConceptLink="" AppInfo="">1925-1929</item>
+                            <item ConceptLink="" AppInfo="">1930-1934</item>
+                            <item ConceptLink="" AppInfo="">1935-1939</item>
+                            <item ConceptLink="" AppInfo="">1940-1944</item>
+                            <item ConceptLink="" AppInfo="">1945-1949</item>
+                            <item ConceptLink="" AppInfo="">1950-1954</item>
+                            <item ConceptLink="" AppInfo="">1955-1959</item>
+                            <item ConceptLink="" AppInfo="">1960-1964</item>
+                            <item ConceptLink="" AppInfo="">1965-1969</item>
+                            <item ConceptLink="" AppInfo="">1970-1974</item>
+                            <item ConceptLink="" AppInfo="">1975-1979</item>
+                            <item ConceptLink="" AppInfo="">1980-1984</item>
+                            <item ConceptLink="" AppInfo="">1985-1989</item>
+                            <item ConceptLink="" AppInfo="">1990-1994</item>
+                            <item ConceptLink="" AppInfo="">1995-1999</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geboorteprovincieKind" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geslachtKind" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="bijzonderhedenKind" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="verblijfplaatsKindNaBevalling" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        </Component>
+        <Component name="GegevensBiologischeMoeder" CardinalityMin="1" CardinalityMax="1">
+            <Element name="geboorteperiodeBiomoeder" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">1860-1864</item>
+                            <item ConceptLink="" AppInfo="">1865-1869</item>
+                            <item ConceptLink="" AppInfo="">1870-1874</item>
+                            <item ConceptLink="" AppInfo="">1875-1879</item>
+                            <item ConceptLink="" AppInfo="">1880-1884</item>
+                            <item ConceptLink="" AppInfo="">1865-1889</item>
+                            <item ConceptLink="" AppInfo="">1890-1894</item>
+                            <item ConceptLink="" AppInfo="">1895-1899</item>
+                            <item ConceptLink="" AppInfo="">1900-1904</item>
+                            <item ConceptLink="" AppInfo="">1905-1909</item>
+                            <item ConceptLink="" AppInfo="">1910-1914</item>
+                            <item ConceptLink="" AppInfo="">1915-1919</item>
+                            <item ConceptLink="" AppInfo="">1920-1924</item>
+                            <item ConceptLink="" AppInfo="">1925-1929</item>
+                            <item ConceptLink="" AppInfo="">1930-1934</item>
+                            <item ConceptLink="" AppInfo="">1935-1939</item>
+                            <item ConceptLink="" AppInfo="">1940-1944</item>
+                            <item ConceptLink="" AppInfo="">1945-1949</item>
+                            <item ConceptLink="" AppInfo="">1950-1954</item>
+                            <item ConceptLink="" AppInfo="">1955-1959</item>
+                            <item ConceptLink="" AppInfo="">1960-1964</item>
+                            <item ConceptLink="" AppInfo="">1965-1969</item>
+                            <item ConceptLink="" AppInfo="">1970-1974</item>
+                            <item ConceptLink="" AppInfo="">1975-1979</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geboortelandBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="woonprovincieBiomoederVoorAanmelding" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="woonplaatsVastOfTijdelijkBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Vast">vast</item>
+                            <item ConceptLink="" AppInfo="Tijdelijk">tijdelijk</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="nationaliteitBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Nederlands">1</item>
+                            <item ConceptLink="" AppInfo="2. niet-Nederlands">2</item>
+                            <item ConceptLink="" AppInfo="3. Onbekend">3</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="indienBiomoederImmigrantMotief" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Arbeid">1</item>
+                            <item ConceptLink="" AppInfo="2. Gezinsmigratie">2</item>
+                            <item ConceptLink="" AppInfo="3. Studie/stage">3</item>
+                            <item ConceptLink="" AppInfo="4. Au pair">4</item>
+                            <item ConceptLink="" AppInfo="5. Anders">5</item>
+                            <item ConceptLink="" AppInfo="6. Onbekend">6</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="leeftijdBijBevallingBiomoeder" ValueScheme="int" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Leeftijd in hele jaren</Documentation>
+            </Element>
+            <Element name="aantalBrussenBiomoeder" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="plaatsKinderrijBiomoeder" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBeroepMoederVanBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBberoepVaderVanBiomoeder" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="relevanteInfoOudersVanBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="woonsituatieConceptieBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item AppInfo="1. Bij ouder(s) inwonend, zonder partner">1</item>
+                            <item ConceptLink="" AppInfo="2. Zelfstandig">2</item>
+                            <item ConceptLink="" AppInfo="3. Samenwonend met partner = bio(logische) vader">3</item>
+                            <item ConceptLink="" AppInfo="4. Samenwonend met partner = niet biovader">4</item>
+                            <item ConceptLink="" AppInfo="5. Met biovader bij ouder(s) cliënte">5</item>
+                            <item ConceptLink="" AppInfo="6. Met biovader bij zijn ouder(s)">6</item>
+                            <item ConceptLink="" AppInfo="7. Bij vrienden">7</item>
+                            <item ConceptLink="" AppInfo="8. Bij familie (anders dan ouders)">8</item>
+                            <item ConceptLink="" AppInfo="9. In gastgezin">9</item>
+                            <item ConceptLink="" AppInfo="10. In opvanghuis">10</item>
+                            <item ConceptLink="" AppInfo="11. Anders">11</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="woonsituatieLaatsteMaandenZwangerschapBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Bij ouder(s) inwonend, zonder partner">1</item>
+                            <item ConceptLink="" AppInfo="2. Zelfstandig">2</item>
+                            <item ConceptLink="" AppInfo="3. Samenwonend met partner = bio(logische) vader">3</item>
+                            <item ConceptLink="" AppInfo="4. Samenwonend met partner = niet biovader">4</item>
+                            <item ConceptLink="" AppInfo="5. Met biovader bij ouder(s) cliënte">5</item>
+                            <item ConceptLink="" AppInfo="6. Met biovader bij zijn ouder(s)">6</item>
+                            <item ConceptLink="" AppInfo="7. Bij vrienden">7</item>
+                            <item ConceptLink="" AppInfo="8. Bij familie (anders dan ouders)">8</item>
+                            <item ConceptLink="" AppInfo="9. In gastgezin">9</item>
+                            <item ConceptLink="" AppInfo="10. In opvanghuis">10</item>
+                            <item ConceptLink="" AppInfo="11. Anders">11</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="woonsituatieNaBevallingBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Bij ouder(s) inwonend, zonder partner">1</item>
+                            <item ConceptLink="" AppInfo="2. Zelfstandig">2</item>
+                            <item ConceptLink="" AppInfo="3. Samenwonend met partner = bio(logische) vader">3</item>
+                            <item ConceptLink="" AppInfo="4. Samenwonend met partner = niet biovader">4</item>
+                            <item ConceptLink="" AppInfo="5. Met biovader bij ouder(s) cliënte">5</item>
+                            <item ConceptLink="" AppInfo="6. Met biovader bij zijn ouder(s)">6</item>
+                            <item ConceptLink="" AppInfo="7. Bij vrienden">7</item>
+                            <item ConceptLink="" AppInfo="8. Bij familie (anders dan ouders)">8</item>
+                            <item ConceptLink="" AppInfo="9. In gastgezin">9</item>
+                            <item ConceptLink="" AppInfo="10. In opvanghuis">10</item>
+                            <item ConceptLink="" AppInfo="11. Anders">11</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="godsdienstBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="beroepBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="bronVanInkomstenBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Werk">1</item>
+                            <item ConceptLink="" AppInfo="2. Bijstandsuitkering">2</item>
+                            <item ConceptLink="" AppInfo="3. WW-uitkering">3</item>
+                            <item ConceptLink="" AppInfo="4. Studiefinanciering">4</item>
+                            <item ConceptLink="" AppInfo="5. Ouders">5</item>
+                            <item ConceptLink="" AppInfo="6. Partner">6</item>
+                            <item ConceptLink="" AppInfo="7. Anders">7</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="omstandighedenMotievenTotAfstandDoorHulpverlenerBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="aantalWekenOntdekkingZwangerschapBiomoeder" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="aantalWekenZekerheidZwangerschapBiomoeder" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="welOfGeenZwangerschapsafbrekingBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="infoZwangerschapsafbrekingBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="meerderjarigheidBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="huwelijkseStaatBijBevallingBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Ongehuwd">1</item>
+                            <item ConceptLink="" AppInfo="2. Gehuwd">2</item>
+                            <item ConceptLink="" AppInfo="3. Gescheiden">3</item>
+                            <item ConceptLink="" AppInfo="4. Verweduwd">4</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend/niet gegeven">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="huwelijkseStaatBijAdoptieBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Ongehuwd">1</item>
+                            <item ConceptLink="" AppInfo="2. Gehuwd">2</item>
+                            <item ConceptLink="" AppInfo="3. Gescheiden">3</item>
+                            <item ConceptLink="" AppInfo="4. Verweduwd">4</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend/niet gegeven">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="lvbPsychTerminologieBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="relatieMetBiovaderConceptieBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Relatie">1</item>
+                            <item ConceptLink="" AppInfo="2. Eenmalig contact">2</item>
+                            <item ConceptLink="" AppInfo="3. Een paar keer contact">3</item>
+                            <item ConceptLink="" AppInfo="4. Biovader had relatie/huwelijk met ander dan cliënte">4</item>
+                            <item ConceptLink="" AppInfo="5. Cliënte had relatie/huwelijk met ander dan biovader">5</item>
+                            <item ConceptLink="" AppInfo="6. ‘Incestrelatie’: seks met familielid">6</item>
+                            <item ConceptLink="" AppInfo="7. Het is niet zeker wie biovader is">7</item>
+                            <item ConceptLink="" AppInfo="8. Niet-consensueel seksueel contact">8</item>
+                            <item ConceptLink="" AppInfo="9. Anders">9</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="contactMetBiovaderGeboorteBiomoeder" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Partnerrelatie">1</item>
+                            <item ConceptLink="" AppInfo="2 Contact maar geen partnerrelatie">2</item>
+                            <item ConceptLink="" AppInfo="3. Contact verbroken voordat zwangerschap bekend was-door cliënte">3</item>
+                            <item ConceptLink="" AppInfo="4. Contact verbroken voordat zwangerschap bekend was-door biovader">4</item>
+                            <item ConceptLink="" AppInfo="5. Contact verbroken na bekendwording zwangerschap-door cliënte">5</item>
+                            <item ConceptLink="" AppInfo="6. Contact verbroken na bekendwording zwangerschap-door biovader">6</item>
+                            <item ConceptLink="" AppInfo="7. Anders">7</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="heeftBiomoederEerderKindAfgestaan" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="heeftBiomoederEerdereBiokinderen" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="heeftBiomoederZorgVoorBiokinderen" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="heeftBiomoederZorgVoorKinderenAnderen" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisMoederVanBiomoederOverAfstand" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisVaderVanBiomoederOverAfstand" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisBrussenVanBiomoederOverAfstand" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisVriendenVanBiomoederOverAfstand" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="belangrijkePersonenVoorBiomoederBesluitvorming" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="aanwezigePersonenGeprekkenMetBiomoederBijInstelling" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="heeftBiomoederGesprokenMetRaad" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="aanwezigheidBiomoederRechtbankzitting" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="heeftBiomoederBiokindGezienTijdensNaBevalling" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Ja-een keer">1</item>
+                            <item ConceptLink="" AppInfo="2. Ja-meerdere keren">2</item>
+                            <item ConceptLink="" AppInfo="3. Nee">3</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="wensContactBiomoederMetBiokindNaAfstand" CardinalityMin="1" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="vormVanContactwensBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="infoGedachtesGevoelensAfstandLaterStadiumBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="relevanteInfoOverBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+        </Component>
+        <Component name="GegevensBiologischeVader" CardinalityMin="1" CardinalityMax="1">
+            <Documentation>Gegevens biologische vader c.q. verwekker</Documentation>
+            <Element name="geboorteperiodeBiovader" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="">1860-1864</item>
+                            <item ConceptLink="" AppInfo="">1865-1869</item>
+                            <item ConceptLink="" AppInfo="">1870-1874</item>
+                            <item ConceptLink="" AppInfo="">1875-1879</item>
+                            <item ConceptLink="" AppInfo="">1880-1884</item>
+                            <item ConceptLink="" AppInfo="">1865-1889</item>
+                            <item ConceptLink="" AppInfo="">1890-1894</item>
+                            <item ConceptLink="" AppInfo="">1895-1899</item>
+                            <item ConceptLink="" AppInfo="">1900-1904</item>
+                            <item ConceptLink="" AppInfo="">1905-1909</item>
+                            <item ConceptLink="" AppInfo="">1910-1914</item>
+                            <item ConceptLink="" AppInfo="">1915-1919</item>
+                            <item ConceptLink="" AppInfo="">1920-1924</item>
+                            <item ConceptLink="" AppInfo="">1925-1929</item>
+                            <item ConceptLink="" AppInfo="">1930-1934</item>
+                            <item ConceptLink="" AppInfo="">1935-1939</item>
+                            <item ConceptLink="" AppInfo="">1940-1944</item>
+                            <item ConceptLink="" AppInfo="">1945-1949</item>
+                            <item ConceptLink="" AppInfo="">1950-1954</item>
+                            <item ConceptLink="" AppInfo="">1955-1959</item>
+                            <item ConceptLink="" AppInfo="">1960-1964</item>
+                            <item ConceptLink="" AppInfo="">1965-1969</item>
+                            <item ConceptLink="" AppInfo="">1970-1974</item>
+                            <item ConceptLink="" AppInfo="">1975-1979</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="geboortelandBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="woonprovincieBiovaderAanmelding" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q752" AppInfo="">Groningen</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q770" AppInfo="">Friesland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q772" AppInfo="">Drenthe</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q773" AppInfo="">Overijssel</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q775" AppInfo="">Gelderland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1093" AppInfo="">Limburg</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q1101" AppInfo="">Noord-Brabant</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q705" AppInfo="">Zeeland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
+                            <item ConceptLink="" AppInfo="">Elders</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="nationaliteitBiovader" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Nederlands">1</item>
+                            <item ConceptLink="" AppInfo="2. niet-Nederlands">2</item>
+                            <item AppInfo="3. Onbekend">3</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="indienImmigrantMotiefBiovader" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Arbeid">1</item>
+                            <item ConceptLink="" AppInfo="2. Gezinsmigratie">2</item>
+                            <item ConceptLink="" AppInfo="3. Studie/stage">3</item>
+                            <item ConceptLink="" AppInfo="4. Au pair">4</item>
+                            <item ConceptLink="" AppInfo="5. Anders">5</item>
+                            <item ConceptLink="" AppInfo="6. Onbekend">6</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="leeftijdBiovaderBevalling" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBeroepMoederVanBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBeroepVaderVanBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="gegevensInDossierOverOudersVanBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="vaderschapsactieOndernomenWelkeInformatie" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="burgerlijkeStaatConceptieBiovader" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Ongehuwd-zonder vaste partner">1</item>
+                            <item ConceptLink="" AppInfo="2. Ongehuwd-LAT-relatie">2</item>
+                            <item ConceptLink="" AppInfo="3. Gehuwd/samenwonend">3</item>
+                            <item ConceptLink="" AppInfo="4. Gescheiden">4</item>
+                            <item ConceptLink="" AppInfo="5. Weduwnaar">5</item>
+                            <item ConceptLink="" AppInfo="6. Anders">6</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="woonsituatieConceptieBiovader" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="1. Bij ouder(s) inwonend-zonder partner">1</item>
+                            <item ConceptLink="" AppInfo="2. Zelfstandig">2</item>
+                            <item ConceptLink="" AppInfo="3. Samenwonend met partner = cliënte">3</item>
+                            <item ConceptLink="" AppInfo="4. Samenwonend met partner = niet cliënte">4</item>
+                            <item ConceptLink="" AppInfo="5. Met cliënte bij ouder(s) biovader">5</item>
+                            <item ConceptLink="" AppInfo="6. Met cliënte bij haar ouder(s)">6</item>
+                            <item ConceptLink="" AppInfo="7. Bij vrienden">7</item>
+                            <item ConceptLink="" AppInfo="8. Bij familie (anders dan ouders)">8</item>
+                            <item ConceptLink="" AppInfo="9. In gastgezin">9</item>
+                            <item ConceptLink="" AppInfo="10. In opvanghuis">10</item>
+                            <item ConceptLink="" AppInfo="11. Anders">11</item>
+                            <item ConceptLink="" AppInfo="99. Onbekend">99</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="godsdienstBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="opleidingBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="indienOpleidingNietafgemaaktAantalJaarOnderwijsBiovader" ValueScheme="int" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="beroepBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="kennisOverZwangerschapBesluitvormingBiovader" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisOverZwangerschapMoederVanBiovaderAfstand" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="kennisOverZwangerschapVaderVanBiovaderAfstand" CardinalityMin="0" CardinalityMax="1">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item ConceptLink="" AppInfo="Ja">ja</item>
+                            <item ConceptLink="" AppInfo="Nee">nee</item>
+                            <item ConceptLink="" AppInfo="Onbekend">onbekend</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="gegevensInDossierOverBetrokkenheidRolBiovaderBesluitvorming" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="gespreksverslagenGesprekkenAanwezigheidBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+            <Element name="relevanteInfoOverBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+        </Component>
+        <Component name="GegevensAlgemeenDossier" CardinalityMin="1" CardinalityMax="1">
+            <Element name="opvallendhedenAfstandsdossier" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+    </Component>
+</ComponentSpec>

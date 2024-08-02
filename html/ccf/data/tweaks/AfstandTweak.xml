@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+    <Header>
+        <ID>clarin.eu:cr1:p_1721373443948</ID>
+        <Name>Afstand</Name>
+        <Description>Profiel voor het afstand project</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="Afstand">
+        <Element name="IDnummer" cue:displayOrder="1"><clariah:label xml:lang="en">1. ID-nummer</clariah:label><!--cues--></Element>
+        <Component name="DossierAfstand"><clariah:label xml:lang="en">Kenmerken dossier</clariah:label><clariah:explanation>gegevens dossier</clariah:explanation>
+            <Documentation>Gegevens Dossier</Documentation>
+            <Element name="vestigingsprovincieRaad" cue:displayOrder="2"><clariah:label xml:lang="en">2. Vestigingsprovincie Raad</clariah:label><clariah:explanation>Groningen, Friesland, Drenthe, … , Limburg, Buitenland/elders.</clariah:explanation>
+                
+            </Element>
+            <Element name="betrokkenInstellingAfstand" cue:displayOrder="3"><clariah:label xml:lang="en">3. Betrokken instelling voor cliënte c.q. biologische moeder</clariah:label><clariah:explanation>Fiom; VBOK; etc., meerdere antwoorden mogelijk. </clariah:explanation>
+                <Documentation>Fiom; VBOK; etc., meerdere antwoorden mogelijk. </Documentation>
+            </Element>
+            <Element name="draagmoederschapDossier" cue:displayOrder="4"><clariah:label xml:lang="en">4. Is er sprake van draagmoederschap? </clariah:label><clariah:explanation>ja/nee; indien ja, de gegevens uit dit dossier worden niet ingevoerd, een nieuw dossier dient aan de steekproef te worden toegevoegd</clariah:explanation>
+                <Documentation>ja/nee; indien ja, de gegevens uit dit dossier worden niet ingevoerd, een nieuw dossier dient aan de steekproef te worden toegevoegd</Documentation>
+            </Element>
+            <Element name="afstandOfBehoudKind" cue:displayOrder="5"><clariah:label xml:lang="en">5. Is er sprake van afstand of behoud van kind door cliënte?</clariah:label><clariah:explanation>afstand; behoud; anders; onbekend.  </clariah:explanation>
+                
+            </Element>
+            <Element name="dossierBevatAfstandsverklaring" cue:displayOrder="6"><clariah:label xml:lang="en">6. Bevat het dossier een ‘afstandsverklaring’ van de biologisch moeder? </clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="tekstVanAfstandsverklaring" cue:displayOrder="7" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">7. Noteer de tekst die op de ‘afstandsverklaring’ staat</clariah:label><!--cues--></Element>
+            <Element name="ondertekeningAfstandsverklaring" cue:displayOrder="8"><clariah:label xml:lang="en">8. Is de afstandsverklaring ondertekend?</clariah:label><clariah:explanation>ja; nee; NVT</clariah:explanation>
+                
+            </Element>
+            <Element name="doorWieWordtAanmeldingGedaan" cue:displayOrder="9"><clariah:label xml:lang="en">9. Door wie wordt de aanmelding gedaan?</clariah:label><clariah:explanation>1. Cliënte; 2. Biologische vader; 3. Ouder(s) van cliënte; 4. Ouder(s) van biologische vader; 5. Huisarts; 6. Hulpverlener; 7. School; 8. Dominee/pastoor/imam; 9. Ziekenhuis; 10. Verloskundige; 11. Anders; 99. Onbekend.  </clariah:explanation>
+                
+            </Element>
+            <Element name="stadiumZwangerschapAanmelding" cue:displayOrder="10"><clariah:label xml:lang="en">10. Stadium zwangerschap bij aanmelding</clariah:label><clariah:explanation>vul in # weken, bij benadering; onbekend</clariah:explanation>
+                <Documentation>Vul aantal weken in (bij benadering) of 'onbekend'</Documentation>
+            </Element>
+            <Element name="aantalContactenMaatschappelijkWerkerFiomOfAnders" cue:displayOrder="11"><clariah:label xml:lang="en">11. Aantal contacten met maatschappelijk werker van Fiom of anderszins</clariah:label><!--cues--></Element>
+            <Element name="domicilieClienteInstelling" cue:displayOrder="12"><clariah:label xml:lang="en">12. Had cliënte domicilie bij instelling?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="officieelDocumentAanwezigOntheffingVoogdij" cue:displayOrder="13"><clariah:label xml:lang="en">13. Is er in het dossier een officieel document aanwezig waarin de ontheffing van de voogdij is uitgesproken?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="isHetAdoptieGeworden" cue:displayOrder="14"><clariah:label xml:lang="en">14. Is het een adoptie geworden?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="zittenErEigenDocumentenClienteIn" cue:displayOrder="15" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">15. Zitten er eigen documenten van de cliënte in?</clariah:label><!--cues--></Element>
+            <Element name="documentLatereZoekactieBetrokkenen" cue:displayOrder="16"><clariah:label xml:lang="en">16. Bevat het dossier een document van een latere zoekactie door een der betrokkenen?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+        </Component>
+        <Component name="GegevensKind"><clariah:label xml:lang="en">Kind</clariah:label><clariah:explanation>gegevens kind</clariah:explanation>
+            <Documentation>Gegevens kind</Documentation>
+            <Element name="geboorteperiodeKind" cue:displayOrder="17"><clariah:label xml:lang="en">17. Geboorteperiode kind</clariah:label>
+                
+            </Element>
+            <Element name="geboorteprovincieKind" cue:displayOrder="18"><clariah:label xml:lang="en">18. Geboorteprovincie kind</clariah:label>
+                
+            </Element>
+            <Element name="geslachtKind" cue:displayOrder="19"><clariah:label xml:lang="en">19. Geslacht</clariah:label><!--cues--></Element>
+            <Element name="bijzonderhedenKind" cue:displayOrder="20" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">20. Bijzonderheden kind</clariah:label><!--cues--></Element>
+            <Element name="verblijfplaatsKindNaBevalling" cue:displayOrder="21"><clariah:label xml:lang="en">21. Geef aan waar het kind na de bevalling verblijft</clariah:label><!--cues--></Element>
+        </Component>
+        <Component name="GegevensBiologischeMoeder"><clariah:label xml:lang="en">Biologische moeder</clariah:label><clariah:explanation>gegevens biologische moeder</clariah:explanation>
+            <Element name="geboorteperiodeBiomoeder" cue:displayOrder="22"><clariah:label xml:lang="en">22. Geboorteperiode biologische moeder</clariah:label>
+                
+            </Element>
+            <Element name="geboortelandBiomoeder" cue:displayOrder="23"><clariah:label xml:lang="en">23. Geboorteland biologische moeder</clariah:label><!--cues--></Element>
+            <Element name="woonprovincieBiomoederVoorAanmelding" cue:displayOrder="24"><clariah:label xml:lang="en">24. Provincie waarin biologische moeder woonachtig is t.t.v. dan wel voor aanmelding</clariah:label>
+                
+            </Element>
+            <Element name="woonplaatsVastOfTijdelijkBiomoeder" cue:displayOrder="25"><clariah:label xml:lang="en">25. Is haar woonplaats vast of tijdelijk? </clariah:label><clariah:explanation>vast; tijdelijk; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="nationaliteitBiomoeder" cue:displayOrder="26"><clariah:label xml:lang="en">26. Nationaliteit</clariah:label><clariah:explanation>Nederlands; niet-Nederlands; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="indienBiomoederImmigrantMotief" cue:displayOrder="27"><clariah:label xml:lang="en">27. Indien immigrant, wat is het motief?</clariah:label><clariah:explanation>1. Arbeid; 2. Gezinsmigratie; 3. Studie/stage; 4. Au pair; 5. Anders; 6. Onbekend.  </clariah:explanation>
+                
+            </Element>
+            <Element name="leeftijdBijBevallingBiomoeder" cue:displayOrder="28"><clariah:label xml:lang="en">28. Leeftijd bij bevalling</clariah:label><clariah:explanation>Leeftijd in hele jaren</clariah:explanation>
+                <Documentation>Leeftijd in hele jaren</Documentation>
+            </Element>
+            <Element name="aantalBrussenBiomoeder" cue:displayOrder="29"><clariah:label xml:lang="en">29. Aantal broers/zussen</clariah:label><!--cues--></Element>
+            <Element name="plaatsKinderrijBiomoeder" cue:displayOrder="30"><clariah:label xml:lang="en">30. Plaats in kinderrij</clariah:label><clariah:explanation>getal</clariah:explanation><!--cues--></Element>
+            <Element name="opleidingBeroepMoederVanBiomoeder" cue:displayOrder="31"><clariah:label xml:lang="en">31. Opleiding/beroep moeder van cliënte</clariah:label><!--cues--></Element>
+            <Element name="opleidingBberoepVaderVanBiomoeder" cue:displayOrder="32"><clariah:label xml:lang="en">32. Opleiding/beroep vader van cliënte</clariah:label><!--cues--></Element>
+            <Element name="relevanteInfoOudersVanBiomoeder" cue:displayOrder="33" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">33. Staan er meer gegevens in het dossier over de ouders van biologische moeder?</clariah:label><!--cues--></Element>
+            <Element name="woonsituatieConceptieBiomoeder" cue:displayOrder="34"><clariah:label xml:lang="en">34. Woonsituatie ten tijde van conceptie</clariah:label><clariah:explanation>1. Bij ouder(s) inwonend, zonder partner; 2. Zelfstandig; 3. Samenwonend met partner = bio(logische) vader; 4. Samenwonend met partner = niet biovader; 5. Met biovader bij ouder(s) cliënte; 6. Met biovader bij zijn ouder(s); 7. Bij vrienden; 8. Bij familie (anders dan ouders); 9. In gastgezin; 10. In opvanghuis; 11. Anders (licht toe); 99. Onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="woonsituatieLaatsteMaandenZwangerschapBiomoeder" cue:displayOrder="35"><clariah:label xml:lang="en">35. Woonsituatie laatste maanden zwangerschap</clariah:label><clariah:explanation>1. Bij ouder(s) inwonend, zonder partner; 2. Zelfstandig; 3. Samenwonend met partner = bio(logische) vader; 4. Samenwonend met partner = niet biovader; 5. Met biovader bij ouder(s) cliënte; 6. Met biovader bij zijn ouder(s); 7. Bij vriendin; 8. Bij familie (anders dan ouders); 9. In gastgezin; 10. In opvanghuis; 11. Anders (licht toe); 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="woonsituatieNaBevallingBiomoeder" cue:displayOrder="36"><clariah:label xml:lang="en">36. Woonsituatie na de bevalling</clariah:label><clariah:explanation>1. Bij ouder(s) inwonend, zonder partner; 2. Zelfstandig; 3. Samenwonend met partner = bio(logische) vader; 4. Samenwonend met partner = niet biovader; 5. Met biovader bij ouder(s) cliënte; 6. Met biovader bij zijn ouder(s); 7. Bij vriendin; 8. Bij familie (anders dan ouders); 9. In gastgezin; 10. In opvanghuis; 11. Anders (licht toe); 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="godsdienstBiomoeder" cue:displayOrder="37"><clariah:label xml:lang="en">37. Godsdienst biologische moeder</clariah:label><!--cues--></Element>
+            <Element name="opleidingBiomoeder" cue:displayOrder="38"><clariah:label xml:lang="en">38. Opleiding biologische moeder</clariah:label><!--cues--></Element>
+            <Element name="beroepBiomoeder" cue:displayOrder="39"><clariah:label xml:lang="en">39. Beroep biologische moeder</clariah:label><!--cues--></Element>
+            <Element name="bronVanInkomstenBiomoeder" cue:displayOrder="40"><clariah:label xml:lang="en">40. Bron van inkomsten</clariah:label><clariah:explanation>1. Werk; 2. Bijstandsuitkering; 3. WW-uitkering; 4. Studiefinanciering; 5. Ouders; 6. Partner; 7. Anders: vul in; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="omstandighedenMotievenTotAfstandDoorHulpverlenerBiomoeder" cue:displayOrder="41" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">41. Welke omstandigheden en motieven tot afstand worden gerapporteerd door de hulpverlener (van Fiom, Raad of anderzijds)? (m.b.t. rechtszitting bij circa 3 maanden na bevalling)?</clariah:label><!--cues--></Element>
+            <Element name="aantalWekenOntdekkingZwangerschapBiomoeder" cue:displayOrder="42"><clariah:label xml:lang="en">42. Bij hoeveel weken vermoedde biologische moeder dat ze zwanger was?</clariah:label><!--cues--></Element>
+            <Element name="aantalWekenZekerheidZwangerschapBiomoeder" cue:displayOrder="43"><clariah:label xml:lang="en">43. Bij hoeveel weken wist ze zeker dat ze zwanger was?</clariah:label><!--cues--></Element>
+            <Element name="welOfGeenZwangerschapsafbrekingBiomoeder" cue:displayOrder="44"><clariah:label xml:lang="en">44. Heeft ze zwangerschapsafbreking (bv. abortus) overwogen?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="infoZwangerschapsafbrekingBiomoeder" cue:displayOrder="45" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">45. Indien ja, welke informatie wordt hierover genoteerd?</clariah:label><!--cues--></Element>
+            <Element name="meerderjarigheidBiomoeder" cue:displayOrder="46"><clariah:label xml:lang="en">46. Is biologische moeder bij geboorte van kind meerderjarig (21 jaar en ouder)? </clariah:label>
+                
+            </Element>
+            <Element name="huwelijkseStaatBijBevallingBiomoeder" cue:displayOrder="47"><clariah:label xml:lang="en">47. Huwelijkse staat biologische moeder op moment van bevalling?</clariah:label><clariah:explanation>1. Ongehuwd; 2. Gehuwd; 3. Gescheiden; 4. Verweduwd; 99. Onbekend/niet gegeven.</clariah:explanation>
+                
+            </Element>
+            <Element name="huwelijkseStaatBijAdoptieBiomoeder" cue:displayOrder="48"><clariah:label xml:lang="en">48. Huwelijkse staat biologische moeder op moment van adoptie</clariah:label><clariah:explanation>1. Ongehuwd; 2. Gehuwd; 3. Gescheiden; 4. Verweduwd; 99. Onbekend/niet gegeven.</clariah:explanation>
+                
+            </Element>
+            <Element name="lvbPsychTerminologieBiomoeder" cue:displayOrder="49" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">49. Wordt er in de verslaglegging met betrekking tot biologische moeder verwezen naar een licht verstandelijke beperking of psychologische aandoening? Indien ja, welke termen worden hiervoor gebruikt?</clariah:label><!--cues--></Element>
+            <Element name="relatieMetBiovaderConceptieBiomoeder" cue:displayOrder="50"><clariah:label xml:lang="en">50. Relatie met biologische vader/verwekker t.t.v. conceptie</clariah:label><clariah:explanation>1. Relatie; 2. Eenmalig contact; 3. Een paar keer contact; 4. Biovader had relatie/huwelijk met ander dan cliënte; 5. Cliënte had relatie/huwelijk met ander dan biovader; 6. ‘Incestrelatie’: seks met familielid; 7. Het is niet zeker wie biovader is; 8. Niet-consensueel seksueel contact; 9. Anders: [vul in]; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="contactMetBiovaderGeboorteBiomoeder" cue:displayOrder="51"><clariah:label xml:lang="en">51. Contact met biologische vader/verwekker t.t.v. geboorte kind</clariah:label><clariah:explanation>1. Partnerrelatie; 2 Contact maar geen partnerrelatie; 3. Contact verbroken voordat zwangerschap bekend was, door cliënte; 4. Contact verbroken voordat zwangerschap bekend was, door biovader; 5. Contact verbroken na bekendwording zwangerschap, door cliënte; 6. Contact verbroken na bekendwording zwangerschap, door biovader; 7. Anders: [vul in]; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="heeftBiomoederEerderKindAfgestaan" cue:displayOrder="52"><clariah:label xml:lang="en">52. Heeft de cliënte eerder een kind afgestaan?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="heeftBiomoederEerdereBiokinderen" cue:displayOrder="53"><clariah:label xml:lang="en">53. Heeft de cliënte eerdere biologische kinderen?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="heeftBiomoederZorgVoorBiokinderen" cue:displayOrder="54"><clariah:label xml:lang="en">54. Heeft de cliënte de zorg voor biologische kinderen?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="heeftBiomoederZorgVoorKinderenAnderen" cue:displayOrder="55"><clariah:label xml:lang="en">55. Heeft de cliënte de zorg voor kinderen van anderen?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisMoederVanBiomoederOverAfstand" cue:displayOrder="56"><clariah:label xml:lang="en">56. Is de moeder van cliënte op de hoogte van de afstand?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisVaderVanBiomoederOverAfstand" cue:displayOrder="57"><clariah:label xml:lang="en">57. Is de vader van cliënte op de hoogte van de afstand?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisBrussenVanBiomoederOverAfstand" cue:displayOrder="58"><clariah:label xml:lang="en">58. Is/zijn zus(sen) en/of broer(s) op de hoogte van de afstand?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisVriendenVanBiomoederOverAfstand" cue:displayOrder="59"><clariah:label xml:lang="en">59. Is/zijn vriend(en) of vriendin(nen) op de hoogte van de afstand?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="belangrijkePersonenVoorBiomoederBesluitvorming" cue:displayOrder="60" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">60. Welke personen worden in het dossier genoemd als belangrijk voor cliënte m.b.t. de besluitvorming?</clariah:label><!--cues--></Element>
+            <Element name="aanwezigePersonenGeprekkenMetBiomoederBijInstelling" cue:displayOrder="61" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">61. Welke personen waren er aanwezig bij gesprekken met cliënte bij de instelling?</clariah:label><!--cues--></Element>
+            <Element name="heeftBiomoederGesprokenMetRaad" cue:displayOrder="62"><clariah:label xml:lang="en">62. Heeft cliënte met iemand van de Raad gesproken?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="aanwezigheidBiomoederRechtbankzitting" cue:displayOrder="63"><clariah:label xml:lang="en">63. Is de cliënte bij een rechtbankzitting geweest?</clariah:label><clariah:explanation>Ja/nee/onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="heeftBiomoederBiokindGezienTijdensNaBevalling" cue:displayOrder="64"><clariah:label xml:lang="en">64. Heeft cliënte haar kind gezien (tijdens dan wel na de bevalling)?</clariah:label><clariah:explanation>1. Ja, een keer; 2. Ja, meerdere keren; 3. Nee; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="wensContactBiomoederMetBiokindNaAfstand" cue:displayOrder="65"><clariah:label xml:lang="en">65. Wilde moeder contact met of over het kind houden na de afstand?</clariah:label><clariah:explanation>Ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="vormVanContactwensBiomoeder" cue:displayOrder="66" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">66. Indien ja, op welke manier?</clariah:label><!--cues--></Element>
+            <Element name="infoGedachtesGevoelensAfstandLaterStadiumBiomoeder" cue:displayOrder="67" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">67. Staat er informatie in het dossier over gedachtes/gevoelens over de afstand in later stadium?</clariah:label><!--cues--></Element>
+            <Element name="relevanteInfoOverBiomoeder" cue:displayOrder="68" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">68. Bevat het dossier andere informatie m.b.t. de biologische moeder die van belang zou kunnen zijn, zo ja, welke?</clariah:label><!--cues--></Element>
+        </Component>
+        <Component name="GegevensBiologischeVader"><clariah:label xml:lang="en">Biologische vader</clariah:label><clariah:explanation>gegevens biologische vader c.q. verwekker</clariah:explanation>
+            <Documentation>Gegevens biologische vader c.q. verwekker</Documentation>
+            <Element name="geboorteperiodeBiovader" cue:displayOrder="69"><clariah:label xml:lang="en">69. Geboorteperiode biolologische vader</clariah:label>
+                
+            </Element>
+            <Element name="geboortelandBiovader" cue:displayOrder="70"><clariah:label xml:lang="en">70. Geboorteland biologische vader</clariah:label><!--cues--></Element>
+            <Element name="woonprovincieBiovaderAanmelding" cue:displayOrder="71"><clariah:label xml:lang="en">71. Provincie waarin biologische vader woonachtig is t.t.v. dan wel voor aanmelding</clariah:label>
+                
+            </Element>
+            <Element name="nationaliteitBiovader" cue:displayOrder="72"><clariah:label xml:lang="en">72. Nationaliteit</clariah:label><clariah:explanation>Nederlands; niet-Nederlands; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="indienImmigrantMotiefBiovader" cue:displayOrder="73"><clariah:label xml:lang="en">73. Indien immigrant, wat is het motief? </clariah:label><clariah:explanation>1. Arbeid; 2. Gezinsmigratie; 3. Studie/stage; 4. Au pair; 5. Anders; 6. Onbekend.  </clariah:explanation>
+                
+            </Element>
+            <Element name="leeftijdBiovaderBevalling" cue:displayOrder="74"><clariah:label xml:lang="en">74. Zijn leeftijd t.t.v. bevalling [in hele jaren]</clariah:label><!--cues--></Element>
+            <Element name="opleidingBeroepMoederVanBiovader" cue:displayOrder="75"><clariah:label xml:lang="en">75. Opleiding/beroep moeder van biovader</clariah:label><!--cues--></Element>
+            <Element name="opleidingBeroepVaderVanBiovader" cue:displayOrder="76"><clariah:label xml:lang="en">76. Opleiding/beroep vader van biovader</clariah:label><!--cues--></Element>
+            <Element name="gegevensInDossierOverOudersVanBiovader" cue:displayOrder="77" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">77. Staan er meer gegevens in het dossier over de ouders van biologische vader?</clariah:label><!--cues--></Element>
+            <Element name="vaderschapsactieOndernomenWelkeInformatie" cue:displayOrder="78" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">78. Is er een vaderschapsactie ondernomen, zo ja, welke informatie wordt hierover genoteerd?</clariah:label><!--cues--></Element>
+            <Element name="burgerlijkeStaatConceptieBiovader" cue:displayOrder="79"><clariah:label xml:lang="en">79. Burgerlijke staat t.t.v. conceptie</clariah:label><clariah:explanation>1. Ongehuwd, zonder vaste partner; 2. Ongehuwd, LAT-relatie; 3. Gehuwd/samenwonend; 4. Gescheiden; 5. Weduwnaar; 6. Anders; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="woonsituatieConceptieBiovader" cue:displayOrder="80"><clariah:label xml:lang="en">80. Woonsituatie ten tijde van conceptie</clariah:label><clariah:explanation>1. Bij ouder(s) inwonend, zonder partner; 2. Zelfstandig; 3. Samenwonend met partner = cliënte; 4. Samenwonend met partner = niet cliënte; 5. Met cliënte bij ouder(s) biovader; 6. Met cliënte bij haar ouder(s); 7. Bij vrienden; 8. Bij familie (anders dan ouders); 9. In gastgezin; 10. In opvanghuis; 11. Anders; 99. Onbekend.</clariah:explanation>
+                
+            </Element>
+            <Element name="godsdienstBiovader" cue:displayOrder="81"><clariah:label xml:lang="en">81. Godsdienst biologische vader</clariah:label><!--cues--></Element>
+            <Element name="opleidingBiovader" cue:displayOrder="82"><clariah:label xml:lang="en">82. Opleiding biologische vader</clariah:label><!--cues--></Element>
+            <Element name="indienOpleidingNietafgemaaktAantalJaarOnderwijsBiovader" cue:displayOrder="83"><clariah:label xml:lang="en">83. Indien opleiding niet afgemaakt, aantal jaren gevolgd onderwijs bij benadering</clariah:label><!--cues--></Element>
+            <Element name="beroepBiovader" cue:displayOrder="84"><clariah:label xml:lang="en">84. Beroep biologische vader</clariah:label><!--cues--></Element>
+            <Element name="kennisOverZwangerschapBesluitvormingBiovader" cue:displayOrder="85"><clariah:label xml:lang="en">85. Is de biologische vader op de hoogte van zwangerschap tijdens de besluitvorming?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisOverZwangerschapMoederVanBiovaderAfstand" cue:displayOrder="86"><clariah:label xml:lang="en">86. Is de moeder van biovader op de hoogte van de afstand?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="kennisOverZwangerschapVaderVanBiovaderAfstand" cue:displayOrder="87"><clariah:label xml:lang="en">87. Is de vader van biovader op de hoogte van de afstand?</clariah:label><clariah:explanation>ja; nee; onbekend</clariah:explanation>
+                
+            </Element>
+            <Element name="gegevensInDossierOverBetrokkenheidRolBiovaderBesluitvorming" cue:displayOrder="88" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">88. Staan er verdere gegevens in het dossier over de betrokkenheid en rol van de biovader bij de besluitvorming?</clariah:label><!--cues--></Element>
+            <Element name="gespreksverslagenGesprekkenAanwezigheidBiovader" cue:displayOrder="89" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">89. Zijn er in het dossier gespreksverslagen van gesprekken waarbij de biovader zelf aanwezig was?</clariah:label><!--cues--></Element>
+            <Element name="relevanteInfoOverBiovader" cue:displayOrder="90" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">90. Bevat het dossier andere informatie m.b.t. de biologische vader die van belang zou kunnen zijn, zo ja, welke?</clariah:label><!--cues--></Element>
+        </Component>
+        <Component name="GegevensAlgemeenDossier"><clariah:label xml:lang="en">Nadere zaken in dossier</clariah:label>
+            <Element name="opvallendhedenAfstandsdossier" cue:displayOrder="91" cue:inputWidth="80" cue:inputHeight="6"><clariah:label xml:lang="en">91. Wat viel verder op in dit dossier? </clariah:label><!--cues--></Element>
+        </Component>
+    </Component>
+</ComponentSpec>
