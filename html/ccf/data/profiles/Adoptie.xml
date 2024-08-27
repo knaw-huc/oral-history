@@ -8,7 +8,7 @@
     </Header>
     <Component name="Adoptie" CardinalityMin="1" CardinalityMax="1">
         <Element name="IDnummer" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-        <Component name="AdoptieKind" CardinalityMin="1" CardinalityMax="1">
+        <Component name="AdoptieKind" CardinalityMin="0" CardinalityMax="1">
             <Element name="geslacht" ConceptLink="https://schema.org/GenderType" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -63,13 +63,14 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
                 </ValueScheme>
             </Element>
         </Component>
-        <Component name="BiologischeOfAfstandsMoeder" CardinalityMin="1" CardinalityMax="1">
+        <Component name="BiologischeOfAfstandsMoeder" CardinalityMin="0" CardinalityMax="1">
             <Element name="geboortePeriodeBiologischeMoeder" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -117,6 +118,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
@@ -160,7 +162,7 @@
                 <Element name="beperkingOfAandoeningMoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
-        <Component name="GegevensBiologischeVaderOfVerwekker" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensBiologischeVaderOfVerwekker" CardinalityMin="0" CardinalityMax="1">
             <Element name="isDeVerwekkerBekend" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="aardSeksueleRelatieBiologischeMoederEnVerwekker" CardinalityMin="0" CardinalityMax="1">
                 <ValueScheme>
@@ -180,7 +182,7 @@
             <Element name="welkeInformatieVindenWeOverDeOudersVanDeVerwekker" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="isErSprakeVanPogingTotVaderschapsActie" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
-        <Component name="ZwangerschapEnBevalling" CardinalityMin="1" CardinalityMax="1">
+        <Component name="ZwangerschapEnBevalling" CardinalityMin="0" CardinalityMax="1">
             <Element name="informatiePeriodeZwangerschap" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Component name="VerblijfDoorgangshuisBoolean" CardinalityMin="0" CardinalityMax="1">
                 <Element name="verblijfDoorgangshuisProvincie" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -198,6 +200,7 @@
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                                 <item ConceptLink="" AppInfo="">Elders</item>
                             </enumeration>
                         </Vocabulary>
@@ -232,6 +235,7 @@
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                                 <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                                <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                                 <item ConceptLink="" AppInfo="">Elders</item>
                             </enumeration>
                         </Vocabulary>
@@ -241,7 +245,7 @@
                 <Element name="informatieGastgezinBevalling" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             </Component>
         </Component>
-        <Component name="NaBevalling" CardinalityMin="1" CardinalityMax="1">
+        <Component name="NaBevalling" CardinalityMin="0" CardinalityMax="1">
             <Element name="verblijftInKindertehuis" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="provincieKindertehuis" CardinalityMin="0" CardinalityMax="1">
                 <ValueScheme>
@@ -258,6 +262,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
@@ -266,7 +271,7 @@
             <Element name="informatieKindertehuis" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="beperkingOfAnderStoornisKindertehuis" ValueScheme="boolean" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
-        <Component name="Afstand" CardinalityMin="1" CardinalityMax="1">
+        <Component name="Afstand" CardinalityMin="0" CardinalityMax="1">
             <Element name="redenAfstandAdoptieMoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             <Element name="redenAfstandAdoptieOudersMoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="redenAfstandAdoptieAndereActoren" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
@@ -277,7 +282,7 @@
                 <Element name="tekstAfstandsverklaring" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
             </Component>
         </Component>
-        <Component name="Adoptie" CardinalityMin="1" CardinalityMax="1">
+        <Component name="Adoptie" CardinalityMin="0" CardinalityMax="1">
             <Element name="periodePlaatsingPleeggezin" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -390,6 +395,7 @@
                             <item ConceptLink="https://www.wikidata.org/wiki/Q694" AppInfo="">Zuid-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q701" AppInfo="">Noord-Holland</item>
                             <item ConceptLink="https://www.wikidata.org/wiki/Q803" AppInfo="">Utrecht</item>
+                            <item ConceptLink="https://www.wikidata.org/wiki/Q707" AppInfo="">Flevoland</item>
                             <item ConceptLink="" AppInfo="">Elders</item>
                         </enumeration>
                     </Vocabulary>
