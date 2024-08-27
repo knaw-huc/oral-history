@@ -8,7 +8,7 @@
     </Header>
     <Component name="Afstand" CardinalityMin="1" CardinalityMax="1">
         <Element name="IDnummer" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-        <Component name="DossierAfstand" CardinalityMin="1" CardinalityMax="1">
+        <Component name="DossierAfstand" CardinalityMin="0" CardinalityMax="1">
             <Documentation>Gegevens Dossier</Documentation>
             <Element name="vestigingsprovincieRaad" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
@@ -141,7 +141,7 @@
                 </ValueScheme>
             </Element>
         </Component>
-        <Component name="GegevensKind" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensKind" CardinalityMin="0" CardinalityMax="1">
             <Documentation>Gegevens kind</Documentation>
             <Element name="geboorteperiodeKind" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
@@ -196,7 +196,7 @@
             <Element name="bijzonderhedenKind" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="verblijfplaatsKindNaBevalling" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
         </Component>
-        <Component name="GegevensBiologischeMoeder" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensBiologischeMoeder" CardinalityMin="0" CardinalityMax="1">
             <Element name="geboorteperiodeBiomoeder" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
                     <Vocabulary>
@@ -600,7 +600,7 @@
             <Element name="infoGedachtesGevoelensAfstandLaterStadiumBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="relevanteInfoOverBiomoeder" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
-        <Component name="GegevensBiologischeVader" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensBiologischeVader" CardinalityMin="0" CardinalityMax="1">
             <Documentation>Gegevens biologische vader c.q. verwekker</Documentation>
             <Element name="geboorteperiodeBiovader" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
                 <ValueScheme>
@@ -762,7 +762,7 @@
             <Element name="gespreksverslagenGesprekkenAanwezigheidBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
             <Element name="relevanteInfoOverBiovader" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
         </Component>
-        <Component name="GegevensAlgemeenDossier" CardinalityMin="1" CardinalityMax="1">
+        <Component name="GegevensAlgemeenDossier" CardinalityMin="0" CardinalityMax="1">
             <Element name="opvallendhedenAfstandsdossier" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
         </Component>
     </Component>
