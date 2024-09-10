@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ComponentSpec isProfile="true" CMDVersion="1.2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+<ComponentSpec isProfile="true" CMDVersion="1.2" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:clariah="http://www.clariah.eu/">
     <Header>
         <ID>clarin.eu:cr1:p_1653377925723</ID>
     </Header>
     <Component name="Vocabulary">
-	        <Element name="status" CardinalityMin="1" CardinalityMax="1">
+	    <Element name="status" CardinalityMin="1" CardinalityMax="1">
             <ValueScheme>
                 <Vocabulary>
                     <enumeration>
@@ -15,6 +15,12 @@
                     </enumeration>
                 </Vocabulary>
             </ValueScheme>
+        </Element>
+        <Element name="researchDomain">
+            <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nwo-researchfields</clariah:autoCompleteURI>
+        </Element>
+        <Element name="typeKOS">
+            <clariah:autoCompleteURI>skos_proxy.php?vocabulary=nkostype</clariah:autoCompleteURI>
         </Element>
         <Component name="License">
             <Component name="Description">
