@@ -64,7 +64,7 @@ services:
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         volumes:
-            - /data/backup/:/backup/data # in prod change to /backup/data:/backup/data
+            - /backup/data/:/backup/data # in prod change to /backup/data:/backup/data
             - /data/products/niod-yugo/records/:/data/records/
             - /data/products/niod-yugo/resources/:/data/resources/
             - /data/products/niod-yugo/htp:/data/htp
