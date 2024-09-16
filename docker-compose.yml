@@ -18,7 +18,7 @@ services:
             context: .
             dockerfile: ./Dockerfile
         ports:
-            - 8135:80
+            - 8136:80
         volumes:
             - /backup/data:/backup/data
             - /data/niod-yugo/records/:/var/www/html/ccf/data/records/
@@ -34,7 +34,7 @@ services:
             PROFILE: "CollectionHolder"
             SUBTITLE: "Collection Holder"
             BASE_URL: "https://yugoslavia.sd.dev.huc.knaw.nl/ccf/"
-            #BASE_URL: "http://0.0.0.0:8135/ccf/"
+            #BASE_URL: "http://0.0.0.0:8136/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: niod-yugo-mysql
             DB_USER: root
