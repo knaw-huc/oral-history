@@ -33,7 +33,7 @@ services:
             TITLE: "NIOD Yugoslavia Editor"
             PROFILE: "CollectionHolder"
             SUBTITLE: "Collection Holder"
-            BASE_URL: "https://sd-yugoslavia.dev.huc.knaw.nl/ccf/"
+            BASE_URL: "https://yugoslavia.sd.dev.huc.knaw.nl/ccf/"
             #BASE_URL: "http://0.0.0.0:8135/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: niod-yugo-mysql
@@ -43,7 +43,7 @@ services:
         labels:
         - "traefik.enable=true"
         - "traefik.http.routers.niod-yugo.entrypoints=http"
-        - "traefik.http.routers.niod-yugo.rule=Host(`sd-yugoslavia.dev.huc.knaw.nl`)"
+        - "traefik.http.routers.niod-yugo.rule=Host(`yugoslavia.sd.huc.knaw.nl`)"
         networks:
             - niod-yugo-network
         depends_on:
