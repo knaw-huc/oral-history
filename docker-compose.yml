@@ -1,19 +1,19 @@
 version: '2'
 services: 
-    yugoslavia-mysql:
+    niod-yugo-mysql:
         build:
             context: .
             dockerfile: ./Dockerfile.mariadb
         volumes: 
-            - yugoslavia-mysqldb:/var/lib/mysql
+            - niod-yugo-mysqldb:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWD:-rood}
             MYSQL_DATABASE: "cmdi_forms"
         networks:
-            - yugoslavia-network 
+            - niod-yugo-network 
 
     # huc-editor backend & frontend
-    yugoslavia-php-apache:
+    niod-yugo-php-apache:
         build:
             context: .
             dockerfile: ./Dockerfile
@@ -36,19 +36,19 @@ services:
             BASE_URL: "https://sd-yugoslavia.dev.huc.knaw.nl/ccf/"
             #BASE_URL: "http://0.0.0.0:8135/ccf/"
             TZ: "Europe/Amsterdam"
-            DB_SERVER: yugoslavia-mysql
+            DB_SERVER: niod-yugo-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
         labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.sd-yugoslavia.entrypoints=http"
-        - "traefik.http.routers.sd-yugoslavia.rule=Host(`sd-yugoslavia.dev.huc.knaw.nl`)"
+        - "traefik.http.routers.niod-yugo.entrypoints=http"
+        - "traefik.http.routers.niod-yugo.rule=Host(`sd-yugoslavia.dev.huc.knaw.nl`)"
         networks:
-            - yugoslavia-network
+            - niod-yugo-network
         depends_on:
-            - yugoslavia-mysql
-    yugoslavia-backup:
+            - niod-yugo-mysql
+    niod-yugo-backup:
         build:
             context: .
             dockerfile: ./Dockerfile.backup
@@ -59,7 +59,7 @@ services:
             BACKUP_NAME: "niod-yugo"
             BACKUP_LOCATION: "/backup/data"
             BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
-            DB_SERVER: yugoslavia-mysql
+            DB_SERVER: niod-yugo-mysql
             DB_USER: root
             DB_PASSWD: ${DB_PASSWD:-rood}
             DB_NAME: cmdi_forms
@@ -75,12 +75,12 @@ services:
             #- ./data/.htaccess:/data/.htaccess
             #- ./data/htp:/data/htp
         networks:
-            - yugoslavia-network
+            - niod-yugo-network
         depends_on:
-            - yugoslavia-mysql
+            - niod-yugo-mysql
 networks:
-  yugoslavia-network:
+  niod-yugo-network:
     external: true
     name: traefik-public
 volumes:
-    yugoslavia-mysqldb:
+    niod-yugo-mysqldb:
