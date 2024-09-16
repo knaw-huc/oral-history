@@ -33,7 +33,7 @@ services:
             TITLE: "NIOD Yugoslavia Editor"
             PROFILE: "CollectionHolder"
             SUBTITLE: "Collection Holder"
-            BASE_URL: "https://yugoslavia.sd.dev.huc.knaw.nl/ccf/"
+            BASE_URL: "https://yugoslavia.sd.huc.knaw.nl/ccf/"
             #BASE_URL: "http://0.0.0.0:8136/ccf/"
             TZ: "Europe/Amsterdam"
             DB_SERVER: niod-yugo-mysql
