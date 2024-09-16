@@ -48,6 +48,36 @@ services:
             - niod-yugo-network
         depends_on:
             - niod-yugo-mysql
+    niod-yugo-backup:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.backup
+        restart: unless-stopped
+        environment:
+            BACKUP_HOUR: "01"
+            BACKUP_MINUTE: "35"
+            BACKUP_NAME: "niod-yugo"
+            BACKUP_LOCATION: "/backup/data"
+            BACKUP_FILE: "$BACKUP_LOCATION/$BACKUP_NAME.tgz"
+            DB_SERVER: niod-yugo-mysql
+            DB_USER: root
+            DB_PASSWD: ${DB_PASSWD:-rood}
+            DB_NAME: cmdi_forms
+        volumes:
+            - /backup/data/:/backup/data # in prod change to /backup/data:/backup/data
+            - /data/products/niod-yugo/records/:/data/records/
+            - /data/products/niod-yugo/resources/:/data/resources/
+            - /data/products/niod-yugo/htp:/data/htp
+            - /data/products/niod-yugo/.htaccess:/data/.htaccess
+            #- ./data/backup:/backup/data
+            #- ./data/records/:/data/records/
+            #- ./data/resources/:/data/resources/
+            #- ./data/.htaccess:/data/.htaccess
+            #- ./data/htp:/data/htp
+        networks:
+            - niod-yugo-network
+        depends_on:
+            - niod-yugo-mysql
 networks:
   niod-yugo-network:
     external: true
