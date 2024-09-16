@@ -23,7 +23,7 @@ services:
             - /backup/data:/backup/data
             - /data/niod-yugo/records/:/var/www/html/ccf/data/records/
             - /data/niod-yugo/resources/:/var/www/html/ccf/data/resources/
-            - /data/niod-yugo/htp:/var/www/htp
+            #- /data/niod-yugo/htp:/var/www/htp
             - /data/niod-yugo/.htaccess:/var/www/html/.htaccess
             #- ./data/records/:/var/www/html/ccf/data/records/
             #- ./data/resources/:/var/www/html/ccf/data/resources/
