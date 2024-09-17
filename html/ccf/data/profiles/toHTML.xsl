@@ -14,7 +14,7 @@
     <xsl:template match="text()"/>
     
     <xsl:template name="title">
-        <xsl:value-of select="//cmd:IDnummer"/>
+        <xsl:value-of select="//cmd:authorisedForm"/>
     </xsl:template>
     
     <xsl:template match="/">
