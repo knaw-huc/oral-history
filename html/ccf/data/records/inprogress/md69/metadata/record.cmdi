@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
@@ -16,11 +16,10 @@
         <cmd:Vocabulary>
             <cmd:identifier>lkif</cmd:identifier>
             <cmd:title xml:lang="en">LKIF-Core Ontology</cmd:title>
-            <cmd:type>owl</cmd:type>
-            <cmd:status>review</cmd:status>
+            <cmd:status>review-in-progress</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">GNU Lesser General Public License</cmd:label>
-                <cmd:url>https://www.gnu.org/licenses/lgpl-3.0.html</cmd:url>
+                <cmd:uri>https://www.gnu.org/licenses/lgpl-3.0.html</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://raw.githubusercontent.com/RinkeHoekstra/lkif-core/master/norm.owl</cmd:uri>
@@ -82,9 +81,6 @@
                 <cmd:uri>https://raw.githubusercontent.com/RinkeHoekstra/lkif-core/master/action.owl</cmd:uri>
                 <cmd:type>endpoint</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en"/>
-            </cmd:Description>
             <cmd:Version>
                 <cmd:version>1.1</cmd:version>
                 <cmd:validFrom>2008-07-22</cmd:validFrom>
@@ -319,14 +315,15 @@
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>YALC</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
+            <cmd:Type>
+                <cmd:syntax>owl</cmd:syntax>
+            </cmd:Type>
+            <cmd:description xml:lang="en"/>
+            <cmd:Publisher>
+                <cmd:name>YALC</cmd:name>
+                <cmd:identifier>https://triplydb.com/Triply/yalc</cmd:identifier>
+                <cmd:uri>https://triplydb.com/estrella/lkif</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

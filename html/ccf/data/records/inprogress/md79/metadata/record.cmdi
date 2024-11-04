@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>KNAW editor</cmd:MdCreator>
@@ -16,34 +16,16 @@
         <cmd:Vocabulary>
             <cmd:identifier>juso</cmd:identifier>
             <cmd:title xml:lang="en">Juso</cmd:title>
-            <cmd:type>owl</cmd:type>
-            <cmd:status>review</cmd:status>
+            <cmd:status>review-in-progress</cmd:status>
             <cmd:License>
                 <cmd:identifier>CC BY 4.0</cmd:identifier>
                 <cmd:label xml:lang="en">CC BY 4.0</cmd:label>
-                <cmd:url>https://creativecommons.org/licenses/by/4.0/</cmd:url>
+                <cmd:uri>https://creativecommons.org/licenses/by/4.0/</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>http://rdfs.co/juso/</cmd:uri>
                 <cmd:type>homepage</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en">The Juso Ontology is a Web vocabulary for describing geographical addresses and features.</cmd:description>
-            </cmd:Description>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>YALC</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>Awesome Humanities</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
             <cmd:Version>
                 <cmd:version>0.1.2</cmd:version>
                 <cmd:validFrom>2015-12-30</cmd:validFrom>
@@ -312,6 +294,24 @@
                     </cmd:Statements>
                 </cmd:Summary>
             </cmd:Version>
+            <cmd:Type>
+                <cmd:syntax>owl</cmd:syntax>
+            </cmd:Type>
+            <cmd:Namespace>
+                <cmd:prefix>juso</cmd:prefix>
+                <cmd:uri>http://rdfs.co/juso/</cmd:uri>
+            </cmd:Namespace>
+            <cmd:description xml:lang="en">The Juso Ontology is a Web vocabulary for describing geographical addresses and features.</cmd:description>
+            <cmd:Publisher>
+                <cmd:name>YALC</cmd:name>
+                <cmd:identifier>https://triplydb.com/Triply/yalc</cmd:identifier>
+                <cmd:uri>https://triplydb.com/list/juso</cmd:uri>
+            </cmd:Publisher>
+            <cmd:Publisher>
+                <cmd:name>Awesome Humanities</cmd:name>
+                <cmd:identifier>https://github.com/CLARIAH/awesome-humanities-ontologies</cmd:identifier>
+                <cmd:uri>https://github.com/CLARIAH/awesome-humanities-ontologies</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

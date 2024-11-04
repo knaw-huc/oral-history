@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
@@ -16,11 +16,10 @@
         <cmd:Vocabulary>
             <cmd:identifier>iso_19103</cmd:identifier>
             <cmd:title xml:lang="en">Geographic information — Conceptual schema language (ISO/TS 19103:2005)</cmd:title>
-            <cmd:type>owl</cmd:type>
-            <cmd:status>review</cmd:status>
+            <cmd:status>review-in-progress</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">unknown</cmd:label>
-                <cmd:url>http://rightsstatements.org/vocab/UND/1.0/</cmd:url>
+                <cmd:uri>http://rightsstatements.org/vocab/UND/1.0/</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://raw.githubusercontent.com/ISO-TC211/GOM/master/isotc211_GOM_harmonizedOntology/iso19103/2005/Numerics.rdf</cmd:uri>
@@ -82,9 +81,6 @@
                 <cmd:uri>https://www.iso.org/standard/37800.html</cmd:uri>
                 <cmd:type>homepage</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en">ISO TS 19103:2005 provides rules and guidelines for the use of a conceptual schema language within the ISO geographic information standards.  The chosen conceptual schema language is the Unified Modeling Language (UML).ISO TS 19103:2005 provides a profile of UML for use with geographic information.  In addition, it provides guidelines on how UML should be used to create standardized geographic information and service models.</cmd:description>
-            </cmd:Description>
             <cmd:Version>
                 <cmd:version>2005</cmd:version>
                 <cmd:validFrom>2005-01-01T00:00:00</cmd:validFrom>
@@ -297,14 +293,15 @@
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>YALC</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
+            <cmd:Type>
+                <cmd:syntax>owl</cmd:syntax>
+            </cmd:Type>
+            <cmd:description xml:lang="en">ISO TS 19103:2005 provides rules and guidelines for the use of a conceptual schema language within the ISO geographic information standards.  The chosen conceptual schema language is the Unified Modeling Language (UML).ISO TS 19103:2005 provides a profile of UML for use with geographic information.  In addition, it provides guidelines on how UML should be used to create standardized geographic information and service models.</cmd:description>
+            <cmd:Publisher>
+                <cmd:name>YALC</cmd:name>
+                <cmd:identifier>https://triplydb.com/Triply/yalc</cmd:identifier>
+                <cmd:uri>https://triplydb.com/iso/19103</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

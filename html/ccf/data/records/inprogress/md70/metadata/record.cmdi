@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
@@ -16,19 +16,15 @@
         <cmd:Vocabulary>
             <cmd:identifier>list</cmd:identifier>
             <cmd:title xml:lang="en">LIST Ontology</cmd:title>
-            <cmd:type>owl</cmd:type>
-            <cmd:status>review</cmd:status>
+            <cmd:status>review-in-progress</cmd:status>
             <cmd:License>
                 <cmd:label xml:lang="en">CC BY 3.0</cmd:label>
-                <cmd:url>http://creativecommons.org/licenses/by/3.0/</cmd:url>
+                <cmd:uri>http://creativecommons.org/licenses/by/3.0/</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://pi.pauwel.be/evoc/list_W3ID/20151211/index.html</cmd:uri>
                 <cmd:type>homepage</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en">Ontology that can be used to represent ordered lists. This ontology is identical to the ontology originally published by Drummond et al. (see &lt;http://owl-workshop.man.ac.uk/acceptedLong/submission_12.pdf&gt;), with namespace &lt;http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#&gt;. It is also available at &lt;https://gist.github.com/danlentz/6537658&gt;.  Ontology generated on Fri Sep 25 14:02:03 2015.</cmd:description>
-            </cmd:Description>
             <cmd:Version>
                 <cmd:version>1.2</cmd:version>
                 <cmd:validFrom>2015-12-11</cmd:validFrom>
@@ -199,14 +195,19 @@
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>YALC</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
+            <cmd:Type>
+                <cmd:syntax>owl</cmd:syntax>
+            </cmd:Type>
+            <cmd:Namespace>
+                <cmd:prefix>express</cmd:prefix>
+                <cmd:uri>https://w3id.org/list#</cmd:uri>
+            </cmd:Namespace>
+            <cmd:description xml:lang="en">Ontology that can be used to represent ordered lists. This ontology is identical to the ontology originally published by Drummond et al. (see &lt;http://owl-workshop.man.ac.uk/acceptedLong/submission_12.pdf&gt;), with namespace &lt;http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#&gt;. It is also available at &lt;https://gist.github.com/danlentz/6537658&gt;.  Ontology generated on Fri Sep 25 14:02:03 2015.</cmd:description>
+            <cmd:Publisher>
+                <cmd:name>YALC</cmd:name>
+                <cmd:identifier>https://triplydb.com/Triply/yalc</cmd:identifier>
+                <cmd:uri>https://triplydb.com/stiima-cnr/list</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

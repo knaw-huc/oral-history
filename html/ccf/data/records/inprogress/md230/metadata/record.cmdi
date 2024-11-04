@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
@@ -16,21 +16,15 @@
         <cmd:Vocabulary>
             <cmd:identifier>simple-event-model-sem</cmd:identifier>
             <cmd:title xml:lang="en">Simple Event Model (SEM)</cmd:title>
-            <cmd:type>rdfs</cmd:type>
-            <cmd:status>reviewed</cmd:status>
+            <cmd:status>published</cmd:status>
             <cmd:License>
                 <cmd:identifier>CC 1.0</cmd:identifier>
-                <cmd:url>http://creativecommons.org/publicdomain/zero/1.0/</cmd:url>
+                <cmd:uri>http://creativecommons.org/publicdomain/zero/1.0/</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://semanticweb.cs.vu.nl/2009/11/sem/</cmd:uri>
                 <cmd:type>homepage</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en">Simple Event Model (SEM) - an ontology for modelling
-        events
-    </cmd:description>
-            </cmd:Description>
             <cmd:Version>
                 <cmd:version>2019-11</cmd:version>
                 <cmd:validFrom>2019-11-01</cmd:validFrom>
@@ -40,14 +34,17 @@
                     <cmd:recipe>rdf</cmd:recipe>
                 </cmd:Location>
             </cmd:Version>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>Awesome Humanities</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
+            <cmd:Type>
+                <cmd:syntax>rdfs</cmd:syntax>
+            </cmd:Type>
+            <cmd:description xml:lang="en">Simple Event Model (SEM) - an ontology for modelling
+        events
+    </cmd:description>
+            <cmd:Publisher>
+                <cmd:name>Awesome Humanities</cmd:name>
+                <cmd:identifier>https://github.com/CLARIAH/awesome-humanities-ontologies</cmd:identifier>
+                <cmd:uri>https://github.com/CLARIAH/awesome-humanities-ontologies</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>

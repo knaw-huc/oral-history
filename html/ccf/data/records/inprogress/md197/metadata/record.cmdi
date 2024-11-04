@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lat="http://lat.mpi.nl/" xmlns:cmd="http://www.clarin.eu/cmd/" xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1653377925723/xsd" CMDVersion="1.1">
     <cmd:Header>
         <cmd:MdCreator>HuC DI SD</cmd:MdCreator>
@@ -16,19 +16,15 @@
         <cmd:Vocabulary>
             <cmd:identifier>express</cmd:identifier>
             <cmd:title xml:lang="en">EXPRESS Ontology</cmd:title>
-            <cmd:type>rdfs</cmd:type>
-            <cmd:status>review</cmd:status>
+            <cmd:status>review-in-progress</cmd:status>
             <cmd:License>
                 <cmd:identifier>CC 3.0</cmd:identifier>
-                <cmd:url>http://creativecommons.org/licenses/by/3.0/</cmd:url>
+                <cmd:uri>http://creativecommons.org/licenses/by/3.0/</cmd:uri>
             </cmd:License>
             <cmd:Location>
                 <cmd:uri>https://pi.pauwel.be/evoc/express_W3ID/20151211/index.html</cmd:uri>
                 <cmd:type>homepage</cmd:type>
             </cmd:Location>
-            <cmd:Description>
-                <cmd:description xml:lang="en">Ontology automatically generated using ‘genOnto’ converter developed by Walter Terkaj (ITIA-CNR, &lt;mailto:walter.terkaj@itia.cnr.it&gt;) with revision support from Pieter Pauwels (&lt;mailto:pipauwel.pauwels@ugent.be&gt;).  Serialized using C++ RDF library by Walter Terkaj (ITIA-CNR, &lt;mailto:walter.terkaj@itia.cnr.it&gt;) based on Redland API C library.  Fri Sep 25 14:02:03 2015.</cmd:description>
-            </cmd:Description>
             <cmd:Version>
                 <cmd:version>1.2</cmd:version>
                 <cmd:validFrom>2015-12-11</cmd:validFrom>
@@ -436,14 +432,19 @@
                     </cmd:Namespaces>
                 </cmd:Summary>
             </cmd:Version>
-            <cmd:Assessement>
-                <cmd:Recommendation>
-                    <cmd:Rating>appears</cmd:Rating>
-                    <cmd:Publisher>
-                        <cmd:name>YALC</cmd:name>
-                    </cmd:Publisher>
-                </cmd:Recommendation>
-            </cmd:Assessement>
+            <cmd:Type>
+                <cmd:syntax>rdfs</cmd:syntax>
+            </cmd:Type>
+            <cmd:Namespace>
+                <cmd:prefix>express</cmd:prefix>
+                <cmd:uri>https://w3id.org/express#</cmd:uri>
+            </cmd:Namespace>
+            <cmd:description xml:lang="en">Ontology automatically generated using ‘genOnto’ converter developed by Walter Terkaj (ITIA-CNR, &lt;mailto:walter.terkaj@itia.cnr.it&gt;) with revision support from Pieter Pauwels (&lt;mailto:pipauwel.pauwels@ugent.be&gt;).  Serialized using C++ RDF library by Walter Terkaj (ITIA-CNR, &lt;mailto:walter.terkaj@itia.cnr.it&gt;) based on Redland API C library.  Fri Sep 25 14:02:03 2015.</cmd:description>
+            <cmd:Publisher>
+                <cmd:name>YALC</cmd:name>
+                <cmd:identifier>https://triplydb.com/Triply/yalc</cmd:identifier>
+                <cmd:uri>https://triplydb.com/stiima-cnr/express</cmd:uri>
+            </cmd:Publisher>
         </cmd:Vocabulary>
     </cmd:Components>
 </cmd:CMD>
